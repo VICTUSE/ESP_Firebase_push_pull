@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+D:/EMY/ESP_workspace/firebase_deneme/build/CMakeFiles/bootloader
+D:/EMY/ESP_workspace/firebase_deneme/build/CMakeFiles/bootloader.rule
+D:/EMY/ESP_workspace/firebase_deneme/build/CMakeFiles/bootloader-complete.rule
+D:/EMY/ESP_workspace/firebase_deneme/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+D:/EMY/ESP_workspace/firebase_deneme/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+D:/EMY/ESP_workspace/firebase_deneme/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+D:/EMY/ESP_workspace/firebase_deneme/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+D:/EMY/ESP_workspace/firebase_deneme/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+D:/EMY/ESP_workspace/firebase_deneme/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+D:/EMY/ESP_workspace/firebase_deneme/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

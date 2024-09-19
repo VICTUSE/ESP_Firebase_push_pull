@@ -414,6 +414,16 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("D:/EMY/ESP_workspace/firebase_deneme/build/esp-idf/espressif__mpu6050/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("D:/EMY/ESP_workspace/firebase_deneme/build/esp-idf/zorxx__dht/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("D:/EMY/ESP_workspace/firebase_deneme/build/esp-idf/main/cmake_install.cmake")
 endif()
 

@@ -1,0 +1,76 @@
+[1/5] cmd.exe /C "cd /D D:\EMY\ESP_workspace\firebase_deneme\build\esp-idf\esptool_py && python D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/EMY/ESP_workspace/firebase_deneme/build/partition_table/partition-table.bin D:/EMY/ESP_workspace/firebase_deneme/build/app-template.bin"
+app-template.bin binary size 0xe85e0 bytes. Smallest app partition is 0x100000 bytes. 0x17a20 bytes (9%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D D:\EMY\ESP_workspace\firebase_deneme\build\bootloader\esp-idf\esptool_py && python D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/EMY/ESP_workspace/firebase_deneme/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6860 bytes. 0x7a0 bytes (7%) free.
+[2/3] cmd.exe /C "cd /D D:\Espressiff\Espressif\frameworks\esp-idf-v5.2.2\components\esptool_py && D:\Espressiff\Espressif\tools\cmake\3esptool.py --chip esp32 -p com11 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 app-template.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.0
+Serial port com11
+Connecting...
+Failed to get PID of a device on com11, using standard reset sequence.
+.
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: c8:f0:9e:f1:4a:c8
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x000f8fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 26720 bytes to 16349...
+Writing at 0x00001000... (100 %)
+Wrote 26720 bytes (16349 compressed) at 0x00001000 in 0.9 seconds (effective 247.5 kbit/s)...
+Hash of data verified.
+Compressed 951776 bytes to 596680...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001d073... (5 %)
+Writing at 0x00026ee8... (8 %)
+Writing at 0x0002c529... (10 %)
+Writing at 0x00032389... (13 %)
+Writing at 0x0003dfd1... (16 %)
+Writing at 0x00043a46... (18 %)
+Writing at 0x00049854... (21 %)
+Writing at 0x0004f6e7... (24 %)
+Writing at 0x000552b7... (27 %)
+Writing at 0x0005b1b3... (29 %)
+Writing at 0x00060c44... (32 %)
+Writing at 0x00067166... (35 %)
+Writing at 0x0006c35a... (37 %)
+Writing at 0x000718a9... (40 %)
+Writing at 0x00076b31... (43 %)
+Writing at 0x0007c222... (45 %)
+Writing at 0x00081888... (48 %)
+Writing at 0x000871df... (51 %)
+Writing at 0x0008d0c5... (54 %)
+Writing at 0x0009291c... (56 %)
+Writing at 0x00098697... (59 %)
+Writing at 0x0009e379... (62 %)
+Writing at 0x000a3c02... (64 %)
+Writing at 0x000a9820... (67 %)
+Writing at 0x000af901... (70 %)
+Writing at 0x000b5a0d... (72 %)
+Writing at 0x000bb4a7... (75 %)
+Writing at 0x000c0f44... (78 %)
+Writing at 0x000c698c... (81 %)
+Writing at 0x000cddca... (83 %)
+Writing at 0x000d740c... (86 %)
+Writing at 0x000debce... (89 %)
+Writing at 0x000e4b5a... (91 %)
+Writing at 0x000ea681... (94 %)
+Writing at 0x000f0bb5... (97 %)
+Writing at 0x000f5ea5... (100 %)
+Wrote 951776 bytes (596680 compressed) at 0x00010000 in 13.9 seconds (effective 548.5 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 297.3 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+.24.0\bin\cmake.exe -D IDF_PATH=D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2 -D SERIAL_TOOL=python;;D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=D:/EMY/ESP_workspace/firebase_deneme/build -P D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esptool_py/run_serial_tool.cmake"

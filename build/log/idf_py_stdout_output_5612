@@ -1,0 +1,2002 @@
+J���� chip revision: v3.�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Sep 18 2024 16:38:30[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.0[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=29b24h (170788) map[0m
+[0;32mI (163) esp_image: segment 1: paddr=00039b4c vaddr=3ffb0000 size=03bbch ( 15292) load[0m
+[0;32mI (169) esp_image: segment 2: paddr=0003d710 vaddr=40080000 size=02908h ( 10504) load[0m
+[0;32mI (174) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a3784h (669572) map[0m
+[0;32mI (407) esp_image: segment 4: paddr=000e37ac vaddr=40082908 size=14e40h ( 85568) load[0m
+[0;32mI (452) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (452) boot: Disabling RNG early entropy source...[0m
+[0;32mI (464) cpu_start: Multicore app[0m
+[0;32mI (473) cpu_start: Pro cpu start user code[0m
+[0;32mI (473) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (473) cpu_start: Application information:[0m
+[0;32mI (476) cpu_start: Project name:     app-template[0m
+[0;32mI (481) cpu_start: App version:      1[0m
+[0;32mI (486) cpu_start: Compile time:     Sep 18 2024 16:38:16[0m
+[0;32mI (492) cpu_start: ELF file SHA256:  d20a499ab...[0m
+[0;32mI (497) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (502) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (507) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (512) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (517) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (524) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (530) heap_init: At 3FFB8260 len 00027DA0 (159 KiB): DRAM[0m
+[0;32mI (536) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (543) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (549) heap_init: At 40097748 len 000088B8 (34 KiB): IRAM[0m
+[0;32mI (557) spi_flash: detected chip: generic[0m
+[0;32mI (560) spi_flash: flash io: dio[0m
+[0;33mW (564) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (578) main_task: Started on CPU0[0m
+[0;32mI (588) main_task: Calling app_main()[0m
+[0;32mI (628) uart: queue free spaces: 10[0m
+[0;32mI (628) Firebase: ESP_WIFI_MODE_STA[0m
+I (648) wifi:wifi driver task: 3ffc1900, prio:23, stack:6656, core=0
+I (668) wifi:wifi firmware version: 3e0076f
+I (668) wifi:wifi certification version: v7.0
+I (668) wifi:config NVS flash: enabled
+I (668) wifi:config nano formating: disabled
+I (678) wifi:Init data frame dynamic rx buffer num: 32
+I (678) wifi:Init static rx mgmt buffer num: 5
+I (678) wifi:Init management short buffer num: 32
+I (688) wifi:Init dynamic tx buffer num: 32
+I (688) wifi:Init static rx buffer size: 1600
+I (698) wifi:Init static rx buffer num: 10
+I (698) wifi:Init dynamic rx buffer num: 32
+[0;32mI (708) wifi_init: rx ba win: 6[0m
+[0;32mI (708) wifi_init: tcpip mbox: 32[0m
+[0;32mI (708) wifi_init: udp mbox: 6[0m
+[0;32mI (718) wifi_init: tcp mbox: 6[0m
+[0;32mI (718) wifi_init: tcp tx win: 5760[0m
+[0;32mI (718) wifi_init: tcp rx win: 5760[0m
+[0;32mI (728) wifi_init: tcp mss: 1440[0m
+[0;32mI (728) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (738) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (738) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+I (838) wifi:mode : sta (c8:f0:9e:f1:4a:c8)
+I (838) wifi:enable tsf
+[0;32mI (838) Firebase: wifi_init_sta finished.[0m
+I (848) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (848) wifi:state: init -> auth (b0)
+I (858) wifi:state: auth -> assoc (0)
+I (858) wifi:state: assoc -> run (10)
+I (888) wifi:connected with Galaxym31, aid = 1, channel 11, BW20, bssid = 4a:3e:02:1e:c9:b7
+I (888) wifi:security: WPA2-PSK, phy: bgn, rssi: -39
+I (888) wifi:pm start, type: 1
+
+I (888) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (898) wifi:<ba-add>idx:0 (ifx:0, 4a:3e:02:1e:c9:b7), tid:0, ssn:0, winSize:64
+I (918) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us
+I (918) wifi:AP's beacon interval = 102400 us, DTIM period = 2
+[0;32mI (1908) esp_netif_handlers: sta ip: 192.168.26.89, mask: 255.255.255.0, gw: 192.168.26.71[0m
+[0;32mI (1908) Firebase: got ip:192.168.26.89[0m
+[0;32mI (1908) Firebase: connected to ap SSID:myssid password:mypassword[0m
+[0;32mI (1918) Firebase: UART Received Data: Roll:  27         Pitch:  28   
+Roll:  28         Pitch:  28   
+Roll:  28         Pitch:  28   
+Roll:  28         Pitch:  28 �
+[0;32mI (1928) Parsed Data: Roll: 27, Pitch: 28[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":27},"pitch":{"doubleValue":28}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/c
+HTTP_EVENT_ON_DATA: ollection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 28
+    },
+    "roll": {
+      "doubleValue": 27
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:29:33.424305Z"
+}
+
+[0;32mI (3918) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (3928) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (3928) Firebase: UART Received Data: Roll:  27         Pitch:  28   
+Roll:  28         Pitch:  28   
+Roll:  28         Pitch:  28   
+Roll:  27         Pitch:  28 )[0m
+[0;32mI (3948) Parsed Data: Roll: 27, Pitch: 28[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":27},"pitch":{"doubleValue":28}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 28
+    },
+    "roll": {
+      "doubleValue": 27
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:29:33.424305Z"
+}
+
+[0;32mI (5968) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (5978) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (5978) Firebase: UART Received Data: Roll:  27         Pitch:  28   
+Roll:  27         Pitch:  28   
+Roll:  27         Pitch:  28   
+Roll:  27         Pitch:  28 )[0m
+[0;32mI (5998) Parsed Data: Roll: 27, Pitch: 28[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":27},"pitch":{"doubleValue":28}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 28
+    },
+    "roll": {
+      "doubleValue": 27
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:29:33.424305Z"
+}
+
+[0;32mI (8218) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (8228) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (8228) Firebase: UART Received Data: Roll:  27         Pitch:  28   
+Roll:  27         Pitch:  28   
+Roll:  28         Pitch:  28   
+Roll:  27         Pitch:  28 J[0m
+[0;32mI (8248) Parsed Data: Roll: 27, Pitch: 28[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":27},"pitch":{"doubleValue":28}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 28
+    },
+    "roll": {
+      "doubleValue": 27
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:29:33.424305Z"
+}
+
+[0;32mI (10268) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (10278) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (10278) Firebase: UART Received Data: Roll:  27         Pitch:  28   
+Roll:  27         Pitch:  28   
+Roll:  27         Pitch:  28   
+Roll:  27         Pitch:  28 )[0m
+[0;32mI (10298) Parsed Data: Roll: 27, Pitch: 28[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":27},"pitch":{"doubleValue":28}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 28
+    },
+    "roll": {
+      "doubleValue": 27
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:29:33.424305Z"
+}
+
+[0;32mI (12318) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (12328) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (12328) Firebase: UART Received Data: Roll:  27         Pitch:  28   
+Roll:  27         Pitch:  28   
+Roll:  27         Pitch:  28   
+Roll:  27         Pitch:  28 )[0m
+[0;32mI (12348) Parsed Data: Roll: 27, Pitch: 28[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":27},"pitch":{"doubleValue":28}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 28
+    },
+    "roll": {
+      "doubleValue": 27
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:29:33.424305Z"
+}
+
+[0;32mI (13988) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (13998) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (13998) Firebase: UART Received Data: Roll:  27         Pitch:  28   
+Roll:  28         Pitch:  28   
+Roll:  27         Pitch:  28   
+Roll:  27         Pitch:  28 [0m
+[0;32mI (14008) Parsed Data: Roll: 27, Pitch: 28[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":27},"pitch":{"doubleValue":28}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 28
+    },
+    "roll": {
+      "doubleValue": 27
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:29:33.424305Z"
+}
+
+[0;32mI (15588) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (15608) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (15608) Firebase: UART Received Data: Roll:  27         Pitch:  28   
+Roll:  27         Pitch:  28   
+Roll:  27         Pitch:  28   
+Roll:  15         Pitch:  16 �
+[0;32mI (15618) Parsed Data: Roll: 27, Pitch: 28[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":27},"pitch":{"doubleValue":28}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "roll": {
+      "doubleValue": 27
+    },
+    "pitch": {
+      "doubleValue": 28
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:29:33.424305Z"
+}
+
+[0;32mI (17688) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (17698) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (17698) Firebase: UART Received Data: Roll:  -30         Pitch:  -13   
+Roll:  -18         Pitch:  -12   
+Roll:  -8         Pitch:  -11   
+Roll:  0         Pitch: 0[0m
+[0;32mI (17718) Parsed Data: Roll: -30, Pitch: -13[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":-30},"pitch":{"doubleValue":-13}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/c
+HTTP_EVENT_ON_DATA: ollection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "roll": {
+      "doubleValue": -30
+    },
+    "pitch": {
+      "doubleValue": -13
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:30:19.264909Z"
+}
+
+[0;32mI (19688) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (19698) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (19698) Firebase: UART Received Data: Roll:  22         Pitch:  -11   
+Roll:  23         Pitch:  -12   
+Roll:  23         Pitch:  -12   
+Roll:  23         Pitch:  2[0m
+[0;32mI (19718) Parsed Data: Roll: 22, Pitch: -11[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":22},"pitch":{"doubleValue":-11}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/c
+HTTP_EVENT_ON_DATA: ollection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "roll": {
+      "doubleValue": 22
+    },
+    "pitch": {
+      "doubleValue": -11
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:30:21.338415Z"
+}
+
+[0;32mI (21738) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (21748) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (21748) Firebase: UART Received Data: Roll:  22         Pitch:  -15   
+Roll:  21         Pitch:  -20   
+Roll:  24         Pitch:  -15   
+Roll:  25         Pitch:  /[0m
+[0;32mI (21758) Parsed Data: Roll: 22, Pitch: -15[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":22},"pitch":{"doubleValue":-15}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": -15
+    },
+    "roll": {
+      "doubleValue": 22
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:30:23.039129Z"
+}
+
+[0;32mI (23578) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (23598) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (23598) Firebase: UART Received Data: Roll:  17         Pitch:  -21   
+Roll:  24         Pitch:  -27   
+Roll:  29         Pitch:  -32   
+Roll:  30         Pitch:  [0m
+[0;32mI (23608) Parsed Data: Roll: 17, Pitch: -21[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":17},"pitch":{"doubleValue":-21}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": -21
+    },
+    "roll": {
+      "doubleValue": 17
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:30:25.189295Z"
+}
+
+[0;32mI (25628) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (25638) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (25638) Firebase: UART Received Data: Roll:  61         Pitch:  -52   
+Roll:  64         Pitch:  -52   
+Roll:  66         Pitch:  -52   
+Roll:  67         Pitch:  2[0m
+[0;32mI (25648) Parsed Data: Roll: 61, Pitch: -52[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":61},"pitch":{"doubleValue":-52}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "roll": {
+      "doubleValue": 61
+    },
+    "pitch": {
+      "doubleValue": -52
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:30:27.268920Z"
+}
+
+[0;32mI (27678) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (27688) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (27688) Firebase: UART Received Data: Roll:  68         Pitch:  -49   
+Roll:  68         Pitch:  -49   
+Roll:  67         Pitch:  -49   
+Roll:  66         Pitch:  2[0m
+[0;32mI (27708) Parsed Data: Roll: 68, Pitch: -49[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":68},"pitch":{"doubleValue":-49}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": -49
+    },
+    "roll": {
+      "doubleValue": 68
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:30:28.899696Z"
+}
+
+[0;32mI (29318) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (29328) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (29328) Firebase: UART Received Data: Roll:  61         Pitch:  -49   
+Roll:  61         Pitch:  -48   
+Roll:  61         Pitch:  -48   
+Roll:  60         Pitch:  [0m
+[0;32mI (29338) Parsed Data: Roll: 61, Pitch: -49[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":61},"pitch":{"doubleValue":-49}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": -49
+    },
+    "roll": {
+      "doubleValue": 61
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:30:30.979900Z"
+}
+
+[0;32mI (31368) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (31388) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (31388) Firebase: UART Received Data: Roll:  59         Pitch:  -49   
+Roll:  59         Pitch:  -49   
+Roll:  59         Pitch:  -50   
+Roll:  59         Pitch:  2[0m
+[0;32mI (31398) Parsed Data: Roll: 59, Pitch: -49[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":59},"pitch":{"doubleValue":-49}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": -49
+    },
+    "roll": {
+      "doubleValue": 59
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:30:32.613366Z"
+}
+
+[0;32mI (33208) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (33218) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (33218) Firebase: UART Received Data: Roll:  60         Pitch:  -49   
+Roll:  59         Pitch:  -48   
+Roll:  60         Pitch:  -44   
+Roll:  59         Pitch:  [0m
+[0;32mI (33228) Parsed Data: Roll: 60, Pitch: -49[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":60},"pitch":{"doubleValue":-49}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": -49
+    },
+    "roll": {
+      "doubleValue": 60
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:30:34.809007Z"
+}
+
+[0;32mI (35258) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (35268) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (35268) Firebase: UART Received Data: Roll:  2         Pitch:  -12   
+Roll:  -5         Pitch:  -9   
+Roll:  -12         Pitch:  -9   
+Roll:  -16         Pitch:  -0[0m
+[0;32mI (35278) Parsed Data: Roll: 2, Pitch: -12[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":2},"pitch":{"doubleValue":-12}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": -12
+    },
+    "roll": {
+      "doubleValue": 2
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:30:36.741393Z"
+}
+
+[0;32mI (37298) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (37308) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (37308) Firebase: UART Received Data: Roll:  -18         Pitch:  -4   
+Roll:  -17         Pitch:  -4   
+Roll:  -17         Pitch:  -5   
+Roll:  -16         Pitch: 2[0m
+[0;32mI (37328) Parsed Data: Roll: -18, Pitch: -4[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":-18},"pitch":{"doubleValue":-4}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": -4
+    },
+    "roll": {
+      "doubleValue": -18
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:30:38.758179Z"
+}
+
+[0;32mI (39348) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (39358) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (39358) Firebase: UART Received Data: Roll:  -11         Pitch:  -8   
+Roll:  -10         Pitch:  -8   
+Roll:  -10         Pitch:  -9   
+Roll:  -9         Pitch:  -[0m
+[0;32mI (39378) Parsed Data: Roll: -11, Pitch: -8[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":-11},"pitch":{"doubleValue":-8}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": -8
+    },
+    "roll": {
+      "doubleValue": -11
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:30:40.541139Z"
+}
+
+[0;32mI (40988) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (40998) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (40998) Firebase: UART Received Data: Roll:  -7         Pitch:  -9   
+Roll:  -7         Pitch:  -10   
+Roll:  4         Pitch:  -1   
+Roll:  34         Pitch:  21 �
+[0;32mI (41018) Parsed Data: Roll: -7, Pitch: -9[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":-7},"pitch":{"doubleValue":-9}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": -9
+    },
+    "roll": {
+      "doubleValue": -7
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:30:42.645041Z"
+}
+
+[0;32mI (43058) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (43068) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (43068) Firebase: UART Received Data: Roll:  12         Pitch:  14   
+Roll:  8         Pitch:  11   
+Roll:  6         Pitch:  13   
+Roll:  4         Pitch:  13   
+"[0m
+[0;32mI (43078) Parsed Data: Roll: 12, Pitch: 14[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":12},"pitch":{"doubleValue":14}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 14
+    },
+    "roll": {
+      "doubleValue": 12
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:30:44.484821Z"
+}
+
+[0;32mI (44888) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (44898) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (44898) Firebase: UART Received Data: Roll:  -1         Pitch:  13   
+Roll:  -1         Pitch:  13   
+Roll:  -1         Pitch:  13   
+Roll:  -1         Pitch:  13 $[0m
+[0;32mI (44908) Parsed Data: Roll: -1, Pitch: 13[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":-1},"pitch":{"doubleValue":13}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 13
+    },
+    "roll": {
+      "doubleValue": -1
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:30:46.498720Z"
+}
+
+[0;32mI (46928) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (46938) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (46938) Firebase: UART Received Data: Roll:  1         Pitch:  12   
+Roll:  1         Pitch:  12   
+Roll:  1         Pitch:  12   
+Roll:  2         Pitch:  13   
+ [0m
+[0;32mI (46958) Parsed Data: Roll: 1, Pitch: 12[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":1},"pitch":{"doubleValue":12}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 12
+    },
+    "roll": {
+      "doubleValue": 1
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:30:48.165049Z"
+}
+
+[0;32mI (48568) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (48588) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (48588) Firebase: UART Received Data: Roll:  3         Pitch:  14   
+Roll:  3         Pitch:  14   
+Roll:  4         Pitch:  14   
+Roll:  4         Pitch:  14   
+�
+[0;32mI (48598) Parsed Data: Roll: 3, Pitch: 14[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":3},"pitch":{"doubleValue":14}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 14
+    },
+    "roll": {
+      "doubleValue": 3
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:30:50.181114Z"
+}
+
+[0;32mI (50608) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (50628) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (50628) Firebase: UART Received Data: Roll:  5         Pitch:  14   
+Roll:  5         Pitch:  14   
+Roll:  4         Pitch:  14   
+Roll:  5         Pitch:  14   
+ [0m
+[0;32mI (50638) Parsed Data: Roll: 5, Pitch: 14[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":5},"pitch":{"doubleValue":14}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "roll": {
+      "doubleValue": 5
+    },
+    "pitch": {
+      "doubleValue": 14
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:30:52.028337Z"
+}
+
+[0;32mI (52458) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (52468) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (52468) Firebase: UART Received Data: Roll:  4         Pitch:  14   
+Roll:  5         Pitch:  14   
+Roll:  4         Pitch:  14   
+Roll:  4         Pitch:  14   
+[0m
+[0;32mI (52478) Parsed Data: Roll: 4, Pitch: 14[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":4},"pitch":{"doubleValue":14}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 14
+    },
+    "roll": {
+      "doubleValue": 4
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:30:53.931636Z"
+}
+
+[0;32mI (54508) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (54518) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (54518) Firebase: UART Received Data: Roll:  4         Pitch:  14   
+Roll:  5         Pitch:  14   
+Roll:  5         Pitch:  14   
+Roll:  5         Pitch:  14   
+ [0m
+[0;32mI (54528) Parsed Data: Roll: 4, Pitch: 14[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":4},"pitch":{"doubleValue":14}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 14
+    },
+    "roll": {
+      "doubleValue": 4
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:30:53.931636Z"
+}
+
+[0;32mI (56758) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (56768) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (56768) Firebase: UART Received Data: Roll:  5         Pitch:  14   
+Roll:  5         Pitch:  14   
+Roll:  5         Pitch:  14   
+Roll:  5         Pitch:  13   
+@[0m
+[0;32mI (56778) Parsed Data: Roll: 5, Pitch: 14[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":5},"pitch":{"doubleValue":14}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 14
+    },
+    "roll": {
+      "doubleValue": 5
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:30:57.918065Z"
+}
+
+[0;32mI (58398) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (58408) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (58408) Firebase: UART Received Data: Roll:  4         Pitch:  13   
+Roll:  4         Pitch:  13   
+Roll:  5         Pitch:  13   
+Roll:  5         Pitch:  13   
+[0m
+[0;32mI (58418) Parsed Data: Roll: 4, Pitch: 13[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":4},"pitch":{"doubleValue":13}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 13
+    },
+    "roll": {
+      "doubleValue": 4
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:31:00.030145Z"
+}
+
+[0;32mI (60438) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (60458) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (60458) Firebase: UART Received Data: Roll:  5         Pitch:  14   
+Roll:  5         Pitch:  14   
+Roll:  5         Pitch:  14   
+Roll:  5         Pitch:  14   
+ [0m
+[0;32mI (60468) Parsed Data: Roll: 5, Pitch: 14[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":5},"pitch":{"doubleValue":14}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 14
+    },
+    "roll": {
+      "doubleValue": 5
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:31:01.643140Z"
+}
+
+[0;32mI (62078) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (62088) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (62098) Firebase: UART Received Data: Roll:  5         Pitch:  14   
+Roll:  5         Pitch:  14   
+Roll:  5         Pitch:  14   
+Roll:  5         Pitch:  14   
+�
+[0;32mI (62108) Parsed Data: Roll: 5, Pitch: 14[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":5},"pitch":{"doubleValue":14}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 14
+    },
+    "roll": {
+      "doubleValue": 5
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:31:01.643140Z"
+}
+
+[0;32mI (63718) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (63728) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (63728) Firebase: UART Received Data: Roll:  5         Pitch:  14   
+Roll:  5         Pitch:  14   
+Roll:  5         Pitch:  14   
+Roll:  5         Pitch:  14   
+�
+[0;32mI (63748) Parsed Data: Roll: 5, Pitch: 14[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":5},"pitch":{"doubleValue":14}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 14
+    },
+    "roll": {
+      "doubleValue": 5
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:31:01.643140Z"
+}
+
+[0;32mI (65768) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (65778) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (65778) Firebase: UART Received Data: Roll:  -8         Pitch:  1   
+Roll:  -3         Pitch:  6   
+Roll:  0         Pitch:  10   
+Roll:  4         Pitch:  13   
+"[0m
+[0;32mI (65798) Parsed Data: Roll: -8, Pitch: 1[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":-8},"pitch":{"doubleValue":1}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "roll": {
+      "doubleValue": -8
+    },
+    "pitch": {
+      "doubleValue": 1
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:31:07.174169Z"
+}
+
+[0;32mI (67608) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (67618) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (67628) Firebase: UART Received Data: Roll:  11         Pitch:  20   
+Roll:  12         Pitch:  20   
+Roll:  12         Pitch:  20   
+Roll:  11         Pitch:  20 ([0m
+[0;32mI (67638) Parsed Data: Roll: 11, Pitch: 20[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":11},"pitch":{"doubleValue":20}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 20
+    },
+    "roll": {
+      "doubleValue": 11
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:31:09.014282Z"
+}
+
+[0;32mI (69458) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (69468) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (69468) Firebase: UART Received Data: Roll:  8         Pitch:  17   
+Roll:  8         Pitch:  17   
+Roll:  8         Pitch:  17   
+Roll:  7         Pitch:  16   
+[0m
+[0;32mI (69488) Parsed Data: Roll: 8, Pitch: 17[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":8},"pitch":{"doubleValue":17}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 17
+    },
+    "roll": {
+      "doubleValue": 8
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:31:10.866350Z"
+}
+
+[0;32mI (71498) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (71518) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (71518) Firebase: UART Received Data: Roll:  9         Pitch:  18   
+Roll:  8         Pitch:  17   
+Roll:  7         Pitch:  16   
+Roll:  6         Pitch:  16   
+ [0m
+[0;32mI (71528) Parsed Data: Roll: 9, Pitch: 18[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":9},"pitch":{"doubleValue":18}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "roll": {
+      "doubleValue": 9
+    },
+    "pitch": {
+      "doubleValue": 18
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:31:13.170420Z"
+}
+
+[0;32mI (73758) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (73768) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (73768) Firebase: UART Received Data: Roll:  5         Pitch:  14   
+Roll:  5         Pitch:  14   
+Roll:  5         Pitch:  14   
+Roll:  5         Pitch:  14   
+@[0m
+[0;32mI (73778) Parsed Data: Roll: 5, Pitch: 14[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":5},"pitch":{"doubleValue":14}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 14
+    },
+    "roll": {
+      "doubleValue": 5
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:31:15.370924Z"
+}
+
+[0;32mI (75798) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (75808) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (75818) Firebase: UART Received Data: Roll:  4         Pitch:  14   
+Roll:  5         Pitch:  14   
+Roll:  5         Pitch:  14   
+Roll:  5         Pitch:  14   
+ [0m
+[0;32mI (75828) Parsed Data: Roll: 4, Pitch: 14[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":4},"pitch":{"doubleValue":14}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "roll": {
+      "doubleValue": 4
+    },
+    "pitch": {
+      "doubleValue": 14
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:31:17.627910Z"
+}
+
+[0;32mI (78258) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (78268) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (78268) Firebase: UART Received Data: Roll:  6         Pitch:  15   
+Roll:  6         Pitch:  15   
+Roll:  7         Pitch:  15   
+Roll:  7         Pitch:  16   
+`[0m
+[0;32mI (78288) Parsed Data: Roll: 6, Pitch: 15[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":6},"pitch":{"doubleValue":15}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "roll": {
+      "doubleValue": 6
+    },
+    "pitch": {
+      "doubleValue": 15
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:31:19.651672Z"
+}
+
+[0;32mI (80108) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (80118) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (80118) Firebase: UART Received Data: Roll:  7         Pitch:  16   
+Roll:  7         Pitch:  16   
+Roll:  7         Pitch:  15   
+Roll:  7         Pitch:  16   
+[0m
+[0;32mI (80128) Parsed Data: Roll: 7, Pitch: 16[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":7},"pitch":{"doubleValue":16}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/c
+HTTP_EVENT_ON_DATA: ollection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "roll": {
+      "doubleValue": 7
+    },
+    "pitch": {
+      "doubleValue": 16
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:31:21.486813Z"
+}
+
+[0;32mI (81948) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (81958) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (81958) Firebase: UART Received Data: Roll:  6         Pitch:  15   
+Roll:  6         Pitch:  15   
+Roll:  6         Pitch:  15   
+Roll:  6         Pitch:  15   
+[0m
+[0;32mI (81978) Parsed Data: Roll: 6, Pitch: 15[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":6},"pitch":{"doubleValue":15}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 15
+    },
+    "roll": {
+      "doubleValue": 6
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:31:23.570373Z"
+}
+
+[0;32mI (83998) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (84008) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (84008) Firebase: UART Received Data: Roll:  6         Pitch:  15   
+Roll:  6         Pitch:  15   
+Roll:  6         Pitch:  15   
+Roll:  6         Pitch:  15   
+ [0m
+[0;32mI (84018) Parsed Data: Roll: 6, Pitch: 15[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":6},"pitch":{"doubleValue":15}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 15
+    },
+    "roll": {
+      "doubleValue": 6
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:31:23.570373Z"
+}
+
+[0;32mI (85938) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (85948) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (85958) Firebase: UART Received Data: Roll:  6         Pitch:  15   
+Roll:  6         Pitch:  15   
+Roll:  6         Pitch:  15   
+Roll:  6         Pitch:  15   
+ [0m
+[0;32mI (85968) Parsed Data: Roll: 6, Pitch: 15[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":6},"pitch":{"doubleValue":15}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "roll": {
+      "doubleValue": 6
+    },
+    "pitch": {
+      "doubleValue": 15
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:31:23.570373Z"
+}
+
+[0;32mI (87698) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (87708) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (87708) Firebase: UART Received Data: Roll:  6         Pitch:  15   
+Roll:  6         Pitch:  15   
+Roll:  7         Pitch:  15   
+Roll:  7         Pitch:  15   
+[0m
+[0;32mI (87718) Parsed Data: Roll: 6, Pitch: 15[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":6},"pitch":{"doubleValue":15}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 15
+    },
+    "roll": {
+      "doubleValue": 6
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:31:23.570373Z"
+}
+
+[0;32mI (89728) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (89738) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (89738) Firebase: UART Received Data: Roll:  6         Pitch:  15   
+Roll:  6         Pitch:  15   
+Roll:  6         Pitch:  15   
+Roll:  6         Pitch:  15   
+ [0m
+[0;32mI (89758) Parsed Data: Roll: 6, Pitch: 15[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":6},"pitch":{"doubleValue":15}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 15
+    },
+    "roll": {
+      "doubleValue": 6
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:31:23.570373Z"
+}
+
+[0;32mI (91368) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (91378) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (91378) Firebase: UART Received Data: Roll:  6         Pitch:  15   
+Roll:  6         Pitch:  15   
+Roll:  6         Pitch:  15   
+Roll:  6         Pitch:  15   
+�
+[0;32mI (91398) Parsed Data: Roll: 6, Pitch: 15[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":6},"pitch":{"doubleValue":15}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 15
+    },
+    "roll": {
+      "doubleValue": 6
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:31:23.570373Z"
+}
+
+[0;32mI (93218) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (93228) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (93228) Firebase: UART Received Data: Roll:  6         Pitch:  15   
+Roll:  6         Pitch:  15   
+Roll:  6         Pitch:  15   
+Roll:  6         Pitch:  15   
+[0m
+[0;32mI (93238) Parsed Data: Roll: 6, Pitch: 15[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":6},"pitch":{"doubleValue":15}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 15
+    },
+    "roll": {
+      "doubleValue": 6
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:31:23.570373Z"
+}
+
+[0;32mI (95058) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (95068) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (95068) Firebase: UART Received Data: Roll:  6         Pitch:  15   
+Roll:  6         Pitch:  15   
+Roll:  6         Pitch:  15   
+Roll:  6         Pitch:  15   
+ [0m
+[0;32mI (95078) Parsed Data: Roll: 6, Pitch: 15[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":6},"pitch":{"doubleValue":15}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 15
+    },
+    "roll": {
+      "doubleValue": 6
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:31:23.570373Z"
+}
+
+[0;32mI (96698) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (96708) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (96708) Firebase: UART Received Data: Roll:  6         Pitch:  15   
+Roll:  6         Pitch:  15   
+Roll:  6         Pitch:  15   
+Roll:  6         Pitch:  16   
+�
+[0;32mI (96718) Parsed Data: Roll: 6, Pitch: 15[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":6},"pitch":{"doubleValue":15}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 15
+    },
+    "roll": {
+      "doubleValue": 6
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:31:23.570373Z"
+}
+
+[0;32mI (98548) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (98558) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (98558) Firebase: UART Received Data: Roll:  6         Pitch:  16   
+Roll:  6         Pitch:  16   
+Roll:  6         Pitch:  16   
+Roll:  6         Pitch:  16   
+[0m
+[0;32mI (98568) Parsed Data: Roll: 6, Pitch: 16[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":6},"pitch":{"doubleValue":16}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "roll": {
+      "doubleValue": 6
+    },
+    "pitch": {
+      "doubleValue": 16
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:31:39.733463Z"
+}
+
+[0;32mI (100178) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (100188) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (100188) Firebase: UART Received Data: Roll:  6         Pitch:  16   
+Roll:  6         Pitch:  15   
+Roll:  6         Pitch:  15   
+Roll:  6         Pitch:  15   
+�
+[0;32mI (100208) Parsed Data: Roll: 6, Pitch: 16[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":6},"pitch":{"doubleValue":16}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 16
+    },
+    "roll": {
+      "doubleValue": 6
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:31:39.733463Z"
+}
+
+[0;32mI (102018) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (102028) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (102028) Firebase: UART Received Data: Roll:  6         Pitch:  15   
+Roll:  6         Pitch:  15   
+Roll:  6         Pitch:  15   
+Roll:  6         Pitch:  15   
+[0m
+[0;32mI (102038) Parsed Data: Roll: 6, Pitch: 15[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":6},"pitch":{"doubleValue":15}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "roll": {
+      "doubleValue": 6
+    },
+    "pitch": {
+      "doubleValue": 15
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:31:43.242682Z"
+}
+
+[0;32mI (103858) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (103868) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (103868) Firebase: UART Received Data: Roll:  6         Pitch:  15   
+Roll:  6         Pitch:  15   
+Roll:  6         Pitch:  15   
+Roll:  6         Pitch:  15   
+ [0m
+[0;32mI (103888) Parsed Data: Roll: 6, Pitch: 15[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":6},"pitch":{"doubleValue":15}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 15
+    },
+    "roll": {
+      "doubleValue": 6
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:31:43.242682Z"
+}
+
+[0;32mI (105498) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (105508) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (105508) Firebase: UART Received Data: Roll:  6         Pitch:  16   
+Roll:  6         Pitch:  16   
+Roll:  6         Pitch:  16   
+Roll:  6         Pitch:  16   
+�
+[0;32mI (105528) Parsed Data: Roll: 6, Pitch: 16[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":6},"pitch":{"doubleValue":16}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 16
+    },
+    "roll": {
+      "doubleValue": 6
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:31:46.666153Z"
+}
+
+[0;32mI (107138) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (107148) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (107148) Firebase: UART Received Data: Roll:  6         Pitch:  16   
+Roll:  6         Pitch:  16   
+Roll:  6         Pitch:  16   
+Roll:  6         Pitch:  16   
+�
+[0;32mI (107168) Parsed Data: Roll: 6, Pitch: 16[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":6},"pitch":{"doubleValue":16}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 16
+    },
+    "roll": {
+      "doubleValue": 6
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:31:46.666153Z"
+}
+
+[0;32mI (108778) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (108788) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (108788) Firebase: UART Received Data: Roll:  6         Pitch:  15   
+Roll:  6         Pitch:  15   
+Roll:  6         Pitch:  15   
+Roll:  6         Pitch:  15   
+�
+[0;32mI (108808) Parsed Data: Roll: 6, Pitch: 15[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":6},"pitch":{"doubleValue":15}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 15
+    },
+    "roll": {
+      "doubleValue": 6
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:31:49.975795Z"
+}
+
+[0;32mI (110418) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (110428) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (110428) Firebase: UART Received Data: Roll:  6         Pitch:  16   
+Roll:  6         Pitch:  16   
+Roll:  6         Pitch:  16   
+Roll:  6         Pitch:  16   
+[0m
+[0;32mI (110438) Parsed Data: Roll: 6, Pitch: 16[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":6},"pitch":{"doubleValue":16}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 16
+    },
+    "roll": {
+      "doubleValue": 6
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:31:51.797969Z"
+}
+
+[0;32mI (112258) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (112268) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (112268) Firebase: UART Received Data: Roll:  6         Pitch:  16   
+Roll:  6         Pitch:  16   
+Roll:  6         Pitch:  16   
+Roll:  6         Pitch:  15   
+[0m
+[0;32mI (112288) Parsed Data: Roll: 6, Pitch: 16[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":6},"pitch":{"doubleValue":16}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 16
+    },
+    "roll": {
+      "doubleValue": 6
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:31:51.797969Z"
+}
+
+[0;32mI (114098) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (114108) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (114108) Firebase: UART Received Data: Roll:  6         Pitch:  15   
+Roll:  6         Pitch:  16   
+Roll:  6         Pitch:  16   
+Roll:  6         Pitch:  16   
+[0m
+[0;32mI (114128) Parsed Data: Roll: 6, Pitch: 15[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":6},"pitch":{"doubleValue":15}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 15
+    },
+    "roll": {
+      "doubleValue": 6
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:31:55.274179Z"
+}
+
+[0;32mI (115738) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (115748) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (115748) Firebase: UART Received Data: Roll:  6         Pitch:  16   
+Roll:  6         Pitch:  16   
+Roll:  6         Pitch:  15   
+Roll:  6         Pitch:  15   
+�
+[0;32mI (115768) Parsed Data: Roll: 6, Pitch: 16[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":6},"pitch":{"doubleValue":16}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 16
+    },
+    "roll": {
+      "doubleValue": 6
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:31:57.125097Z"
+}
+
+[0;32mI (117578) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (117588) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (117588) Firebase: UART Received Data: Roll:  6         Pitch:  15   
+Roll:  6         Pitch:  15   
+Roll:  6         Pitch:  16   
+Roll:  6         Pitch:  16   
+ [0m
+[0;32mI (117608) Parsed Data: Roll: 6, Pitch: 15[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":6},"pitch":{"doubleValue":15}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 15
+    },
+    "roll": {
+      "doubleValue": 6
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:31:58.761258Z"
+}
+
+[0;32mI (119218) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (119228) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (119228) Firebase: UART Received Data: Roll:  6         Pitch:  15   
+Roll:  6         Pitch:  16   
+Roll:  6         Pitch:  16   
+Roll:  6         Pitch:  16   
+�
+[0;32mI (119248) Parsed Data: Roll: 6, Pitch: 15[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":6},"pitch":{"doubleValue":15}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 15
+    },
+    "roll": {
+      "doubleValue": 6
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:31:58.761258Z"
+}
+
+[0;32mI (120858) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (120868) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (120868) Firebase: UART Received Data: Roll:  6         Pitch:  16   
+Roll:  6         Pitch:  16   
+Roll:  6         Pitch:  16   
+Roll:  6         Pitch:  15   
+�
+[0;32mI (120888) Parsed Data: Roll: 6, Pitch: 16[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":6},"pitch":{"doubleValue":16}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 16
+    },
+    "roll": {
+      "doubleValue": 6
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:32:02.228769Z"
+}
+
+[0;32mI (122698) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (122708) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (122718) Firebase: UART Received Data: Roll:  6         Pitch:  15   
+Roll:  6         Pitch:  15   
+Roll:  6         Pitch:  15   
+Roll:  6         Pitch:  15   
+[0m
+[0;32mI (122728) Parsed Data: Roll: 6, Pitch: 15[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":6},"pitch":{"doubleValue":15}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 15
+    },
+    "roll": {
+      "doubleValue": 6
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:32:03.894121Z"
+}
+
+[0;32mI (124338) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (124348) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (124358) Firebase: UART Received Data: Roll:  6         Pitch:  15   
+Roll:  6         Pitch:  15   
+Roll:  6         Pitch:  15   
+Roll:  6         Pitch:  16   
+[0m
+[0;32mI (124368) Parsed Data: Roll: 6, Pitch: 15[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":6},"pitch":{"doubleValue":15}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "roll": {
+      "doubleValue": 6
+    },
+    "pitch": {
+      "doubleValue": 15
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:32:03.894121Z"
+}
+
+[0;32mI (125978) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (125988) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (125988) Firebase: UART Received Data: Roll:  6         Pitch:  16   
+Roll:  5         Pitch:  15   
+Roll:  5         Pitch:  16   
+Roll:  5         Pitch:  15   
+�
+[0;32mI (126008) Parsed Data: Roll: 6, Pitch: 16[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":6},"pitch":{"doubleValue":16}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 16
+    },
+    "roll": {
+      "doubleValue": 6
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:32:07.233290Z"
+}
+
+[0;32mI (127828) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (127838) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (127838) Firebase: UART Received Data: Roll:  5         Pitch:  15   
+Roll:  5         Pitch:  16   
+Roll:  5         Pitch:  16   
+Roll:  5         Pitch:  16   
+[0m
+[0;32mI (127848) Parsed Data: Roll: 5, Pitch: 15[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":5},"pitch":{"doubleValue":15}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 15
+    },
+    "roll": {
+      "doubleValue": 5
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:32:09.211804Z"
+}
+
+[0;32mI (129668) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (129678) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (129678) Firebase: UART Received Data: Roll:  5         Pitch:  16   
+Roll:  5         Pitch:  16   
+Roll:  5         Pitch:  16   
+Roll:  5         Pitch:  15   
+[0m
+[0;32mI (129688) Parsed Data: Roll: 5, Pitch: 16[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":5},"pitch":{"doubleValue":16}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 16
+    },
+    "roll": {
+      "doubleValue": 5
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:32:10.901378Z"
+}
+
+[0;32mI (131308) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (131318) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (131318) Firebase: UART Received Data: Roll:  5         Pitch:  16   
+Roll:  5         Pitch:  16   
+Roll:  5         Pitch:  16   
+Roll:  5         Pitch:  15   
+[0m
+[0;32mI (131338) Parsed Data: Roll: 5, Pitch: 16[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":5},"pitch":{"doubleValue":16}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "roll": {
+      "doubleValue": 5
+    },
+    "pitch": {
+      "doubleValue": 16
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:32:10.901378Z"
+}
+
+[0;32mI (133158) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (133168) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (133168) Firebase: UART Received Data: Roll:  5         Pitch:  15   
+Roll:  5         Pitch:  16   
+Roll:  5         Pitch:  16   
+Roll:  5         Pitch:  16   
+[0m
+[0;32mI (133178) Parsed Data: Roll: 5, Pitch: 15[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":5},"pitch":{"doubleValue":15}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "roll": {
+      "doubleValue": 5
+    },
+    "pitch": {
+      "doubleValue": 15
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:32:14.372481Z"
+}
+
+[0;32mI (134788) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (134798) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (134798) Firebase: UART Received Data: Roll:  5         Pitch:  16   
+Roll:  5         Pitch:  16   
+Roll:  5         Pitch:  16   
+Roll:  5         Pitch:  16   
+�
+[0;32mI (134808) Parsed Data: Roll: 5, Pitch: 16[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":5},"pitch":{"doubleValue":16}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 16
+    },
+    "roll": {
+      "doubleValue": 5
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:32:15.978238Z"
+}
+
+[0;32mI (136628) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (136638) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (136638) Firebase: UART Received Data: Roll:  5         Pitch:  16   
+Roll:  5         Pitch:  16   
+Roll:  5         Pitch:  16   
+Roll:  5         Pitch:  16   
+[0m
+[0;32mI (136658) Parsed Data: Roll: 5, Pitch: 16[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":5},"pitch":{"doubleValue":16}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 16
+    },
+    "roll": {
+      "doubleValue": 5
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:32:15.978238Z"
+}
+
+[0;32mI (138678) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (138688) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (138688) Firebase: UART Received Data: Roll:  5         Pitch:  16   
+Roll:  5         Pitch:  16   
+Roll:  5         Pitch:  16   
+Roll:  5         Pitch:  16   
+ [0m
+[0;32mI (138698) Parsed Data: Roll: 5, Pitch: 16[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":5},"pitch":{"doubleValue":16}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 16
+    },
+    "roll": {
+      "doubleValue": 5
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:32:15.978238Z"
+}
+
+[0;32mI (140318) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (140328) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (140328) Firebase: UART Received Data: Roll:  5         Pitch:  16   
+Roll:  5         Pitch:  15   
+Roll:  5         Pitch:  15   
+Roll:  5         Pitch:  15   
+[0m
+[0;32mI (140338) Parsed Data: Roll: 5, Pitch: 16[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":5},"pitch":{"doubleValue":16}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 16
+    },
+    "roll": {
+      "doubleValue": 5
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:32:15.978238Z"
+}
+
+[0;32mI (142158) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (142168) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (142168) Firebase: UART Received Data: Roll:  5         Pitch:  16   
+Roll:  5         Pitch:  16   
+Roll:  5         Pitch:  16   
+Roll:  5         Pitch:  16   
+[0m
+[0;32mI (142178) Parsed Data: Roll: 5, Pitch: 16[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":5},"pitch":{"doubleValue":16}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "roll": {
+      "doubleValue": 5
+    },
+    "pitch": {
+      "doubleValue": 16
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:32:15.978238Z"
+}
+
+[0;32mI (143798) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (143808) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (143808) Firebase: UART Received Data: Roll:  5         Pitch:  15   
+Roll:  5         Pitch:  15   
+Roll:  5         Pitch:  15   
+Roll:  5         Pitch:  16   
+�
+[0;32mI (143818) Parsed Data: Roll: 5, Pitch: 15[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":5},"pitch":{"doubleValue":15}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 15
+    },
+    "roll": {
+      "doubleValue": 5
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:32:25.015353Z"
+}
+
+[0;32mI (145438) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (145448) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (145448) Firebase: UART Received Data: Roll:  5         Pitch:  16   
+Roll:  5         Pitch:  15   
+Roll:  5         Pitch:  16   
+Roll:  5         Pitch:  16   
+�
+[0;32mI (145458) Parsed Data: Roll: 5, Pitch: 16[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":5},"pitch":{"doubleValue":16}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 16
+    },
+    "roll": {
+      "doubleValue": 5
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:32:26.814900Z"
+}
+
+[0;32mI (147278) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (147288) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (147288) Firebase: UART Received Data: Roll:  5         Pitch:  16   
+Roll:  5         Pitch:  16   
+Roll:  5         Pitch:  16   
+Roll:  5         Pitch:  16   
+ [0m
+[0;32mI (147298) Parsed Data: Roll: 5, Pitch: 16[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":5},"pitch":{"doubleValue":16}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 16
+    },
+    "roll": {
+      "doubleValue": 5
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:32:26.814900Z"
+}
+
+[0;32mI (148918) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (148928) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (148928) Firebase: UART Received Data: Roll:  5         Pitch:  16   
+Roll:  5         Pitch:  16   
+Roll:  5         Pitch:  15   
+Roll:  5         Pitch:  15   
+�
+[0;32mI (148948) Parsed Data: Roll: 5, Pitch: 16[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":5},"pitch":{"doubleValue":16}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 16
+    },
+    "roll": {
+      "doubleValue": 5
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T13:32:26.814900Z"
+}
+
+[0;32mI (150558) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (150568) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (150568) Firebase: UART Received Data: Roll:  5         Pitch:  16   
+Roll:  5         Pitch:  16   
+Roll:  5         Pitch:  16   
+Roll:  5         Pitch:  16   
+�
+[0;32mI (150578) Parsed Data: Roll: 5, Pitch: 16[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":5},"pitch":{"doubleValue":16}}}

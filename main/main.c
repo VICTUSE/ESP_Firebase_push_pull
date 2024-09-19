@@ -1,3 +1,4 @@
+#include <stdint.h>
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -7,17 +8,14 @@
 #include "esp_system.h"
 #include "esp_wifi.h"
 #include "esp_event.h"
+#include "hal/uart_types.h"
 #include "nvs_flash.h"
 #include "esp_log.h"
 #include "esp_http_client.h"
-
+#include "driver/uart.h"
 #include "lwip/err.h"
 #include "lwip/sys.h"
 
-/* The examples use WiFi configuration that you can set via project configuration menu
-   If you'd rather not, just change the below entries to strings with
-   the config you want - ie #define EXAMPLE_WIFI_SSID "mywifissid"
-*/
 #define EXAMPLE_ESP_WIFI_SSID      CONFIG_ESP_WIFI_SSID
 #define EXAMPLE_ESP_WIFI_PASS      CONFIG_ESP_WIFI_PASSWORD
 #define EXAMPLE_ESP_MAXIMUM_RETRY  5
@@ -40,7 +38,10 @@ static EventGroupHandle_t s_wifi_event_group;
 #define WIFI_CONNECTED_BIT BIT0
 #define WIFI_FAIL_BIT      BIT1
 
+const uart_port_t uart_num = UART_NUM_2;
 static int s_retry_num = 0;
+/* test variables*/
+
 
 /* TLS Root Certificate for Firebase */
 extern const uint8_t _binary_firebase_cert_pem_start[] asm("_binary_firebase_cert_pem_start");
@@ -132,6 +133,34 @@ void wifi_init_sta(void)
     }
 }
 
+void UART_Init(void)
+{
+	
+uart_config_t uart_config = {
+    .baud_rate = 38400,
+    .data_bits = UART_DATA_8_BITS,
+    .parity = UART_PARITY_DISABLE,
+    .stop_bits = UART_STOP_BITS_1,
+    .flow_ctrl = UART_HW_FLOWCTRL_DISABLE,
+    .rx_flow_ctrl_thresh = 122,
+};
+// Configure UART parameters
+ESP_ERROR_CHECK(uart_param_config(uart_num, &uart_config));
+
+// Set UART pins(TX: IO4, RX: IO5, RTS: IO18, CTS: IO19)
+ESP_ERROR_CHECK(uart_set_pin(UART_NUM_2, 4, 5, 18, 19));
+
+// Setup UART buffered IO with event queue
+const int uart_buffer_size = (1024 * 2);
+QueueHandle_t uart_queue;
+// Install UART driver using an event queue here
+ESP_ERROR_CHECK(uart_driver_install(UART_NUM_2, uart_buffer_size, \
+                                        uart_buffer_size, 10, &uart_queue, 0));
+}
+
+
+
+
 esp_err_t client_event_get_handler(esp_http_client_event_handle_t http_event)
 {
 	switch (http_event->event_id) {
@@ -145,19 +174,22 @@ esp_err_t client_event_get_handler(esp_http_client_event_handle_t http_event)
 	
 }
 /* Function to push data to Firebase */
-void push_data_to_firebase(const char* data) {
+void push_data_to_firebase(char* data) {
 
+     
+    printf("Sending JSON data: %s\n", data);
     
     esp_http_client_config_t config = {
-        .url = "https://firestore.googleapis.com/v1/projects/iot-firebase-80171/databases/(default)/documents/collection",
+        .url = "https://firestore.googleapis.com/v1/projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
         .cert_pem = (char *)_binary_firebase_cert_pem_start,  // Set CA cert for SSL
         .event_handler = client_event_get_handler
     };
     
     esp_http_client_handle_t client = esp_http_client_init(&config);
-    esp_http_client_set_method(client, HTTP_METHOD_POST);
+    esp_http_client_set_method(client, HTTP_METHOD_PATCH);   //To create new document send post, to update field send patch
     esp_http_client_set_header(client, "Content-Type", "application/json");
     esp_http_client_set_post_field(client, data, strlen(data));
+
 
     esp_err_t err = esp_http_client_perform(client);
     
@@ -168,15 +200,18 @@ void push_data_to_firebase(const char* data) {
     } else {
         ESP_LOGE(TAG, "HTTP POST request failed: %s", esp_err_to_name(err));
     }
-    esp_http_client_perform(client);
+    
     esp_http_client_cleanup(client);
+    
+  
+    
 }
 
 /* Function to get data from Firebase */
 void get_data_from_firebase(void) {
 
     esp_http_client_config_t config = {
-        .url = "https://firestore.googleapis.com/v1/projects/iot-firebase-80171/databases/(default)/documents/collection",
+        .url = "https://firestore.googleapis.com/v1/projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
         .cert_pem = (char *)_binary_firebase_cert_pem_start,  // Set CA cert for SSL
         .event_handler = client_event_get_handler
     };
@@ -194,11 +229,10 @@ void get_data_from_firebase(void) {
         ESP_LOGE(TAG, "HTTP GET request failed: %s", esp_err_to_name(err));
     }
 
-    esp_http_client_perform(client);
+    
     esp_http_client_cleanup(client);
     
 }
-
 // Application main task
 void app_main() {
     //Initialize NVS
@@ -208,14 +242,47 @@ void app_main() {
       ret = nvs_flash_init();
     }
     ESP_ERROR_CHECK(ret);
-
+    
+    UART_Init();
     ESP_LOGI(TAG, "ESP_WIFI_MODE_STA");
     wifi_init_sta();
-
+    
     // Push data to Firebase
-    char json_data[] = "{\"fields\":{\"Memory\":{\"doubleValue\":\"2\"},\"Name\":{\"stringValue\":\"Data from the client\"}}}";
-    push_data_to_firebase( json_data);
-
+ /*   char json_data[200];
+    sprintf(json_data, "{\"fields\":{\"roll\":{\"doubleValue\":%d},\"pitch\":{\"doubleValue\":%d}}}",roll, pitch);    
+    push_data_to_firebase( json_data); 
+    ESP_LOGI(TAG, "DATA PUSHED TO THE FIRESTORE"); */
+    
     //Retrieve data from Firebase
     //get_data_from_firebase();
+    
+    // Read data from UART.
+	const uart_port_t uart_num = UART_NUM_2;
+	uint8_t data[35];
+	int length = 0;
+	while(1){
+		
+	
+	ESP_ERROR_CHECK(uart_get_buffered_data_len(uart_num, (size_t*)&length));
+	length = uart_read_bytes(uart_num, data, length, 100);
+	if (length > 0) {
+    data[length] = '\0';  // Null-terminate the data
+    }
+      
+    int8_t roll ;
+    int8_t pitch ;
+    ESP_LOGI(TAG, "UART Received Data: %s", data);
+    // Parse the incoming string using sscanf
+    sscanf((char*)data, "Roll:  %hhd         Pitch:  %hhd   \n\r", &roll, &pitch);
+        
+    // Log the parsed values
+    ESP_LOGI("Parsed Data", "Roll: %d, Pitch: %d", roll, pitch);
+   
+    // Push data to Firebase
+    char json_data[100];
+    sprintf(json_data, "{\"fields\":{\"roll\":{\"doubleValue\":%d},\"pitch\":{\"doubleValue\":%d}}}",roll, pitch);    
+    push_data_to_firebase( json_data); 
+    ESP_LOGI(TAG, "DATA PUSHED TO THE FIRESTORE"); 
+    
+    }
 }

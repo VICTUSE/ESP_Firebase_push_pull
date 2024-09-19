@@ -61,4 +61,6 @@ D:/EMY/ESP_workspace/firebase_deneme/build/esp-idf/nvs_sec_provider/libnvs_sec_p
 D:/EMY/ESP_workspace/firebase_deneme/build/esp-idf/perfmon/libperfmon.a
 D:/EMY/ESP_workspace/firebase_deneme/build/esp-idf/spiffs/libspiffs.a
 D:/EMY/ESP_workspace/firebase_deneme/build/esp-idf/wifi_provisioning/libwifi_provisioning.a
+D:/EMY/ESP_workspace/firebase_deneme/build/esp-idf/espressif__mpu6050/libespressif__mpu6050.a
+D:/EMY/ESP_workspace/firebase_deneme/build/esp-idf/zorxx__dht/libzorxx__dht.a
 D:/EMY/ESP_workspace/firebase_deneme/build/esp-idf/main/libmain.a

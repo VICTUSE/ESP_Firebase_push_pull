@@ -1,0 +1,1378 @@
+J���� chip revision: v3.0[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Sep 18 2024 16:38:30[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.0[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=29b24h (170788) map[0m
+[0;32mI (163) esp_image: segment 1: paddr=00039b4c vaddr=3ffb0000 size=03bbch ( 15292) load[0m
+[0;32mI (169) esp_image: segment 2: paddr=0003d710 vaddr=40080000 size=02908h ( 10504) load[0m
+[0;32mI (174) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a3780h (669568) map[0m
+[0;32mI (407) esp_image: segment 4: paddr=000e37a8 vaddr=40082908 size=14e40h ( 85568) load[0m
+[0;32mI (452) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (452) boot: Disabling RNG early entropy source...[0m
+[0;32mI (464) cpu_start: Multicore app[0m
+[0;32mI (473) cpu_start: Pro cpu start user code[0m
+[0;32mI (473) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (473) cpu_start: Application information:[0m
+[0;32mI (476) cpu_start: Project name:     app-template[0m
+[0;32mI (481) cpu_start: App version:      1[0m
+[0;32mI (486) cpu_start: Compile time:     Sep 18 2024 16:38:16[0m
+[0;32mI (492) cpu_start: ELF file SHA256:  79aadbcbc...[0m
+[0;32mI (497) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (503) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (507) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (512) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (517) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (524) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (530) heap_init: At 3FFB8260 len 00027DA0 (159 KiB): DRAM[0m
+[0;32mI (536) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (543) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (549) heap_init: At 40097748 len 000088B8 (34 KiB): IRAM[0m
+[0;32mI (557) spi_flash: detected chip: generic[0m
+[0;32mI (560) spi_flash: flash io: dio[0m
+[0;33mW (564) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (578) main_task: Started on CPU0[0m
+[0;32mI (588) main_task: Calling app_main()[0m
+[0;32mI (628) uart: queue free spaces: 10[0m
+[0;32mI (628) Firebase: ESP_WIFI_MODE_STA[0m
+I (648) wifi:wifi driver task: 3ffc1900, prio:23, stack:6656, core=0
+I (668) wifi:wifi firmware version: 3e0076f
+I (668) wifi:wifi certification version: v7.0
+I (668) wifi:config NVS flash: enabled
+I (668) wifi:config nano formating: disabled
+I (678) wifi:Init data frame dynamic rx buffer num: 32
+I (678) wifi:Init static rx mgmt buffer num: 5
+I (678) wifi:Init management short buffer num: 32
+I (688) wifi:Init dynamic tx buffer num: 32
+I (688) wifi:Init static rx buffer size: 1600
+I (698) wifi:Init static rx buffer num: 10
+I (698) wifi:Init dynamic rx buffer num: 32
+[0;32mI (708) wifi_init: rx ba win: 6[0m
+[0;32mI (708) wifi_init: tcpip mbox: 32[0m
+[0;32mI (708) wifi_init: udp mbox: 6[0m
+[0;32mI (718) wifi_init: tcp mbox: 6[0m
+[0;32mI (718) wifi_init: tcp tx win: 5760[0m
+[0;32mI (718) wifi_init: tcp rx win: 5760[0m
+[0;32mI (728) wifi_init: tcp mss: 1440[0m
+[0;32mI (728) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (738) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (738) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+I (838) wifi:mode : sta (c8:f0:9e:f1:4a:c8)
+I (838) wifi:enable tsf
+[0;32mI (838) Firebase: wifi_init_sta finished.[0m
+[0;32mI (3258) Firebase: retry to connect to the AP[0m
+[0;32mI (3258) Firebase: connect to the AP fail[0m
+[0;32mI (5668) Firebase: retry to connect to the AP[0m
+[0;32mI (5668) Firebase: connect to the AP fail[0m
+[0;32mI (8088) Firebase: retry to connect to the AP[0m
+[0;32mI (8088) Firebase: connect to the AP fail[0m
+[0;32mI (10498) Firebase: retry to connect to the AP[0m
+[0;32mI (10498) Firebase: connect to the AP fail[0m
+[0;32mI (12918) Firebase: retry to connect to the AP[0m
+[0;32mI (12918) Firebase: connect to the AP fail[0m
+I (13658) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1
+I (13658) wifi:state: init -> auth (b0)
+I (13658) wifi:state: auth -> assoc (0)
+I (13668) wifi:state: assoc -> run (10)
+I (13698) wifi:connected with Galaxym31, aid = 1, channel 6, BW20, bssid = 4a:3e:02:1e:c9:b7
+I (13698) wifi:security: WPA2-PSK, phy: bgn, rssi: -50
+I (13718) wifi:pm start, type: 1
+
+I (13718) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (13728) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us
+I (13728) wifi:AP's beacon interval = 102400 us, DTIM period = 2
+I (13738) wifi:<ba-add>idx:0 (ifx:0, 4a:3e:02:1e:c9:b7), tid:0, ssn:0, winSize:64
+[0;32mI (14728) esp_netif_handlers: sta ip: 192.168.26.89, mask: 255.255.255.0, gw: 192.168.26.71[0m
+[0;32mI (14728) Firebase: got ip:192.168.26.89[0m
+[0;32mI (14728) Firebase: connected to ap SSID:myssid password:mypassword[0m
+[0;32mI (14738) Firebase: UART Received Data: Roll:  16         Pitch:  15   
+Roll:  16         
+***ERROR*** A stack overflow in task IDLE1 has been detected.
+
+
+Backtrace: 0x400818d6:0x3ffbaf90 0x40089f6d:0x3ffbafb0 0x4008af22:0x3ffbafd0 0x4008c21b:0x3ffbb050 0x4008b02c:0x3ffbb070 0x4008afde:0xa5a5a5a5 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 79aadbcbc
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Sep 18 2024 16:38:30[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.0[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=29b24h (170788) map[0m
+[0;32mI (163) esp_image: segment 1: paddr=00039b4c vaddr=3ffb0000 size=03bbch ( 15292) load[0m
+[0;32mI (169) esp_image: segment 2: paddr=0003d710 vaddr=40080000 size=02908h ( 10504) load[0m
+[0;32mI (173) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a3780h (669568) map[0m
+[0;32mI (407) esp_image: segment 4: paddr=000e37a8 vaddr=40082908 size=14e40h ( 85568) load[0m
+[0;32mI (452) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (452) boot: Disabling RNG early entropy source...[0m
+[0;32mI (464) cpu_start: Multicore app[0m
+[0;32mI (473) cpu_start: Pro cpu start user code[0m
+[0;32mI (473) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (473) cpu_start: Application information:[0m
+[0;32mI (476) cpu_start: Project name:     app-template[0m
+[0;32mI (481) cpu_start: App version:      1[0m
+[0;32mI (485) cpu_start: Compile time:     Sep 18 2024 16:38:16[0m
+[0;32mI (492) cpu_start: ELF file SHA256:  79aadbcbc...[0m
+[0;32mI (497) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (502) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (507) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (512) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (517) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (524) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (530) heap_init: At 3FFB8260 len 00027DA0 (159 KiB): DRAM[0m
+[0;32mI (536) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (542) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (549) heap_init: At 40097748 len 000088B8 (34 KiB): IRAM[0m
+[0;32mI (557) spi_flash: detected chip: generic[0m
+[0;32mI (560) spi_flash: flash io: dio[0m
+[0;33mW (564) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (578) main_task: Started on CPU0[0m
+[0;32mI (588) main_task: Calling app_main()[0m
+[0;32mI (628) uart: queue free spaces: 10[0m
+[0;32mI (628) Firebase: ESP_WIFI_MODE_STA[0m
+I (648) wifi:wifi driver task: 3ffc1900, prio:23, stack:6656, core=0
+I (668) wifi:wifi firmware version: 3e0076f
+I (668) wifi:wifi certification version: v7.0
+I (668) wifi:config NVS flash: enabled
+I (668) wifi:config nano formating: disabled
+I (678) wifi:Init data frame dynamic rx buffer num: 32
+I (678) wifi:Init static rx mgmt buffer num: 5
+I (678) wifi:Init management short buffer num: 32
+I (688) wifi:Init dynamic tx buffer num: 32
+I (688) wifi:Init static rx buffer size: 1600
+I (698) wifi:Init static rx buffer num: 10
+I (698) wifi:Init dynamic rx buffer num: 32
+[0;32mI (708) wifi_init: rx ba win: 6[0m
+[0;32mI (708) wifi_init: tcpip mbox: 32[0m
+[0;32mI (708) wifi_init: udp mbox: 6[0m
+[0;32mI (718) wifi_init: tcp mbox: 6[0m
+[0;32mI (718) wifi_init: tcp tx win: 5760[0m
+[0;32mI (718) wifi_init: tcp rx win: 5760[0m
+[0;32mI (728) wifi_init: tcp mss: 1440[0m
+[0;32mI (728) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (738) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (738) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+I (838) wifi:mode : sta (c8:f0:9e:f1:4a:c8)
+I (838) wifi:enable tsf
+[0;32mI (838) Firebase: wifi_init_sta finished.[0m
+I (848) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1
+I (848) wifi:state: init -> auth (b0)
+I (858) wifi:state: auth -> assoc (0)
+I (868) wifi:state: assoc -> run (10)
+I (868) wifi:state: run -> init (2c0)
+I (878) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+[0;32mI (878) Firebase: retry to connect to the AP[0m
+[0;32mI (878) Firebase: connect to the AP fail[0m
+[0;32mI (3298) Firebase: retry to connect to the AP[0m
+[0;32mI (3298) Firebase: connect to the AP fail[0m
+I (3298) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+I (3298) wifi:state: init -> auth (b0)
+I (3308) wifi:state: auth -> assoc (0)
+I (3318) wifi:state: assoc -> run (10)
+I (3338) wifi:connected with Galaxym31, aid = 1, channel 6, BW20, bssid = 4a:3e:02:1e:c9:b7
+I (3338) wifi:security: WPA2-PSK, phy: bgn, rssi: -50
+I (3348) wifi:pm start, type: 1
+
+I (3348) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (3348) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us
+I (3358) wifi:AP's beacon interval = 102400 us, DTIM period = 2
+I (3368) wifi:<ba-add>idx:0 (ifx:0, 4a:3e:02:1e:c9:b7), tid:0, ssn:0, winSize:64
+[0;32mI (4368) esp_netif_handlers: sta ip: 192.168.26.89, mask: 255.255.255.0, gw: 192.168.26.71[0m
+[0;32mI (4368) Firebase: got ip:192.168.26.89[0m
+[0;32mI (4368) Firebase: connected to ap SSID:myssid password:mypassword[0m
+[0;32mI (4378) Firebase: UART Received Data: Roll:  17         Pitch:  16   
+Roll:  17         Pitch:  16   
+Roll:  17         Pitch:  15   
+Roll:  17         Pitch:  15 [0m
+[0;32mI (4388) Parsed Data: Roll: 17, Pitch: 16[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":17},"pitch":{"doubleValue":16}}}
+
+***ERROR*** A stack overflow in task IDLE0 has been detected.
+
+
+Backtrace: 0x400818d6:0x3ffba990 0x40089f6d:0x3ffba9b0 0x4008af22:0x3ffba9d0 0x4008c21b:0x3ffbaa50 0x4008b02c:0x3ffbaa70 0x4008afde:0x4008345a |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 79aadbcbc
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Sep 18 2024 16:38:30[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.0[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=29b24h (170788) map[0m
+[0;32mI (163) esp_image: segment 1: paddr=00039b4c vaddr=3ffb0000 size=03bbch ( 15292) load[0m
+[0;32mI (169) esp_image: segment 2: paddr=0003d710 vaddr=40080000 size=02908h ( 10504) load[0m
+[0;32mI (173) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a3780h (669568) map[0m
+[0;32mI (407) esp_image: segment 4: paddr=000e37a8 vaddr=40082908 size=14e40h ( 85568) load[0m
+[0;32mI (452) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (452) boot: Disabling RNG early entropy source...[0m
+[0;32mI (464) cpu_start: Multicore app[0m
+[0;32mI (473) cpu_start: Pro cpu start user code[0m
+[0;32mI (473) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (473) cpu_start: Application information:[0m
+[0;32mI (476) cpu_start: Project name:     app-template[0m
+[0;32mI (481) cpu_start: App version:      1[0m
+[0;32mI (486) cpu_start: Compile time:     Sep 18 2024 16:38:16[0m
+[0;32mI (492) cpu_start: ELF file SHA256:  79aadbcbc...[0m
+[0;32mI (497) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (502) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (507) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (512) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (517) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (524) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (530) heap_init: At 3FFB8260 len 00027DA0 (159 KiB): DRAM[0m
+[0;32mI (536) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (543) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (549) heap_init: At 40097748 len 000088B8 (34 KiB): IRAM[0m
+[0;32mI (557) spi_flash: detected chip: generic[0m
+[0;32mI (560) spi_flash: flash io: dio[0m
+[0;33mW (564) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (578) main_task: Started on CPU0[0m
+[0;32mI (588) main_task: Calling app_main()[0m
+[0;32mI (628) uart: queue free spaces: 10[0m
+[0;32mI (628) Firebase: ESP_WIFI_MODE_STA[0m
+I (648) wifi:wifi driver task: 3ffc1900, prio:23, stack:6656, core=0
+I (668) wifi:wifi firmware version: 3e0076f
+I (668) wifi:wifi certification version: v7.0
+I (668) wifi:config NVS flash: enabled
+I (668) wifi:config nano formating: disabled
+I (678) wifi:Init data frame dynamic rx buffer num: 32
+I (678) wifi:Init static rx mgmt buffer num: 5
+I (678) wifi:Init management short buffer num: 32
+I (688) wifi:Init dynamic tx buffer num: 32
+I (688) wifi:Init static rx buffer size: 1600
+I (698) wifi:Init static rx buffer num: 10
+I (698) wifi:Init dynamic rx buffer num: 32
+[0;32mI (708) wifi_init: rx ba win: 6[0m
+[0;32mI (708) wifi_init: tcpip mbox: 32[0m
+[0;32mI (708) wifi_init: udp mbox: 6[0m
+[0;32mI (718) wifi_init: tcp mbox: 6[0m
+[0;32mI (718) wifi_init: tcp tx win: 5760[0m
+[0;32mI (718) wifi_init: tcp rx win: 5760[0m
+[0;32mI (728) wifi_init: tcp mss: 1440[0m
+[0;32mI (728) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (738) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (738) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+I (838) wifi:mode : sta (c8:f0:9e:f1:4a:c8)
+I (838) wifi:enable tsf
+[0;32mI (838) Firebase: wifi_init_sta finished.[0m
+I (848) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1
+I (858) wifi:state: init -> auth (b0)
+I (858) wifi:state: auth -> assoc (0)
+I (878) wifi:state: assoc -> run (10)
+I (888) wifi:state: run -> init (2c0)
+I (888) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+[0;32mI (888) Firebase: retry to connect to the AP[0m
+[0;32mI (898) Firebase: connect to the AP fail[0m
+[0;32mI (3308) Firebase: retry to connect to the AP[0m
+[0;32mI (3308) Firebase: connect to the AP fail[0m
+I (3318) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+I (3318) wifi:state: init -> auth (b0)
+I (3318) wifi:state: auth -> assoc (0)
+I (3328) wifi:state: assoc -> run (10)
+I (3358) wifi:connected with Galaxym31, aid = 1, channel 6, BW20, bssid = 4a:3e:02:1e:c9:b7
+I (3358) wifi:security: WPA2-PSK, phy: bgn, rssi: -51
+I (3368) wifi:pm start, type: 1
+
+I (3368) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (3378) wifi:<ba-add>idx:0 (ifx:0, 4a:3e:02:1e:c9:b7), tid:0, ssn:0, winSize:64
+I (3408) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us
+I (3408) wifi:AP's beacon interval = 102400 us, DTIM period = 2
+[0;32mI (4378) esp_netif_handlers: sta ip: 192.168.26.89, mask: 255.255.255.0, gw: 192.168.26.71[0m
+[0;32mI (4378) Firebase: got ip:192.168.26.89[0m
+[0;32mI (4378) Firebase: connected to ap SSID:myssid password:mypassword[0m
+[0;32mI (4388) Firebase: UART Received Data: Roll:  17         Pitch:  15   
+Roll:  17         Pitch:  16   
+Roll:  17         Pitch:  16   
+Roll:  17         Pitch:  16 1[0m
+[0;32mI (4398) Parsed Data: Roll: 17, Pitch: 15[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":17},"pitch":{"doubleValue":15}}}
+
+***ERROR*** A stack overflow in task IDLE0 has been detected.
+
+
+Backtrace: 0x400818d6:0x3ffba990 0x40089f6d:0x3ffba9b0 0x4008af22:0x3ffba9d0 0x4008c21b:0x3ffbaa50 0x4008b02c:0x3ffbaa70 0x4008afde:0x4008345a |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 79aadbcbc
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Sep 18 2024 16:38:30[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.0[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=29b24h (170788) map[0m
+[0;32mI (163) esp_image: segment 1: paddr=00039b4c vaddr=3ffb0000 size=03bbch ( 15292) load[0m
+[0;32mI (169) esp_image: segment 2: paddr=0003d710 vaddr=40080000 size=02908h ( 10504) load[0m
+[0;32mI (173) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a3780h (669568) map[0m
+[0;32mI (407) esp_image: segment 4: paddr=000e37a8 vaddr=40082908 size=14e40h ( 85568) load[0m
+[0;32mI (452) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (452) boot: Disabling RNG early entropy source...[0m
+[0;32mI (464) cpu_start: Multicore app[0m
+[0;32mI (473) cpu_start: Pro cpu start user code[0m
+[0;32mI (473) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (473) cpu_start: Application information:[0m
+[0;32mI (476) cpu_start: Project name:     app-template[0m
+[0;32mI (481) cpu_start: App version:      1[0m
+[0;32mI (486) cpu_start: Compile time:     Sep 18 2024 16:38:16[0m
+[0;32mI (492) cpu_start: ELF file SHA256:  79aadbcbc...[0m
+[0;32mI (497) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (502) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (507) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (512) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (517) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (524) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (530) heap_init: At 3FFB8260 len 00027DA0 (159 KiB): DRAM[0m
+[0;32mI (536) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (543) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (549) heap_init: At 40097748 len 000088B8 (34 KiB): IRAM[0m
+[0;32mI (557) spi_flash: detected chip: generic[0m
+[0;32mI (560) spi_flash: flash io: dio[0m
+[0;33mW (564) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (578) main_task: Started on CPU0[0m
+[0;32mI (588) main_task: Calling app_main()[0m
+[0;32mI (628) uart: queue free spaces: 10[0m
+[0;32mI (628) Firebase: ESP_WIFI_MODE_STA[0m
+I (648) wifi:wifi driver task: 3ffc1900, prio:23, stack:6656, core=0
+I (668) wifi:wifi firmware version: 3e0076f
+I (668) wifi:wifi certification version: v7.0
+I (668) wifi:config NVS flash: enabled
+I (668) wifi:config nano formating: disabled
+I (678) wifi:Init data frame dynamic rx buffer num: 32
+I (678) wifi:Init static rx mgmt buffer num: 5
+I (678) wifi:Init management short buffer num: 32
+I (688) wifi:Init dynamic tx buffer num: 32
+I (688) wifi:Init static rx buffer size: 1600
+I (698) wifi:Init static rx buffer num: 10
+I (698) wifi:Init dynamic rx buffer num: 32
+[0;32mI (708) wifi_init: rx ba win: 6[0m
+[0;32mI (708) wifi_init: tcpip mbox: 32[0m
+[0;32mI (708) wifi_init: udp mbox: 6[0m
+[0;32mI (718) wifi_init: tcp mbox: 6[0m
+[0;32mI (718) wifi_init: tcp tx win: 5760[0m
+[0;32mI (718) wifi_init: tcp rx win: 5760[0m
+[0;32mI (728) wifi_init: tcp mss: 1440[0m
+[0;32mI (728) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (738) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (738) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+I (838) wifi:mode : sta (c8:f0:9e:f1:4a:c8)
+I (838) wifi:enable tsf
+[0;32mI (838) Firebase: wifi_init_sta finished.[0m
+I (848) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1
+I (848) wifi:state: init -> auth (b0)
+I (868) wifi:state: auth -> assoc (0)
+I (888) wifi:state: assoc -> run (10)
+I (918) wifi:connected with Galaxym31, aid = 1, channel 6, BW20, bssid = 4a:3e:02:1e:c9:b7
+I (918) wifi:security: WPA2-PSK, phy: bgn, rssi: -48
+I (928) wifi:pm start, type: 1
+
+I (928) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (938) wifi:<ba-add>idx:0 (ifx:0, 4a:3e:02:1e:c9:b7), tid:0, ssn:0, winSize:64
+I (998) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us
+I (998) wifi:AP's beacon interval = 102400 us, DTIM period = 2
+[0;32mI (1938) esp_netif_handlers: sta ip: 192.168.26.89, mask: 255.255.255.0, gw: 192.168.26.71[0m
+[0;32mI (1938) Firebase: got ip:192.168.26.89[0m
+[0;32mI (1938) Firebase: connected to ap SSID:myssid password:mypassword[0m
+[0;32mI (1948) Firebase: UART Received Data: Roll:  17         Pitch:  15   
+Roll:  17         Pitch:  15   
+Roll:  17         Pitch:  16   
+Roll:  17         Pitch:  16 �
+[0;32mI (1958) Parsed Data: Roll: 17, Pitch: 15[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":17},"pitch":{"doubleValue":15}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "roll": {
+      "doubleValue": 17
+    },
+    "pitch": {
+      "doubleValue": 15
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T14:07:03.146064Z"
+}
+
+[0;32mI (3388) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (3398) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (3408) Firebase: UART Received Data: Roll:  17         Pitch:  16   
+Roll:  18         Pitch:  16   
+Roll:  18         Pitch:  16   
+Roll:  19         Pitch:  17 �
+[0;32mI (3418) Parsed Data: Roll: 17, Pitch: 16[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":17},"pitch":{"doubleValue":16}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "roll": {
+      "doubleValue": 17
+    },
+    "pitch": {
+      "doubleValue": 16
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T14:07:04.548233Z"
+}
+
+[0;32mI (4888) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (4898) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (4898) Firebase: UART Received Data: Roll:  17         Pitch:  16   
+Roll:  17         Pitch:  16   
+Roll:  17         Pitch:  15   
+Roll:  17         Pitch:  15 �
+[0;32mI (4918) Parsed Data: Roll: 17, Pitch: 16[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":17},"pitch":{"doubleValue":16}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/c
+HTTP_EVENT_ON_DATA: ollection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 16
+    },
+    "roll": {
+      "doubleValue": 17
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T14:07:04.548233Z"
+}
+
+[0;32mI (6468) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (6478) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (6478) Firebase: UART Received Data: Roll:  17         Pitch:  15   
+Roll:  17         Pitch:  15   
+Roll:  17         Pitch:  15   
+Roll:  16         Pitch:  15 �
+[0;32mI (6498) Parsed Data: Roll: 17, Pitch: 15[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":17},"pitch":{"doubleValue":15}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 15
+    },
+    "roll": {
+      "doubleValue": 17
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T14:07:07.720688Z"
+}
+
+[0;32mI (8098) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (8108) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (8118) Firebase: UART Received Data: Roll:  17         Pitch:  15   
+Roll:  17         Pitch:  15   
+Roll:  17         Pitch:  15   
+Roll:  17         Pitch:  15 �
+[0;32mI (8128) Parsed Data: Roll: 17, Pitch: 15[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":17},"pitch":{"doubleValue":15}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 15
+    },
+    "roll": {
+      "doubleValue": 17
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T14:07:07.720688Z"
+}
+
+[0;32mI (9738) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (9748) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (9748) Firebase: UART Received Data: Roll:  17         Pitch:  16   
+Roll:  17         Pitch:  16   
+Roll:  17         Pitch:  16   
+Roll:  17         Pitch:  16 �
+[0;32mI (9768) Parsed Data: Roll: 17, Pitch: 16[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":17},"pitch":{"doubleValue":16}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 16
+    },
+    "roll": {
+      "doubleValue": 17
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T14:07:11.116980Z"
+}
+
+[0;32mI (11378) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (11388) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (11388) Firebase: UART Received Data: Roll:  17         Pitch:  16   
+Roll:  17         Pitch:  16   
+Roll:  17         Pitch:  16   
+Roll:  17         Pitch:  16 [0m
+[0;32mI (11408) Parsed Data: Roll: 17, Pitch: 16[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":17},"pitch":{"doubleValue":16}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 16
+    },
+    "roll": {
+      "doubleValue": 17
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T14:07:11.116980Z"
+}
+
+[0;32mI (13248) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (13258) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (13258) Firebase: UART Received Data: Roll:  44         Pitch:  35   
+Roll:  29         Pitch:  -9   
+Roll:  39         Pitch:  0   
+Roll:  33         Pitch:  -6  [0m
+[0;32mI (13268) Parsed Data: Roll: 44, Pitch: 35[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":44},"pitch":{"doubleValue":35}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 35
+    },
+    "roll": {
+      "doubleValue": 44
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T14:07:14.610082Z"
+}
+
+[0;32mI (14858) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (14868) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (14868) Firebase: UART Received Data: Roll:  2         Pitch:  -22   
+Roll:  -1         Pitch:  -25   
+Roll:  -3         Pitch:  -26   
+Roll:  -4         Pitch:  -�
+[0;32mI (14888) Parsed Data: Roll: 2, Pitch: -22[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":2},"pitch":{"doubleValue":-22}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": -22
+    },
+    "roll": {
+      "doubleValue": 2
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T14:07:16.256362Z"
+}
+
+[0;32mI (16498) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (16508) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (16508) Firebase: UART Received Data: Roll:  -8         Pitch:  -20   
+Roll:  -8         Pitch:  -17   
+Roll:  -8         Pitch:  -14   
+Roll:  -10         Pitch: �
+[0;32mI (16528) Parsed Data: Roll: -8, Pitch: -20[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":-8},"pitch":{"doubleValue":-20}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": -20
+    },
+    "roll": {
+      "doubleValue": -8
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T14:07:17.859281Z"
+}
+
+[0;32mI (18138) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (18148) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (18148) Firebase: UART Received Data: Roll:  -36         Pitch:  -34   
+Roll:  -38         Pitch:  -38   
+Roll:  -38         Pitch:  -40   
+Roll:  -39         Pitc[0m
+[0;32mI (18158) Parsed Data: Roll: -36, Pitch: -34[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":-36},"pitch":{"doubleValue":-34}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": -34
+    },
+    "roll": {
+      "doubleValue": -36
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T14:07:19.509071Z"
+}
+
+[0;32mI (19778) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (19788) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (19788) Firebase: UART Received Data: Roll:  -9         Pitch:  9   
+Roll:  -5         Pitch:  14   
+Roll:  -1         Pitch:  17   
+Roll:  1         Pitch:  19   �
+[0;32mI (19798) Parsed Data: Roll: -9, Pitch: 9[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":-9},"pitch":{"doubleValue":9}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 9
+    },
+    "roll": {
+      "doubleValue": -9
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T14:07:21.159377Z"
+}
+
+[0;32mI (21418) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (21428) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (21428) Firebase: UART Received Data: Roll:  6         Pitch:  22   
+Roll:  6         Pitch:  22   
+Roll:  6         Pitch:  21   
+Roll:  6         Pitch:  21   
+�
+[0;32mI (21438) Parsed Data: Roll: 6, Pitch: 22[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":6},"pitch":{"doubleValue":22}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "roll": {
+      "doubleValue": 6
+    },
+    "pitch": {
+      "doubleValue": 22
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T14:07:22.817120Z"
+}
+
+[0;32mI (23258) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (23268) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (23268) Firebase: UART Received Data: Roll:  5         Pitch:  18   
+Roll:  4         Pitch:  17   
+Roll:  4         Pitch:  17   
+Roll:  4         Pitch:  16   
+[0m
+[0;32mI (23288) Parsed Data: Roll: 5, Pitch: 18[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":5},"pitch":{"doubleValue":18}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "roll": {
+      "doubleValue": 5
+    },
+    "pitch": {
+      "doubleValue": 18
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T14:07:24.612332Z"
+}
+
+[0;32mI (24898) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (24908) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (24908) Firebase: UART Received Data: Roll:  2         Pitch:  14   
+Roll:  2         Pitch:  13   
+Roll:  1         Pitch:  13   
+Roll:  1         Pitch:  13   
+[0m
+[0;32mI (24918) Parsed Data: Roll: 2, Pitch: 14[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":2},"pitch":{"doubleValue":14}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 14
+    },
+    "roll": {
+      "doubleValue": 2
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T14:07:26.277049Z"
+}
+
+[0;32mI (26538) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (26548) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (26548) Firebase: UART Received Data: Roll:  1         Pitch:  13   
+Roll:  1         Pitch:  12   
+Roll:  0         Pitch:  12   
+Roll:  1         Pitch:  13   
+�
+[0;32mI (26558) Parsed Data: Roll: 1, Pitch: 13[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":1},"pitch":{"doubleValue":13}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 13
+    },
+    "roll": {
+      "doubleValue": 1
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T14:07:27.920736Z"
+}
+
+[0;32mI (28178) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (28188) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (28188) Firebase: UART Received Data: Roll:  1         Pitch:  13   
+Roll:  1         Pitch:  13   
+Roll:  1         Pitch:  13   
+Roll:  1         Pitch:  13   
+�
+[0;32mI (28198) Parsed Data: Roll: 1, Pitch: 13[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":1},"pitch":{"doubleValue":13}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 13
+    },
+    "roll": {
+      "doubleValue": 1
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T14:07:27.920736Z"
+}
+
+[0;32mI (29848) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (29858) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (29858) Firebase: UART Received Data: Roll:  1         Pitch:  13   
+Roll:  1         Pitch:  13   
+Roll:  1         Pitch:  13   
+Roll:  1         Pitch:  13   
+[0m
+[0;32mI (29868) Parsed Data: Roll: 1, Pitch: 13[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":1},"pitch":{"doubleValue":13}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 13
+    },
+    "roll": {
+      "doubleValue": 1
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T14:07:27.920736Z"
+}
+
+[0;32mI (31658) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (31668) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (31668) Firebase: UART Received Data: Roll:  1         Pitch:  13   
+Roll:  1         Pitch:  13   
+Roll:  34         Pitch:  34   
+Roll:  33         Pitch:  31   [0m
+[0;32mI (31678) Parsed Data: Roll: 1, Pitch: 13[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":1},"pitch":{"doubleValue":13}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 13
+    },
+    "roll": {
+      "doubleValue": 1
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T14:07:27.920736Z"
+}
+
+[0;32mI (33298) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (33308) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (33308) Firebase: UART Received Data: Roll:  7         Pitch:  12   
+Roll:  5         Pitch:  11   
+Roll:  3         Pitch:  10   
+Roll:  2         Pitch:  10   
+�
+[0;32mI (33318) Parsed Data: Roll: 7, Pitch: 12[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":7},"pitch":{"doubleValue":12}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 12
+    },
+    "roll": {
+      "doubleValue": 7
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T14:07:34.655372Z"
+}
+
+[0;32mI (34928) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (34938) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (34938) Firebase: UART Received Data: Roll:  0         Pitch:  10   
+Roll:  1         Pitch:  11   
+Roll:  1         Pitch:  11   
+Roll:  2         Pitch:  12   
+�
+[0;32mI (34958) Parsed Data: Roll: 0, Pitch: 10[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":0},"pitch":{"doubleValue":10}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 10
+    },
+    "roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T14:07:36.302802Z"
+}
+
+[0;32mI (36568) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (36578) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (36578) Firebase: UART Received Data: Roll:  3         Pitch:  14   
+Roll:  4         Pitch:  14   
+Roll:  4         Pitch:  15   
+Roll:  5         Pitch:  15   
+[0m
+[0;32mI (36598) Parsed Data: Roll: 3, Pitch: 14[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":3},"pitch":{"doubleValue":14}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "roll": {
+      "doubleValue": 3
+    },
+    "pitch": {
+      "doubleValue": 14
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T14:07:37.929871Z"
+}
+
+[0;32mI (38208) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (38218) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (38218) Firebase: UART Received Data: Roll:  6         Pitch:  16   
+Roll:  6         Pitch:  16   
+Roll:  6         Pitch:  16   
+Roll:  6         Pitch:  17   
+�
+[0;32mI (38228) Parsed Data: Roll: 6, Pitch: 16[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":6},"pitch":{"doubleValue":16}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 16
+    },
+    "roll": {
+      "doubleValue": 6
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T14:07:39.559578Z"
+}
+
+[0;32mI (39848) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (39858) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (39858) Firebase: UART Received Data: Roll:  7         Pitch:  17   
+Roll:  7         Pitch:  17   
+Roll:  7         Pitch:  17   
+Roll:  7         Pitch:  17   
+�
+[0;32mI (39868) Parsed Data: Roll: 7, Pitch: 17[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":7},"pitch":{"doubleValue":17}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "roll": {
+      "doubleValue": 7
+    },
+    "pitch": {
+      "doubleValue": 17
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T14:07:41.426389Z"
+}
+
+[0;32mI (41688) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (41698) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (41698) Firebase: UART Received Data: Roll:  7         Pitch:  16   
+Roll:  6         Pitch:  16   
+Roll:  6         Pitch:  17   
+Roll:  6         Pitch:  17   
+[0m
+[0;32mI (41718) Parsed Data: Roll: 7, Pitch: 16[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":7},"pitch":{"doubleValue":16}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 16
+    },
+    "roll": {
+      "doubleValue": 7
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T14:07:43.153663Z"
+}
+
+[0;32mI (43528) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (43548) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (43548) Firebase: UART Received Data: Roll:  7         Pitch:  17   
+Roll:  7         Pitch:  17   
+Roll:  7         Pitch:  17   
+Roll:  7         Pitch:  17   
+ [0m
+[0;32mI (43558) Parsed Data: Roll: 7, Pitch: 17[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":7},"pitch":{"doubleValue":17}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 17
+    },
+    "roll": {
+      "doubleValue": 7
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T14:07:45.156438Z"
+}
+
+[0;32mI (45588) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (45598) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (45598) Firebase: UART Received Data: Roll:  7         Pitch:  17   
+Roll:  7         Pitch:  17   
+Roll:  7         Pitch:  17   
+Roll:  7         Pitch:  16   
+ [0m
+[0;32mI (45608) Parsed Data: Roll: 7, Pitch: 17[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":7},"pitch":{"doubleValue":17}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "roll": {
+      "doubleValue": 7
+    },
+    "pitch": {
+      "doubleValue": 17
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T14:07:45.156438Z"
+}
+
+[0;32mI (47218) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (47228) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (47228) Firebase: UART Received Data: Roll:  6         Pitch:  16   
+Roll:  6         Pitch:  16   
+Roll:  6         Pitch:  16   
+Roll:  6         Pitch:  16   
+�
+[0;32mI (47248) Parsed Data: Roll: 6, Pitch: 16[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":6},"pitch":{"doubleValue":16}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 16
+    },
+    "roll": {
+      "doubleValue": 6
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T14:07:48.619228Z"
+}
+
+[0;32mI (49058) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (49068) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (49068) Firebase: UART Received Data: Roll:  6         Pitch:  16   
+Roll:  6         Pitch:  16   
+Roll:  6         Pitch:  16   
+Roll:  6         Pitch:  17   
+[0m
+[0;32mI (49088) Parsed Data: Roll: 6, Pitch: 16[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":6},"pitch":{"doubleValue":16}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 16
+    },
+    "roll": {
+      "doubleValue": 6
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T14:07:48.619228Z"
+}
+
+[0;32mI (50698) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (50718) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (50718) Firebase: UART Received Data: Roll:  7         Pitch:  17   
+Roll:  7         Pitch:  17   
+Roll:  7         Pitch:  17   
+Roll:  7         Pitch:  17   
+�
+[0;32mI (50728) Parsed Data: Roll: 7, Pitch: 17[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":7},"pitch":{"doubleValue":17}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 17
+    },
+    "roll": {
+      "doubleValue": 7
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T14:07:52.137769Z"
+}
+
+[0;32mI (52548) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (52558) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (52558) Firebase: UART Received Data: Roll:  6         Pitch:  17   
+Roll:  6         Pitch:  17   
+Roll:  6         Pitch:  17   
+Roll:  6         Pitch:  17   
+ [0m
+[0;32mI (52568) Parsed Data: Roll: 6, Pitch: 17[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":6},"pitch":{"doubleValue":17}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 17
+    },
+    "roll": {
+      "doubleValue": 6
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T14:07:54.095381Z"
+}
+
+[0;32mI (54388) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (54398) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (54398) Firebase: UART Received Data: Roll:  6         Pitch:  17   
+Roll:  6         Pitch:  16   
+Roll:  6         Pitch:  16   
+Roll:  6         Pitch:  16   
+[0m
+[0;32mI (54408) Parsed Data: Roll: 6, Pitch: 17[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":6},"pitch":{"doubleValue":17}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "roll": {
+      "doubleValue": 6
+    },
+    "pitch": {
+      "doubleValue": 17
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T14:07:54.095381Z"
+}
+
+[0;32mI (56028) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (56038) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (56038) Firebase: UART Received Data: Roll:  6         Pitch:  17   
+Roll:  6         Pitch:  17   
+Roll:  6         Pitch:  17   
+Roll:  6         Pitch:  17   
+�
+[0;32mI (56048) Parsed Data: Roll: 6, Pitch: 17[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":6},"pitch":{"doubleValue":17}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 17
+    },
+    "roll": {
+      "doubleValue": 6
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T14:07:54.095381Z"
+}
+
+[0;32mI (57868) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (57878) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (57878) Firebase: UART Received Data: Roll:  6         Pitch:  17   
+Roll:  6         Pitch:  16   
+Roll:  6         Pitch:  16   
+Roll:  6         Pitch:  16   
+[0m
+[0;32mI (57898) Parsed Data: Roll: 6, Pitch: 17[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":6},"pitch":{"doubleValue":17}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 17
+    },
+    "roll": {
+      "doubleValue": 6
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T14:07:54.095381Z"
+}
+
+[0;32mI (59508) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (59518) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (59518) Firebase: UART Received Data: Roll:  6         Pitch:  17   
+Roll:  6         Pitch:  16   
+Roll:  6         Pitch:  16   
+Roll:  6         Pitch:  16   
+[0m
+[0;32mI (59528) Parsed Data: Roll: 6, Pitch: 17[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":6},"pitch":{"doubleValue":17}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 17
+    },
+    "roll": {
+      "doubleValue": 6
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T14:07:54.095381Z"
+}
+
+[0;32mI (61348) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (61368) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (61368) Firebase: UART Received Data: Roll:  7         Pitch:  17   
+Roll:  7         Pitch:  17   
+Roll:  7         Pitch:  17   
+Roll:  7         Pitch:  17   
+[0m
+[0;32mI (61378) Parsed Data: Roll: 7, Pitch: 17[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":7},"pitch":{"doubleValue":17}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 17
+    },
+    "roll": {
+      "doubleValue": 7
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T14:08:02.703245Z"
+}
+
+[0;32mI (62988) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (62998) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (62998) Firebase: UART Received Data: Roll:  7         Pitch:  17   
+Roll:  7         Pitch:  17   
+Roll:  7         Pitch:  17   
+Roll:  7         Pitch:  17   
+�
+[0;32mI (63018) Parsed Data: Roll: 7, Pitch: 17[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":7},"pitch":{"doubleValue":17}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 17
+    },
+    "roll": {
+      "doubleValue": 7
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T14:08:02.703245Z"
+}
+
+[0;32mI (64628) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (64638) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (64638) Firebase: UART Received Data: Roll:  7         Pitch:  17   
+Roll:  7         Pitch:  17   
+Roll:  7         Pitch:  17   
+Roll:  7         Pitch:  17   
+�
+[0;32mI (64658) Parsed Data: Roll: 7, Pitch: 17[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":7},"pitch":{"doubleValue":17}}}
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "pitch": {
+      "doubleValue": 17
+    },
+    "roll": {
+      "doubleValue": 7
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-19T14:08:02.703245Z"
+}
+
+[0;32mI (66258) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (66268) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (66278) Firebase: UART Received Data: Roll:  6         Pitch:  17   
+Roll:  6         Pitch:  17   
+Roll:  6         Pitch:  17   
+Roll:  6         Pitch:  17   
+[0m
+[0;32mI (66288) Parsed Data: Roll: 6, Pitch: 17[0m
+Sending JSON data: {"fields":{"roll":{"doubleValue":6},"pitch":{"doubleValue":17}}}

@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <sys/_intsup.h>
 #include "esp_err.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
@@ -26,6 +27,13 @@
 // Firebase credentials
 #define FIREBASE_HOST  "iot-firebase-80171-default-rtdb.europe-west1.firebasedatabase.app"
 #define FIREBASE_API_KEY "AIzaSyA3wUxLxeGNnfy6OZgcEDDg9NHXwzLEikQ"
+
+typedef struct{
+	int8_t roll;
+	int8_t pitch;
+}roll_pitch_return;
+roll_pitch_return uart_return;
+
 // Tag for logging
 static const char *TAG = "Firebase";
 
@@ -158,9 +166,6 @@ ESP_ERROR_CHECK(uart_driver_install(UART_NUM_2, uart_buffer_size, \
                                         uart_buffer_size, 10, &uart_queue, 0));
 }
 
-
-
-
 esp_err_t client_event_get_handler(esp_http_client_event_handle_t http_event)
 {
 	switch (http_event->event_id) {
@@ -173,12 +178,37 @@ esp_err_t client_event_get_handler(esp_http_client_event_handle_t http_event)
 	return ESP_OK;
 	
 }
-/* Function to push data to Firebase */
-void push_data_to_firebase(char* data) {
-
-     
-    printf("Sending JSON data: %s\n", data);
+roll_pitch_return UART_Receive_Data(void)
+{
+	 // Read data from UART.
+	const uart_port_t uart_num = UART_NUM_2;
+	uint8_t data[35];
+	int length = 0;
+	
+	ESP_ERROR_CHECK(uart_get_buffered_data_len(uart_num, (size_t*)&length));
+	length = uart_read_bytes(uart_num, data, length, 100);          //uart_read_bytes returns len
+	/*
+	* If data received
+	*/
+	if (length > 0) {
+    data[length] = '\0';  // Null-terminate the data
+    }
+   
+    ESP_LOGI(TAG, "UART Received Data: %s", data);
+    // Parse the incoming string using sscanf
+    sscanf((char*)data, "Roll:  %hhd         Pitch:  %hhd   \n\r", &uart_return.roll, &uart_return.pitch);
+    // Log the parsed values
+    ESP_LOGI("Parsed Data", "Roll: %d, Pitch: %d", uart_return.roll, uart_return.pitch);
     
+    return uart_return;
+}
+/* Function to push data to Firebase */
+void push_data_to_firebase(void) {
+
+    UART_Receive_Data();
+    char json_data[80];
+    sprintf(json_data, "{\"fields\":{\"roll\":{\"doubleValue\":%d},\"pitch\":{\"doubleValue\":%d}}}",uart_return.roll, uart_return.pitch); 
+   
     esp_http_client_config_t config = {
         .url = "https://firestore.googleapis.com/v1/projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
         .cert_pem = (char *)_binary_firebase_cert_pem_start,  // Set CA cert for SSL
@@ -188,8 +218,7 @@ void push_data_to_firebase(char* data) {
     esp_http_client_handle_t client = esp_http_client_init(&config);
     esp_http_client_set_method(client, HTTP_METHOD_PATCH);   //To create new document send post, to update field send patch
     esp_http_client_set_header(client, "Content-Type", "application/json");
-    esp_http_client_set_post_field(client, data, strlen(data));
-
+    esp_http_client_set_post_field(client, json_data, strlen(json_data));
 
     esp_err_t err = esp_http_client_perform(client);
     
@@ -202,8 +231,6 @@ void push_data_to_firebase(char* data) {
     }
     
     esp_http_client_cleanup(client);
-    
-  
     
 }
 
@@ -233,6 +260,18 @@ void get_data_from_firebase(void) {
     esp_http_client_cleanup(client);
     
 }
+
+static void Push_Data_Task(void *pvParameters)
+{
+	while(1)
+	{
+	push_data_to_firebase();
+	vTaskDelay(2000 / portTICK_PERIOD_MS);
+    ESP_LOGI(TAG, "DATA PUSHED TO THE FIRESTORE"); 
+	}
+}
+
+
 // Application main task
 void app_main() {
     //Initialize NVS
@@ -256,33 +295,6 @@ void app_main() {
     //Retrieve data from Firebase
     //get_data_from_firebase();
     
-    // Read data from UART.
-	const uart_port_t uart_num = UART_NUM_2;
-	uint8_t data[35];
-	int length = 0;
-	while(1){
-		
-	
-	ESP_ERROR_CHECK(uart_get_buffered_data_len(uart_num, (size_t*)&length));
-	length = uart_read_bytes(uart_num, data, length, 100);
-	if (length > 0) {
-    data[length] = '\0';  // Null-terminate the data
-    }
-      
-    int8_t roll ;
-    int8_t pitch ;
-    ESP_LOGI(TAG, "UART Received Data: %s", data);
-    // Parse the incoming string using sscanf
-    sscanf((char*)data, "Roll:  %hhd         Pitch:  %hhd   \n\r", &roll, &pitch);
-        
-    // Log the parsed values
-    ESP_LOGI("Parsed Data", "Roll: %d, Pitch: %d", roll, pitch);
-   
-    // Push data to Firebase
-    char json_data[100];
-    sprintf(json_data, "{\"fields\":{\"roll\":{\"doubleValue\":%d},\"pitch\":{\"doubleValue\":%d}}}",roll, pitch);    
-    push_data_to_firebase( json_data); 
-    ESP_LOGI(TAG, "DATA PUSHED TO THE FIRESTORE"); 
-    
-    }
+    xTaskCreate(Push_Data_Task, "Push_To_Firebase", 1024 * 2, NULL, configMAX_PRIORITIES - 1, NULL);
+ 
 }

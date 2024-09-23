@@ -1,0 +1,694 @@
+boot: chip revision: v3.0[0mets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Sep 23 2024 10:01:52[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.0[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=28a74h (166516) map[0m
+[0;32mI (162) esp_image: segment 1: paddr=00038a9c vaddr=3ffb0000 size=03bcch ( 15308) load[0m
+[0;32mI (168) esp_image: segment 2: paddr=0003c670 vaddr=40080000 size=039a8h ( 14760) load[0m
+[0;32mI (174) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9df5ch (647004) map[0m
+[0;32mI (398) esp_image: segment 4: paddr=000ddf84 vaddr=400839a8 size=12e88h ( 77448) load[0m
+[0;32mI (440) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (440) boot: Disabling RNG early entropy source...[0m
+[0;32mI (451) cpu_start: Multicore app[0m
+[0;32mI (460) cpu_start: Pro cpu start user code[0m
+[0;32mI (460) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (460) cpu_start: Application information:[0m
+[0;32mI (463) cpu_start: Project name:     app-template[0m
+[0;32mI (468) cpu_start: App version:      1[0m
+[0;32mI (473) cpu_start: Compile time:     Sep 23 2024 10:01:37[0m
+[0;32mI (479) cpu_start: ELF file SHA256:  251fdab67...[0m
+[0;32mI (484) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (490) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (494) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (499) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (504) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (511) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (517) heap_init: At 3FFB8478 len 00027B88 (158 KiB): DRAM[0m
+[0;32mI (523) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (530) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (536) heap_init: At 40096830 len 000097D0 (37 KiB): IRAM[0m
+[0;32mI (544) spi_flash: detected chip: generic[0m
+[0;32mI (547) spi_flash: flash io: dio[0m
+[0;33mW (551) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (565) main_task: Started on CPU0[0m
+[0;32mI (575) main_task: Calling app_main()[0m
+[0;32mI (615) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 1| Intr:0 [0m
+[0;32mI (615) gpio: GPIO[5]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 1| Intr:0 [0m
+[0;32mI (625) Firebase: ESP_WIFI_MODE_STA[0m
+I (645) wifi:wifi driver task: 3ffc04cc, prio:23, stack:6656, core=0
+I (665) wifi:wifi firmware version: 3e0076f
+I (665) wifi:wifi certification version: v7.0
+I (665) wifi:config NVS flash: enabled
+I (665) wifi:config nano formating: disabled
+I (675) wifi:Init data frame dynamic rx buffer num: 32
+I (675) wifi:Init static rx mgmt buffer num: 5
+I (675) wifi:Init management short buffer num: 32
+I (685) wifi:Init dynamic tx buffer num: 32
+I (685) wifi:Init static rx buffer size: 1600
+I (695) wifi:Init static rx buffer num: 10
+I (695) wifi:Init dynamic rx buffer num: 32
+[0;32mI (705) wifi_init: rx ba win: 6[0m
+[0;32mI (705) wifi_init: tcpip mbox: 32[0m
+[0;32mI (705) wifi_init: udp mbox: 6[0m
+[0;32mI (715) wifi_init: tcp mbox: 6[0m
+[0;32mI (715) wifi_init: tcp tx win: 5760[0m
+[0;32mI (715) wifi_init: tcp rx win: 5760[0m
+[0;32mI (725) wifi_init: tcp mss: 1440[0m
+[0;32mI (725) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (735) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (735) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+I (835) wifi:mode : sta (c8:f0:9e:f1:4a:c8)
+I (835) wifi:enable tsf
+[0;32mI (835) Firebase: wifi_init_sta finished.[0m
+I (845) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (855) wifi:state: init -> auth (b0)
+I (855) wifi:state: auth -> assoc (0)
+I (865) wifi:state: assoc -> run (10)
+I (1005) wifi:connected with Galaxym31, aid = 1, channel 11, BW20, bssid = 4a:3e:02:1e:c9:b7
+I (1005) wifi:security: WPA2-PSK, phy: bgn, rssi: -38
+I (1015) wifi:pm start, type: 1
+
+I (1015) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (1025) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us
+I (1025) wifi:AP's beacon interval = 102400 us, DTIM period = 2
+I (1035) wifi:<ba-add>idx:0 (ifx:0, 4a:3e:02:1e:c9:b7), tid:0, ssn:0, winSize:64
+[0;32mI (2045) esp_netif_handlers: sta ip: 192.168.26.89, mask: 255.255.255.0, gw: 192.168.26.71[0m
+[0;32mI (2045) Firebase: got ip:192.168.26.89[0m
+[0;32mI (2045) Firebase: connected to ap SSID:myssid password:mypassword[0m
+[0;32mI (2055) main_task: Returned from app_main()[0m
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T06:44:27.831745Z"
+}
+
+[0;32mI (3695) Firebase: HTTP GET Status = 200[0m
+[0;32mI (3705) Firebase: Received Firebase data: [0m
+[0;31mE (3705) Firebase: Failed to parse JSON data[0m
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T06:44:27.831745Z"
+}
+
+[0;32mI (8425) Firebase: HTTP GET Status = 200[0m
+[0;32mI (8435) Firebase: Received Firebase data: [0m
+[0;31mE (8435) Firebase: Failed to parse JSON data[0m
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T06:44:27.831745Z"
+}
+
+[0;32mI (13335) Firebase: HTTP GET Status = 200[0m
+[0;32mI (13345) Firebase: Received Firebase data: [0m
+[0;31mE (13345) Firebase: Failed to parse JSON data[0m
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T06:44:27.831745Z"
+}
+
+[0;32mI (18045) Firebase: HTTP GET Status = 200[0m
+[0;32mI (18055) Firebase: Received Firebase data: [0m
+[0;31mE (18055) Firebase: Failed to parse JSON data[0m
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T06:44:27.831745Z"
+}
+
+[0;32mI (22555) Firebase: HTTP GET Status = 200[0m
+[0;32mI (22565) Firebase: Received Firebase data: [0m
+[0;31mE (22565) Firebase: Failed to parse JSON data[0m
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T06:44:27.831745Z"
+}
+
+[0;32mI (27095) Firebase: HTTP GET Status = 200[0m
+[0;32mI (27095) Firebase: Received Firebase data: [0m
+[0;31mE (27105) Firebase: Failed to parse JSON data[0m
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T06:44:27.831745Z"
+}
+
+[0;32mI (31405) Firebase: HTTP GET Status = 200[0m
+[0;32mI (31415) Firebase: Received Firebase data: [0m
+[0;31mE (31415) Firebase: Failed to parse JSON data[0m
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T06:44:27.831745Z"
+}
+
+[0;32mI (36275) Firebase: HTTP GET Status = 200[0m
+[0;32mI (36285) Firebase: Received Firebase data: [0m
+[0;31mE (36285) Firebase: Failed to parse JSON data[0m
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T06:44:27.831745Z"
+}
+
+[0;32mI (40985) Firebase: HTTP GET Status = 200[0m
+[0;32mI (40995) Firebase: Received Firebase data: [0m
+[0;31mE (40995) Firebase: Failed to parse JSON data[0m
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T06:44:27.831745Z"
+}
+
+[0;32mI (45695) Firebase: HTTP GET Status = 200[0m
+[0;32mI (45705) Firebase: Received Firebase data: [0m
+[0;31mE (45705) Firebase: Failed to parse JSON data[0m
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T06:44:27.831745Z"
+}
+
+[0;32mI (50615) Firebase: HTTP GET Status = 200[0m
+[0;32mI (50615) Firebase: Received Firebase data: [0m
+[0;31mE (50615) Firebase: Failed to parse JSON data[0m
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T06:44:27.831745Z"
+}
+
+[0;32mI (55145) Firebase: HTTP GET Status = 200[0m
+[0;32mI (55155) Firebase: Received Firebase data: [0m
+[0;31mE (55155) Firebase: Failed to parse JSON data[0m
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/c
+HTTP_EVENT_ON_DATA: ollection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T06:44:27.831745Z"
+}
+
+[0;32mI (59825) Firebase: HTTP GET Status = 200[0m
+[0;32mI (59835) Firebase: Received Firebase data: [0m
+[0;31mE (59835) Firebase: Failed to parse JSON data[0m
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T06:44:27.831745Z"
+}
+
+[0;32mI (64745) Firebase: HTTP GET Status = 200[0m
+[0;32mI (64755) Firebase: Received Firebase data: [0m
+[0;31mE (64755) Firebase: Failed to parse JSON data[0m
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T06:44:27.831745Z"
+}
+
+[0;32mI (69455) Firebase: HTTP GET Status = 200[0m
+[0;32mI (69465) Firebase: Received Firebase data: [0m
+[0;31mE (69465) Firebase: Failed to parse JSON data[0m
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T06:44:27.831745Z"
+}
+
+[0;32mI (73985) Firebase: HTTP GET Status = 200[0m
+[0;32mI (73995) Firebase: Received Firebase data: [0m
+[0;31mE (73995) Firebase: Failed to parse JSON data[0m
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T06:44:27.831745Z"
+}
+
+[0;32mI (78875) Firebase: HTTP GET Status = 200[0m
+[0;32mI (78885) Firebase: Received Firebase data: [0m
+[0;31mE (78885) Firebase: Failed to parse JSON data[0m
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T06:44:27.831745Z"
+}
+
+[0;32mI (83585) Firebase: HTTP GET Status = 200[0m
+[0;32mI (83595) Firebase: Received Firebase data: [0m
+[0;31mE (83595) Firebase: Failed to parse JSON data[0m
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T06:44:27.831745Z"
+}
+
+[0;32mI (88495) Firebase: HTTP GET Status = 200[0m
+[0;32mI (88505) Firebase: Received Firebase data: [0m
+[0;31mE (88505) Firebase: Failed to parse JSON data[0m
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T06:44:27.831745Z"
+}
+
+[0;32mI (93415) Firebase: HTTP GET Status = 200[0m
+[0;32mI (93425) Firebase: Received Firebase data: [0m
+[0;31mE (93425) Firebase: Failed to parse JSON data[0m
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T06:44:27.831745Z"
+}
+
+[0;32mI (98165) Firebase: HTTP GET Status = 200[0m
+[0;32mI (98175) Firebase: Received Firebase data: [0m
+[0;31mE (98175) Firebase: Failed to parse JSON data[0m
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T06:44:27.831745Z"
+}
+
+[0;32mI (102835) Firebase: HTTP GET Status = 200[0m
+[0;32mI (102845) Firebase: Received Firebase data: [0m
+[0;31mE (102845) Firebase: Failed to parse JSON data[0m
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T06:44:27.831745Z"
+}
+
+[0;32mI (107545) Firebase: HTTP GET Status = 200[0m
+[0;32mI (107555) Firebase: Received Firebase data: [0m
+[0;31mE (107555) Firebase: Failed to parse JSON data[0m
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T06:44:27.831745Z"
+}
+
+[0;32mI (112255) Firebase: HTTP GET Status = 200[0m
+[0;32mI (112265) Firebase: Received Firebase data: [0m
+[0;31mE (112265) Firebase: Failed to parse JSON data[0m
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T06:44:27.831745Z"
+}
+
+[0;32mI (116965) Firebase: HTTP GET Status = 200[0m
+[0;32mI (116975) Firebase: Received Firebase data: [0m
+[0;31mE (116975) Firebase: Failed to parse JSON data[0m
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T06:44:27.831745Z"
+}
+
+[0;32mI (121495) Firebase: HTTP GET Status = 200[0m
+[0;32mI (121505) Firebase: Received Firebase data: [0m
+[0;31mE (121505) Firebase: Failed to parse JSON data[0m
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T06:44:27.831745Z"
+}
+
+[0;32mI (126005) Firebase: HTTP GET Status = 200[0m
+[0;32mI (126015) Firebase: Received Firebase data: [0m
+[0;31mE (126015) Firebase: Failed to parse JSON data[0m
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T06:44:27.831745Z"
+}
+
+[0;32mI (130685) Firebase: HTTP GET Status = 200[0m
+[0;32mI (130695) Firebase: Received Firebase data: [0m
+[0;31mE (130695) Firebase: Failed to parse JSON data[0m
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T06:44:27.831745Z"
+}
+
+[0;32mI (135395) Firebase: HTTP GET Status = 200[0m
+[0;32mI (135405) Firebase: Received Firebase data: [0m
+[0;31mE (135405) Firebase: Failed to parse JSON data[0m
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T06:44:27.831745Z"
+}
+
+[0;32mI (140315) Firebase: HTTP GET Status = 200[0m
+[0;32mI (140325) Firebase: Received Firebase data: [0m
+[0;31mE (140325) Firebase: Failed to parse JSON data[0m
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T06:44:27.831745Z"
+}
+
+[0;32mI (145435) Firebase: HTTP GET Status = 200[0m
+[0;32mI (145445) Firebase: Received Firebase data: [0m
+[0;31mE (145445) Firebase: Failed to parse JSON data[0m
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/c
+HTTP_EVENT_ON_DATA: ollection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T06:44:27.831745Z"
+}
+
+[0;32mI (150145) Firebase: HTTP GET Status = 200[0m
+[0;32mI (150155) Firebase: Received Firebase data: [0m
+[0;31mE (150155) Firebase: Failed to parse JSON data[0m
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T06:44:27.831745Z"
+}
+
+[0;32mI (154685) Firebase: HTTP GET Status = 200[0m
+[0;32mI (154695) Firebase: Received Firebase data: [0m
+[0;31mE (154695) Firebase: Failed to parse JSON data[0m

@@ -1,0 +1,1307 @@
+���� chip revision: v3.0[0m
+�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Sep 23 2024 10:01:52[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.0[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2887ch (166012) map[0m
+[0;32mI (162) esp_image: segment 1: paddr=000388a4 vaddr=3ffb0000 size=03bbch ( 15292) load[0m
+[0;32mI (168) esp_image: segment 2: paddr=0003c468 vaddr=40080000 size=03bb0h ( 15280) load[0m
+[0;32mI (174) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9bc98h (638104) map[0m
+[0;32mI (395) esp_image: segment 4: paddr=000dbcc0 vaddr=40083bb0 size=12c80h ( 76928) load[0m
+[0;32mI (436) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (436) boot: Disabling RNG early entropy source...[0m
+[0;32mI (448) cpu_start: Multicore app[0m
+[0;32mI (456) cpu_start: Pro cpu start user code[0m
+[0;32mI (456) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (457) cpu_start: Application information:[0m
+[0;32mI (460) cpu_start: Project name:     app-template[0m
+[0;32mI (465) cpu_start: App version:      1[0m
+[0;32mI (469) cpu_start: Compile time:     Sep 23 2024 10:01:37[0m
+[0;32mI (475) cpu_start: ELF file SHA256:  948e55613...[0m
+[0;32mI (481) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (486) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (491) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (496) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (501) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (508) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (514) heap_init: At 3FFB8460 len 00027BA0 (158 KiB): DRAM[0m
+[0;32mI (520) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (526) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (533) heap_init: At 40096830 len 000097D0 (37 KiB): IRAM[0m
+[0;32mI (540) spi_flash: detected chip: generic[0m
+[0;32mI (544) spi_flash: flash io: dio[0m
+[0;33mW (547) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (562) main_task: Started on CPU0[0m
+[0;32mI (572) main_task: Calling app_main()[0m
+[0;32mI (612) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 1| Intr:0 [0m
+[0;32mI (612) gpio: GPIO[5]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 1| Intr:0 [0m
+[0;32mI (622) Firebase: ESP_WIFI_MODE_STA[0m
+I (642) wifi:wifi driver task: 3ffc04b4, prio:23, stack:6656, core=0
+I (662) wifi:wifi firmware version: 3e0076f
+I (662) wifi:wifi certification version: v7.0
+I (662) wifi:config NVS flash: enabled
+I (662) wifi:config nano formating: disabled
+I (672) wifi:Init data frame dynamic rx buffer num: 32
+I (672) wifi:Init static rx mgmt buffer num: 5
+I (672) wifi:Init management short buffer num: 32
+I (682) wifi:Init dynamic tx buffer num: 32
+I (682) wifi:Init static rx buffer size: 1600
+I (692) wifi:Init static rx buffer num: 10
+I (692) wifi:Init dynamic rx buffer num: 32
+[0;32mI (702) wifi_init: rx ba win: 6[0m
+[0;32mI (702) wifi_init: tcpip mbox: 32[0m
+[0;32mI (702) wifi_init: udp mbox: 6[0m
+[0;32mI (712) wifi_init: tcp mbox: 6[0m
+[0;32mI (712) wifi_init: tcp tx win: 5760[0m
+[0;32mI (712) wifi_init: tcp rx win: 5760[0m
+[0;32mI (722) wifi_init: tcp mss: 1440[0m
+[0;32mI (722) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (732) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (732) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+I (832) wifi:mode : sta (c8:f0:9e:f1:4a:c8)
+I (832) wifi:enable tsf
+[0;32mI (832) Firebase: wifi_init_sta finished.[0m
+I (842) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (842) wifi:state: init -> auth (b0)
+I (852) wifi:state: auth -> assoc (0)
+I (862) wifi:state: assoc -> run (10)
+I (1012) wifi:connected with Galaxym31, aid = 1, channel 11, BW20, bssid = 4a:3e:02:1e:c9:b7
+I (1012) wifi:security: WPA2-PSK, phy: bgn, rssi: -44
+I (1022) wifi:pm start, type: 1
+
+I (1022) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (1022) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us
+I (1032) wifi:AP's beacon interval = 102400 us, DTIM period = 2
+I (1042) wifi:<ba-add>idx:0 (ifx:0, 4a:3e:02:1e:c9:b7), tid:0, ssn:0, winSize:64
+[0;32mI (2042) esp_netif_handlers: sta ip: 192.168.26.89, mask: 255.255.255.0, gw: 192.168.26.71[0m
+[0;32mI (2042) Firebase: got ip:192.168.26.89[0m
+[0;32mI (2042) Firebase: connected to ap SSID:myssid password:mypassword[0m
+[0;32mI (2052) main_task: Returned from app_main()[0m
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (5292) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (10372) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (15092) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (20002) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (24912) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (29832) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (34572) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (39042) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (43962) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (48712) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (53182) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (57912) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (62772) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (67922) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (72642) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (77542) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/c
+HTTP_EVENT_ON_DATA: ollection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (82262) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (87372) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (92322) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (96812) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (101712) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (106832) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (111752) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (116482) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (121182) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (125672) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (130432) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/c
+HTTP_EVENT_ON_DATA: ollection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (134922) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (139622) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (144342) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (149022) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (154352) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (158882) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (163582) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (168072) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (172982) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (177902) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (182432) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (187522) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (192642) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/c
+HTTP_EVENT_ON_DATA: ollection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (197762) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (202682) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (207392) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (212132) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (217222) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (222342) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (227662) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (232782) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/c
+HTTP_EVENT_ON_DATA: ollection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (237902) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (242612) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (247532) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (252652) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (257982) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (263092) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (268422) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (273332) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (278452) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (283372) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (288282) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (293402) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (298342) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (303442) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (308192) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (313272) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (318182) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/
+HTTP_EVENT_ON_DATA: collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (323302) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 
+HTTP_EVENT_ON_DATA: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents
+HTTP_EVENT_ON_DATA: /collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T08:53:24.577066Z"
+}
+
+[0;32mI (328422) Firebase: HTTP GET Status = 200[0m
+print buffer: 0
+print buffer: 

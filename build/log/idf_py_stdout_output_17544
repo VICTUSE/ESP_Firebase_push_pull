@@ -1,0 +1,4357 @@
+�����revision: v3.0[0m
+[0;�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Sep 23 2024 10:01:52[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.0[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=28a94h (166548) map[0m
+[0;32mI (162) esp_image: segment 1: paddr=00038abc vaddr=3ffb0000 size=03bcch ( 15308) load[0m
+[0;32mI (168) esp_image: segment 2: paddr=0003c690 vaddr=40080000 size=03988h ( 14728) load[0m
+[0;32mI (174) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9dec4h (646852) map[0m
+[0;32mI (398) esp_image: segment 4: paddr=000ddeec vaddr=40083988 size=12ea8h ( 77480) load[0m
+[0;32mI (440) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (440) boot: Disabling RNG early entropy source...[0m
+[0;32mI (451) cpu_start: Multicore app[0m
+[0;32mI (460) cpu_start: Pro cpu start user code[0m
+[0;32mI (460) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (460) cpu_start: Application information:[0m
+[0;32mI (463) cpu_start: Project name:     app-template[0m
+[0;32mI (468) cpu_start: App version:      1[0m
+[0;32mI (473) cpu_start: Compile time:     Sep 23 2024 10:01:37[0m
+[0;32mI (479) cpu_start: ELF file SHA256:  2b015ed15...[0m
+[0;32mI (484) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (490) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (494) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (499) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (504) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (511) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (517) heap_init: At 3FFB8480 len 00027B80 (158 KiB): DRAM[0m
+[0;32mI (523) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (530) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (536) heap_init: At 40096830 len 000097D0 (37 KiB): IRAM[0m
+[0;32mI (544) spi_flash: detected chip: generic[0m
+[0;32mI (547) spi_flash: flash io: dio[0m
+[0;33mW (551) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (565) main_task: Started on CPU0[0m
+[0;32mI (575) main_task: Calling app_main()[0m
+[0;32mI (615) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 1| Intr:0 [0m
+[0;32mI (615) gpio: GPIO[5]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 1| Intr:0 [0m
+[0;32mI (625) Firebase: ESP_WIFI_MODE_STA[0m
+I (645) wifi:wifi driver task: 3ffc04d4, prio:23, stack:6656, core=0
+I (665) wifi:wifi firmware version: 3e0076f
+I (665) wifi:wifi certification version: v7.0
+I (665) wifi:config NVS flash: enabled
+I (665) wifi:config nano formating: disabled
+I (675) wifi:Init data frame dynamic rx buffer num: 32
+I (675) wifi:Init static rx mgmt buffer num: 5
+I (675) wifi:Init management short buffer num: 32
+I (685) wifi:Init dynamic tx buffer num: 32
+I (685) wifi:Init static rx buffer size: 1600
+I (695) wifi:Init static rx buffer num: 10
+I (695) wifi:Init dynamic rx buffer num: 32
+[0;32mI (705) wifi_init: rx ba win: 6[0m
+[0;32mI (705) wifi_init: tcpip mbox: 32[0m
+[0;32mI (705) wifi_init: udp mbox: 6[0m
+[0;32mI (715) wifi_init: tcp mbox: 6[0m
+[0;32mI (715) wifi_init: tcp tx win: 5760[0m
+[0;32mI (715) wifi_init: tcp rx win: 5760[0m
+[0;32mI (725) wifi_init: tcp mss: 1440[0m
+[0;32mI (725) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (735) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (735) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+I (835) wifi:mode : sta (c8:f0:9e:f1:4a:c8)
+I (835) wifi:enable tsf
+[0;32mI (835) Firebase: wifi_init_sta finished.[0m
+I (845) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (845) wifi:state: init -> auth (b0)
+I (855) wifi:state: auth -> assoc (0)
+I (855) wifi:state: assoc -> run (10)
+I (995) wifi:connected with Galaxym31, aid = 1, channel 11, BW20, bssid = 4a:3e:02:1e:c9:b7
+I (995) wifi:security: WPA2-PSK, phy: bgn, rssi: -41
+I (1005) wifi:pm start, type: 1
+
+I (1005) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (1015) wifi:<ba-add>idx:0 (ifx:0, 4a:3e:02:1e:c9:b7), tid:0, ssn:0, winSize:64
+I (1025) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us
+I (1025) wifi:AP's beacon interval = 102400 us, DTIM period = 2
+[0;32mI (2015) esp_netif_handlers: sta ip: 192.168.26.89, mask: 255.255.255.0, gw: 192.168.26.71[0m
+[0;32mI (2015) Firebase: got ip:192.168.26.89[0m
+[0;32mI (2015) Firebase: connected to ap SSID:myssid password:mypassword[0m
+[0;32mI (2025) main_task: Returned from app_main()[0m
+[0;32mI (3395) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:21:51.728013Z"
+}
+[0m
+[0;32mI (3425) Firebase: HTTP GET Status = 200[0m
+[0;31mE (3425) Firebase: Error parsing JSON data[0m
+[0;32mI (4855) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:21:51.728013Z"
+}
+[0m
+[0;32mI (4875) Firebase: HTTP GET Status = 200[0m
+[0;31mE (4885) Firebase: Error parsing JSON data[0m
+[0;32mI (6675) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:21:51.728013Z"
+}
+[0m
+[0;32mI (6695) Firebase: HTTP GET Status = 200[0m
+[0;31mE (6705) Firebase: Error parsing JSON data[0m
+[0;32mI (8315) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:21:51.728013Z"
+}
+[0m
+[0;32mI (8335) Firebase: HTTP GET Status = 200[0m
+[0;31mE (8345) Firebase: Error parsing JSON data[0m
+[0;32mI (10155) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:21:51.728013Z"
+}
+[0m
+[0;32mI (10175) Firebase: HTTP GET Status = 200[0m
+[0;31mE (10185) Firebase: Error parsing JSON data[0m
+[0;32mI (11795) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:21:51.728013Z"
+}
+[0m
+[0;32mI (11815) Firebase: HTTP GET Status = 200[0m
+[0;31mE (11825) Firebase: Error parsing JSON data[0m
+[0;32mI (13635) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:21:51.728013Z"
+}
+[0m
+[0;32mI (13655) Firebase: HTTP GET Status = 200[0m
+[0;31mE (13665) Firebase: Error parsing JSON data[0m
+[0;32mI (15275) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:21:51.728013Z"
+}
+[0m
+[0;32mI (15295) Firebase: HTTP GET Status = 200[0m
+[0;31mE (15305) Firebase: Error parsing JSON data[0m
+[0;32mI (16945) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:21:51.728013Z"
+}
+[0m
+[0;32mI (16965) Firebase: HTTP GET Status = 200[0m
+[0;31mE (16975) Firebase: Error parsing JSON data[0m
+[0;32mI (18385) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:21:51.728013Z"
+}
+[0m
+[0;32mI (18405) Firebase: HTTP GET Status = 200[0m
+[0;31mE (18415) Firebase: Error parsing JSON data[0m
+[0;32mI (19985) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:21:51.728013Z"
+}
+[0m
+[0;32mI (20005) Firebase: HTTP GET Status = 200[0m
+[0;31mE (20015) Firebase: Error parsing JSON data[0m
+[0;32mI (22035) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:21:51.728013Z"
+}
+[0m
+[0;32mI (22055) Firebase: HTTP GET Status = 200[0m
+[0;31mE (22065) Firebase: Error parsing JSON data[0m
+[0;32mI (23875) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:21:51.728013Z"
+}
+[0m
+[0;32mI (23895) Firebase: HTTP GET Status = 200[0m
+[0;31mE (23905) Firebase: Error parsing JSON data[0m
+[0;32mI (25335) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:21:51.728013Z"
+}
+[0m
+[0;32mI (25355) Firebase: HTTP GET Status = 200[0m
+[0;31mE (25365) Firebase: Error parsing JSON data[0m
+[0;32mI (26745) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:21:51.728013Z"
+}
+[0m
+[0;32mI (26775) Firebase: HTTP GET Status = 200[0m
+[0;31mE (26785) Firebase: Error parsing JSON data[0m
+[0;32mI (28585) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:21:51.728013Z"
+}
+[0m
+[0;32mI (28605) Firebase: HTTP GET Status = 200[0m
+[0;31mE (28615) Firebase: Error parsing JSON data[0m
+[0;32mI (30225) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:21:51.728013Z"
+}
+[0m
+[0;32mI (30245) Firebase: HTTP GET Status = 200[0m
+[0;31mE (30255) Firebase: Error parsing JSON data[0m
+[0;32mI (31675) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:21:51.728013Z"
+}
+[0m
+[0;32mI (31695) Firebase: HTTP GET Status = 200[0m
+[0;31mE (31705) Firebase: Error parsing JSON data[0m
+[0;32mI (33915) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:21:51.728013Z"
+}
+[0m
+[0;32mI (33935) Firebase: HTTP GET Status = 200[0m
+[0;31mE (33945) Firebase: Error parsing JSON data[0m
+[0;32mI (35755) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:21:51.728013Z"
+}
+[0m
+[0;32mI (35775) Firebase: HTTP GET Status = 200[0m
+[0;31mE (35785) Firebase: Error parsing JSON data[0m
+[0;32mI (37805) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:21:51.728013Z"
+}
+[0m
+[0;32mI (37825) Firebase: HTTP GET Status = 200[0m
+[0;31mE (37835) Firebase: Error parsing JSON data[0m
+[0;32mI (39645) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:21:51.728013Z"
+}
+[0m
+[0;32mI (39665) Firebase: HTTP GET Status = 200[0m
+[0;31mE (39675) Firebase: Error parsing JSON data[0m
+[0;32mI (41285) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:21:51.728013Z"
+}
+[0m
+[0;32mI (41305) Firebase: HTTP GET Status = 200[0m
+[0;31mE (41315) Firebase: Error parsing JSON data[0m
+[0;32mI (42975) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:21:51.728013Z"
+}
+[0m
+[0;32mI (42995) Firebase: HTTP GET Status = 200[0m
+[0;31mE (43005) Firebase: Error parsing JSON data[0m
+[0;32mI (44765) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:21:51.728013Z"
+}
+[0m
+[0;32mI (44785) Firebase: HTTP GET Status = 200[0m
+[0;31mE (44795) Firebase: Error parsing JSON data[0m
+[0;32mI (46605) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:21:51.728013Z"
+}
+[0m
+[0;32mI (46635) Firebase: HTTP GET Status = 200[0m
+[0;31mE (46645) Firebase: Error parsing JSON data[0m
+[0;32mI (48245) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:21:51.728013Z"
+}
+[0m
+[0;32mI (48275) Firebase: HTTP GET Status = 200[0m
+[0;31mE (48285) Firebase: Error parsing JSON data[0m
+[0;32mI (50085) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:21:51.728013Z"
+}
+[0m
+[0;32mI (50115) Firebase: HTTP GET Status = 200[0m
+[0;31mE (50125) Firebase: Error parsing JSON data[0m
+[0;32mI (51935) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:21:51.728013Z"
+}
+[0m
+[0;32mI (51955) Firebase: HTTP GET Status = 200[0m
+[0;31mE (51965) Firebase: Error parsing JSON data[0m
+[0;32mI (53775) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:21:51.728013Z"
+}
+[0m
+[0;32mI (53805) Firebase: HTTP GET Status = 200[0m
+[0;31mE (53815) Firebase: Error parsing JSON data[0m
+[0;32mI (55425) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:21:51.728013Z"
+}
+[0m
+[0;32mI (55455) Firebase: HTTP GET Status = 200[0m
+[0;31mE (55465) Firebase: Error parsing JSON data[0m
+[0;32mI (57055) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:21:51.728013Z"
+}
+[0m
+[0;32mI (57075) Firebase: HTTP GET Status = 200[0m
+[0;31mE (57085) Firebase: Error parsing JSON data[0m
+[0;32mI (58695) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:21:51.728013Z"
+}
+[0m
+[0;32mI (58715) Firebase: HTTP GET Status = 200[0m
+[0;31mE (58725) Firebase: Error parsing JSON data[0m
+[0;32mI (60535) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:21:51.728013Z"
+}
+[0m
+[0;32mI (60555) Firebase: HTTP GET Status = 200[0m
+[0;31mE (60565) Firebase: Error parsing JSON data[0m
+[0;32mI (62375) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:21:51.728013Z"
+}
+[0m
+[0;32mI (62395) Firebase: HTTP GET Status = 200[0m
+[0;31mE (62405) Firebase: Error parsing JSON data[0m
+[0;32mI (64215) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:21:51.728013Z"
+}
+[0m
+[0;32mI (64245) Firebase: HTTP GET Status = 200[0m
+[0;31mE (64255) Firebase: Error parsing JSON data[0m
+[0;32mI (66065) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:21:51.728013Z"
+}
+[0m
+[0;32mI (66085) Firebase: HTTP GET Status = 200[0m
+[0;31mE (66095) Firebase: Error parsing JSON data[0m
+[0;32mI (67705) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:21:51.728013Z"
+}
+[0m
+[0;32mI (67725) Firebase: HTTP GET Status = 200[0m
+[0;31mE (67735) Firebase: Error parsing JSON data[0m
+[0;32mI (69745) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:21:51.728013Z"
+}
+[0m
+[0;32mI (69775) Firebase: HTTP GET Status = 200[0m
+[0;31mE (69785) Firebase: Error parsing JSON data[0m
+[0;32mI (71595) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:21:51.728013Z"
+}
+[0m
+[0;32mI (71615) Firebase: HTTP GET Status = 200[0m
+[0;31mE (71625) Firebase: Error parsing JSON data[0m
+[0;32mI (73435) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:21:51.728013Z"
+}
+[0m
+[0;32mI (73455) Firebase: HTTP GET Status = 200[0m
+[0;31mE (73465) Firebase: Error parsing JSON data[0m
+[0;32mI (75095) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:21:51.728013Z"
+}
+[0m
+[0;32mI (75125) Firebase: HTTP GET Status = 200[0m
+[0;31mE (75135) Firebase: Error parsing JSON data[0m
+[0;32mI (76715) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:21:51.728013Z"
+}
+[0m
+[0;32mI (76735) Firebase: HTTP GET Status = 200[0m
+[0;31mE (76745) Firebase: Error parsing JSON data[0m
+[0;32mI (78195) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:21:51.728013Z"
+}
+[0m
+[0;32mI (78215) Firebase: HTTP GET Status = 200[0m
+[0;31mE (78225) Firebase: Error parsing JSON data[0m
+[0;32mI (80195) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:21:51.728013Z"
+}
+[0m
+[0;32mI (80215) Firebase: HTTP GET Status = 200[0m
+[0;31mE (80225) Firebase: Error parsing JSON data[0m
+[0;32mI (82035) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:21:51.728013Z"
+}
+[0m
+[0;32mI (82065) Firebase: HTTP GET Status = 200[0m
+[0;31mE (82075) Firebase: Error parsing JSON data[0m
+[0;32mI (83675) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:21:51.728013Z"
+}
+[0m
+[0;32mI (83695) Firebase: HTTP GET Status = 200[0m
+[0;31mE (83705) Firebase: Error parsing JSON data[0m
+[0;32mI (85125) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:21:51.728013Z"
+}
+[0m
+[0;32mI (85145) Firebase: HTTP GET Status = 200[0m
+[0;31mE (85155) Firebase: Error parsing JSON data[0m
+[0;32mI (86745) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:21:51.728013Z"
+}
+[0m
+[0;32mI (86775) Firebase: HTTP GET Status = 200[0m
+[0;31mE (86785) Firebase: Error parsing JSON data[0m
+[0;32mI (88595) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:21:51.728013Z"
+}
+[0m
+[0;32mI (88615) Firebase: HTTP GET Status = 200[0m
+[0;31mE (88625) Firebase: Error parsing JSON data[0m
+[0;32mI (90435) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:21:51.728013Z"
+}
+[0m
+[0;32mI (90455) Firebase: HTTP GET Status = 200[0m
+[0;31mE (90465) Firebase: Error parsing JSON data[0m
+[0;32mI (92485) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:21:51.728013Z"
+}
+[0m
+[0;32mI (92505) Firebase: HTTP GET Status = 200[0m
+[0;31mE (92515) Firebase: Error parsing JSON data[0m
+[0;32mI (93915) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:21:51.728013Z"
+}
+[0m
+[0;32mI (93945) Firebase: HTTP GET Status = 200[0m
+[0;31mE (93955) Firebase: Error parsing JSON data[0m
+[0;32mI (95585) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:21:51.728013Z"
+}
+[0m
+[0;32mI (95605) Firebase: HTTP GET Status = 200[0m
+[0;31mE (95615) Firebase: Error parsing JSON data[0m
+[0;32mI (97195) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:21:51.728013Z"
+}
+[0m
+[0;32mI (97215) Firebase: HTTP GET Status = 200[0m
+[0;31mE (97225) Firebase: Error parsing JSON data[0m
+[0;32mI (99035) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:21:51.728013Z"
+}
+[0m
+[0;32mI (99055) Firebase: HTTP GET Status = 200[0m
+[0;31mE (99065) Firebase: Error parsing JSON data[0m
+[0;32mI (100675) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:21:51.728013Z"
+}
+[0m
+[0;32mI (100695) Firebase: HTTP GET Status = 200[0m
+[0;31mE (100705) Firebase: Error parsing JSON data[0m
+[0;32mI (102315) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:21:51.728013Z"
+}
+[0m
+[0;32mI (102335) Firebase: HTTP GET Status = 200[0m
+[0;31mE (102345) Firebase: Error parsing JSON data[0m
+[0;32mI (103975) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:21:51.728013Z"
+}
+[0m
+[0;32mI (104005) Firebase: HTTP GET Status = 200[0m
+[0;31mE (104015) Firebase: Error parsing JSON data[0m
+[0;32mI (105625) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (105645) Firebase: HTTP GET Status = 200[0m
+[0;31mE (105655) Firebase: Error parsing JSON data[0m
+[0;32mI (107435) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (107455) Firebase: HTTP GET Status = 200[0m
+[0;31mE (107465) Firebase: Error parsing JSON data[0m
+[0;32mI (109075) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (109095) Firebase: HTTP GET Status = 200[0m
+[0;31mE (109105) Firebase: Error parsing JSON data[0m
+[0;32mI (110915) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (110935) Firebase: HTTP GET Status = 200[0m
+[0;31mE (110945) Firebase: Error parsing JSON data[0m
+[0;32mI (112755) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (112785) Firebase: HTTP GET Status = 200[0m
+[0;31mE (112795) Firebase: Error parsing JSON data[0m
+[0;32mI (114395) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (114415) Firebase: HTTP GET Status = 200[0m
+[0;31mE (114425) Firebase: Error parsing JSON data[0m
+[0;32mI (116035) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (116055) Firebase: HTTP GET Status = 200[0m
+[0;31mE (116065) Firebase: Error parsing JSON data[0m
+[0;32mI (117875) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (117905) Firebase: HTTP GET Status = 200[0m
+[0;31mE (117915) Firebase: Error parsing JSON data[0m
+[0;32mI (119515) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (119535) Firebase: HTTP GET Status = 200[0m
+[0;31mE (119545) Firebase: Error parsing JSON data[0m
+[0;32mI (121365) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (121385) Firebase: HTTP GET Status = 200[0m
+[0;31mE (121395) Firebase: Error parsing JSON data[0m
+[0;32mI (122995) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (123025) Firebase: HTTP GET Status = 200[0m
+[0;31mE (123035) Firebase: Error parsing JSON data[0m
+[0;32mI (125045) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (125065) Firebase: HTTP GET Status = 200[0m
+[0;31mE (125075) Firebase: Error parsing JSON data[0m
+[0;32mI (126685) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (126705) Firebase: HTTP GET Status = 200[0m
+[0;31mE (126715) Firebase: Error parsing JSON data[0m
+[0;32mI (128315) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (128345) Firebase: HTTP GET Status = 200[0m
+[0;31mE (128355) Firebase: Error parsing JSON data[0m
+[0;32mI (129755) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (129775) Firebase: HTTP GET Status = 200[0m
+[0;31mE (129785) Firebase: Error parsing JSON data[0m
+[0;32mI (131395) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (131415) Firebase: HTTP GET Status = 200[0m
+[0;31mE (131425) Firebase: Error parsing JSON data[0m
+[0;32mI (132825) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (132855) Firebase: HTTP GET Status = 200[0m
+[0;31mE (132865) Firebase: Error parsing JSON data[0m
+[0;32mI (134465) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (134485) Firebase: HTTP GET Status = 200[0m
+[0;31mE (134495) Firebase: Error parsing JSON data[0m
+[0;32mI (135895) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (135925) Firebase: HTTP GET Status = 200[0m
+[0;31mE (135935) Firebase: Error parsing JSON data[0m
+[0;32mI (137745) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (137765) Firebase: HTTP GET Status = 200[0m
+[0;31mE (137775) Firebase: Error parsing JSON data[0m
+[0;32mI (139175) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (139205) Firebase: HTTP GET Status = 200[0m
+[0;31mE (139215) Firebase: Error parsing JSON data[0m
+[0;32mI (140815) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (140835) Firebase: HTTP GET Status = 200[0m
+[0;31mE (140845) Firebase: Error parsing JSON data[0m
+[0;32mI (142295) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (142325) Firebase: HTTP GET Status = 200[0m
+[0;31mE (142335) Firebase: Error parsing JSON data[0m
+[0;32mI (144095) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (144115) Firebase: HTTP GET Status = 200[0m
+[0;31mE (144125) Firebase: Error parsing JSON data[0m
+[0;32mI (145935) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (145955) Firebase: HTTP GET Status = 200[0m
+[0;31mE (145965) Firebase: Error parsing JSON data[0m
+[0;32mI (147575) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (147595) Firebase: HTTP GET Status = 200[0m
+[0;31mE (147605) Firebase: Error parsing JSON data[0m
+[0;32mI (149445) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (149465) Firebase: HTTP GET Status = 200[0m
+[0;31mE (149475) Firebase: Error parsing JSON data[0m
+[0;32mI (151055) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (151075) Firebase: HTTP GET Status = 200[0m
+[0;31mE (151085) Firebase: Error parsing JSON data[0m
+[0;32mI (152695) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (152715) Firebase: HTTP GET Status = 200[0m
+[0;31mE (152725) Firebase: Error parsing JSON data[0m
+[0;32mI (154125) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (154155) Firebase: HTTP GET Status = 200[0m
+[0;31mE (154165) Firebase: Error parsing JSON data[0m
+[0;32mI (155765) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (155785) Firebase: HTTP GET Status = 200[0m
+[0;31mE (155795) Firebase: Error parsing JSON data[0m
+[0;32mI (157195) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (157225) Firebase: HTTP GET Status = 200[0m
+[0;31mE (157235) Firebase: Error parsing JSON data[0m
+[0;32mI (158655) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (158685) Firebase: HTTP GET Status = 200[0m
+[0;31mE (158695) Firebase: Error parsing JSON data[0m
+[0;32mI (160105) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (160135) Firebase: HTTP GET Status = 200[0m
+[0;31mE (160145) Firebase: Error parsing JSON data[0m
+[0;32mI (161705) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (161725) Firebase: HTTP GET Status = 200[0m
+[0;31mE (161735) Firebase: Error parsing JSON data[0m
+[0;32mI (163135) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (163165) Firebase: HTTP GET Status = 200[0m
+[0;31mE (163175) Firebase: Error parsing JSON data[0m
+[0;32mI (164615) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (164645) Firebase: HTTP GET Status = 200[0m
+[0;31mE (164655) Firebase: Error parsing JSON data[0m
+[0;32mI (166205) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (166235) Firebase: HTTP GET Status = 200[0m
+[0;31mE (166245) Firebase: Error parsing JSON data[0m
+[0;32mI (167845) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (167875) Firebase: HTTP GET Status = 200[0m
+[0;31mE (167885) Firebase: Error parsing JSON data[0m
+[0;32mI (169285) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (169305) Firebase: HTTP GET Status = 200[0m
+[0;31mE (169315) Firebase: Error parsing JSON data[0m
+[0;32mI (170715) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (170735) Firebase: HTTP GET Status = 200[0m
+[0;31mE (170745) Firebase: Error parsing JSON data[0m
+[0;32mI (172555) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (172585) Firebase: HTTP GET Status = 200[0m
+[0;31mE (172595) Firebase: Error parsing JSON data[0m
+[0;32mI (174195) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (174215) Firebase: HTTP GET Status = 200[0m
+[0;31mE (174225) Firebase: Error parsing JSON data[0m
+[0;32mI (175835) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (175855) Firebase: HTTP GET Status = 200[0m
+[0;31mE (175865) Firebase: Error parsing JSON data[0m
+[0;32mI (177305) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (177325) Firebase: HTTP GET Status = 200[0m
+[0;31mE (177335) Firebase: Error parsing JSON data[0m
+[0;32mI (178725) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (178745) Firebase: HTTP GET Status = 200[0m
+[0;31mE (178755) Firebase: Error parsing JSON data[0m
+[0;32mI (180345) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (180365) Firebase: HTTP GET Status = 200[0m
+[0;31mE (180375) Firebase: Error parsing JSON data[0m
+[0;32mI (182185) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (182205) Firebase: HTTP GET Status = 200[0m
+[0;31mE (182215) Firebase: Error parsing JSON data[0m
+[0;32mI (184025) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (184045) Firebase: HTTP GET Status = 200[0m
+[0;31mE (184055) Firebase: Error parsing JSON data[0m
+[0;32mI (185665) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (185685) Firebase: HTTP GET Status = 200[0m
+[0;31mE (185695) Firebase: Error parsing JSON data[0m
+[0;32mI (187105) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (187135) Firebase: HTTP GET Status = 200[0m
+[0;31mE (187145) Firebase: Error parsing JSON data[0m
+[0;32mI (188535) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (188555) Firebase: HTTP GET Status = 200[0m
+[0;31mE (188565) Firebase: Error parsing JSON data[0m
+[0;32mI (190375) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (190395) Firebase: HTTP GET Status = 200[0m
+[0;31mE (190405) Firebase: Error parsing JSON data[0m
+[0;32mI (192215) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (192245) Firebase: HTTP GET Status = 200[0m
+[0;31mE (192255) Firebase: Error parsing JSON data[0m
+[0;32mI (193855) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (193885) Firebase: HTTP GET Status = 200[0m
+[0;31mE (193895) Firebase: Error parsing JSON data[0m
+[0;32mI (195495) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (195515) Firebase: HTTP GET Status = 200[0m
+[0;31mE (195525) Firebase: Error parsing JSON data[0m
+[0;32mI (197135) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (197155) Firebase: HTTP GET Status = 200[0m
+[0;31mE (197165) Firebase: Error parsing JSON data[0m
+[0;32mI (198775) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (198795) Firebase: HTTP GET Status = 200[0m
+[0;31mE (198805) Firebase: Error parsing JSON data[0m
+[0;32mI (200415) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (200435) Firebase: HTTP GET Status = 200[0m
+[0;31mE (200445) Firebase: Error parsing JSON data[0m
+[0;32mI (202055) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (202075) Firebase: HTTP GET Status = 200[0m
+[0;31mE (202085) Firebase: Error parsing JSON data[0m
+[0;32mI (204095) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (204125) Firebase: HTTP GET Status = 200[0m
+[0;31mE (204135) Firebase: Error parsing JSON data[0m
+[0;32mI (205935) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (205965) Firebase: HTTP GET Status = 200[0m
+[0;31mE (205975) Firebase: Error parsing JSON data[0m
+[0;32mI (207785) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (207805) Firebase: HTTP GET Status = 200[0m
+[0;31mE (207815) Firebase: Error parsing JSON data[0m
+[0;32mI (209625) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (209645) Firebase: HTTP GET Status = 200[0m
+[0;31mE (209655) Firebase: Error parsing JSON data[0m
+[0;32mI (211265) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (211285) Firebase: HTTP GET Status = 200[0m
+[0;31mE (211295) Firebase: Error parsing JSON data[0m
+[0;32mI (212905) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (212925) Firebase: HTTP GET Status = 200[0m
+[0;31mE (212935) Firebase: Error parsing JSON data[0m
+[0;32mI (214345) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (214365) Firebase: HTTP GET Status = 200[0m
+[0;31mE (214375) Firebase: Error parsing JSON data[0m
+[0;32mI (216185) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (216205) Firebase: HTTP GET Status = 200[0m
+[0;31mE (216215) Firebase: Error parsing JSON data[0m
+[0;32mI (217815) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (217845) Firebase: HTTP GET Status = 200[0m
+[0;31mE (217855) Firebase: Error parsing JSON data[0m
+[0;32mI (219455) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (219485) Firebase: HTTP GET Status = 200[0m
+[0;31mE (219495) Firebase: Error parsing JSON data[0m
+[0;32mI (221095) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (221115) Firebase: HTTP GET Status = 200[0m
+[0;31mE (221125) Firebase: Error parsing JSON data[0m
+[0;32mI (222735) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (222755) Firebase: HTTP GET Status = 200[0m
+[0;31mE (222765) Firebase: Error parsing JSON data[0m
+[0;32mI (224785) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (224805) Firebase: HTTP GET Status = 200[0m
+[0;31mE (224815) Firebase: Error parsing JSON data[0m
+[0;32mI (226215) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (226235) Firebase: HTTP GET Status = 200[0m
+[0;31mE (226245) Firebase: Error parsing JSON data[0m
+[0;32mI (228055) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (228085) Firebase: HTTP GET Status = 200[0m
+[0;31mE (228095) Firebase: Error parsing JSON data[0m
+[0;32mI (229535) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (229555) Firebase: HTTP GET Status = 200[0m
+[0;31mE (229565) Firebase: Error parsing JSON data[0m
+[0;32mI (231335) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (231355) Firebase: HTTP GET Status = 200[0m
+[0;31mE (231365) Firebase: Error parsing JSON data[0m
+[0;32mI (232975) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (232995) Firebase: HTTP GET Status = 200[0m
+[0;31mE (233005) Firebase: Error parsing JSON data[0m
+[0;32mI (234405) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (234435) Firebase: HTTP GET Status = 200[0m
+[0;31mE (234445) Firebase: Error parsing JSON data[0m
+[0;32mI (236045) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (236065) Firebase: HTTP GET Status = 200[0m
+[0;31mE (236075) Firebase: Error parsing JSON data[0m
+[0;32mI (237485) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (237505) Firebase: HTTP GET Status = 200[0m
+[0;31mE (237515) Firebase: Error parsing JSON data[0m
+[0;32mI (238935) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (238955) Firebase: HTTP GET Status = 200[0m
+[0;31mE (238965) Firebase: Error parsing JSON data[0m
+[0;32mI (240555) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (240575) Firebase: HTTP GET Status = 200[0m
+[0;31mE (240585) Firebase: Error parsing JSON data[0m
+[0;32mI (242185) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (242215) Firebase: HTTP GET Status = 200[0m
+[0;31mE (242225) Firebase: Error parsing JSON data[0m
+[0;32mI (243825) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (243855) Firebase: HTTP GET Status = 200[0m
+[0;31mE (243865) Firebase: Error parsing JSON data[0m
+[0;32mI (245675) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (245695) Firebase: HTTP GET Status = 200[0m
+[0;31mE (245705) Firebase: Error parsing JSON data[0m
+[0;32mI (247515) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (247535) Firebase: HTTP GET Status = 200[0m
+[0;31mE (247545) Firebase: Error parsing JSON data[0m
+[0;32mI (249155) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (249175) Firebase: HTTP GET Status = 200[0m
+[0;31mE (249185) Firebase: Error parsing JSON data[0m
+[0;32mI (250795) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (250815) Firebase: HTTP GET Status = 200[0m
+[0;31mE (250825) Firebase: Error parsing JSON data[0m
+[0;32mI (252255) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (252285) Firebase: HTTP GET Status = 200[0m
+[0;31mE (252295) Firebase: Error parsing JSON data[0m
+[0;32mI (253865) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (253885) Firebase: HTTP GET Status = 200[0m
+[0;31mE (253895) Firebase: Error parsing JSON data[0m
+[0;32mI (255295) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (255325) Firebase: HTTP GET Status = 200[0m
+[0;31mE (255335) Firebase: Error parsing JSON data[0m
+[0;32mI (257135) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (257165) Firebase: HTTP GET Status = 200[0m
+[0;31mE (257175) Firebase: Error parsing JSON data[0m
+[0;32mI (258595) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (258615) Firebase: HTTP GET Status = 200[0m
+[0;31mE (258625) Firebase: Error parsing JSON data[0m
+[0;32mI (260015) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (260035) Firebase: HTTP GET Status = 200[0m
+[0;31mE (260045) Firebase: Error parsing JSON data[0m
+[0;32mI (261845) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (261875) Firebase: HTTP GET Status = 200[0m
+[0;31mE (261885) Firebase: Error parsing JSON data[0m
+[0;32mI (263695) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (263715) Firebase: HTTP GET Status = 200[0m
+[0;31mE (263725) Firebase: Error parsing JSON data[0m
+[0;32mI (265535) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (265555) Firebase: HTTP GET Status = 200[0m
+[0;31mE (265565) Firebase: Error parsing JSON data[0m
+[0;32mI (267585) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (267605) Firebase: HTTP GET Status = 200[0m
+[0;31mE (267615) Firebase: Error parsing JSON data[0m
+[0;32mI (269425) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (269455) Firebase: HTTP GET Status = 200[0m
+[0;31mE (269465) Firebase: Error parsing JSON data[0m
+[0;32mI (271065) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (271085) Firebase: HTTP GET Status = 200[0m
+[0;31mE (271095) Firebase: Error parsing JSON data[0m
+[0;32mI (272705) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (272725) Firebase: HTTP GET Status = 200[0m
+[0;31mE (272735) Firebase: Error parsing JSON data[0m
+[0;32mI (274345) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (274365) Firebase: HTTP GET Status = 200[0m
+[0;31mE (274375) Firebase: Error parsing JSON data[0m
+[0;32mI (276185) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (276205) Firebase: HTTP GET Status = 200[0m
+[0;31mE (276215) Firebase: Error parsing JSON data[0m
+[0;32mI (277825) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (277845) Firebase: HTTP GET Status = 200[0m
+[0;31mE (277855) Firebase: Error parsing JSON data[0m
+[0;32mI (279255) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (279285) Firebase: HTTP GET Status = 200[0m
+[0;31mE (279295) Firebase: Error parsing JSON data[0m
+[0;32mI (280695) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (280715) Firebase: HTTP GET Status = 200[0m
+[0;31mE (280725) Firebase: Error parsing JSON data[0m
+[0;32mI (282125) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (282145) Firebase: HTTP GET Status = 200[0m
+[0;31mE (282155) Firebase: Error parsing JSON data[0m
+[0;32mI (283765) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (283785) Firebase: HTTP GET Status = 200[0m
+[0;31mE (283795) Firebase: Error parsing JSON data[0m
+[0;32mI (285405) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (285425) Firebase: HTTP GET Status = 200[0m
+[0;31mE (285435) Firebase: Error parsing JSON data[0m
+[0;32mI (287445) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (287475) Firebase: HTTP GET Status = 200[0m
+[0;31mE (287485) Firebase: Error parsing JSON data[0m
+[0;32mI (289295) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (289315) Firebase: HTTP GET Status = 200[0m
+[0;31mE (289325) Firebase: Error parsing JSON data[0m
+[0;32mI (290725) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (290745) Firebase: HTTP GET Status = 200[0m
+[0;31mE (290755) Firebase: Error parsing JSON data[0m
+[0;32mI (292565) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (292595) Firebase: HTTP GET Status = 200[0m
+[0;31mE (292605) Firebase: Error parsing JSON data[0m
+[0;32mI (294205) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (294235) Firebase: HTTP GET Status = 200[0m
+[0;31mE (294245) Firebase: Error parsing JSON data[0m
+[0;32mI (295645) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (295665) Firebase: HTTP GET Status = 200[0m
+[0;31mE (295675) Firebase: Error parsing JSON data[0m
+[0;32mI (297275) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (297305) Firebase: HTTP GET Status = 200[0m
+[0;31mE (297315) Firebase: Error parsing JSON data[0m
+[0;32mI (298915) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (298945) Firebase: HTTP GET Status = 200[0m
+[0;31mE (298955) Firebase: Error parsing JSON data[0m
+[0;32mI (300555) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (300575) Firebase: HTTP GET Status = 200[0m
+[0;31mE (300585) Firebase: Error parsing JSON data[0m
+[0;32mI (302195) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (302215) Firebase: HTTP GET Status = 200[0m
+[0;31mE (302225) Firebase: Error parsing JSON data[0m
+[0;32mI (303635) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (303655) Firebase: HTTP GET Status = 200[0m
+[0;31mE (303665) Firebase: Error parsing JSON data[0m
+[0;32mI (305295) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (305325) Firebase: HTTP GET Status = 200[0m
+[0;31mE (305335) Firebase: Error parsing JSON data[0m
+[0;32mI (307105) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (307135) Firebase: HTTP GET Status = 200[0m
+[0;31mE (307145) Firebase: Error parsing JSON data[0m
+[0;32mI (308565) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (308595) Firebase: HTTP GET Status = 200[0m
+[0;31mE (308605) Firebase: Error parsing JSON data[0m
+[0;32mI (309985) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (310005) Firebase: HTTP GET Status = 200[0m
+[0;31mE (310015) Firebase: Error parsing JSON data[0m
+[0;32mI (312025) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (312045) Firebase: HTTP GET Status = 200[0m
+[0;31mE (312055) Firebase: Error parsing JSON data[0m
+[0;32mI (313865) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (313895) Firebase: HTTP GET Status = 200[0m
+[0;31mE (313905) Firebase: Error parsing JSON data[0m
+[0;32mI (315705) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (315735) Firebase: HTTP GET Status = 200[0m
+[0;31mE (315745) Firebase: Error parsing JSON data[0m
+[0;32mI (317355) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (317375) Firebase: HTTP GET Status = 200[0m
+[0;31mE (317385) Firebase: Error parsing JSON data[0m
+[0;32mI (318985) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (319015) Firebase: HTTP GET Status = 200[0m
+[0;31mE (319025) Firebase: Error parsing JSON data[0m
+[0;32mI (320835) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (320855) Firebase: HTTP GET Status = 200[0m
+[0;31mE (320865) Firebase: Error parsing JSON data[0m
+[0;32mI (322675) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (322695) Firebase: HTTP GET Status = 200[0m
+[0;31mE (322705) Firebase: Error parsing JSON data[0m
+[0;32mI (324105) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (324135) Firebase: HTTP GET Status = 200[0m
+[0;31mE (324145) Firebase: Error parsing JSON data[0m
+[0;32mI (325545) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (325575) Firebase: HTTP GET Status = 200[0m
+[0;31mE (325585) Firebase: Error parsing JSON data[0m
+[0;32mI (327205) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (327225) Firebase: HTTP GET Status = 200[0m
+[0;31mE (327235) Firebase: Error parsing JSON data[0m
+[0;32mI (329025) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (329045) Firebase: HTTP GET Status = 200[0m
+[0;31mE (329055) Firebase: Error parsing JSON data[0m
+[0;32mI (330665) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (330685) Firebase: HTTP GET Status = 200[0m
+[0;31mE (330695) Firebase: Error parsing JSON data[0m
+[0;32mI (332305) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (332325) Firebase: HTTP GET Status = 200[0m
+[0;31mE (332335) Firebase: Error parsing JSON data[0m
+[0;32mI (334145) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (334165) Firebase: HTTP GET Status = 200[0m
+[0;31mE (334175) Firebase: Error parsing JSON data[0m
+[0;32mI (335785) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (335805) Firebase: HTTP GET Status = 200[0m
+[0;31mE (335815) Firebase: Error parsing JSON data[0m
+[0;32mI (337215) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (337235) Firebase: HTTP GET Status = 200[0m
+[0;31mE (337245) Firebase: Error parsing JSON data[0m
+[0;32mI (338855) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (338875) Firebase: HTTP GET Status = 200[0m
+[0;31mE (338885) Firebase: Error parsing JSON data[0m
+[0;32mI (340285) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (340305) Firebase: HTTP GET Status = 200[0m
+[0;31mE (340315) Firebase: Error parsing JSON data[0m
+[0;32mI (341925) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (341945) Firebase: HTTP GET Status = 200[0m
+[0;31mE (341955) Firebase: Error parsing JSON data[0m
+[0;32mI (343565) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (343585) Firebase: HTTP GET Status = 200[0m
+[0;31mE (343595) Firebase: Error parsing JSON data[0m
+[0;32mI (345405) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (345435) Firebase: HTTP GET Status = 200[0m
+[0;31mE (345445) Firebase: Error parsing JSON data[0m
+[0;32mI (347255) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (347275) Firebase: HTTP GET Status = 200[0m
+[0;31mE (347285) Firebase: Error parsing JSON data[0m
+[0;32mI (348895) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (348915) Firebase: HTTP GET Status = 200[0m
+[0;31mE (348925) Firebase: Error parsing JSON data[0m
+[0;32mI (350525) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (350555) Firebase: HTTP GET Status = 200[0m
+[0;31mE (350565) Firebase: Error parsing JSON data[0m
+[0;32mI (352375) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (352395) Firebase: HTTP GET Status = 200[0m
+[0;31mE (352405) Firebase: Error parsing JSON data[0m
+[0;32mI (354015) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (354035) Firebase: HTTP GET Status = 200[0m
+[0;31mE (354045) Firebase: Error parsing JSON data[0m
+[0;32mI (355645) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (355675) Firebase: HTTP GET Status = 200[0m
+[0;31mE (355685) Firebase: Error parsing JSON data[0m
+[0;32mI (357695) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (357715) Firebase: HTTP GET Status = 200[0m
+[0;31mE (357725) Firebase: Error parsing JSON data[0m
+[0;32mI (359125) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (359155) Firebase: HTTP GET Status = 200[0m
+[0;31mE (359165) Firebase: Error parsing JSON data[0m
+[0;32mI (360845) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (360865) Firebase: HTTP GET Status = 200[0m
+[0;31mE (360875) Firebase: Error parsing JSON data[0m
+[0;32mI (362405) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (362425) Firebase: HTTP GET Status = 200[0m
+[0;31mE (362435) Firebase: Error parsing JSON data[0m
+[0;32mI (364245) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (364275) Firebase: HTTP GET Status = 200[0m
+[0;31mE (364285) Firebase: Error parsing JSON data[0m
+[0;32mI (365885) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (365905) Firebase: HTTP GET Status = 200[0m
+[0;31mE (365915) Firebase: Error parsing JSON data[0m
+[0;32mI (367525) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (367545) Firebase: HTTP GET Status = 200[0m
+[0;31mE (367555) Firebase: Error parsing JSON data[0m
+[0;32mI (369165) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (369185) Firebase: HTTP GET Status = 200[0m
+[0;31mE (369195) Firebase: Error parsing JSON data[0m
+[0;32mI (370815) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (370835) Firebase: HTTP GET Status = 200[0m
+[0;31mE (370845) Firebase: Error parsing JSON data[0m
+[0;32mI (372235) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (372255) Firebase: HTTP GET Status = 200[0m
+[0;31mE (372265) Firebase: Error parsing JSON data[0m
+[0;32mI (373875) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (373895) Firebase: HTTP GET Status = 200[0m
+[0;31mE (373905) Firebase: Error parsing JSON data[0m
+[0;32mI (375515) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (375535) Firebase: HTTP GET Status = 200[0m
+[0;31mE (375545) Firebase: Error parsing JSON data[0m
+[0;32mI (376945) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (376965) Firebase: HTTP GET Status = 200[0m
+[0;31mE (376975) Firebase: Error parsing JSON data[0m
+[0;32mI (378395) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (378415) Firebase: HTTP GET Status = 200[0m
+[0;31mE (378435) Firebase: Error parsing JSON data[0m
+[0;32mI (379815) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (379835) Firebase: HTTP GET Status = 200[0m
+[0;31mE (379845) Firebase: Error parsing JSON data[0m
+[0;32mI (381245) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (381275) Firebase: HTTP GET Status = 200[0m
+[0;31mE (381285) Firebase: Error parsing JSON data[0m
+[0;32mI (382885) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (382905) Firebase: HTTP GET Status = 200[0m
+[0;31mE (382915) Firebase: Error parsing JSON data[0m
+[0;32mI (384525) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (384545) Firebase: HTTP GET Status = 200[0m
+[0;31mE (384555) Firebase: Error parsing JSON data[0m
+[0;32mI (386165) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (386185) Firebase: HTTP GET Status = 200[0m
+[0;31mE (386195) Firebase: Error parsing JSON data[0m
+[0;32mI (387805) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (387825) Firebase: HTTP GET Status = 200[0m
+[0;31mE (387835) Firebase: Error parsing JSON data[0m
+[0;32mI (389235) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (389265) Firebase: HTTP GET Status = 200[0m
+[0;31mE (389275) Firebase: Error parsing JSON data[0m
+[0;32mI (390675) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (390695) Firebase: HTTP GET Status = 200[0m
+[0;31mE (390705) Firebase: Error parsing JSON data[0m
+[0;32mI (392305) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (392325) Firebase: HTTP GET Status = 200[0m
+[0;31mE (392335) Firebase: Error parsing JSON data[0m
+[0;32mI (393945) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (393965) Firebase: HTTP GET Status = 200[0m
+[0;31mE (393975) Firebase: Error parsing JSON data[0m
+[0;32mI (395415) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (395435) Firebase: HTTP GET Status = 200[0m
+[0;31mE (395445) Firebase: Error parsing JSON data[0m
+[0;32mI (397225) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (397245) Firebase: HTTP GET Status = 200[0m
+[0;31mE (397255) Firebase: Error parsing JSON data[0m
+[0;32mI (398895) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (398915) Firebase: HTTP GET Status = 200[0m
+[0;31mE (398925) Firebase: Error parsing JSON data[0m
+[0;32mI (400505) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (400525) Firebase: HTTP GET Status = 200[0m
+[0;31mE (400535) Firebase: Error parsing JSON data[0m
+[0;32mI (402355) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (402385) Firebase: HTTP GET Status = 200[0m
+[0;31mE (402395) Firebase: Error parsing JSON data[0m
+[0;32mI (403775) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (403795) Firebase: HTTP GET Status = 200[0m
+[0;31mE (403805) Firebase: Error parsing JSON data[0m
+[0;32mI (405615) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (405645) Firebase: HTTP GET Status = 200[0m
+[0;31mE (405655) Firebase: Error parsing JSON data[0m
+[0;32mI (407465) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (407485) Firebase: HTTP GET Status = 200[0m
+[0;31mE (407495) Firebase: Error parsing JSON data[0m
+[0;32mI (408895) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (408915) Firebase: HTTP GET Status = 200[0m
+[0;31mE (408925) Firebase: Error parsing JSON data[0m
+[0;32mI (410735) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (410765) Firebase: HTTP GET Status = 200[0m
+[0;31mE (410775) Firebase: Error parsing JSON data[0m
+[0;32mI (412585) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (412605) Firebase: HTTP GET Status = 200[0m
+[0;31mE (412615) Firebase: Error parsing JSON data[0m
+[0;32mI (414055) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (414075) Firebase: HTTP GET Status = 200[0m
+[0;31mE (414085) Firebase: Error parsing JSON data[0m
+[0;32mI (415445) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (415475) Firebase: HTTP GET Status = 200[0m
+[0;31mE (415485) Firebase: Error parsing JSON data[0m
+[0;32mI (416885) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (416905) Firebase: HTTP GET Status = 200[0m
+[0;31mE (416915) Firebase: Error parsing JSON data[0m
+[0;32mI (418515) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (418545) Firebase: HTTP GET Status = 200[0m
+[0;31mE (418555) Firebase: Error parsing JSON data[0m
+[0;32mI (420155) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (420185) Firebase: HTTP GET Status = 200[0m
+[0;31mE (420195) Firebase: Error parsing JSON data[0m
+[0;32mI (421595) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (421615) Firebase: HTTP GET Status = 200[0m
+[0;31mE (421625) Firebase: Error parsing JSON data[0m
+[0;32mI (423235) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (423255) Firebase: HTTP GET Status = 200[0m
+[0;31mE (423265) Firebase: Error parsing JSON data[0m
+[0;32mI (424865) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (424895) Firebase: HTTP GET Status = 200[0m
+[0;31mE (424905) Firebase: Error parsing JSON data[0m
+[0;32mI (426305) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (426325) Firebase: HTTP GET Status = 200[0m
+[0;31mE (426335) Firebase: Error parsing JSON data[0m
+[0;32mI (427735) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (427765) Firebase: HTTP GET Status = 200[0m
+[0;31mE (427775) Firebase: Error parsing JSON data[0m
+[0;32mI (429175) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (429195) Firebase: HTTP GET Status = 200[0m
+[0;31mE (429205) Firebase: Error parsing JSON data[0m
+[0;32mI (430805) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (430835) Firebase: HTTP GET Status = 200[0m
+[0;31mE (430845) Firebase: Error parsing JSON data[0m
+[0;32mI (432655) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (432675) Firebase: HTTP GET Status = 200[0m
+[0;31mE (432685) Firebase: Error parsing JSON data[0m
+[0;32mI (434285) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (434315) Firebase: HTTP GET Status = 200[0m
+[0;31mE (434325) Firebase: Error parsing JSON data[0m
+[0;32mI (435775) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (435795) Firebase: HTTP GET Status = 200[0m
+[0;31mE (435805) Firebase: Error parsing JSON data[0m
+[0;32mI (437365) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (437385) Firebase: HTTP GET Status = 200[0m
+[0;31mE (437395) Firebase: Error parsing JSON data[0m
+[0;32mI (438795) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (438815) Firebase: HTTP GET Status = 200[0m
+[0;31mE (438825) Firebase: Error parsing JSON data[0m
+[0;32mI (440635) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (440665) Firebase: HTTP GET Status = 200[0m
+[0;31mE (440675) Firebase: Error parsing JSON data[0m
+[0;32mI (442275) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (442295) Firebase: HTTP GET Status = 200[0m
+[0;31mE (442305) Firebase: Error parsing JSON data[0m
+[0;32mI (443915) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (443935) Firebase: HTTP GET Status = 200[0m
+[0;31mE (443945) Firebase: Error parsing JSON data[0m

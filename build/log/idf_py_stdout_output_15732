@@ -1,0 +1,3161 @@
+'����revision: v3.0[0m
+[0;32ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Sep 23 2024 10:01:52[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.0[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=28a94h (166548) map[0m
+[0;32mI (162) esp_image: segment 1: paddr=00038abc vaddr=3ffb0000 size=03bcch ( 15308) load[0m
+[0;32mI (168) esp_image: segment 2: paddr=0003c690 vaddr=40080000 size=03988h ( 14728) load[0m
+[0;32mI (174) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9dedch (646876) map[0m
+[0;32mI (398) esp_image: segment 4: paddr=000ddf04 vaddr=40083988 size=12ea8h ( 77480) load[0m
+[0;32mI (440) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (440) boot: Disabling RNG early entropy source...[0m
+[0;32mI (451) cpu_start: Multicore app[0m
+[0;32mI (460) cpu_start: Pro cpu start user code[0m
+[0;32mI (460) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (460) cpu_start: Application information:[0m
+[0;32mI (463) cpu_start: Project name:     app-template[0m
+[0;32mI (468) cpu_start: App version:      1[0m
+[0;32mI (473) cpu_start: Compile time:     Sep 23 2024 10:01:37[0m
+[0;32mI (479) cpu_start: ELF file SHA256:  ad47958d9...[0m
+[0;32mI (484) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (490) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (494) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (499) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (504) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (511) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (517) heap_init: At 3FFB8480 len 00027B80 (158 KiB): DRAM[0m
+[0;32mI (523) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (530) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (536) heap_init: At 40096830 len 000097D0 (37 KiB): IRAM[0m
+[0;32mI (544) spi_flash: detected chip: generic[0m
+[0;32mI (547) spi_flash: flash io: dio[0m
+[0;33mW (551) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (565) main_task: Started on CPU0[0m
+[0;32mI (575) main_task: Calling app_main()[0m
+[0;32mI (615) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 1| Intr:0 [0m
+[0;32mI (615) gpio: GPIO[5]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 1| Intr:0 [0m
+[0;32mI (625) Firebase: ESP_WIFI_MODE_STA[0m
+I (645) wifi:wifi driver task: 3ffc04d4, prio:23, stack:6656, core=0
+I (665) wifi:wifi firmware version: 3e0076f
+I (665) wifi:wifi certification version: v7.0
+I (665) wifi:config NVS flash: enabled
+I (665) wifi:config nano formating: disabled
+I (675) wifi:Init data frame dynamic rx buffer num: 32
+I (675) wifi:Init static rx mgmt buffer num: 5
+I (675) wifi:Init management short buffer num: 32
+I (685) wifi:Init dynamic tx buffer num: 32
+I (685) wifi:Init static rx buffer size: 1600
+I (695) wifi:Init static rx buffer num: 10
+I (695) wifi:Init dynamic rx buffer num: 32
+[0;32mI (705) wifi_init: rx ba win: 6[0m
+[0;32mI (705) wifi_init: tcpip mbox: 32[0m
+[0;32mI (705) wifi_init: udp mbox: 6[0m
+[0;32mI (715) wifi_init: tcp mbox: 6[0m
+[0;32mI (715) wifi_init: tcp tx win: 5760[0m
+[0;32mI (715) wifi_init: tcp rx win: 5760[0m
+[0;32mI (725) wifi_init: tcp mss: 1440[0m
+[0;32mI (725) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (735) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (745) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+I (835) wifi:mode : sta (c8:f0:9e:f1:4a:c8)
+I (835) wifi:enable tsf
+[0;32mI (835) Firebase: wifi_init_sta finished.[0m
+I (845) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (845) wifi:state: init -> auth (b0)
+I (855) wifi:state: auth -> assoc (0)
+I (855) wifi:state: assoc -> run (10)
+I (885) wifi:connected with Galaxym31, aid = 1, channel 11, BW20, bssid = 4a:3e:02:1e:c9:b7
+I (885) wifi:security: WPA2-PSK, phy: bgn, rssi: -36
+I (895) wifi:pm start, type: 1
+
+I (895) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (895) wifi:<ba-add>idx:0 (ifx:0, 4a:3e:02:1e:c9:b7), tid:0, ssn:0, winSize:64
+I (915) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us
+I (915) wifi:AP's beacon interval = 102400 us, DTIM period = 2
+[0;32mI (1905) esp_netif_handlers: sta ip: 192.168.26.89, mask: 255.255.255.0, gw: 192.168.26.71[0m
+[0;32mI (1905) Firebase: got ip:192.168.26.89[0m
+[0;32mI (1905) Firebase: connected to ap SSID:myssid password:mypassword[0m
+[0;32mI (1915) main_task: Returned from app_main()[0m
+[0;32mI (3385) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (3405) Firebase: HTTP GET Status = 200[0m
+[0;32mI (7885) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (7915) Firebase: HTTP GET Status = 200[0m
+[0;32mI (12395) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (12425) Firebase: HTTP GET Status = 200[0m
+[0;32mI (16905) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (16925) Firebase: HTTP GET Status = 200[0m
+[0;32mI (21615) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (21635) Firebase: HTTP GET Status = 200[0m
+[0;32mI (26115) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (26145) Firebase: HTTP GET Status = 200[0m
+[0;32mI (31265) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (31285) Firebase: HTTP GET Status = 200[0m
+[0;32mI (36155) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (36175) Firebase: HTTP GET Status = 200[0m
+[0;32mI (40505) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (40525) Firebase: HTTP GET Status = 200[0m
+[0;32mI (45165) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (45185) Firebase: HTTP GET Status = 200[0m
+[0;32mI (49895) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (49915) Firebase: HTTP GET Status = 200[0m
+[0;32mI (54585) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (54605) Firebase: HTTP GET Status = 200[0m
+[0;32mI (59295) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (59315) Firebase: HTTP GET Status = 200[0m
+[0;32mI (64005) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (64025) Firebase: HTTP GET Status = 200[0m
+[0;32mI (68925) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (68945) Firebase: HTTP GET Status = 200[0m
+[0;32mI (73475) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (73495) Firebase: HTTP GET Status = 200[0m
+[0;32mI (77755) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (77785) Firebase: HTTP GET Status = 200[0m
+[0;32mI (82435) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:29:24.024068Z"
+}
+[0m
+[0;32mI (82455) Firebase: HTTP GET Status = 200[0m
+[0;32mI (86735) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:37:07.865876Z"
+}
+[0m
+[0;32mI (86765) Firebase: HTTP GET Status = 200[0m
+[0;32mI (91245) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "0"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:37:07.865876Z"
+}
+[0m
+[0;32mI (91265) Firebase: HTTP GET Status = 200[0m
+[0;32mI (95955) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:37:19.108801Z"
+}
+[0m
+[0;32mI (95975) Firebase: HTTP GET Status = 200[0m
+[0;32mI (100295) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "0"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:37:19.108801Z"
+}
+[0m
+[0;32mI (100325) Firebase: HTTP GET Status = 200[0m
+[0;32mI (104765) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:37:29.331171Z"
+}
+[0m
+[0;32mI (104785) Firebase: HTTP GET Status = 200[0m
+[0;32mI (109075) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:37:29.331171Z"
+}
+[0m
+[0;32mI (109105) Firebase: HTTP GET Status = 200[0m
+[0;32mI (113565) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:37:29.331171Z"
+}
+[0m
+[0;32mI (113595) Firebase: HTTP GET Status = 200[0m
+[0;32mI (118075) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:37:29.331171Z"
+}
+[0m
+[0;32mI (118095) Firebase: HTTP GET Status = 200[0m
+[0;32mI (122575) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:37:29.331171Z"
+}
+[0m
+[0;32mI (122605) Firebase: HTTP GET Status = 200[0m
+[0;32mI (126925) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:37:29.331171Z"
+}
+[0m
+[0;32mI (126955) Firebase: HTTP GET Status = 200[0m
+[0;32mI (131385) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:37:29.331171Z"
+}
+[0m
+[0;32mI (131405) Firebase: HTTP GET Status = 200[0m
+[0;32mI (135895) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:37:29.331171Z"
+}
+[0m
+[0;32mI (135915) Firebase: HTTP GET Status = 200[0m
+[0;32mI (140435) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:37:29.331171Z"
+}
+[0m
+[0;32mI (140455) Firebase: HTTP GET Status = 200[0m
+[0;32mI (145105) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:37:29.331171Z"
+}
+[0m
+[0;32mI (145125) Firebase: HTTP GET Status = 200[0m
+[0;32mI (149615) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:37:29.331171Z"
+}
+[0m
+[0;32mI (149635) Firebase: HTTP GET Status = 200[0m
+[0;32mI (154145) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:37:29.331171Z"
+}
+[0m
+[0;32mI (154165) Firebase: HTTP GET Status = 200[0m
+[0;32mI (158465) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:37:29.331171Z"
+}
+[0m
+[0;32mI (158495) Firebase: HTTP GET Status = 200[0m
+[0;32mI (162925) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:37:29.331171Z"
+}
+[0m
+[0;32mI (162945) Firebase: HTTP GET Status = 200[0m
+[0;32mI (167425) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:37:29.331171Z"
+}
+[0m
+[0;32mI (167455) Firebase: HTTP GET Status = 200[0m
+[0;32mI (171975) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:37:29.331171Z"
+}
+[0m
+[0;32mI (172005) Firebase: HTTP GET Status = 200[0m
+[0;32mI (176475) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:37:29.331171Z"
+}
+[0m
+[0;32mI (176495) Firebase: HTTP GET Status = 200[0m
+[0;32mI (181195) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:37:29.331171Z"
+}
+[0m
+[0;32mI (181225) Firebase: HTTP GET Status = 200[0m
+[0;32mI (185715) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:37:29.331171Z"
+}
+[0m
+[0;32mI (185745) Firebase: HTTP GET Status = 200[0m
+[0;32mI (190365) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:37:29.331171Z"
+}
+[0m
+[0;32mI (190385) Firebase: HTTP GET Status = 200[0m
+[0;32mI (194935) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:37:29.331171Z"
+}
+[0m
+[0;32mI (194955) Firebase: HTTP GET Status = 200[0m
+[0;32mI (199415) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:37:29.331171Z"
+}
+[0m
+[0;32mI (199435) Firebase: HTTP GET Status = 200[0m
+[0;32mI (203885) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:37:29.331171Z"
+}
+[0m
+[0;32mI (203905) Firebase: HTTP GET Status = 200[0m
+[0;32mI (208595) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:37:29.331171Z"
+}
+[0m
+[0;32mI (208615) Firebase: HTTP GET Status = 200[0m
+[0;32mI (212895) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:37:29.331171Z"
+}
+[0m
+[0;32mI (212915) Firebase: HTTP GET Status = 200[0m
+[0;32mI (217265) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:37:29.331171Z"
+}
+[0m
+[0;32mI (217285) Firebase: HTTP GET Status = 200[0m
+[0;32mI (221705) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:37:29.331171Z"
+}
+[0m
+[0;32mI (221725) Firebase: HTTP GET Status = 200[0m
+[0;32mI (226205) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:37:29.331171Z"
+}
+[0m
+[0;32mI (226225) Firebase: HTTP GET Status = 200[0m
+[0;32mI (230915) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:37:29.331171Z"
+}
+[0m
+[0;32mI (230935) Firebase: HTTP GET Status = 200[0m
+[0;32mI (235425) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:37:29.331171Z"
+}
+[0m
+[0;32mI (235445) Firebase: HTTP GET Status = 200[0m
+[0;32mI (240135) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:37:29.331171Z"
+}
+[0m
+[0;32mI (240155) Firebase: HTTP GET Status = 200[0m
+[0;32mI (244845) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:37:29.331171Z"
+}
+[0m
+[0;32mI (244865) Firebase: HTTP GET Status = 200[0m
+[0;32mI (249555) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:37:29.331171Z"
+}
+[0m
+[0;32mI (249575) Firebase: HTTP GET Status = 200[0m
+[0;32mI (254055) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:37:29.331171Z"
+}
+[0m
+[0;32mI (254075) Firebase: HTTP GET Status = 200[0m
+[0;32mI (258765) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:37:29.331171Z"
+}
+[0m
+[0;32mI (258795) Firebase: HTTP GET Status = 200[0m
+[0;32mI (263905) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:37:29.331171Z"
+}
+[0m
+[0;32mI (263935) Firebase: HTTP GET Status = 200[0m
+[0;32mI (268805) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:37:29.331171Z"
+}
+[0m
+[0;32mI (268825) Firebase: HTTP GET Status = 200[0m
+[0;32mI (273925) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:37:29.331171Z"
+}
+[0m
+[0;32mI (273945) Firebase: HTTP GET Status = 200[0m
+[0;32mI (278665) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:37:29.331171Z"
+}
+[0m
+[0;32mI (278695) Firebase: HTTP GET Status = 200[0m
+[0;32mI (283135) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:37:29.331171Z"
+}
+[0m
+[0;32mI (283165) Firebase: HTTP GET Status = 200[0m
+[0;32mI (287645) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:37:29.331171Z"
+}
+[0m
+[0;32mI (287665) Firebase: HTTP GET Status = 200[0m
+[0;32mI (292145) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:37:29.331171Z"
+}
+[0m
+[0;32mI (292175) Firebase: HTTP GET Status = 200[0m
+[0;32mI (296855) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:37:29.331171Z"
+}
+[0m
+[0;32mI (296885) Firebase: HTTP GET Status = 200[0m
+[0;32mI (301565) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:37:29.331171Z"
+}
+[0m
+[0;32mI (301595) Firebase: HTTP GET Status = 200[0m
+[0;32mI (306285) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:37:29.331171Z"
+}
+[0m
+[0;32mI (306305) Firebase: HTTP GET Status = 200[0m
+[0;32mI (310785) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:37:29.331171Z"
+}
+[0m
+[0;32mI (310805) Firebase: HTTP GET Status = 200[0m
+[0;32mI (315495) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:37:29.331171Z"
+}
+[0m
+[0;32mI (315525) Firebase: HTTP GET Status = 200[0m
+[0;32mI (320205) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:37:29.331171Z"
+}
+[0m
+[0;32mI (320235) Firebase: HTTP GET Status = 200[0m
+[0;32mI (324915) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "10"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:09.739680Z"
+}
+[0m
+[0;32mI (324945) Firebase: HTTP GET Status = 200[0m
+[0;32mI (330065) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "10"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:09.739680Z"
+}
+[0m
+[0;32mI (330085) Firebase: HTTP GET Status = 200[0m
+[0;32mI (335155) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "10"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:09.739680Z"
+}
+[0m
+[0;32mI (335175) Firebase: HTTP GET Status = 200[0m
+[0;32mI (339665) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "20"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:24.587288Z"
+}
+[0m
+[0;32mI (339685) Firebase: HTTP GET Status = 200[0m
+[0;32mI (344165) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "20"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:24.587288Z"
+}
+[0m
+[0;32mI (344195) Firebase: HTTP GET Status = 200[0m
+[0;32mI (348695) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "20"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:24.587288Z"
+}
+[0m
+[0;32mI (348725) Firebase: HTTP GET Status = 200[0m
+[0;32mI (353175) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (353205) Firebase: HTTP GET Status = 200[0m
+[0;32mI (357485) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "0"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (357505) Firebase: HTTP GET Status = 200[0m
+[0;32mI (362195) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (362215) Firebase: HTTP GET Status = 200[0m
+[0;32mI (366905) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (366925) Firebase: HTTP GET Status = 200[0m
+[0;32mI (371405) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (371425) Firebase: HTTP GET Status = 200[0m
+[0;32mI (376545) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (376575) Firebase: HTTP GET Status = 200[0m
+[0;32mI (381035) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "0"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (381055) Firebase: HTTP GET Status = 200[0m
+[0;32mI (385355) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "0"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (385385) Firebase: HTTP GET Status = 200[0m
+[0;32mI (390045) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "0"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (390065) Firebase: HTTP GET Status = 200[0m
+[0;32mI (394545) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (394575) Firebase: HTTP GET Status = 200[0m
+[0;32mI (398885) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (398905) Firebase: HTTP GET Status = 200[0m
+[0;32mI (403605) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (403635) Firebase: HTTP GET Status = 200[0m
+[0;32mI (408115) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (408145) Firebase: HTTP GET Status = 200[0m
+[0;32mI (412775) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (412795) Firebase: HTTP GET Status = 200[0m
+[0;32mI (417085) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (417115) Firebase: HTTP GET Status = 200[0m
+[0;32mI (421785) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "0"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (421805) Firebase: HTTP GET Status = 200[0m
+[0;32mI (426095) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (426115) Firebase: HTTP GET Status = 200[0m
+[0;32mI (430595) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (430615) Firebase: HTTP GET Status = 200[0m
+[0;32mI (434935) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "0"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (434965) Firebase: HTTP GET Status = 200[0m
+[0;32mI (439435) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "0"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (439455) Firebase: HTTP GET Status = 200[0m
+[0;32mI (444105) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (444135) Firebase: HTTP GET Status = 200[0m
+[0;32mI (448445) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (448465) Firebase: HTTP GET Status = 200[0m
+[0;32mI (452775) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (452795) Firebase: HTTP GET Status = 200[0m
+[0;32mI (457425) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "0"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (457445) Firebase: HTTP GET Status = 200[0m
+[0;32mI (462155) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "0"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (462175) Firebase: HTTP GET Status = 200[0m
+[0;32mI (466435) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (466455) Firebase: HTTP GET Status = 200[0m
+[0;32mI (470775) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (470805) Firebase: HTTP GET Status = 200[0m
+[0;32mI (475245) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (475265) Firebase: HTTP GET Status = 200[0m
+[0;32mI (479745) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (479765) Firebase: HTTP GET Status = 200[0m
+[0;32mI (484085) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (484105) Firebase: HTTP GET Status = 200[0m
+[0;32mI (488755) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "0"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (488775) Firebase: HTTP GET Status = 200[0m
+[0;32mI (493265) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (493285) Firebase: HTTP GET Status = 200[0m
+[0;32mI (497975) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (497995) Firebase: HTTP GET Status = 200[0m
+[0;32mI (502685) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "0"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (502705) Firebase: HTTP GET Status = 200[0m
+[0;32mI (507395) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "0"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (507415) Firebase: HTTP GET Status = 200[0m
+[0;32mI (511895) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "0"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (511925) Firebase: HTTP GET Status = 200[0m
+[0;32mI (516445) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (516475) Firebase: HTTP GET Status = 200[0m
+[0;32mI (520905) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (520925) Firebase: HTTP GET Status = 200[0m
+[0;32mI (525825) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "0"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (525845) Firebase: HTTP GET Status = 200[0m
+[0;32mI (530535) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (530555) Firebase: HTTP GET Status = 200[0m
+[0;32mI (535265) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (535295) Firebase: HTTP GET Status = 200[0m
+[0;32mI (539545) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (539565) Firebase: HTTP GET Status = 200[0m
+[0;32mI (544075) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "0"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (544095) Firebase: HTTP GET Status = 200[0m
+[0;32mI (548555) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "0"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (548585) Firebase: HTTP GET Status = 200[0m
+[0;32mI (553265) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (553285) Firebase: HTTP GET Status = 200[0m
+[0;32mI (557575) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "0"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (557595) Firebase: HTTP GET Status = 200[0m
+[0;32mI (562545) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (562575) Firebase: HTTP GET Status = 200[0m
+[0;32mI (567395) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (567425) Firebase: HTTP GET Status = 200[0m
+[0;32mI (571925) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (571955) Firebase: HTTP GET Status = 200[0m
+[0;32mI (576415) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (576435) Firebase: HTTP GET Status = 200[0m
+[0;32mI (581155) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (581175) Firebase: HTTP GET Status = 200[0m
+[0;32mI (585625) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (585645) Firebase: HTTP GET Status = 200[0m
+[0;32mI (590565) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "0"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (590585) Firebase: HTTP GET Status = 200[0m
+[0;32mI (595045) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (595065) Firebase: HTTP GET Status = 200[0m
+[0;32mI (599555) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "0"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (599575) Firebase: HTTP GET Status = 200[0m
+[0;32mI (604055) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (604075) Firebase: HTTP GET Status = 200[0m
+[0;32mI (608765) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "0"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (608795) Firebase: HTTP GET Status = 200[0m
+[0;32mI (613275) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (613295) Firebase: HTTP GET Status = 200[0m
+[0;32mI (617985) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (618005) Firebase: HTTP GET Status = 200[0m
+[0;32mI (622695) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "0"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (622715) Firebase: HTTP GET Status = 200[0m
+[0;32mI (626995) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (627015) Firebase: HTTP GET Status = 200[0m
+[0;32mI (631395) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (631415) Firebase: HTTP GET Status = 200[0m
+[0;32mI (636005) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (636025) Firebase: HTTP GET Status = 200[0m
+[0;32mI (640305) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "0"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (640335) Firebase: HTTP GET Status = 200[0m
+[0;32mI (644855) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (644875) Firebase: HTTP GET Status = 200[0m
+[0;32mI (649525) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (649545) Firebase: HTTP GET Status = 200[0m
+[0;32mI (654235) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (654255) Firebase: HTTP GET Status = 200[0m
+[0;32mI (659355) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (659375) Firebase: HTTP GET Status = 200[0m
+[0;32mI (663855) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "0"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (663885) Firebase: HTTP GET Status = 200[0m
+[0;32mI (668605) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (668625) Firebase: HTTP GET Status = 200[0m
+[0;32mI (673075) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "0"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (673095) Firebase: HTTP GET Status = 200[0m
+[0;32mI (677585) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "0"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (677605) Firebase: HTTP GET Status = 200[0m
+[0;32mI (682285) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "0"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (682315) Firebase: HTTP GET Status = 200[0m
+[0;32mI (687235) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (687265) Firebase: HTTP GET Status = 200[0m
+[0;32mI (691915) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (691935) Firebase: HTTP GET Status = 200[0m
+[0;32mI (696645) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (696675) Firebase: HTTP GET Status = 200[0m
+[0;32mI (701135) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (701155) Firebase: HTTP GET Status = 200[0m
+[0;32mI (705865) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "0"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (705885) Firebase: HTTP GET Status = 200[0m
+[0;32mI (710755) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (710775) Firebase: HTTP GET Status = 200[0m
+[0;32mI (715675) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "0"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (715695) Firebase: HTTP GET Status = 200[0m
+[0;32mI (720385) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (720405) Firebase: HTTP GET Status = 200[0m
+[0;32mI (725095) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "0"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (725115) Firebase: HTTP GET Status = 200[0m
+[0;32mI (730035) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "0"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (730055) Firebase: HTTP GET Status = 200[0m
+[0;32mI (734315) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (734335) Firebase: HTTP GET Status = 200[0m
+[0;32mI (738815) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (738835) Firebase: HTTP GET Status = 200[0m
+[0;32mI (743735) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (743755) Firebase: HTTP GET Status = 200[0m
+[0;32mI (748665) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "0"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (748695) Firebase: HTTP GET Status = 200[0m
+[0;32mI (753155) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (753175) Firebase: HTTP GET Status = 200[0m
+[0;32mI (757655) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (757675) Firebase: HTTP GET Status = 200[0m
+[0;32mI (762365) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (762385) Firebase: HTTP GET Status = 200[0m
+[0;32mI (766665) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "0"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (766695) Firebase: HTTP GET Status = 200[0m
+[0;32mI (771175) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (771195) Firebase: HTTP GET Status = 200[0m
+[0;32mI (775885) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "0"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (775905) Firebase: HTTP GET Status = 200[0m
+[0;32mI (780795) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (780825) Firebase: HTTP GET Status = 200[0m
+[0;32mI (785305) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (785325) Firebase: HTTP GET Status = 200[0m
+[0;32mI (790215) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "0"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (790245) Firebase: HTTP GET Status = 200[0m
+[0;32mI (795155) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (795175) Firebase: HTTP GET Status = 200[0m
+[0;32mI (799645) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "0"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (799665) Firebase: HTTP GET Status = 200[0m
+[0;32mI (804145) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "0"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (804165) Firebase: HTTP GET Status = 200[0m
+[0;32mI (808645) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (808675) Firebase: HTTP GET Status = 200[0m
+[0;32mI (813355) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (813385) Firebase: HTTP GET Status = 200[0m
+[0;32mI (817865) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (817885) Firebase: HTTP GET Status = 200[0m
+[0;32mI (822165) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "0"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (822195) Firebase: HTTP GET Status = 200[0m
+[0;32mI (826895) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "0"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (826925) Firebase: HTTP GET Status = 200[0m
+[0;32mI (831175) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (831205) Firebase: HTTP GET Status = 200[0m
+[0;32mI (835475) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "0"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (835505) Firebase: HTTP GET Status = 200[0m
+[0;32mI (839825) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (839855) Firebase: HTTP GET Status = 200[0m
+[0;32mI (844485) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "0"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (844515) Firebase: HTTP GET Status = 200[0m
+[0;32mI (848625) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (848645) Firebase: HTTP GET Status = 200[0m
+[0;32mI (853095) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (853115) Firebase: HTTP GET Status = 200[0m
+[0;32mI (857805) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "0"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (857825) Firebase: HTTP GET Status = 200[0m
+[0;32mI (862175) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (862195) Firebase: HTTP GET Status = 200[0m
+[0;32mI (866815) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (866835) Firebase: HTTP GET Status = 200[0m
+[0;32mI (871155) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "0"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (871185) Firebase: HTTP GET Status = 200[0m
+[0;32mI (875615) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (875645) Firebase: HTTP GET Status = 200[0m
+[0;32mI (881145) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (881175) Firebase: HTTP GET Status = 200[0m
+[0;32mI (885855) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (885885) Firebase: HTTP GET Status = 200[0m
+[0;32mI (890565) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (890595) Firebase: HTTP GET Status = 200[0m
+[0;32mI (895285) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "0"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (895305) Firebase: HTTP GET Status = 200[0m
+[0;32mI (899985) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (900015) Firebase: HTTP GET Status = 200[0m
+[0;32mI (904495) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "0"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (904515) Firebase: HTTP GET Status = 200[0m
+[0;32mI (908835) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "0"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (908855) Firebase: HTTP GET Status = 200[0m
+[0;32mI (913305) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (913325) Firebase: HTTP GET Status = 200[0m
+[0;32mI (918035) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (918055) Firebase: HTTP GET Status = 200[0m
+[0;32mI (922515) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "0"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (922545) Firebase: HTTP GET Status = 200[0m
+[0;32mI (927255) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (927275) Firebase: HTTP GET Status = 200[0m
+[0;32mI (931735) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (931755) Firebase: HTTP GET Status = 200[0m
+[0;32mI (936035) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "0"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-23T11:41:34.397860Z"
+}
+[0m
+[0;32mI (936055) Firebase: HTTP GET Status = 200[0m

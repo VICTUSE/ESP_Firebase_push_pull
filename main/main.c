@@ -3,12 +3,14 @@
 #include <string.h>
 #include <stdlib.h>
 #include <sys/_intsup.h>
+#include "driver/gpio.h"
 #include "esp_err.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "esp_system.h"
 #include "esp_wifi.h"
 #include "esp_event.h"
+#include "hal/gpio_types.h"
 #include "hal/uart_types.h"
 #include "nvs_flash.h"
 #include "esp_log.h"
@@ -16,6 +18,11 @@
 #include "driver/uart.h"
 #include "lwip/err.h"
 #include "lwip/sys.h"
+#include "cJSON.h"
+
+#define GPIO_LED1 4
+#define GPIO_LED2 5
+#define GPIO_PIN_SELECT (1ULL << GPIO_LED1) | (1ULL << GPIO_LED2)
 
 #define EXAMPLE_ESP_WIFI_SSID      CONFIG_ESP_WIFI_SSID
 #define EXAMPLE_ESP_WIFI_PASS      CONFIG_ESP_WIFI_PASSWORD
@@ -29,10 +36,18 @@
 #define FIREBASE_API_KEY "AIzaSyA3wUxLxeGNnfy6OZgcEDDg9NHXwzLEikQ"
 
 typedef struct{
+	uint8_t led1;
+	uint8_t led2;
+}led_struct_t;
+led_struct_t led_struct;
+
+typedef struct{
 	int8_t roll;
 	int8_t pitch;
 }roll_pitch_return;
 roll_pitch_return uart_return;
+
+char buffer[512];
 
 // Tag for logging
 static const char *TAG = "Firebase";
@@ -45,6 +60,8 @@ static EventGroupHandle_t s_wifi_event_group;
  * - we failed to connect after the maximum amount of retries */
 #define WIFI_CONNECTED_BIT BIT0
 #define WIFI_FAIL_BIT      BIT1
+/*firebase data buffer*/
+
 
 const uart_port_t uart_num = UART_NUM_2;
 static int s_retry_num = 0;
@@ -75,6 +92,17 @@ static void event_handler(void* arg, esp_event_base_t event_base,
         s_retry_num = 0;
         xEventGroupSetBits(s_wifi_event_group, WIFI_CONNECTED_BIT);
     }
+}
+/**
+*
+*/
+void GPIO_Init(void)
+{
+	gpio_config_t gpio_cfg;
+	gpio_cfg.mode = GPIO_MODE_OUTPUT;
+	gpio_cfg.pin_bit_mask = GPIO_PIN_SELECT;
+	gpio_cfg.intr_type = GPIO_INTR_DISABLE;
+	gpio_config(&gpio_cfg);
 }
 
 void wifi_init_sta(void)
@@ -168,16 +196,79 @@ ESP_ERROR_CHECK(uart_driver_install(UART_NUM_2, uart_buffer_size, \
 
 esp_err_t client_event_get_handler(esp_http_client_event_handle_t http_event)
 {
-	switch (http_event->event_id) {
-		case HTTP_EVENT_ON_DATA:
-		printf("HTTP_EVENT_ON_DATA: %.*s\n", http_event->data_len, (char*)http_event->data);
-		break;
-		default:
-		break;
+	static char *response_buffer = NULL;
+    static int total_length = 0;
+
+    switch (http_event->event_id) {
+        case HTTP_EVENT_ON_DATA:
+            if (http_event->data_len > 0) {
+                if (response_buffer == NULL) {
+                    // Allocate memory for response
+                    response_buffer = (char *)malloc(http_event->data_len + 1);
+                    total_length = 0;
+                } else {
+                    // Reallocate memory for the growing response
+                    response_buffer = (char *)realloc(response_buffer, total_length + http_event->data_len + 1);
+                }
+                if (response_buffer == NULL) {
+                    ESP_LOGE(TAG, "Failed to allocate memory for response buffer");
+                    return ESP_FAIL;
+                }
+                // Copy the current chunk to the buffer
+                memcpy(response_buffer + total_length, http_event->data, http_event->data_len);
+                total_length += http_event->data_len;
+                response_buffer[total_length] = '\0';  // Null-terminate the string
+            }
+            break;
+
+        case HTTP_EVENT_ON_FINISH:
+            if (response_buffer != NULL && total_length > 0) {
+                // Log the full response
+                ESP_LOGI(TAG, "Full JSON Response: %s", response_buffer);
+                // Copy the response to buffer
+                strncpy(buffer, response_buffer, sizeof(buffer) - 1);  // Copy response to buffer with proper size limit
+                buffer[sizeof(buffer) - 1] = '\0';  // Ensure null termination
+                // Check if the response contains valid JSON
+                if (response_buffer[0] == '{') {
+                    // Parse the full response
+                    cJSON *root = cJSON_Parse(response_buffer);
+                    if (root == NULL) {
+                        ESP_LOGE(TAG, "Error parsing JSON data");
+                    } else {
+                        cJSON *fields = cJSON_GetObjectItem(root, "fields");
+                        if (fields != NULL) {
+                            cJSON *led1 = cJSON_GetObjectItem(fields, "led 1");
+                            cJSON *led2 = cJSON_GetObjectItem(fields, "led 2");
+
+                            if (led1 != NULL && led2 != NULL) {
+                                led_struct.led1 = atoi(cJSON_GetObjectItem(led1, "integerValue")->valuestring);
+                                led_struct.led2 = atoi(cJSON_GetObjectItem(led2, "integerValue")->valuestring);
+
+                                gpio_set_level(GPIO_LED1, led_struct.led1);
+                                gpio_set_level(GPIO_LED2, led_struct.led2);
+                            } else {
+                                ESP_LOGE(TAG, "Error retrieving LED data from JSON");
+                            }
+                        }
+                        cJSON_Delete(root);
+                    }
+                } else {
+                    ESP_LOGE(TAG, "Received non-JSON response");
+                }
+
+                // Free the response buffer
+                free(response_buffer);
+                response_buffer = NULL;
+                total_length = 0;
+            }
+            break;
+
+        default:
+            break;
     }
-	return ESP_OK;
-	
+    return ESP_OK;
 }
+
 roll_pitch_return UART_Receive_Data(void)
 {
 	 // Read data from UART.
@@ -236,7 +327,6 @@ void push_data_to_firebase(void) {
 
 /* Function to get data from Firebase */
 void get_data_from_firebase(void) {
-
     esp_http_client_config_t config = {
         .url = "https://firestore.googleapis.com/v1/projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
         .cert_pem = (char *)_binary_firebase_cert_pem_start,  // Set CA cert for SSL
@@ -250,12 +340,13 @@ void get_data_from_firebase(void) {
     
     if (err == ESP_OK) {
         ESP_LOGI(TAG, "HTTP GET Status = %d", esp_http_client_get_status_code(client));
-        char buffer[512];
-        esp_http_client_read(client, buffer, sizeof(buffer));
-    } else {
+        
+       // int length = esp_http_client_read(client, buffer, sizeof(buffer));  
+       // printf("print buffer: %d\n", length);
+        }
+    else {
         ESP_LOGE(TAG, "HTTP GET request failed: %s", esp_err_to_name(err));
     }
-
     
     esp_http_client_cleanup(client);
     
@@ -263,14 +354,72 @@ void get_data_from_firebase(void) {
 
 static void Push_Data_Task(void *pvParameters)
 {
+	
 	while(1)
 	{
 	push_data_to_firebase();
+	
+	
 	vTaskDelay(2000 / portTICK_PERIOD_MS);
     ESP_LOGI(TAG, "DATA PUSHED TO THE FIRESTORE"); 
 	}
 }
 
+static void Get_Data_Task(void *pvParameters) {
+	
+while (1) {
+        get_data_from_firebase();
+
+        // Parse the received JSON data
+        cJSON *root = cJSON_Parse(buffer);
+        if (root == NULL) {
+            ESP_LOGE(TAG, "Error parsing JSON data");
+            continue;  // Skip this iteration if JSON parsing failed
+        }
+
+        // Extract the "fields" object
+        cJSON *fields = cJSON_GetObjectItem(root, "fields");
+        if (fields == NULL) {
+            ESP_LOGE(TAG, "No 'fields' object found in JSON");
+            cJSON_Delete(root);
+            continue;  // Skip this iteration if fields object is missing
+        }
+
+        // Extract LED 1 state
+        cJSON *led1 = cJSON_GetObjectItem(fields, "led 1");
+        if (led1 && cJSON_IsObject(led1)) {
+            cJSON *led1_value = cJSON_GetObjectItem(led1, "integerValue");
+            if (led1_value && cJSON_IsString(led1_value)) {
+                led_struct.led1 = atoi(led1_value->valuestring);
+                gpio_set_level(GPIO_LED1, led_struct.led1);
+            } else {
+                ESP_LOGE(TAG, "Invalid 'led 1' value");
+            }
+        } else {
+            ESP_LOGE(TAG, "'led 1' object not found in JSON");
+        }
+
+        // Extract LED 2 state
+        cJSON *led2 = cJSON_GetObjectItem(fields, "led 2");
+        if (led2 && cJSON_IsObject(led2)) {
+            cJSON *led2_value = cJSON_GetObjectItem(led2, "integerValue");
+            if (led2_value && cJSON_IsString(led2_value)) {
+                led_struct.led2 = atoi(led2_value->valuestring);
+                gpio_set_level(GPIO_LED2, led_struct.led2);
+            } else {
+                ESP_LOGE(TAG, "Invalid 'led 2' value");
+            }
+        } else {
+            ESP_LOGE(TAG, "'led 2' object not found in JSON");
+        }
+
+        // Free the parsed JSON object
+        cJSON_Delete(root);
+
+        // Delay before the next iteration
+        vTaskDelay(3000 / portTICK_PERIOD_MS);
+    }
+}
 
 // Application main task
 void app_main() {
@@ -282,7 +431,8 @@ void app_main() {
     }
     ESP_ERROR_CHECK(ret);
     
-    UART_Init();
+    GPIO_Init();
+    //UART_Init();
     ESP_LOGI(TAG, "ESP_WIFI_MODE_STA");
     wifi_init_sta();
     
@@ -295,6 +445,7 @@ void app_main() {
     //Retrieve data from Firebase
     //get_data_from_firebase();
     
-    xTaskCreate(Push_Data_Task, "Push_To_Firebase", 1024 * 2, NULL, configMAX_PRIORITIES - 1, NULL);
- 
+    //xTaskCreate(Push_Data_Task, "Push_To_Firebase", 1024 * 2, NULL, configMAX_PRIORITIES - 1, NULL);
+     xTaskCreate(Get_Data_Task, "Get_Data_From_Firebase", 2048 * 2, NULL, configMAX_PRIORITIES - 1, NULL);
+
 }

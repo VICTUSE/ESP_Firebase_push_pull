@@ -1,0 +1,11 @@
+[0;33m--- esp-idf-monitor 1.4.0 on com11 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400975c9: _xt_context_save at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/xtensa/xtensa_context.S:157
+[0m
+[0;33m0x400d26c6: panic_handler at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/panic_handler.c:138 (discriminator 3)
+[0m
+[0m

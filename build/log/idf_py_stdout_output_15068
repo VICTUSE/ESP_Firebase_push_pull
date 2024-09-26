@@ -1,0 +1,218 @@
+J���� chip revision: v3.0[0m
+[0;3�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Sep 23 2024 10:01:52[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.0[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=299c4h (170436) map[0m
+[0;32mI (163) esp_image: segment 1: paddr=000399ec vaddr=3ffb0000 size=03bcch ( 15308) load[0m
+[0;32mI (169) esp_image: segment 2: paddr=0003d5c0 vaddr=40080000 size=02a58h ( 10840) load[0m
+[0;32mI (174) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9ff7ch (655228) map[0m
+[0;32mI (402) esp_image: segment 4: paddr=000dffa4 vaddr=40082a58 size=14c88h ( 85128) load[0m
+[0;32mI (447) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (447) boot: Disabling RNG early entropy source...[0m
+[0;32mI (459) cpu_start: Multicore app[0m
+[0;32mI (468) cpu_start: Pro cpu start user code[0m
+[0;32mI (468) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (468) cpu_start: Application information:[0m
+[0;32mI (471) cpu_start: Project name:     app-template[0m
+[0;32mI (476) cpu_start: App version:      1[0m
+[0;32mI (480) cpu_start: Compile time:     Sep 24 2024 11:48:22[0m
+[0;32mI (487) cpu_start: ELF file SHA256:  827e031f7...[0m
+[0;32mI (492) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (497) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (502) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (507) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (512) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (519) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (525) heap_init: At 3FFB8288 len 00027D78 (159 KiB): DRAM[0m
+[0;32mI (531) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (537) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (544) heap_init: At 400976E0 len 00008920 (34 KiB): IRAM[0m
+[0;32mI (552) spi_flash: detected chip: generic[0m
+[0;32mI (555) spi_flash: flash io: dio[0m
+[0;33mW (559) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (573) main_task: Started on CPU0[0m
+[0;32mI (583) main_task: Calling app_main()[0m
+[0;32mI (623) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 1| Intr:0 [0m
+[0;32mI (623) gpio: GPIO[5]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 1| Intr:0 [0m
+[0;32mI (633) uart: queue free spaces: 10[0m
+[0;32mI (643) Firebase: ESP_WIFI_MODE_STA[0m
+I (653) wifi:wifi driver task: 3ffc1928, prio:23, stack:6656, core=0
+I (673) wifi:wifi firmware version: 3e0076f
+I (673) wifi:wifi certification version: v7.0
+I (673) wifi:config NVS flash: enabled
+I (673) wifi:config nano formating: disabled
+I (683) wifi:Init data frame dynamic rx buffer num: 32
+I (683) wifi:Init static rx mgmt buffer num: 5
+I (683) wifi:Init management short buffer num: 32
+I (693) wifi:Init dynamic tx buffer num: 32
+I (693) wifi:Init static rx buffer size: 1600
+I (703) wifi:Init static rx buffer num: 10
+I (703) wifi:Init dynamic rx buffer num: 32
+[0;32mI (713) wifi_init: rx ba win: 6[0m
+[0;32mI (713) wifi_init: tcpip mbox: 32[0m
+[0;32mI (713) wifi_init: udp mbox: 6[0m
+[0;32mI (723) wifi_init: tcp mbox: 6[0m
+[0;32mI (723) wifi_init: tcp tx win: 5760[0m
+[0;32mI (723) wifi_init: tcp rx win: 5760[0m
+[0;32mI (733) wifi_init: tcp mss: 1440[0m
+[0;32mI (733) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (743) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (753) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+I (843) wifi:mode : sta (c8:f0:9e:f1:4a:c8)
+I (843) wifi:enable tsf
+[0;32mI (843) Firebase: wifi_init_sta finished.[0m
+I (853) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (853) wifi:state: init -> auth (b0)
+I (853) wifi:state: auth -> assoc (0)
+I (863) wifi:state: assoc -> run (10)
+I (893) wifi:connected with Galaxym31, aid = 1, channel 11, BW20, bssid = 4a:3e:02:1e:c9:b7
+I (893) wifi:security: WPA2-PSK, phy: bgn, rssi: -58
+I (903) wifi:pm start, type: 1
+
+I (903) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (903) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us
+I (913) wifi:AP's beacon interval = 102400 us, DTIM period = 2
+I (923) wifi:<ba-add>idx:0 (ifx:0, 4a:3e:02:1e:c9:b7), tid:0, ssn:0, winSize:64
+[0;32mI (1933) esp_netif_handlers: sta ip: 192.168.26.89, mask: 255.255.255.0, gw: 192.168.26.71[0m
+[0;32mI (1933) Firebase: got ip:192.168.26.89[0m
+[0;32mI (1933) Firebase: connected to ap SSID:Galaxym31 password:12345678[0m
+[0;32mI (1943) main_task: Returned from app_main()[0m
+[0;32mI (3073) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (3073) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (3573) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=13889654200095997447;o=1[0m
+[0;32mI (3573) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (3583) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (3593) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (3603) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 12:24:15 GMT[0m
+[0;32mI (3603) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (3613) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (3623) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (3623) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (3633) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (3643) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (3653) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (3663) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (3673) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (3683) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (3683) Firebase: HTTP GET Status = 200[0m
+[0;32mI (3683) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (6763) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (6773) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (7063) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=6841567553496824638;o=1[0m
+[0;32mI (7063) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (7063) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (7073) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (7083) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 12:24:18 GMT[0m
+[0;32mI (7093) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (7093) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (7103) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (7113) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (7123) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (7123) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (7133) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (7143) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (7153) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (7163) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (7163) Firebase: HTTP GET Status = 200[0m
+[0;32mI (7173) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (10233) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (10243) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (10743) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=3217409376442585458;o=1[0m
+[0;32mI (10743) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (10753) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (10763) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (10763) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 12:24:22 GMT[0m
+[0;32mI (10773) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (10783) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (10793) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (10793) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (10803) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (10813) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (10823) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (10833) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (10843) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (10853) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (10853) Firebase: HTTP GET Status = 200[0m
+[0;32mI (10853) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (13923) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (13923) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (14433) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=14757240608269887344;o=1[0m
+[0;32mI (14433) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (14443) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (14443) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (14453) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 12:24:26 GMT[0m
+[0;32mI (14463) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (14473) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (14473) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (14483) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (14493) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (14503) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (14513) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (14513) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (14523) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (14533) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (14533) Firebase: HTTP GET Status = 200[0m
+[0;32mI (14543) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (17493) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (17503) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (17913) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=2724348784363784852;o=1[0m
+[0;32mI (17913) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (17923) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (17933) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (17933) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 12:24:29 GMT[0m
+[0;32mI (17943) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (17953) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (17963) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (17963) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (17973) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (17983) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (17993) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (18003) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (18003) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (18023) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (18023) Firebase: HTTP GET Status = 200[0m
+[0;32mI (18023) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (20963) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (20973) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (21393) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=17995880871264370533;o=1[0m
+[0;32mI (21393) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (21403) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (21413) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (21413) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 12:24:33 GMT[0m
+[0;32mI (21423) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (21433) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (21443) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (21443) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (21453) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (21463) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (21473) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (21483) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (21493) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (21503) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (21503) Firebase: HTTP GET Status = 200[0m
+[0;32mI (21503) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (24583) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (24583) Firebase: HTTP_EVENT_HEADER_SENT[0m

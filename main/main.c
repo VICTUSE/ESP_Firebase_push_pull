@@ -1,3 +1,8 @@
+/**
+*
+*@Author: EREN MERT YİĞİT
+* @notes : Use task delay otherwise one of the tasks are broke
+**/
 #include <stdint.h>
 #include <stdio.h>
 #include <string.h>
@@ -19,60 +24,68 @@
 #include "lwip/err.h"
 #include "lwip/sys.h"
 #include "cJSON.h"
+#include "freertos/semphr.h"
 
 #define GPIO_LED1 4
 #define GPIO_LED2 5
 #define GPIO_PIN_SELECT (1ULL << GPIO_LED1) | (1ULL << GPIO_LED2)
 
-#define EXAMPLE_ESP_WIFI_SSID      CONFIG_ESP_WIFI_SSID
-#define EXAMPLE_ESP_WIFI_PASS      CONFIG_ESP_WIFI_PASSWORD
+#define ESP_WIFI_SSID      "Galaxym31"
+#define ESP_WIFI_PASS      "12345678"
 #define EXAMPLE_ESP_MAXIMUM_RETRY  5
 
 #define ESP_WIFI_SCAN_AUTH_MODE_THRESHOLD WIFI_AUTH_WPA_WPA2_PSK
 
-
 // Firebase credentials
 #define FIREBASE_HOST  "iot-firebase-80171-default-rtdb.europe-west1.firebasedatabase.app"
 #define FIREBASE_API_KEY "AIzaSyA3wUxLxeGNnfy6OZgcEDDg9NHXwzLEikQ"
-
+/**
+* Structer to hold led states
+*/
 typedef struct{
 	uint8_t led1;
 	uint8_t led2;
 }led_struct_t;
 led_struct_t led_struct;
-
+/**
+* Structer to hold roll pitch values
+*/
 typedef struct{
 	int8_t roll;
 	int8_t pitch;
 }roll_pitch_return;
 roll_pitch_return uart_return;
+// Global mutex handle
+SemaphoreHandle_t xMutex;
+/**
+* buffer to hold respond from http request and total respond data length from chunks
+*/
+static char *response_buffer = NULL;         
+static int total_length = 0;
+/*Bool check to if http event finished*/
+bool http_event_finish = false;       
 
-char buffer[512];
-
-// Tag for logging
+/*Tag for logging*/
 static const char *TAG = "Firebase";
-
 /* FreeRTOS event group to signal when we are connected*/
 static EventGroupHandle_t s_wifi_event_group;
-
 /* The event group allows multiple bits for each event, but we only care about two events:
  * - we are connected to the AP with an IP
  * - we failed to connect after the maximum amount of retries */
 #define WIFI_CONNECTED_BIT BIT0
 #define WIFI_FAIL_BIT      BIT1
 /*firebase data buffer*/
-
-
-const uart_port_t uart_num = UART_NUM_2;
+const uart_port_t uart_num = UART_NUM_1;
+esp_http_client_handle_t client;
+/*WIFI Connection retry*/
 static int s_retry_num = 0;
-/* test variables*/
-
-
 /* TLS Root Certificate for Firebase */
 extern const uint8_t _binary_firebase_cert_pem_start[] asm("_binary_firebase_cert_pem_start");
 extern const uint8_t _binary_firebase_cert_pem_end[] asm("_binary_firebase_cert_pem_end");
-
-static void event_handler(void* arg, esp_event_base_t event_base,
+/**
+* WIFI Event handler function
+*/
+static void WIFI_event_handler(void* arg, esp_event_base_t event_base,
                                 int32_t event_id, void* event_data)
 {
     if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_START) {
@@ -93,8 +106,123 @@ static void event_handler(void* arg, esp_event_base_t event_base,
         xEventGroupSetBits(s_wifi_event_group, WIFI_CONNECTED_BIT);
     }
 }
+
+
+
+
+esp_err_t http_event_handler_push(esp_http_client_event_handle_t http_event_push)
+{
+	switch (http_event_push->event_id) 
+	{
+        case HTTP_EVENT_ERROR:
+             ESP_LOGI(TAG, "HTTP_EVENT_ERROR");
+             break;
+        case HTTP_EVENT_ON_CONNECTED:
+             ESP_LOGI(TAG, "HTTP_EVENT_ON_CONNECTED");
+             break;
+        case HTTP_EVENT_HEADER_SENT:
+             ESP_LOGI(TAG, "HTTP_EVENT_HEADER_SENT");
+             break;
+        case HTTP_EVENT_ON_HEADER:
+             ESP_LOGI(TAG, "HTTP_EVENT_ON_HEADER, key=%s, value=%s", http_event_push->header_key, http_event_push->header_value);
+             break;
+	    case HTTP_EVENT_ON_DATA:
+	         break;
+	    case HTTP_EVENT_ON_FINISH: 
+	         ESP_LOGI(TAG, "HTTP_EVENT_ON_FINISH");   
+	         break;
+	    case HTTP_EVENT_DISCONNECTED:
+             ESP_LOGI(TAG, "HTTP_EVENT_DISCONNECTED");
+             break;
+        case HTTP_EVENT_REDIRECT:
+             ESP_LOGI(TAG, "HTTP_EVENT_DISCONNECTED");
+             break;
+   }
+    return ESP_OK;
+}
+
 /**
-*
+* HTTP Client event handler 
+*/
+esp_err_t http_event_handler_pull(esp_http_client_event_handle_t http_event_pull)
+{
+    switch (http_event_pull->event_id) {
+        case HTTP_EVENT_ERROR:
+            ESP_LOGI(TAG, "HTTP_EVENT_ERROR");
+            break;
+        case HTTP_EVENT_ON_CONNECTED:
+            ESP_LOGI(TAG, "HTTP_EVENT_ON_CONNECTED");
+            break;
+        case HTTP_EVENT_HEADER_SENT:
+            ESP_LOGI(TAG, "HTTP_EVENT_HEADER_SENT");
+            break;
+        case HTTP_EVENT_ON_HEADER:
+            ESP_LOGI(TAG, "HTTP_EVENT_ON_HEADER, key=%s, value=%s", http_event_pull->header_key, http_event_pull->header_value);
+            break;
+        case HTTP_EVENT_ON_DATA:
+            if (!esp_http_client_is_chunked_response(http_event_pull->client)) {
+                // Append the data receive    
+            }           
+            if (http_event_pull->data_len > 0) {
+                char *new_buffer = (char *)realloc(response_buffer, total_length + http_event_pull->data_len + 1);
+                if (new_buffer == NULL) {
+				    ESP_LOGE(TAG, "Failed to allocate memory for response buffer");
+                    if (response_buffer != NULL) 
+                    {
+                         free(response_buffer);  // Free any previously allocated buffer
+                         response_buffer = NULL;
+                    }
+                    return ESP_FAIL;
+                }
+                response_buffer = new_buffer;
+                memcpy(response_buffer + total_length, http_event_pull->data, http_event_pull->data_len);
+                total_length += http_event_pull->data_len;
+                response_buffer[total_length] = '\0';
+            }
+            break;
+        case HTTP_EVENT_ON_FINISH:
+            
+             if (response_buffer != NULL && total_length > 0) {
+                ESP_LOGI(TAG, "HTTP_EVENT_ON_FINISH");
+                // Log the full response
+                ESP_LOGI(TAG, "Full JSON Response: %s", response_buffer);
+                
+                // Check if the response contains valid JSON
+                if (response_buffer[0] == '{') {
+					http_event_finish = true;
+                    
+                } else {
+                    ESP_LOGE(TAG, "Received non-JSON response");
+                }
+                }
+            break;
+        case HTTP_EVENT_DISCONNECTED:
+            ESP_LOGI(TAG, "HTTP_EVENT_DISCONNECTED");
+            break;
+        case HTTP_EVENT_REDIRECT:
+            break;
+        }
+    return ESP_OK;
+}
+
+/*
+esp_err_t client_event_handler(esp_http_client_event_handle_t http_event)
+{
+	switch(http_event_push_data->event_id)
+	{
+		case HTTP_EVENT_ON_DATA:
+		     printf("HTTP_EVENT_ON_DATA: %.*s\n",http_event_push_data->data_len, (char*)http_event_push_data->data);
+		     break;
+		default:
+		break;
+	}
+	
+	return ESP_OK;
+}
+*/
+
+/**
+* GPIO Initiliazition function
 */
 void GPIO_Init(void)
 {
@@ -104,7 +232,9 @@ void GPIO_Init(void)
 	gpio_cfg.intr_type = GPIO_INTR_DISABLE;
 	gpio_config(&gpio_cfg);
 }
-
+/**
+* WIFI STA Initiliazition function
+*/
 void wifi_init_sta(void)
 {
     s_wifi_event_group = xEventGroupCreate();
@@ -121,19 +251,19 @@ void wifi_init_sta(void)
     esp_event_handler_instance_t instance_got_ip;
     ESP_ERROR_CHECK(esp_event_handler_instance_register(WIFI_EVENT,
                                                         ESP_EVENT_ANY_ID,
-                                                        &event_handler,
+                                                        &WIFI_event_handler,
                                                         NULL,
                                                         &instance_any_id));
     ESP_ERROR_CHECK(esp_event_handler_instance_register(IP_EVENT,
                                                         IP_EVENT_STA_GOT_IP,
-                                                        &event_handler,
+                                                        &WIFI_event_handler,
                                                         NULL,
                                                         &instance_got_ip));
-
+                                                        
     wifi_config_t wifi_config = {
         .sta = {
-            .ssid = "Galaxym31",
-            .password = "12345678",
+            .ssid = ESP_WIFI_SSID,
+            .password = ESP_WIFI_PASS,
             /* Authmode threshold resets to WPA2 as default if password matches WPA2 standards (pasword len => 8).
              * If you want to connect the device to deprecated WEP/WPA networks, Please set the threshold value
              * to WIFI_AUTH_WEP/WIFI_AUTH_WPA_PSK and set the password with length and format matching to
@@ -160,15 +290,17 @@ void wifi_init_sta(void)
      * happened. */
     if (bits & WIFI_CONNECTED_BIT) {
         ESP_LOGI(TAG, "connected to ap SSID:%s password:%s",
-                 EXAMPLE_ESP_WIFI_SSID, EXAMPLE_ESP_WIFI_PASS);
+                 ESP_WIFI_SSID, ESP_WIFI_PASS);
     } else if (bits & WIFI_FAIL_BIT) {
         ESP_LOGI(TAG, "Failed to connect to SSID:%s, password:%s",
-                 EXAMPLE_ESP_WIFI_SSID, EXAMPLE_ESP_WIFI_PASS);
+                 ESP_WIFI_SSID, ESP_WIFI_PASS);
     } else {
         ESP_LOGE(TAG, "UNEXPECTED EVENT");
     }
 }
-
+/**
+* UART Initialization function
+**/
 void UART_Init(void)
 {
 	
@@ -180,137 +312,73 @@ uart_config_t uart_config = {
     .flow_ctrl = UART_HW_FLOWCTRL_DISABLE,
     .rx_flow_ctrl_thresh = 122,
 };
-// Configure UART parameters
+/* Configure UART parameters */
 ESP_ERROR_CHECK(uart_param_config(uart_num, &uart_config));
 
-// Set UART pins(TX: IO4, RX: IO5, RTS: IO18, CTS: IO19)
-ESP_ERROR_CHECK(uart_set_pin(UART_NUM_2, 4, 5, 18, 19));
+/* Set UART pins(TX: IO17, RX: IO16, RTS: IO18, CTS: IO19) */
+ESP_ERROR_CHECK(uart_set_pin(UART_NUM_1, 17, 16, 18, 19));
 
-// Setup UART buffered IO with event queue
+/* Setup UART buffered IO with event queue*/
 const int uart_buffer_size = (1024 * 2);
 QueueHandle_t uart_queue;
-// Install UART driver using an event queue here
-ESP_ERROR_CHECK(uart_driver_install(UART_NUM_2, uart_buffer_size, \
+/* Install UART driver using an event queue here */
+ESP_ERROR_CHECK(uart_driver_install(UART_NUM_1, uart_buffer_size, \
                                         uart_buffer_size, 10, &uart_queue, 0));
 }
 
-esp_err_t client_event_get_handler(esp_http_client_event_handle_t http_event)
-{
-	static char *response_buffer = NULL;
-    static int total_length = 0;
-
-    switch (http_event->event_id) {
-        case HTTP_EVENT_ON_DATA:
-            if (http_event->data_len > 0) {
-                if (response_buffer == NULL) {
-                    // Allocate memory for response
-                    response_buffer = (char *)malloc(http_event->data_len + 1);
-                    total_length = 0;
-                } else {
-                    // Reallocate memory for the growing response
-                    response_buffer = (char *)realloc(response_buffer, total_length + http_event->data_len + 1);
-                }
-                if (response_buffer == NULL) {
-                    ESP_LOGE(TAG, "Failed to allocate memory for response buffer");
-                    return ESP_FAIL;
-                }
-                // Copy the current chunk to the buffer
-                memcpy(response_buffer + total_length, http_event->data, http_event->data_len);
-                total_length += http_event->data_len;
-                response_buffer[total_length] = '\0';  // Null-terminate the string
-            }
-            break;
-
-        case HTTP_EVENT_ON_FINISH:
-            if (response_buffer != NULL && total_length > 0) {
-                // Log the full response
-                ESP_LOGI(TAG, "Full JSON Response: %s", response_buffer);
-                // Copy the response to buffer
-                strncpy(buffer, response_buffer, sizeof(buffer) - 1);  // Copy response to buffer with proper size limit
-                buffer[sizeof(buffer) - 1] = '\0';  // Ensure null termination
-                // Check if the response contains valid JSON
-                if (response_buffer[0] == '{') {
-                    // Parse the full response
-                    cJSON *root = cJSON_Parse(response_buffer);
-                    if (root == NULL) {
-                        ESP_LOGE(TAG, "Error parsing JSON data");
-                    } else {
-                        cJSON *fields = cJSON_GetObjectItem(root, "fields");
-                        if (fields != NULL) {
-                            cJSON *led1 = cJSON_GetObjectItem(fields, "led 1");
-                            cJSON *led2 = cJSON_GetObjectItem(fields, "led 2");
-
-                            if (led1 != NULL && led2 != NULL) {
-                                led_struct.led1 = atoi(cJSON_GetObjectItem(led1, "integerValue")->valuestring);
-                                led_struct.led2 = atoi(cJSON_GetObjectItem(led2, "integerValue")->valuestring);
-
-                                gpio_set_level(GPIO_LED1, led_struct.led1);
-                                gpio_set_level(GPIO_LED2, led_struct.led2);
-                            } else {
-                                ESP_LOGE(TAG, "Error retrieving LED data from JSON");
-                            }
-                        }
-                        cJSON_Delete(root);
-                    }
-                } else {
-                    ESP_LOGE(TAG, "Received non-JSON response");
-                }
-
-                // Free the response buffer
-                free(response_buffer);
-                response_buffer = NULL;
-                total_length = 0;
-            }
-            break;
-
-        default:
-            break;
-    }
-    return ESP_OK;
-}
-
+/**
+* UART Data receiver function
+*/
 roll_pitch_return UART_Receive_Data(void)
 {
-	 // Read data from UART.
-	const uart_port_t uart_num = UART_NUM_2;
-	uint8_t data[35];
+	//maybe try malloc here ?
+	 // Read data from UART	
+	uint8_t data[1024];    //little buffer cause reset problems keep it high
 	int length = 0;
 	
 	ESP_ERROR_CHECK(uart_get_buffered_data_len(uart_num, (size_t*)&length));
-	length = uart_read_bytes(uart_num, data, length, 100);          //uart_read_bytes returns len
+
+	length = uart_read_bytes(uart_num, data, length, 100 / portTICK_PERIOD_MS);          //uart_read_bytes returns len
+	ESP_LOGI(TAG, "Bytes available in UART buffer: %d", length);
+	data[length] = '\0';  // Null-terminate the data
 	/*
 	* If data received
 	*/
-	if (length > 0) {
-    data[length] = '\0';  // Null-terminate the data
+    if (length > sizeof(data) - 1)
+    {
+    length = sizeof(data) - 1;  // Prevent out-of-bound write
     }
-   
+    
     ESP_LOGI(TAG, "UART Received Data: %s", data);
     // Parse the incoming string using sscanf
     sscanf((char*)data, "Roll:  %hhd         Pitch:  %hhd   \n\r", &uart_return.roll, &uart_return.pitch);
     // Log the parsed values
-    ESP_LOGI("Parsed Data", "Roll: %d, Pitch: %d", uart_return.roll, uart_return.pitch);
-    
+    ESP_LOGI("Parsed UART Data", "Roll: %d, Pitch: %d", uart_return.roll, uart_return.pitch);
+   
     return uart_return;
 }
 /* Function to push data to Firebase */
 void push_data_to_firebase(void) {
-
     UART_Receive_Data();
-    char json_data[80];
-    sprintf(json_data, "{\"fields\":{\"roll\":{\"doubleValue\":%d},\"pitch\":{\"doubleValue\":%d}}}",uart_return.roll, uart_return.pitch); 
-   
-    esp_http_client_config_t config = {
-        .url = "https://firestore.googleapis.com/v1/projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+    char json_data[128];
+    sprintf(json_data, "{\"fields\":{\"Roll\":{\"doubleValue\":%d},\"Pitch\":{\"doubleValue\":%d}}}",uart_return.roll, uart_return.pitch); 
+    esp_http_client_config_t config_push = {
+        .url = "https://firestore.googleapis.com/v1/projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+        .method = HTTP_METHOD_PATCH,
         .cert_pem = (char *)_binary_firebase_cert_pem_start,  // Set CA cert for SSL
-        .event_handler = client_event_get_handler
+        .event_handler = http_event_handler_push,
+        
     };
-    
-    esp_http_client_handle_t client = esp_http_client_init(&config);
-    esp_http_client_set_method(client, HTTP_METHOD_PATCH);   //To create new document send post, to update field send patch
+     client = esp_http_client_init(&config_push);
+         
+    if (client == NULL) {
+    ESP_LOGE(TAG, "Failed to initialize HTTP client");
+    return;
+    }
+  //  esp_http_client_set_method(client, HTTP_METHOD_PATCH);   //To create new document send post, to update field send patch
     esp_http_client_set_header(client, "Content-Type", "application/json");
     esp_http_client_set_post_field(client, json_data, strlen(json_data));
-
+    // Perform the HTTP request
     esp_err_t err = esp_http_client_perform(client);
     
     if (err == ESP_OK) {
@@ -324,104 +392,116 @@ void push_data_to_firebase(void) {
     esp_http_client_cleanup(client);
     
 }
+/**
+* Function to get data from Firebase
+*/
 
-/* Function to get data from Firebase */
 void get_data_from_firebase(void) {
     esp_http_client_config_t config = {
         .url = "https://firestore.googleapis.com/v1/projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
         .cert_pem = (char *)_binary_firebase_cert_pem_start,  // Set CA cert for SSL
-        .event_handler = client_event_get_handler
+        .event_handler = http_event_handler_pull
     };
     
     esp_http_client_handle_t client = esp_http_client_init(&config);
+    if (client == NULL) {
+    ESP_LOGE(TAG, "Failed to initialize HTTP client");
+    return;
+}
     esp_http_client_set_method(client, HTTP_METHOD_GET);
 
     esp_err_t err = esp_http_client_perform(client);
     
     if (err == ESP_OK) {
         ESP_LOGI(TAG, "HTTP GET Status = %d", esp_http_client_get_status_code(client));
-        
-       // int length = esp_http_client_read(client, buffer, sizeof(buffer));  
-       // printf("print buffer: %d\n", length);
         }
     else {
         ESP_LOGE(TAG, "HTTP GET request failed: %s", esp_err_to_name(err));
     }
     
     esp_http_client_cleanup(client);
-    
 }
+
 
 static void Push_Data_Task(void *pvParameters)
 {
 	
 	while(1)
 	{
+	if (xSemaphoreTake(xMutex, pdMS_TO_TICKS(100)) == pdTRUE)
+	 {
+    // Critical section: Firebase push data logic
 	push_data_to_firebase();
-	
-	
-	vTaskDelay(2000 / portTICK_PERIOD_MS);
-    ESP_LOGI(TAG, "DATA PUSHED TO THE FIRESTORE"); 
+	ESP_LOGI(TAG, "DATA PUSHED TO THE FIRESTORE");
+    
+    xSemaphoreGive(xMutex);  // Release the mutex
+    }
+    vTaskDelay(1000 / portTICK_PERIOD_MS);
 	}
+	
 }
+/**
+* Get led data task 
+*/
 
-static void Get_Data_Task(void *pvParameters) {
+static void Get_Data_Task(void *pvParameters)
+{
 	
 while (1) {
+	
+if (xSemaphoreTake(xMutex, pdMS_TO_TICKS(100)) == pdTRUE)
+	 {    
+	// Critical section: Firebase push data logic
         get_data_from_firebase();
+        if(http_event_finish == true)
+        {
+        // Parse the full response
+                    cJSON *root = cJSON_Parse(response_buffer);
+                    if (root == NULL)
+                    {
+                        ESP_LOGE(TAG, "Error parsing JSON data");
+                    } 
+                    else 
+                    {
+                        cJSON *fields = cJSON_GetObjectItem(root, "fields");
+                        if (fields != NULL) 
+                        {
+                            cJSON *led1 = cJSON_GetObjectItem(fields, "led 1");
+                            cJSON *led2 = cJSON_GetObjectItem(fields, "led 2");
 
-        // Parse the received JSON data
-        cJSON *root = cJSON_Parse(buffer);
-        if (root == NULL) {
-            ESP_LOGE(TAG, "Error parsing JSON data");
-            continue;  // Skip this iteration if JSON parsing failed
-        }
+                            if (led1 != NULL && led2 != NULL) 
+                            {
+                                led_struct.led1 = atoi(cJSON_GetObjectItem(led1, "integerValue")->valuestring);
+                                led_struct.led2 = atoi(cJSON_GetObjectItem(led2, "integerValue")->valuestring);
 
-        // Extract the "fields" object
-        cJSON *fields = cJSON_GetObjectItem(root, "fields");
-        if (fields == NULL) {
-            ESP_LOGE(TAG, "No 'fields' object found in JSON");
-            cJSON_Delete(root);
-            continue;  // Skip this iteration if fields object is missing
-        }
-
-        // Extract LED 1 state
-        cJSON *led1 = cJSON_GetObjectItem(fields, "led 1");
-        if (led1 && cJSON_IsObject(led1)) {
-            cJSON *led1_value = cJSON_GetObjectItem(led1, "integerValue");
-            if (led1_value && cJSON_IsString(led1_value)) {
-                led_struct.led1 = atoi(led1_value->valuestring);
-                gpio_set_level(GPIO_LED1, led_struct.led1);
-            } else {
-                ESP_LOGE(TAG, "Invalid 'led 1' value");
-            }
-        } else {
-            ESP_LOGE(TAG, "'led 1' object not found in JSON");
-        }
-
-        // Extract LED 2 state
-        cJSON *led2 = cJSON_GetObjectItem(fields, "led 2");
-        if (led2 && cJSON_IsObject(led2)) {
-            cJSON *led2_value = cJSON_GetObjectItem(led2, "integerValue");
-            if (led2_value && cJSON_IsString(led2_value)) {
-                led_struct.led2 = atoi(led2_value->valuestring);
-                gpio_set_level(GPIO_LED2, led_struct.led2);
-            } else {
-                ESP_LOGE(TAG, "Invalid 'led 2' value");
-            }
-        } else {
-            ESP_LOGE(TAG, "'led 2' object not found in JSON");
-        }
-
-        // Free the parsed JSON object
-        cJSON_Delete(root);
-
+                                gpio_set_level(GPIO_LED1, led_struct.led1);
+                                gpio_set_level(GPIO_LED2, led_struct.led2);
+                            } 
+                            else
+                            {
+                                ESP_LOGE(TAG, "Error retrieving LED data from JSON");
+                            }
+                        }
+                        cJSON_Delete(root);
+                    }
+                // Free the response buffer
+                free(response_buffer);
+                response_buffer = NULL;
+                total_length = 0;
+         }
+         http_event_finish = false;
+    xSemaphoreGive(xMutex);  // Release the mutex
+    }                  
         // Delay before the next iteration
-        vTaskDelay(3000 / portTICK_PERIOD_MS);
+        vTaskDelay(1000 / portTICK_PERIOD_MS);
+      
+    
     }
 }
 
-// Application main task
+/**
+* Application main task
+*/
 void app_main() {
     //Initialize NVS
     esp_err_t ret = nvs_flash_init();
@@ -430,11 +510,20 @@ void app_main() {
       ret = nvs_flash_init();
     }
     ESP_ERROR_CHECK(ret);
+    // Create the mutex before starting any tasks
+    xMutex = xSemaphoreCreateMutex();
+    
+    if (xMutex == NULL) 
+    {
+        ESP_LOGE(TAG, "Mutex creation failed!");
+        return;
+    }
     
     GPIO_Init();
-    //UART_Init();
+    UART_Init();
     ESP_LOGI(TAG, "ESP_WIFI_MODE_STA");
     wifi_init_sta();
+    
     
     // Push data to Firebase
  /*   char json_data[200];
@@ -445,7 +534,8 @@ void app_main() {
     //Retrieve data from Firebase
     //get_data_from_firebase();
     
-    //xTaskCreate(Push_Data_Task, "Push_To_Firebase", 1024 * 2, NULL, configMAX_PRIORITIES - 1, NULL);
-     xTaskCreate(Get_Data_Task, "Get_Data_From_Firebase", 2048 * 2, NULL, configMAX_PRIORITIES - 1, NULL);
-
+    
+       xTaskCreate(Push_Data_Task, "Push_To_Firebase", 2048 * 2, NULL, configMAX_PRIORITIES - 1, NULL);
+       xTaskCreate(Get_Data_Task, "Get_Data_From_Firebase", 2048 * 2, NULL, configMAX_PRIORITIES - 1, NULL);
+    
 }

@@ -1,0 +1,1444 @@
+chip revision: v3.0[0m
+[0;32�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Sep 23 2024 10:01:52[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.0[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=29e8ch (171660) map[0m
+[0;32mI (164) esp_image: segment 1: paddr=00039eb4 vaddr=3ffb0000 size=03bbch ( 15292) load[0m
+[0;32mI (169) esp_image: segment 2: paddr=0003da78 vaddr=40080000 size=025a0h (  9632) load[0m
+[0;32mI (174) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a3fb8h (671672) map[0m
+[0;32mI (408) esp_image: segment 4: paddr=000e3fe0 vaddr=400825a0 size=151a8h ( 86440) load[0m
+[0;32mI (454) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (454) boot: Disabling RNG early entropy source...[0m
+[0;32mI (465) cpu_start: Multicore app[0m
+[0;32mI (474) cpu_start: Pro cpu start user code[0m
+[0;32mI (474) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (474) cpu_start: Application information:[0m
+[0;32mI (477) cpu_start: Project name:     app-template[0m
+[0;32mI (483) cpu_start: App version:      1[0m
+[0;32mI (487) cpu_start: Compile time:     Sep 24 2024 11:48:22[0m
+[0;32mI (493) cpu_start: ELF file SHA256:  035fa453e...[0m
+[0;32mI (498) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (504) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (509) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (513) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (518) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (525) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (531) heap_init: At 3FFB8268 len 00027D98 (159 KiB): DRAM[0m
+[0;32mI (538) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (544) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (550) heap_init: At 40097748 len 000088B8 (34 KiB): IRAM[0m
+[0;32mI (558) spi_flash: detected chip: generic[0m
+[0;32mI (561) spi_flash: flash io: dio[0m
+[0;33mW (565) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (579) main_task: Started on CPU0[0m
+[0;32mI (589) main_task: Calling app_main()[0m
+[0;32mI (629) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 1| Intr:0 [0m
+[0;32mI (629) gpio: GPIO[5]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 1| Intr:0 [0m
+[0;32mI (639) uart: queue free spaces: 10[0m
+[0;32mI (649) Firebase: ESP_WIFI_MODE_STA[0m
+I (659) wifi:wifi driver task: 3ffc1908, prio:23, stack:6656, core=0
+I (679) wifi:wifi firmware version: 3e0076f
+I (679) wifi:wifi certification version: v7.0
+I (679) wifi:config NVS flash: enabled
+I (679) wifi:config nano formating: disabled
+I (689) wifi:Init data frame dynamic rx buffer num: 32
+I (689) wifi:Init static rx mgmt buffer num: 5
+I (689) wifi:Init management short buffer num: 32
+I (699) wifi:Init dynamic tx buffer num: 32
+I (699) wifi:Init static rx buffer size: 1600
+I (709) wifi:Init static rx buffer num: 10
+I (709) wifi:Init dynamic rx buffer num: 32
+[0;32mI (719) wifi_init: rx ba win: 6[0m
+[0;32mI (719) wifi_init: tcpip mbox: 32[0m
+[0;32mI (719) wifi_init: udp mbox: 6[0m
+[0;32mI (729) wifi_init: tcp mbox: 6[0m
+[0;32mI (729) wifi_init: tcp tx win: 5760[0m
+[0;32mI (729) wifi_init: tcp rx win: 5760[0m
+[0;32mI (739) wifi_init: tcp mss: 1440[0m
+[0;32mI (739) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (749) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (759) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+I (849) wifi:mode : sta (c8:f0:9e:f1:4a:c8)
+I (849) wifi:enable tsf
+[0;32mI (849) Firebase: wifi_init_sta finished.[0m
+I (919) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (919) wifi:state: init -> auth (b0)
+I (929) wifi:state: auth -> assoc (0)
+I (939) wifi:state: assoc -> run (10)
+I (1079) wifi:connected with Galaxym31, aid = 1, channel 11, BW20, bssid = 4a:3e:02:1e:c9:b7
+I (1079) wifi:security: WPA2-PSK, phy: bgn, rssi: -45
+I (1089) wifi:pm start, type: 1
+
+I (1089) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (1099) wifi:<ba-add>idx:0 (ifx:0, 4a:3e:02:1e:c9:b7), tid:0, ssn:0, winSize:64
+I (1119) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us
+I (1129) wifi:AP's beacon interval = 102400 us, DTIM period = 2
+[0;32mI (2099) esp_netif_handlers: sta ip: 192.168.26.89, mask: 255.255.255.0, gw: 192.168.26.71[0m
+[0;32mI (2099) Firebase: got ip:192.168.26.89[0m
+[0;32mI (2099) Firebase: connected to ap SSID:Galaxym31 password:12345678[0m
+[0;32mI (2109) Firebase: UART Received Data: [0m
+[0;32mI (2109) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (2119) main_task: Returned from app_main()[0m
+[0;32mI (4449) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (4459) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (4819) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=4494154667458311164;o=1[0m
+[0;32mI (4819) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (4829) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (4829) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (4839) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:52:47 GMT[0m
+[0;32mI (4849) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (4849) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (4859) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (4869) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (4879) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (4889) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (4899) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (4899) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (4909) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (4919) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (4919) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (4929) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (4939) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (6939) Firebase: UART Received Data: [0m
+[0;32mI (6939) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (8569) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (8569) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (9329) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=15369919051106835861;o=1[0m
+[0;32mI (9329) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (9329) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (9339) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (9349) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:52:51 GMT[0m
+[0;32mI (9359) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (9359) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (9369) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (9379) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (9389) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (9389) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (9399) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (9409) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (9419) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (9429) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (9429) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (9439) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (9449) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (11449) Firebase: UART Received Data: [0m
+[0;32mI (11449) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (12869) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (12869) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (13209) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=8268956396377640987;o=1[0m
+[0;32mI (13219) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (13219) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (13229) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (13239) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:52:56 GMT[0m
+[0;32mI (13249) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (13249) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (13259) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (13269) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (13269) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (13279) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (13289) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (13299) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (13309) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (13319) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (13319) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (13329) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (13339) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (15339) Firebase: UART Received Data: [0m
+[0;32mI (15339) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (16539) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (16549) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (16899) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=14205351991272996928;o=1[0m
+[0;32mI (16899) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (16909) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (16919) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (16919) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:52:59 GMT[0m
+[0;32mI (16929) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (16939) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (16949) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (16949) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (16959) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (16969) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (16979) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (16989) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (16999) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (17009) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (17009) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (17009) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (17019) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (19029) Firebase: UART Received Data: [0m
+[0;32mI (19029) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (20439) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (20439) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (20789) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=5743164927160840578;o=1[0m
+[0;32mI (20789) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (20799) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (20809) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (20809) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:53:03 GMT[0m
+[0;32mI (20819) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (20829) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (20839) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (20839) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (20849) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (20859) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (20869) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (20879) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (20889) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (20899) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (20899) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (20899) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (20919) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (22919) Firebase: UART Received Data: [0m
+[0;32mI (22919) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (24109) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (24119) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (24479) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=14818028576155241695;o=1[0m
+[0;32mI (24479) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (24489) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (24489) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (24499) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:53:07 GMT[0m
+[0;32mI (24509) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (24519) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (24519) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (24529) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (24539) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (24549) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (24559) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (24559) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (24569) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (24579) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (24579) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (24589) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (24599) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (26599) Firebase: UART Received Data: [0m
+[0;32mI (26599) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (27809) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (27819) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (28469) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=15271935267966689497;o=1[0m
+[0;32mI (28469) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (28479) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (28489) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (28489) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:53:11 GMT[0m
+[0;32mI (28499) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (28509) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (28519) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (28519) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (28529) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (28539) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (28549) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (28559) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (28569) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (28579) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (28579) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (28579) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (28599) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (30599) Firebase: UART Received Data: [0m
+[0;32mI (30599) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (32159) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (32159) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (32869) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=5914168754031737037;o=1[0m
+[0;32mI (32879) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (32879) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (32889) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (32899) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:53:15 GMT[0m
+[0;32mI (32909) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (32909) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (32919) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (32929) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (32929) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (32939) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (32949) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (32959) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (32969) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (32979) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (32979) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (32989) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (32999) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (34999) Firebase: UART Received Data: [0m
+[0;32mI (34999) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (36409) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (36419) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (36769) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=5012922145100677981;o=1[0m
+[0;32mI (36769) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (36769) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (36779) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (36789) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:53:19 GMT[0m
+[0;32mI (36799) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (36799) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (36809) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (36819) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (36829) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (36829) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (36839) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (36849) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (36859) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (36869) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (36869) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (36879) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (36889) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (38889) Firebase: UART Received Data: [0m
+[0;32mI (38889) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (40099) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (40099) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (40659) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=11434169137740453096;o=1[0m
+[0;32mI (40659) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (40669) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (40669) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (40679) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:53:23 GMT[0m
+[0;32mI (40689) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (40689) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (40699) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (40709) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (40719) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (40729) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (40739) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (40739) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (40749) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (40759) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (40759) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (40769) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (40779) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (42779) Firebase: UART Received Data: [0m
+[0;32mI (42779) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (43979) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (43989) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (44579) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=3840390610376729037;o=1[0m
+[0;32mI (44579) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (44589) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (44599) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (44599) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:53:27 GMT[0m
+[0;32mI (44609) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (44619) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (44629) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (44639) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (44639) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (44649) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (44659) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (44669) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (44679) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (44689) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (44689) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (44699) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (44709) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (46709) Firebase: UART Received Data: [0m
+[0;32mI (46709) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (48079) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (48089) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (48439) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=8692050617813131149;o=1[0m
+[0;32mI (48439) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (48449) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (48449) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (48459) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:53:31 GMT[0m
+[0;32mI (48469) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (48479) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (48479) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (48489) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (48499) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (48509) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (48519) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (48519) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (48529) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (48539) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (48549) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (48549) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (48559) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (50559) Firebase: UART Received Data: [0m
+[0;32mI (50559) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (51769) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (51769) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (52129) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=11521867348688226734;o=1[0m
+[0;32mI (52129) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (52129) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (52139) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (52149) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:53:34 GMT[0m
+[0;32mI (52159) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (52159) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (52169) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (52179) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (52189) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (52189) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (52199) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (52209) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (52219) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (52229) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (52229) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (52239) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (52249) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (54249) Firebase: UART Received Data: [0m
+[0;32mI (54249) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (55459) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (55469) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (56019) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=13279762385885607980;o=1[0m
+[0;32mI (56019) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (56029) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (56029) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (56039) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:53:38 GMT[0m
+[0;32mI (56049) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (56049) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (56059) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (56069) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (56079) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (56089) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (56099) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (56099) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (56109) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (56119) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (56119) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (56129) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (56139) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (58139) Firebase: UART Received Data: [0m
+[0;32mI (58139) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (59329) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (59339) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (59709) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=18000630068243988482;o=1[0m
+[0;32mI (59709) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (59709) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (59719) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (59729) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:53:42 GMT[0m
+[0;32mI (59739) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (59739) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (59749) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (59759) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (59769) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (59769) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (59779) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (59789) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (59799) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (59809) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (59809) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (59819) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (59829) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (61829) Firebase: UART Received Data: [0m
+[0;32mI (61829) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (63039) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (63039) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (63389) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=2331270472775430768;o=1[0m
+[0;32mI (63389) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (63399) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (63409) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (63409) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:53:46 GMT[0m
+[0;32mI (63419) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (63429) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (63429) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (63439) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (63449) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (63459) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (63469) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (63479) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (63479) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (63499) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (63499) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (63499) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (63509) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (65509) Firebase: UART Received Data: [0m
+[0;32mI (65509) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (66719) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (66719) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (67079) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=6409006259298679542;o=1[0m
+[0;32mI (67079) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (67079) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (67089) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (67099) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:53:49 GMT[0m
+[0;32mI (67109) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (67109) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (67119) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (67129) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (67139) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (67139) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (67159) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (67159) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (67169) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (67179) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (67179) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (67189) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (67199) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (69199) Firebase: UART Received Data: [0m
+[0;32mI (69199) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (70609) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (70609) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (70969) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=642212778068075986;o=1[0m
+[0;32mI (70969) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (70979) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (70979) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (70989) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:53:53 GMT[0m
+[0;32mI (70999) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (70999) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (71009) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (71019) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (71029) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (71039) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (71049) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (71049) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (71059) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (71069) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (71069) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (71079) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (71089) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (73089) Firebase: UART Received Data: [0m
+[0;32mI (73089) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (74289) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (74299) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (74649) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=3641661541516759583;o=1[0m
+[0;32mI (74649) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (74659) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (74669) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (74679) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:53:57 GMT[0m
+[0;32mI (74679) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (74689) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (74699) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (74709) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (74709) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (74719) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (74729) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (74739) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (74749) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (74759) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (74759) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (74769) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (74779) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (76779) Firebase: UART Received Data: [0m
+[0;32mI (76779) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (77989) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (77989) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (78549) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=8538242755625590992;o=1[0m
+[0;32mI (78549) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (78549) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (78559) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (78569) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:54:01 GMT[0m
+[0;32mI (78579) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (78579) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (78589) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (78599) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (78609) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (78609) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (78619) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (78629) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (78639) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (78649) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (78649) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (78659) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (78669) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (80669) Firebase: UART Received Data: [0m
+[0;32mI (80669) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (81869) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (81869) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (82229) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=11659245092235484853;o=1[0m
+[0;32mI (82229) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (82239) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (82249) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (82249) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:54:05 GMT[0m
+[0;32mI (82259) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (82269) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (82279) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (82279) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (82289) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (82299) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (82309) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (82319) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (82329) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (82339) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (82339) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (82339) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (82349) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (84359) Firebase: UART Received Data: [0m
+[0;32mI (84359) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (85559) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (85559) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (85919) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=13131191053454648511;o=1[0m
+[0;32mI (85919) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (85929) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (85929) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (85939) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:54:08 GMT[0m
+[0;32mI (85949) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (85959) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (85959) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (85969) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (85979) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (85989) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (85999) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (85999) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (86009) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (86019) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (86019) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (86029) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (86039) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (88039) Firebase: UART Received Data: [0m
+[0;32mI (88039) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (89119) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (89129) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (89599) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=14157624837856557006;o=1[0m
+[0;32mI (89599) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (89609) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (89619) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (89619) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:54:12 GMT[0m
+[0;32mI (89629) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (89639) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (89649) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (89649) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (89659) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (89669) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (89679) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (89689) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (89699) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (89709) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (89709) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (89719) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (89729) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (91729) Firebase: UART Received Data: [0m
+[0;32mI (91729) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (92809) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (92819) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (93499) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=9538877405837723962;o=1[0m
+[0;32mI (93499) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (93499) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (93509) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (93519) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:54:16 GMT[0m
+[0;32mI (93529) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (93529) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (93539) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (93549) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (93559) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (93559) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (93569) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (93579) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (93589) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (93599) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (93599) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (93609) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (93619) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (95619) Firebase: UART Received Data: [0m
+[0;32mI (95619) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (97029) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (97029) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (97389) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=16936725035191438379;o=1[0m
+[0;32mI (97389) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (97399) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (97399) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (97409) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:54:20 GMT[0m
+[0;32mI (97419) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (97429) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (97429) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (97439) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (97449) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (97459) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (97469) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (97469) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (97479) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (97489) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (97499) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (97499) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (97509) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (99509) Firebase: UART Received Data: [0m
+[0;32mI (99509) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (100929) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (100939) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (101479) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=8475018372204142291;o=1[0m
+[0;32mI (101479) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (101489) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (101499) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (101499) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:54:24 GMT[0m
+[0;32mI (101509) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (101519) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (101529) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (101529) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (101539) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (101549) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (101559) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (101569) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (101579) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (101589) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (101589) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (101599) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (101609) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (103609) Firebase: UART Received Data: [0m
+[0;32mI (103609) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (105029) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (105039) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (105399) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=6087125117399442741;o=1[0m
+[0;32mI (105399) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (105409) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (105419) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (105419) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:54:28 GMT[0m
+[0;32mI (105429) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (105439) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (105449) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (105459) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (105459) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (105469) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (105479) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (105489) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (105499) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (105509) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (105509) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (105519) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (105529) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (107529) Firebase: UART Received Data: [0m
+[0;32mI (107529) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (108919) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (108929) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (109469) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=2597795444306598379;o=1[0m
+[0;32mI (109469) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (109479) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (109479) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (109489) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:54:32 GMT[0m
+[0;32mI (109499) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (109509) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (109509) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (109519) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (109529) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (109539) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (109549) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (109559) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (109559) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (109569) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (109579) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (109579) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (109589) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (111589) Firebase: UART Received Data: [0m
+[0;32mI (111589) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (112789) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (112789) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (113209) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=12827646975658044627;o=1[0m
+[0;32mI (113209) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (113219) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (113229) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (113229) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:54:35 GMT[0m
+[0;32mI (113239) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (113249) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (113259) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (113259) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (113269) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (113279) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (113289) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (113299) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (113309) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (113319) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (113319) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (113329) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (113339) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (115339) Firebase: UART Received Data: [0m
+[0;32mI (115339) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (116909) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (116909) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (117459) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=10955585333494273326;o=1[0m
+[0;32mI (117459) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (117459) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (117469) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (117479) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:54:40 GMT[0m
+[0;32mI (117489) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (117489) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (117499) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (117509) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (117519) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (117529) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (117539) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (117539) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (117549) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (117559) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (117559) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (117569) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (117579) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (119579) Firebase: UART Received Data: [0m
+[0;32mI (119579) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (120909) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (120919) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (121349) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=16283059468995039853;o=1[0m
+[0;32mI (121349) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (121359) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (121359) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (121369) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:54:44 GMT[0m
+[0;32mI (121379) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (121389) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (121389) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (121399) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (121409) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (121419) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (121429) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (121429) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (121439) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (121449) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (121459) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (121459) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (121469) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (123469) Firebase: UART Received Data: [0m
+[0;32mI (123469) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (124889) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (124899) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (125439) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=16889343260240762112;o=1[0m
+[0;32mI (125439) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (125449) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (125459) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (125469) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:54:48 GMT[0m
+[0;32mI (125469) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (125479) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (125489) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (125499) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (125499) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (125509) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (125519) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (125529) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (125539) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (125549) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (125549) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (125559) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (125569) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (127569) Firebase: UART Received Data: [0m
+[0;32mI (127569) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (128949) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (128949) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (129329) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=613230901533770066;o=1[0m
+[0;32mI (129329) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (129339) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (129349) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (129359) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:54:52 GMT[0m
+[0;32mI (129359) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (129369) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (129379) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (129389) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (129389) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (129399) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (129409) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (129419) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (129429) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (129439) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (129439) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (129449) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (129459) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (131459) Firebase: UART Received Data: [0m
+[0;32mI (131459) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (132649) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (132659) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (133019) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=6527173458214974122;o=1[0m
+[0;32mI (133019) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (133029) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (133039) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (133039) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:54:55 GMT[0m
+[0;32mI (133049) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (133059) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (133069) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (133069) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (133079) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (133089) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (133099) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (133109) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (133119) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (133129) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (133129) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (133139) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (133149) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (135149) Firebase: UART Received Data: [0m
+[0;32mI (135149) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (136349) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (136359) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (136709) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=11650339595710112234;o=1[0m
+[0;32mI (136709) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (136719) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (136729) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (136729) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:54:59 GMT[0m
+[0;32mI (136739) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (136749) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (136759) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (136759) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (136769) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (136779) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (136789) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (136799) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (136809) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (136819) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (136819) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (136829) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (136839) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (138839) Firebase: UART Received Data: [0m
+[0;32mI (138839) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (140039) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (140039) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (140599) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=6390124832114202686;o=1[0m
+[0;32mI (140599) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (140609) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (140609) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (140619) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:55:03 GMT[0m
+[0;32mI (140629) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (140639) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (140639) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (140649) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (140659) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (140669) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (140679) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (140689) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (140689) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (140709) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (140709) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (140709) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (140719) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (142729) Firebase: UART Received Data: [0m
+[0;32mI (142729) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (143929) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (143929) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (144289) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=945518721667498034;o=1[0m
+[0;32mI (144289) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (144299) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (144299) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (144309) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:55:07 GMT[0m
+[0;32mI (144319) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (144329) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (144329) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (144339) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (144349) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (144359) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (144369) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (144369) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (144379) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (144389) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (144399) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (144399) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (144409) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (146409) Firebase: UART Received Data: [0m
+[0;32mI (146409) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (148029) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (148039) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (148379) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=2340509476660630138;o=1[0m
+[0;32mI (148379) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (148389) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (148399) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (148399) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:55:11 GMT[0m
+[0;32mI (148409) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (148419) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (148429) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (148429) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (148439) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (148449) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (148459) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (148469) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (148479) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (148489) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (148489) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (148499) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (148509) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (150509) Firebase: UART Received Data: [0m
+[0;32mI (150509) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (151859) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (151869) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (152269) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=3178910952107738547;o=1[0m
+[0;32mI (152269) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (152279) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (152289) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (152289) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:55:15 GMT[0m
+[0;32mI (152299) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (152309) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (152319) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (152319) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (152329) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (152339) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (152349) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (152359) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (152369) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (152379) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (152379) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (152389) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (152399) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (154399) Firebase: UART Received Data: [0m
+[0;32mI (154399) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (155599) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (155599) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (155959) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=10667308380129336413;o=1[0m
+[0;32mI (155959) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (155969) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (155969) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (155979) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:55:18 GMT[0m
+[0;32mI (155989) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (155999) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (155999) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (156009) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (156019) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (156029) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (156039) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (156049) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (156049) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (156069) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (156069) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (156069) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (156079) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (158089) Firebase: UART Received Data: [0m
+[0;32mI (158089) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (159289) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (159299) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (159649) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=11645299891473768586;o=1[0m
+[0;32mI (159649) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (159659) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (159659) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (159669) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:55:22 GMT[0m
+[0;32mI (159679) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (159689) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (159689) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (159699) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (159709) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (159719) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (159729) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (159739) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (159739) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (159759) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (159759) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (159759) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (159769) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (161769) Firebase: UART Received Data: [0m
+[0;32mI (161769) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (162969) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (162969) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (163539) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=12816723023638967902;o=1[0m
+[0;32mI (163539) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (163539) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (163549) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (163559) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:55:26 GMT[0m
+[0;32mI (163569) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (163569) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (163579) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (163589) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (163599) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (163609) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (163619) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (163619) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (163629) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (163639) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (163639) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (163649) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (163659) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (165659) Firebase: UART Received Data: [0m
+[0;32mI (165659) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (167089) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (167099) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (167629) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=12997151654497039949;o=1[0m
+[0;32mI (167629) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (167639) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (167649) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (167649) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:55:30 GMT[0m
+[0;32mI (167659) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (167669) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (167679) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (167679) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (167689) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (167699) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (167709) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (167719) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (167729) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (167739) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (167739) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (167749) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (167759) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (169759) Firebase: UART Received Data: [0m
+[0;32mI (169759) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (170969) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (170969) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (171319) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=1588815102708893457;o=1[0m
+[0;32mI (171319) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (171329) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (171329) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (171339) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:55:34 GMT[0m
+[0;32mI (171349) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (171359) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (171359) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (171369) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (171379) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (171389) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (171399) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (171409) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (171409) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (171429) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (171429) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (171429) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (171439) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (173439) Firebase: UART Received Data: [0m
+[0;32mI (173439) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (174649) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (174649) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (174999) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=15426170592610062253;o=1[0m
+[0;32mI (175009) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (175009) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (175019) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (175029) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:55:37 GMT[0m
+[0;32mI (175039) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (175039) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (175049) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (175059) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (175069) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (175069) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (175079) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (175089) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (175099) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (175109) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (175109) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (175119) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (175129) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (177129) Firebase: UART Received Data: [0m
+[0;32mI (177129) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (178329) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (178339) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (178899) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=463979515669173115;o=1[0m
+[0;32mI (178899) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (178899) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (178909) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (178919) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:55:41 GMT[0m
+[0;32mI (178929) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (178929) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (178939) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (178949) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (178959) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (178959) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (178979) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (178979) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (178989) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (178999) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (178999) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (179009) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (179019) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (181019) Firebase: UART Received Data: [0m
+[0;32mI (181019) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (182229) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (182239) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (182579) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=2938569099123491004;o=1[0m
+[0;32mI (182579) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (182589) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (182599) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (182599) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:55:45 GMT[0m
+[0;32mI (182609) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (182619) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (182629) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (182629) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (182639) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (182649) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (182659) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (182669) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (182679) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (182689) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (182689) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (182699) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (182709) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (184709) Firebase: UART Received Data: [0m
+[0;32mI (184709) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (185909) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (185909) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (186269) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=14600337613866986343;o=1[0m
+[0;32mI (186269) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (186279) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (186289) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (186289) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:55:49 GMT[0m
+[0;32mI (186299) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (186309) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (186319) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (186319) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (186329) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (186339) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (186349) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (186359) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (186369) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (186379) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (186379) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (186389) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (186399) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (188399) Firebase: UART Received Data: [0m
+[0;32mI (188399) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (189789) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (189799) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (190159) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=8307781067227882021;o=1[0m
+[0;32mI (190159) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (190169) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (190179) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (190179) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:55:52 GMT[0m
+[0;32mI (190189) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (190199) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (190209) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (190209) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (190219) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (190229) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (190239) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (190249) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (190259) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (190269) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (190269) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (190269) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (190279) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (192289) Firebase: UART Received Data: [0m
+[0;32mI (192289) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (193489) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (193499) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (193849) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=3132102965711565855;o=1[0m
+[0;32mI (193849) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (193849) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (193859) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (193869) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:55:56 GMT[0m
+[0;32mI (193879) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (193879) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (193889) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (193899) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (193909) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (193919) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (193929) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (193929) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (193939) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (193949) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (193949) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (193959) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (193969) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (195969) Firebase: UART Received Data: [0m
+[0;32mI (195969) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (197189) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (197189) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (197739) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=323294053181334231;o=1[0m
+[0;32mI (197739) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (197749) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (197749) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (197759) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:56:00 GMT[0m
+[0;32mI (197769) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (197769) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (197779) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (197789) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (197799) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (197809) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (197819) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (197819) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (197829) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (197839) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (197849) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (197849) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (197859) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (199859) Firebase: UART Received Data: [0m
+[0;32mI (199859) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (201069) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (201079) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (201419) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=4037461750877682493;o=1[0m
+[0;32mI (201419) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (201429) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (201439) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (201449) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:56:04 GMT[0m
+[0;32mI (201459) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (201459) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (201469) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (201479) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (201489) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (201489) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (201499) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (201509) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (201519) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (201529) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (201529) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (201539) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (201549) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (203549) Firebase: UART Received Data: [0m
+[0;32mI (203549) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (204909) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (204909) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (205319) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=12310950810755188496;o=1[0m
+[0;32mI (205319) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (205329) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (205329) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (205339) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:56:08 GMT[0m
+[0;32mI (205349) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (205359) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (205359) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (205369) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (205379) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (205389) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (205399) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (205399) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (205409) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (205419) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (205429) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (205429) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (205439) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (207439) Firebase: UART Received Data: [0m
+[0;32mI (207439) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (208839) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (208849) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (209209) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=8561650350817356539;o=1[0m
+[0;32mI (209209) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (209219) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (209229) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (209229) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:56:12 GMT[0m
+[0;32mI (209239) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (209249) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (209259) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (209259) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (209269) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (209279) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (209289) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (209299) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (209309) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (209319) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (209319) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (209329) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (209339) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (211339) Firebase: UART Received Data: [0m
+[0;32mI (211339) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (212749) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (212749) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (213299) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=4112146898457444313;o=1[0m
+[0;32mI (213299) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (213309) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (213319) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (213319) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:56:15 GMT[0m
+[0;32mI (213329) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (213339) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (213349) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (213349) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (213359) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (213369) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (213379) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (213389) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (213399) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (213409) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (213409) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (213419) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (213429) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (215429) Firebase: UART Received Data: [0m
+[0;32mI (215429) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (216829) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (216839) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (217189) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=495635250963135921;o=1[0m
+[0;32mI (217189) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (217199) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (217209) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (217219) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:56:19 GMT[0m
+[0;32mI (217219) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (217229) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (217239) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (217249) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (217249) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (217259) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (217269) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (217279) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (217289) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (217299) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (217299) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (217309) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (217319) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (219319) Firebase: UART Received Data: [0m
+[0;32mI (219319) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (220729) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (220729) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (221079) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=1072736016127320212;o=1[0m
+[0;32mI (221079) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (221089) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (221099) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (221109) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:56:23 GMT[0m
+[0;32mI (221119) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (221119) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (221129) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (221139) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (221139) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (221149) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (221159) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (221169) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (221179) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (221189) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (221189) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (221199) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (221209) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (223209) Firebase: UART Received Data: [0m
+[0;32mI (223209) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (224399) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (224409) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (224769) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=16621464042812387665;o=1[0m
+[0;32mI (224769) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (224779) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (224789) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (224789) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:56:27 GMT[0m
+[0;32mI (224799) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (224809) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (224819) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (224819) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (224829) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (224839) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (224849) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (224859) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (224869) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (224879) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (224879) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (224889) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (224899) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (226899) Firebase: UART Received Data: [0m
+[0;32mI (226899) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (228099) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (228109) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (228459) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=2651782754081391553;o=1[0m
+[0;32mI (228459) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (228469) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (228469) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (228479) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:56:31 GMT[0m
+[0;32mI (228489) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (228489) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (228499) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (228509) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (228519) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (228529) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (228539) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (228539) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (228549) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (228559) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (228569) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (228569) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (228579) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (230579) Firebase: UART Received Data: [0m
+[0;32mI (230579) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (231849) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (231859) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (232349) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=5264641783078894458;o=1[0m
+[0;32mI (232349) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (232359) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (232359) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (232369) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:56:35 GMT[0m
+[0;32mI (232379) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (232379) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (232389) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (232399) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (232409) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (232419) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (232429) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (232429) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (232439) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (232449) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (232459) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (232459) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (232469) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (234469) Firebase: UART Received Data: [0m
+[0;32mI (234469) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (235679) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (235689) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (236029) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=11201666423105341469;o=1[0m
+[0;32mI (236039) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (236039) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (236049) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (236059) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:56:38 GMT[0m
+[0;32mI (236069) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (236069) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (236079) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (236089) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (236099) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (236099) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (236109) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (236119) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (236129) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (236139) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (236139) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (236149) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (236159) Firebase: DATA PUSHED TO THE FIRESTORE[0m

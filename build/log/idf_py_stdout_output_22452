@@ -1,0 +1,28 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D D:\EMY\ESP_workspace\firebase_deneme\build\bootloader\esp-idf\esptool_py && D:\Espressiff\Espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/EMY/ESP_workspace/firebase_deneme/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6860 bytes. 0x7a0 bytes (7%) free.
+[2/8] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+[3/8] Linking C static library esp-idf\main\libmain.a
+[4/8] Generating ld/sections.ld
+[5/8] Linking CXX executable app-template.elf
+[6/8] Generating binary image from built executable
+esptool.py v4.7.0
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated D:/EMY/ESP_workspace/firebase_deneme/build/app-template.bin
+[7/8] cmd.exe /C "cd /D D:\EMY\ESP_workspace\firebase_deneme\build\esp-idf\esptool_py && D:\Espressiff\Espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/EMY/ESP_workspace/firebase_deneme/build/partition_table/partition-table.bin D:/EMY/ESP_workspace/firebase_deneme/build/app-template.bin"
+app-template.bin binary size 0xe9e20 bytes. Smallest app partition is 0x100000 bytes. 0x161e0 bytes (9%) free.
+[7/8] cmd.exe /C "cd /D D:\Espressiff\Espressif\frameworks\esp-idf-v5.2.2\components\esptool_py && D:\Espressiff\Espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2 -D SERIAL_TOOL=D:/Espressiff/Espressif/python_env/idf5.2_py3.11_env/Scripts/python.exe;;D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=D:/EMY/ESP_workspace/firebase_deneme/build -P D:/Espressiff/Espressif/frameworks/eesptool.py --chip esp32 -p com11 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 app-template.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.0
+Serial port com11
+
+A fatal error occurred: Could not open com11, the port is busy or doesn't exist.
+(could not open port 'com11': FileNotFoundError(2, 'Sistem belirtilen dosyay² bulam²yor.', None, 2))
+
+Hint: Check if the port is correct and ESP connected
+
+sp-idf-v5.2.2/components/esptool_py/run_serial_tool.cmake"
+FAILED: CMakeFiles/flash D:/EMY/ESP_workspace/firebase_deneme/build/CMakeFiles/flash 
+cmd.exe /C "cd /D D:\Espressiff\Espressif\frameworks\esp-idf-v5.2.2\components\esptool_py && D:\Espressiff\Espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2 -D SERIAL_TOOL=D:/Espressiff/Espressif/python_env/idf5.2_py3.11_env/Scripts/python.exe;;D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=D:/EMY/ESP_workspace/firebase_deneme/build -P D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esptool_py/run_serial_tool.cmake"
+ninja: build stopped: subcommand failed.

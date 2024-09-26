@@ -1,0 +1,468 @@
+J���� chip revision: v3.0�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Sep 23 2024 10:01:52[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.0[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2a0ech (172268) map[0m
+[0;32mI (164) esp_image: segment 1: paddr=0003a114 vaddr=3ffb0000 size=03bcch ( 15308) load[0m
+[0;32mI (170) esp_image: segment 2: paddr=0003dce8 vaddr=40080000 size=02330h (  9008) load[0m
+[0;32mI (173) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a4cbch (675004) map[0m
+[0;32mI (409) esp_image: segment 4: paddr=000e4ce4 vaddr=40082330 size=15418h ( 87064) load[0m
+[0;32mI (455) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (455) boot: Disabling RNG early entropy source...[0m
+[0;32mI (467) cpu_start: Multicore app[0m
+[0;32mI (476) cpu_start: Pro cpu start user code[0m
+[0;32mI (476) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (476) cpu_start: Application information:[0m
+[0;32mI (479) cpu_start: Project name:     app-template[0m
+[0;32mI (484) cpu_start: App version:      1[0m
+[0;32mI (489) cpu_start: Compile time:     Sep 24 2024 11:48:22[0m
+[0;32mI (495) cpu_start: ELF file SHA256:  ead3b78f8...[0m
+[0;32mI (500) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (505) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (510) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (515) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (520) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (527) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (533) heap_init: At 3FFB8290 len 00027D70 (159 KiB): DRAM[0m
+[0;32mI (539) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (546) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (552) heap_init: At 40097748 len 000088B8 (34 KiB): IRAM[0m
+[0;32mI (560) spi_flash: detected chip: generic[0m
+[0;32mI (563) spi_flash: flash io: dio[0m
+[0;33mW (567) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (581) main_task: Started on CPU0[0m
+[0;32mI (591) main_task: Calling app_main()[0m
+[0;32mI (631) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 1| Intr:0 [0m
+[0;32mI (631) gpio: GPIO[5]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 1| Intr:0 [0m
+[0;32mI (641) uart: queue free spaces: 10[0m
+[0;32mI (651) Firebase: ESP_WIFI_MODE_STA[0m
+I (661) wifi:wifi driver task: 3ffc1930, prio:23, stack:6656, core=0
+I (681) wifi:wifi firmware version: 3e0076f
+I (681) wifi:wifi certification version: v7.0
+I (681) wifi:config NVS flash: enabled
+I (681) wifi:config nano formating: disabled
+I (691) wifi:Init data frame dynamic rx buffer num: 32
+I (691) wifi:Init static rx mgmt buffer num: 5
+I (691) wifi:Init management short buffer num: 32
+I (701) wifi:Init dynamic tx buffer num: 32
+I (701) wifi:Init static rx buffer size: 1600
+I (711) wifi:Init static rx buffer num: 10
+I (711) wifi:Init dynamic rx buffer num: 32
+[0;32mI (721) wifi_init: rx ba win: 6[0m
+[0;32mI (721) wifi_init: tcpip mbox: 32[0m
+[0;32mI (721) wifi_init: udp mbox: 6[0m
+[0;32mI (731) wifi_init: tcp mbox: 6[0m
+[0;32mI (731) wifi_init: tcp tx win: 5760[0m
+[0;32mI (731) wifi_init: tcp rx win: 5760[0m
+[0;32mI (741) wifi_init: tcp mss: 1440[0m
+[0;32mI (741) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (751) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (751) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+I (851) wifi:mode : sta (c8:f0:9e:f1:4a:c8)
+I (851) wifi:enable tsf
+[0;32mI (851) Firebase: wifi_init_sta finished.[0m
+I (861) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (861) wifi:state: init -> auth (b0)
+I (871) wifi:state: auth -> assoc (0)
+I (871) wifi:state: assoc -> run (10)
+I (901) wifi:connected with Galaxym31, aid = 1, channel 11, BW20, bssid = 4a:3e:02:1e:c9:b7
+I (901) wifi:security: WPA2-PSK, phy: bgn, rssi: -64
+I (911) wifi:pm start, type: 1
+
+I (911) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (921) wifi:<ba-add>idx:0 (ifx:0, 4a:3e:02:1e:c9:b7), tid:0, ssn:0, winSize:64
+I (931) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us
+I (941) wifi:AP's beacon interval = 102400 us, DTIM period = 2
+[0;32mI (1921) esp_netif_handlers: sta ip: 192.168.26.89, mask: 255.255.255.0, gw: 192.168.26.71[0m
+[0;32mI (1921) Firebase: got ip:192.168.26.89[0m
+[0;32mI (1921) Firebase: connected to ap SSID:Galaxym31 password:12345678[0m
+[0;32mI (1931) Firebase: Bytes available in UART buffer: 0[0m
+[0;32mI (1931) Firebase: UART Received Data: [0m
+[0;32mI (1941) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (1951) main_task: Returned from app_main()[0m
+[0;32mI (3491) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (3501) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (3511) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (3511) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (3661) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=16288048600037362020;o=1[0m
+[0;32mI (3661) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (3671) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (3681) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (3691) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 12:50:48 GMT[0m
+[0;32mI (3691) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (3701) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (3711) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (3721) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (3721) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (3731) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (3741) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (3751) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (3761) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (3771) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (3771) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "0"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-25T12:43:44.017034Z"
+}
+[0m
+[0;32mI (3801) Firebase: HTTP GET Status = 200[0m
+[0;32mI (3811) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (3861) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=11681400847010334714;o=1[0m
+[0;32mI (3861) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (3871) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (3881) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (3881) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 12:50:48 GMT[0m
+[0;32mI (3891) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (3901) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (3911) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (3911) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (3921) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (3931) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (3941) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (3951) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (3961) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (3971) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (3971) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "Pitch": {
+      "doubleValue": 0
+    },
+    "Roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-25T12:50:48.190759Z"
+}
+[0m
+[0;32mI (4001) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (4011) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (4021) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (4021) Firebase: Bytes available in UART buffer: 0[0m
+[0;32mI (4021) Firebase: UART Received Data: [0m
+[0;32mI (4031) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (5191) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (5191) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (5631) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=1380873911554504231;o=1[0m
+[0;32mI (5631) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (5641) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (5641) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (5651) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 12:50:49 GMT[0m
+[0;32mI (5661) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (5661) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (5671) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (5681) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (5691) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (5691) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (5701) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (5711) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (5721) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (5731) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (5731) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "Pitch": {
+      "doubleValue": 0
+    },
+    "Roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-25T12:50:48.190759Z"
+}
+{
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "Pitch": {
+      "doubleValue": 0
+    },
+    "Roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-25T12:50:48.190759Z"
+}
+[0m
+[0;32mI (5791) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (5801) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (5811) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (5811) Firebase: Bytes available in UART buffer: 0[0m
+[0;32mI (5811) Firebase: UART Received Data: [0m
+[0;32mI (5821) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (7231) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (7241) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (7601) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=6374144482786110580;o=1[0m
+[0;32mI (7601) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (7611) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (7621) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (7621) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 12:50:51 GMT[0m
+[0;32mI (7631) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (7641) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (7641) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (7651) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (7661) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (7671) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (7681) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (7691) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (7691) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (7711) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (7711) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "Pitch": {
+      "doubleValue": 0
+    },
+    "Roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-25T12:50:48.190759Z"
+}
+{
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "Pitch": {
+      "doubleValue": 0
+    },
+    "Roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-25T12:50:48.190759Z"
+}
+{
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "0"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-25T12:43:44.017034Z"
+}
+[0m
+[0;32mI (7781) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (7791) Firebase: HTTP GET Status = 200[0m
+[0;32mI (7801) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (7801) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;31mE (7811) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (8211) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=12648147101985816671;o=1[0m
+[0;32mI (8211) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (8221) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (8231) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (8231) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 12:50:52 GMT[0m
+[0;32mI (8241) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (8251) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (8261) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (8261) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (8271) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (8281) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (8291) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (8301) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (8311) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (8321) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (8321) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "Roll": {
+      "doubleValue": 0
+    },
+    "Pitch": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-25T12:50:48.190759Z"
+}
+[0m
+[0;32mI (8351) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (8361) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (8371) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (8371) Firebase: Bytes available in UART buffer: 0[0m
+[0;32mI (8371) Firebase: UART Received Data: [0m
+[0;32mI (8381) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (9621) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (9621) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (9961) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=9549718441148181120;o=1[0m
+[0;32mI (9961) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (9971) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (9981) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (9981) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 12:50:54 GMT[0m
+[0;32mI (9991) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (10001) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (10011) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (10011) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (10021) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (10031) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (10041) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (10051) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (10051) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (10071) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (10071) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "Roll": {
+      "doubleValue": 0
+    },
+    "Pitch": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-25T12:50:48.190759Z"
+}
+{
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "Pitch": {
+      "doubleValue": 0
+    },
+    "Roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-25T12:50:48.190759Z"
+}
+[0m
+[0;32mI (10131) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (10131) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (10141) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (10141) Firebase: Bytes available in UART buffer: 0[0m
+[0;32mI (10151) Firebase: UART Received Data: [0m
+[0;32mI (10151) Parsed UART Data: Roll: 0, Pitch: 0[0m
+[0;32mI (11041) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (11051) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (11391) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=4729935895484157173;o=1[0m
+[0;32mI (11391) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (11391) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (11401) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (11411) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 12:50:55 GMT[0m
+[0;32mI (11421) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (11421) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (11431) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (11441) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (11441) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (11451) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (11461) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (11461) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (11471) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (11481) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (11491) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (11501) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (11501) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "Roll": {
+      "doubleValue": 0
+    },
+    "Pitch": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-25T12:50:48.190759Z"
+}
+{
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "Pitch": {
+      "doubleValue": 0
+    },
+    "Roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-25T12:50:48.190759Z"
+}
+{
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-25T12:43:44.017034Z"
+}
+[0m
+[0;32mI (11591) Firebase: HTTP GET Status = 200[0m
+[0;32mI (11591) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (11611) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (11901) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=47295000736346692;o=1[0m
+[0;32mI (11901) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (11911) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (11921) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (11921) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 12:50:56 GMT[0m
+[0;32mI (11931) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (11941) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (11951) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (11951) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (11961) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (11971) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (11981) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (11991) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (12001) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (12011) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (12011) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "Roll": {
+      "doubleValue": 0
+    },
+    "Pitch": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-25T12:50:48.190759Z"
+}
+[0m
+[0;32mI (12041) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (12051) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (12061) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (12061) Firebase: Bytes available in UART buffer: 2[0m
+[0;32mI (12061) Firebase: UART Received Data: Ջ[0m
+[0;32mI (12071) Parsed UART Data: Roll: 0, Pitch: 0[0m

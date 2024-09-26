@@ -1,0 +1,131 @@
+[0;33m--- esp-idf-monitor 1.4.0 on com11 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d26de: panic_handler at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/panic_handler.c:139 (discriminator 3)
+[0m
+[0;33m0x400803c0: _DoubleExceptionVector at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/xtensa/xtensa_vectors.S:564
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d26de: panic_handler at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/panic_handler.c:139 (discriminator 3)
+[0m
+[0;33m0x400850ec: _xt_panic at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/arch/xtensa/panic_handler_asm.S:30
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d26de: panic_handler at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/panic_handler.c:139 (discriminator 3)
+[0m
+[0;33m0x400850ec: _xt_panic at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/arch/xtensa/panic_handler_asm.S:30
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x4000c250: memchr in ROM
+[0m
+[0;33m0x400d26ce: panic_handler at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/panic_handler.c:138 (discriminator 3)
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d26de: panic_handler at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/panic_handler.c:139 (discriminator 3)
+[0m
+[0;33m0x400850e6: _xt_panic at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/arch/xtensa/panic_handler_asm.S:29
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d26de: panic_handler at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/panic_handler.c:139 (discriminator 3)
+[0m
+[0;33m0x400803c5: _DoubleExceptionVector at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/xtensa/xtensa_vectors.S:567
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d26de: panic_handler at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/panic_handler.c:139 (discriminator 3)
+[0m
+[0;33m0x400850ec: _xt_panic at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/arch/xtensa/panic_handler_asm.S:30
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d26de: panic_handler at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/panic_handler.c:139 (discriminator 3)
+[0m
+[0;33m0x400803c5: _DoubleExceptionVector at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/xtensa/xtensa_vectors.S:567
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d26de: panic_handler at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/panic_handler.c:139 (discriminator 3)
+[0m
+[0;33m0x400803c0: _DoubleExceptionVector at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/xtensa/xtensa_vectors.S:564
+[0m
+[0;33m0x40087e75: xt_utils_compare_and_set at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/xtensa/include/xt_utils.h:222
+ (inlined by) esp_cpu_compare_and_set at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_hw_support/cpu.c:491
+[0m
+[0;33m0x40087bec: i2c_write_master at /home/cff/gittree/chip7.1_phy/chip_7.1/board_code/app_test/pp/phy/phy_chip_v7_ana.c:127 (discriminator 3)
+0x40087c19: i2c_write_master at /home/cff/gittree/chip7.1_phy/chip_7.1/board_code/app_test/pp/phy/phy_chip_v7_ana.c:127 (discriminator 3)
+[0m
+[0;33m0x40087e72: xt_utils_compare_and_set at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/xtensa/include/xt_utils.h:215
+ (inlined by) esp_cpu_compare_and_set at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_hw_support/cpu.c:491
+0x4008ad89: spinlock_acquire at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_hw_support/include/spinlock.h:130
+ (inlined by) xPortEnterCriticalTimeout at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:473
+0x4008cf14: vPortEnterCritical at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:571
+ (inlined by) xTaskPriorityDisinherit at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/tasks.c:5099
+0x40089fcb: prvCopyDataToQueue at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:2469
+0x4008a495: xQueueGenericSend at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/queue.c:964
+0x40082ab9: lock_release_generic at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:192
+0x40082b69: _lock_release at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/locks.c:198
+0x4011b8d4: esp_phy_enable at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_phy/src/phy_init.c:287
+0x40171a29: esp_phy_enable_wrapper at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_wifi/esp32/esp_adapter.c:583
+0x400916ad: wifi_rf_phy_enable at ??:?
+0x40094e56: pm_dream at ??:?
+0x4016ef8c: pm_tx_data_process at ??:?
+0x4016efe9: pm_on_data_tx at ??:?
+0x40092673: ppMapTxQueue at ??:?
+0x400928ff: ppTxPkt at ??:?
+0x40090ac6: ieee80211_output_process at ??:?
+0x40093341: ppTask at ??:?
+0x4008ab35: vPortTaskWrapper at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d26de: panic_handler at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/panic_handler.c:139 (discriminator 3)
+[0m
+[0;33m0x400803c0: _DoubleExceptionVector at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/xtensa/xtensa_vectors.S:564
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40097626: _xt_context_save at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/xtensa/xtensa_context.S:213
+[0m
+[0;33m0x400d26ce: panic_handler at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/panic_handler.c:138 (discriminator 3)
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d26de: panic_handler at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/panic_handler.c:139 (discriminator 3)
+[0m
+[0;33m0x400850e9: _xt_panic at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/arch/xtensa/panic_handler_asm.S:29
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d26de: panic_handler at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/panic_handler.c:139 (discriminator 3)
+[0m
+[0;33m0x40097577: xthal_save_extra_nw at /Users/igrokhotkov/e/esp32/hal/hal/state_asm.S:72
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d26de: panic_handler at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/panic_handler.c:139 (discriminator 3)
+[0m
+[0;33m0x400975ed: _xt_context_save at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/xtensa/xtensa_context.S:200
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d26de: panic_handler at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/panic_handler.c:139 (discriminator 3)
+[0m
+[0;33m0x400850e9: _xt_panic at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/arch/xtensa/panic_handler_asm.S:29
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d26de: panic_handler at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/panic_handler.c:139 (discriminator 3)
+[0m
+[0;33m0x400850e6: _xt_panic at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/arch/xtensa/panic_handler_asm.S:29
+[0m
+[0m

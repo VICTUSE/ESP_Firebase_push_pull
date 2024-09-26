@@ -1,0 +1,72 @@
+[0;33m--- esp-idf-monitor 1.4.0 on com11 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400850ec: _xt_panic at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/arch/xtensa/panic_handler_asm.S:30
+[0m
+[0;33m0x400d26ce: panic_handler at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/panic_handler.c:138 (discriminator 3)
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400803c5: _DoubleExceptionVector at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/xtensa/xtensa_vectors.S:567
+[0m
+[0;33m0x400d26ce: panic_handler at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/panic_handler.c:138 (discriminator 3)
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d26de: panic_handler at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/panic_handler.c:139 (discriminator 3)
+[0m
+[0;33m0x400803c5: _DoubleExceptionVector at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/xtensa/xtensa_vectors.S:567
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d26de: panic_handler at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/panic_handler.c:139 (discriminator 3)
+[0m
+[0;33m0x400850e4: _xt_panic at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/arch/xtensa/panic_handler_asm.S:28
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d26de: panic_handler at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/panic_handler.c:139 (discriminator 3)
+[0m
+[0;33m0x400803c0: _DoubleExceptionVector at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/xtensa/xtensa_vectors.S:564
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d26de: panic_handler at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/panic_handler.c:139 (discriminator 3)
+[0m
+[0;33m0x400850ec: _xt_panic at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/arch/xtensa/panic_handler_asm.S:30
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d26de: panic_handler at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/panic_handler.c:139 (discriminator 3)
+[0m
+[0;33m0x400803c0: _DoubleExceptionVector at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/xtensa/xtensa_vectors.S:564
+[0m
+[0;33m0x400818d6: panic_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x40089f6d: esp_system_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x40091961: __assert_func at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x4008f9b0: block_trim_free at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:496 (discriminator 3)
+ (inlined by) block_prepare_used at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:579 (discriminator 3)
+ (inlined by) tlsf_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:1006 (discriminator 3)
+0x4008f2d9: multi_heap_malloc_impl at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/multi_heap.c:210
+0x400820d1: heap_caps_malloc_base at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:179
+0x4008212c: heap_caps_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:202
+0x40082161: heap_caps_malloc_default at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:228
+0x40091971: malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/heap.c:24
+0x400e36c5: esp_http_client_init at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:774
+0x400d706b: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:307
+0x400d7117: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:368
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d26de: panic_handler at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/panic_handler.c:139 (discriminator 3)
+[0m
+[0;33m0x400850e9: _xt_panic at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/arch/xtensa/panic_handler_asm.S:29
+[0m
+[1;31mNone[0m
+[0;33mWaiting for the device to reconnect[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m[0m
+[0m

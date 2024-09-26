@@ -1,0 +1,56 @@
+[0;33m--- esp-idf-monitor 1.4.0 on com11 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x4000c349: memcpy in ROM
+0x4000c36b: memcpy in ROM
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400e46ee: esp_http_client_set_post_field at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1606
+[0m
+[0;33m0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m0x400e46eb: esp_http_client_set_post_field at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1604
+0x400d71e0: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:312 (discriminator 1)
+0x400d7247: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x4000c349: memcpy in ROM
+0x4000c36b: memcpy in ROM
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40001650: strncpy in ROM
+[0m
+[0;33m0x4000164d: strncpy in ROM
+0x40001667: strncpy in ROM
+[0m
+[0;33m0x4000164d: strncpy in ROM
+0x400d6d0f: client_event_get_handler at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:229
+0x4016bb2b: http_dispatch_event at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:188
+0x400e4af6: esp_http_client_perform at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1322
+0x400d71e5: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:314
+0x400d7247: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+0x4008ab35: vPortTaskWrapper at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40001650: strncpy in ROM
+[0m
+[0;33m0x4000164d: strncpy in ROM
+0x40001667: strncpy in ROM
+[0m
+[0;33m0x4000164d: strncpy in ROM
+0x400d6d0f: client_event_get_handler at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:229
+0x4016bb2b: http_dispatch_event at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:188
+0x400e4af6: esp_http_client_perform at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1322
+0x400d71e5: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:314
+0x400d7247: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+0x4008ab35: vPortTaskWrapper at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0m

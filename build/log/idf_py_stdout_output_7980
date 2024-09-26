@@ -1,0 +1,75 @@
+[1/5] cmd.exe /C "cd /D D:\EMY\ESP_workspace\firebase_deneme\build\esp-idf\esptool_py && D:\Espressiff\Espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/EMY/ESP_workspace/firebase_deneme/build/partition_table/partition-table.bin D:/EMY/ESP_workspace/firebase_deneme/build/app-template.bin"
+app-template.bin binary size 0xe4c50 bytes. Smallest app partition is 0x100000 bytes. 0x1b3b0 bytes (11%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D D:\EMY\ESP_workspace\firebase_deneme\build\bootloader\esp-idf\esptool_py && D:\Espressiff\Espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/EMY/ESP_workspace/firebase_deneme/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6860 bytes. 0x7a0 bytes (7%) free.
+[2/3] cmd.exe /C "cd /D D:\Espressiff\Espressif\frameworks\esp-idf-v5.2.2\components\esptool_py && D:\Espressiff\Espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2 -D SERIAL_TOOL=D:/Espressiff/Espressif/python_env/idf5.2_py3.11_env/Scripts/python.exe;;D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=esptool.py --chip esp32 -p com11 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 app-template.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.0
+Serial port com11
+Connecting...
+Failed to get PID of a device on com11, using standard reset sequence.
+.
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: c8:f0:9e:f1:4a:c8
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x000f4fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 26720 bytes to 16350...
+Writing at 0x00001000... (100 %)
+Wrote 26720 bytes (16350 compressed) at 0x00001000 in 0.9 seconds (effective 247.2 kbit/s)...
+Hash of data verified.
+Compressed 937040 bytes to 588673...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001d087... (5 %)
+Writing at 0x00027097... (8 %)
+Writing at 0x0002c76f... (11 %)
+Writing at 0x000324c7... (13 %)
+Writing at 0x0003df1a... (16 %)
+Writing at 0x000439ce... (19 %)
+Writing at 0x0004979c... (22 %)
+Writing at 0x0004f728... (25 %)
+Writing at 0x000552f9... (27 %)
+Writing at 0x0005b231... (30 %)
+Writing at 0x00060c71... (33 %)
+Writing at 0x00067342... (36 %)
+Writing at 0x0006c483... (38 %)
+Writing at 0x00071976... (41 %)
+Writing at 0x00076d70... (44 %)
+Writing at 0x0007c1e5... (47 %)
+Writing at 0x00081948... (50 %)
+Writing at 0x00087127... (52 %)
+Writing at 0x0008d080... (55 %)
+Writing at 0x00092b4d... (58 %)
+Writing at 0x00098793... (61 %)
+Writing at 0x0009e3ac... (63 %)
+Writing at 0x000a3d50... (66 %)
+Writing at 0x000a984a... (69 %)
+Writing at 0x000af5e0... (72 %)
+Writing at 0x000b5a5c... (75 %)
+Writing at 0x000bb55a... (77 %)
+Writing at 0x000c105f... (80 %)
+Writing at 0x000c6ae0... (83 %)
+Writing at 0x000ccb28... (86 %)
+Writing at 0x000d7f87... (88 %)
+Writing at 0x000de251... (91 %)
+Writing at 0x000e3ee8... (94 %)
+Writing at 0x000e9bda... (97 %)
+Writing at 0x000efa2e... (100 %)
+Wrote 937040 bytes (588673 compressed) at 0x00010000 in 13.8 seconds (effective 543.2 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 301.5 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+D:/EMY/ESP_workspace/firebase_deneme/build -P D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esptool_py/run_serial_tool.cmake"

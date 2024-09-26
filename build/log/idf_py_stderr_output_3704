@@ -1,0 +1,83 @@
+[0;33m--- esp-idf-monitor 1.4.0 on com11 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d26de: panic_handler at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/panic_handler.c:139 (discriminator 3)
+[0m
+[0;33m0x400803c0: _DoubleExceptionVector at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/xtensa/xtensa_vectors.S:564
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d26de: panic_handler at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/panic_handler.c:139 (discriminator 3)
+[0m
+[0;33m0x400803c3: _DoubleExceptionVector at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/xtensa/xtensa_vectors.S:566
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d26de: panic_handler at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/panic_handler.c:139 (discriminator 3)
+[0m
+[0;33m0x400850e4: _xt_panic at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/arch/xtensa/panic_handler_asm.S:28
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d26de: panic_handler at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/panic_handler.c:139 (discriminator 3)
+[0m
+[0;33m0x400803c0: _DoubleExceptionVector at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/xtensa/xtensa_vectors.S:564
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d26de: panic_handler at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/panic_handler.c:139 (discriminator 3)
+[0m
+[0;33m0x400803c0: _DoubleExceptionVector at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/xtensa/xtensa_vectors.S:564
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d26de: panic_handler at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/panic_handler.c:139 (discriminator 3)
+[0m
+[0;33m0x400803c5: _DoubleExceptionVector at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/xtensa/xtensa_vectors.S:567
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d26de: panic_handler at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/panic_handler.c:139 (discriminator 3)
+[0m
+[0;33m0x400850e4: _xt_panic at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/arch/xtensa/panic_handler_asm.S:28
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40097568: xthal_save_extra_nw at /Users/igrokhotkov/e/esp32/hal/hal/state_asm.S:72
+[0m
+[0;33m0x400d26ce: panic_handler at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/panic_handler.c:138 (discriminator 3)
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d26de: panic_handler at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/panic_handler.c:139 (discriminator 3)
+[0m
+[0;33m0x400803c5: _DoubleExceptionVector at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/xtensa/xtensa_vectors.S:567
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400803c3: _DoubleExceptionVector at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/xtensa/xtensa_vectors.S:566
+[0m
+[0;33m0x400d26ce: panic_handler at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/panic_handler.c:138 (discriminator 3)
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d26de: panic_handler at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/panic_handler.c:139 (discriminator 3)
+[0m
+[0;33m0x400803c5: _DoubleExceptionVector at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/xtensa/xtensa_vectors.S:567
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400803c8: _DoubleExceptionVector at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/xtensa/xtensa_vectors.S:568
+[0m
+[0;33m0x400d26ce: panic_handler at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/panic_handler.c:138 (discriminator 3)
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d26de: panic_handler at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/panic_handler.c:139 (discriminator 3)
+[0m
+[0;33m0x400850e6: _xt_panic at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/arch/xtensa/panic_handler_asm.S:29
+[0m
+[0m

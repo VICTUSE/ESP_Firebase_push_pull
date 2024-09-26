@@ -1,0 +1,384 @@
+��� chip revision: v3.0[0m
+[0;32mI (�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Sep 23 2024 10:01:52[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.0[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2979ch (169884) map[0m
+[0;32mI (163) esp_image: segment 1: paddr=000397c4 vaddr=3ffb0000 size=03bbch ( 15292) load[0m
+[0;32mI (169) esp_image: segment 2: paddr=0003d388 vaddr=40080000 size=02c90h ( 11408) load[0m
+[0;32mI (174) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9df5ch (647004) map[0m
+[0;32mI (399) esp_image: segment 4: paddr=000ddf84 vaddr=40082c90 size=14a50h ( 84560) load[0m
+[0;32mI (444) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (444) boot: Disabling RNG early entropy source...[0m
+[0;32mI (455) cpu_start: Multicore app[0m
+[0;32mI (464) cpu_start: Pro cpu start user code[0m
+[0;32mI (464) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (464) cpu_start: Application information:[0m
+[0;32mI (467) cpu_start: Project name:     app-template[0m
+[0;32mI (473) cpu_start: App version:      1[0m
+[0;32mI (477) cpu_start: Compile time:     Sep 24 2024 11:48:22[0m
+[0;32mI (483) cpu_start: ELF file SHA256:  dc02a7802...[0m
+[0;32mI (489) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (494) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (499) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (504) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (509) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (516) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (522) heap_init: At 3FFB8270 len 00027D90 (159 KiB): DRAM[0m
+[0;32mI (528) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (534) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (541) heap_init: At 400976E0 len 00008920 (34 KiB): IRAM[0m
+[0;32mI (548) spi_flash: detected chip: generic[0m
+[0;32mI (551) spi_flash: flash io: dio[0m
+[0;33mW (555) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (569) main_task: Started on CPU0[0m
+[0;32mI (579) main_task: Calling app_main()[0m
+[0;32mI (619) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 1| Intr:0 [0m
+[0;32mI (619) gpio: GPIO[5]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 1| Intr:0 [0m
+[0;32mI (629) uart: queue free spaces: 10[0m
+[0;32mI (639) Firebase: ESP_WIFI_MODE_STA[0m
+I (649) wifi:wifi driver task: 3ffc1968, prio:23, stack:6656, core=0
+I (669) wifi:wifi firmware version: 3e0076f
+I (669) wifi:wifi certification version: v7.0
+I (669) wifi:config NVS flash: enabled
+I (669) wifi:config nano formating: disabled
+I (679) wifi:Init data frame dynamic rx buffer num: 32
+I (679) wifi:Init static rx mgmt buffer num: 5
+I (679) wifi:Init management short buffer num: 32
+I (689) wifi:Init dynamic tx buffer num: 32
+I (689) wifi:Init static rx buffer size: 1600
+I (699) wifi:Init static rx buffer num: 10
+I (699) wifi:Init dynamic rx buffer num: 32
+[0;32mI (709) wifi_init: rx ba win: 6[0m
+[0;32mI (709) wifi_init: tcpip mbox: 32[0m
+[0;32mI (709) wifi_init: udp mbox: 6[0m
+[0;32mI (719) wifi_init: tcp mbox: 6[0m
+[0;32mI (719) wifi_init: tcp tx win: 5760[0m
+[0;32mI (719) wifi_init: tcp rx win: 5760[0m
+[0;32mI (729) wifi_init: tcp mss: 1440[0m
+[0;32mI (729) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (739) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (749) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+I (839) wifi:mode : sta (c8:f0:9e:f1:4a:c8)
+I (839) wifi:enable tsf
+[0;32mI (839) Firebase: wifi_init_sta finished.[0m
+I (849) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (849) wifi:state: init -> auth (b0)
+I (859) wifi:state: auth -> assoc (0)
+I (859) wifi:state: assoc -> run (10)
+I (999) wifi:connected with Galaxym31, aid = 1, channel 11, BW20, bssid = 4a:3e:02:1e:c9:b7
+I (999) wifi:security: WPA2-PSK, phy: bgn, rssi: -46
+I (1009) wifi:pm start, type: 1
+
+I (1009) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (1009) wifi:<ba-add>idx:0 (ifx:0, 4a:3e:02:1e:c9:b7), tid:0, ssn:0, winSize:64
+I (1049) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us
+I (1049) wifi:AP's beacon interval = 102400 us, DTIM period = 2
+[0;32mI (2019) esp_netif_handlers: sta ip: 192.168.26.89, mask: 255.255.255.0, gw: 192.168.26.71[0m
+[0;32mI (2019) Firebase: got ip:192.168.26.89[0m
+[0;32mI (2019) Firebase: connected to ap SSID:Galaxym31 password:12345678[0m
+[0;32mI (2029) main_task: Returned from app_main()[0m
+[0;32mI (3559) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (3569) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (3929) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=12580466494948623407;o=1[0m
+[0;32mI (3929) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (3939) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (3949) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (3949) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:06:59 GMT[0m
+[0;32mI (3959) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (3969) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (3969) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (3979) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (3989) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (3999) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (4009) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (4019) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (4019) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (4029) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (4039) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (4039) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (4049) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400e3e64  PS      : 0x00060f30  A0      : 0x800e3f06  A1      : 0x3ffc99f0  
+A2      : 0xca637637  A3      : 0x3f403654  A4      : 0x3ffc98a4  A5      : 0x3ffc986c  
+A6      : 0x3ffc9880  A7      : 0x3ffc9a9c  A8      : 0x00000000  A9      : 0x00000000  
+A10     : 0x00000000  A11     : 0x3f403654  A12     : 0x00000003  A13     : 0x18000000  
+A14     : 0x3ffb4058  A15     : 0x00000000  SAR     : 0x00000004  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0xca637637  LBEG    : 0x400014fd  LEND    : 0x4000150d  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x400e3e61:0x3ffc99f0 0x400e3f03:0x3ffc9a10 0x400e2a4a:0x3ffc9a30 0x400d6fbf:0x3ffc9a50 0x400d7052:0x3ffc9b00 0x4008aacd:0x3ffc9b20
+
+
+
+
+ELF file SHA256: dc02a7802
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Sep 23 2024 10:01:52[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.0[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2979ch (169884) map[0m
+[0;32mI (163) esp_image: segment 1: paddr=000397c4 vaddr=3ffb0000 size=03bbch ( 15292) load[0m
+[0;32mI (169) esp_image: segment 2: paddr=0003d388 vaddr=40080000 size=02c90h ( 11408) load[0m
+[0;32mI (174) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9df5ch (647004) map[0m
+[0;32mI (399) esp_image: segment 4: paddr=000ddf84 vaddr=40082c90 size=14a50h ( 84560) load[0m
+[0;32mI (444) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (444) boot: Disabling RNG early entropy source...[0m
+[0;32mI (455) cpu_start: Multicore app[0m
+[0;32mI (464) cpu_start: Pro cpu start user code[0m
+[0;32mI (464) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (464) cpu_start: Application information:[0m
+[0;32mI (467) cpu_start: Project name:     app-template[0m
+[0;32mI (473) cpu_start: App version:      1[0m
+[0;32mI (477) cpu_start: Compile time:     Sep 24 2024 11:48:22[0m
+[0;32mI (483) cpu_start: ELF file SHA256:  dc02a7802...[0m
+[0;32mI (489) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (494) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (499) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (504) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (509) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (516) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (521) heap_init: At 3FFB8270 len 00027D90 (159 KiB): DRAM[0m
+[0;32mI (528) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (534) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (541) heap_init: At 400976E0 len 00008920 (34 KiB): IRAM[0m
+[0;32mI (548) spi_flash: detected chip: generic[0m
+[0;32mI (551) spi_flash: flash io: dio[0m
+[0;33mW (555) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (569) main_task: Started on CPU0[0m
+[0;32mI (579) main_task: Calling app_main()[0m
+[0;32mI (619) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 1| Intr:0 [0m
+[0;32mI (619) gpio: GPIO[5]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 1| Intr:0 [0m
+[0;32mI (629) uart: queue free spaces: 10[0m
+[0;32mI (639) Firebase: ESP_WIFI_MODE_STA[0m
+I (649) wifi:wifi driver task: 3ffc1968, prio:23, stack:6656, core=0
+I (669) wifi:wifi firmware version: 3e0076f
+I (669) wifi:wifi certification version: v7.0
+I (669) wifi:config NVS flash: enabled
+I (669) wifi:config nano formating: disabled
+I (679) wifi:Init data frame dynamic rx buffer num: 32
+I (679) wifi:Init static rx mgmt buffer num: 5
+I (679) wifi:Init management short buffer num: 32
+I (689) wifi:Init dynamic tx buffer num: 32
+I (689) wifi:Init static rx buffer size: 1600
+I (699) wifi:Init static rx buffer num: 10
+I (699) wifi:Init dynamic rx buffer num: 32
+[0;32mI (709) wifi_init: rx ba win: 6[0m
+[0;32mI (709) wifi_init: tcpip mbox: 32[0m
+[0;32mI (709) wifi_init: udp mbox: 6[0m
+[0;32mI (719) wifi_init: tcp mbox: 6[0m
+[0;32mI (719) wifi_init: tcp tx win: 5760[0m
+[0;32mI (719) wifi_init: tcp rx win: 5760[0m
+[0;32mI (729) wifi_init: tcp mss: 1440[0m
+[0;32mI (729) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (739) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (749) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+I (839) wifi:mode : sta (c8:f0:9e:f1:4a:c8)
+I (839) wifi:enable tsf
+[0;32mI (839) Firebase: wifi_init_sta finished.[0m
+I (849) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (849) wifi:state: init -> auth (b0)
+I (859) wifi:state: auth -> assoc (0)
+I (859) wifi:state: assoc -> run (10)
+I (969) wifi:state: run -> init (2c0)
+I (969) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+[0;32mI (969) Firebase: retry to connect to the AP[0m
+[0;32mI (969) Firebase: connect to the AP fail[0m
+[0;32mI (3389) Firebase: retry to connect to the AP[0m
+[0;32mI (3389) Firebase: connect to the AP fail[0m
+I (3389) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (3389) wifi:state: init -> auth (b0)
+I (3399) wifi:state: auth -> assoc (0)
+I (3409) wifi:state: assoc -> run (10)
+I (3539) wifi:connected with Galaxym31, aid = 1, channel 11, BW20, bssid = 4a:3e:02:1e:c9:b7
+I (3539) wifi:security: WPA2-PSK, phy: bgn, rssi: -54
+I (3549) wifi:pm start, type: 1
+
+I (3549) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (3559) wifi:<ba-add>idx:0 (ifx:0, 4a:3e:02:1e:c9:b7), tid:0, ssn:0, winSize:64
+I (3629) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us
+I (3629) wifi:AP's beacon interval = 102400 us, DTIM period = 2
+[0;32mI (4569) esp_netif_handlers: sta ip: 192.168.26.89, mask: 255.255.255.0, gw: 192.168.26.71[0m
+[0;32mI (4569) Firebase: got ip:192.168.26.89[0m
+[0;32mI (4569) Firebase: connected to ap SSID:Galaxym31 password:12345678[0m
+[0;32mI (4579) main_task: Returned from app_main()[0m
+[0;32mI (5719) Firebase: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (5719) Firebase: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (6199) Firebase: HTTP_EVENT_ON_HEADER, key=X-Debug-Tracking-ID, value=5098650958231488174;o=1[0m
+[0;32mI (6199) Firebase: HTTP_EVENT_ON_HEADER, key=Content-Type, value=application/json; charset=UTF-8[0m
+[0;32mI (6209) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=X-Origin[0m
+[0;32mI (6219) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Referer[0m
+[0;32mI (6219) Firebase: HTTP_EVENT_ON_HEADER, key=Date, value=Wed, 25 Sep 2024 08:07:07 GMT[0m
+[0;32mI (6229) Firebase: HTTP_EVENT_ON_HEADER, key=Server, value=ESF[0m
+[0;32mI (6239) Firebase: HTTP_EVENT_ON_HEADER, key=Cache-Control, value=private[0m
+[0;32mI (6239) Firebase: HTTP_EVENT_ON_HEADER, key=X-XSS-Protection, value=0[0m
+[0;32mI (6249) Firebase: HTTP_EVENT_ON_HEADER, key=X-Frame-Options, value=SAMEORIGIN[0m
+[0;32mI (6259) Firebase: HTTP_EVENT_ON_HEADER, key=X-Content-Type-Options, value=nosniff[0m
+[0;32mI (6269) Firebase: HTTP_EVENT_ON_HEADER, key=Alt-Svc, value=h3=":443"; ma=2592000,h3-29=":443"; ma=2592000[0m
+[0;32mI (6279) Firebase: HTTP_EVENT_ON_HEADER, key=Accept-Ranges, value=none[0m
+[0;32mI (6289) Firebase: HTTP_EVENT_ON_HEADER, key=Vary, value=Origin,Accept-Encoding[0m
+[0;32mI (6289) Firebase: HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0;32mI (6299) Firebase: HTTP_EVENT_ON_FINISH[0m
+[0;32mI (6309) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (6309) Firebase: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (6319) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400e3e64  PS      : 0x00060130  A0      : 0x800e3f06  A1      : 0x3ffc99e0  
+A2      : 0xca637637  A3      : 0x3f403654  A4      : 0x3ffc9894  A5      : 0x3ffc985c  
+A6      : 0x3ffc9870  A7      : 0x3ffc9a8c  A8      : 0x00000000  A9      : 0x00000000  
+A10     : 0x00000000  A11     : 0x3f403654  A12     : 0x00000003  A13     : 0x18000000  
+A14     : 0x00000001  A15     : 0x00000001  SAR     : 0x00000004  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0xca637637  LBEG    : 0x400014fd  LEND    : 0x4000150d  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x400e3e61:0x3ffc99e0 0x400e3f03:0x3ffc9a00 0x400e2a4a:0x3ffc9a20 0x400d6fbf:0x3ffc9a40 0x400d7052:0x3ffc9af0 0x4008aacd:0x3ffc9b10
+
+
+
+
+ELF file SHA256: dc02a7802
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Sep 23 2024 10:01:52[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.0[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2979ch (169884) map[0m
+[0;32mI (163) esp_image: segment 1: paddr=000397c4 vaddr=3ffb0000 size=03bbch ( 15292) load[0m
+[0;32mI (169) esp_image: segment 2: paddr=0003d388 vaddr=40080000 size=02c90h ( 11408) load[0m
+[0;32mI (174) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9df5ch (647004) map[0m
+[0;32mI (399) esp_image: segment 4: paddr=000ddf84 vaddr=40082c90 size=14a50h ( 84560) load[0m
+[0;32mI (444) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (444) boot: Disabling RNG early entropy source...[0m
+[0;32mI (455) cpu_start: Multicore app[0m
+[0;32mI (464) cpu_start: Pro cpu start user code[0m
+[0;32mI (464) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (464) cpu_start: Application information:[0m
+[0;32mI (467) cpu_start: Project name:     app-template[0m
+[0;32mI (473) cpu_start: App version:      1[0m
+[0;32mI (477) cpu_start: Compile time:     Sep 24 2024 11:48:22[0m
+[0;32mI (483) cpu_start: ELF file SHA256:  dc02a7802...[0m
+[0;32mI (489) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (494) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (499) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (504) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (509) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (516) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (522) heap_init: At 3FFB8270 len 00027D90 (159 KiB): DRAM[0m
+[0;32mI (528) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (534) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (541) heap_init: At 400976E0 len 00008920 (34 KiB): IRAM[0m
+[0;32mI (548) spi_flash: detected chip: generic[0m
+[0;32mI (551) spi_flash: flash io: dio[0m
+[0;33mW (555) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (569) main_task: Started on CPU0[0m
+[0;32mI (579) main_task: Calling app_main()[0m
+[0;32mI (619) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 1| Intr:0 [0m
+[0;32mI (619) gpio: GPIO[5]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 1| Intr:0 [0m
+[0;32mI (629) uart: queue free spaces: 10[0m
+[0;32mI (639) Firebase: ESP_WIFI_MODE_STA[0m
+I (649) wifi:wifi driver task: 3ffc1968, prio:23, stack:6656, core=0
+I (669) wifi:wifi firmware version: 3e0076f
+I (669) wifi:wifi certification version: v7.0
+I (669) wifi:config NVS flash: enabled
+I (669) wifi:config nano formating: disabled
+I (679) wifi:Init data frame dynamic rx buffer num: 32
+I (679) wifi:Init static rx mgmt buffer num: 5
+I (679) wifi:Init management short buffer num: 32
+I (689) wifi:Init dynamic tx buffer num: 32
+I (689) wifi:Init static rx buffer size: 1600
+I (699) wifi:Init static rx buffer num: 10
+I (699) wifi:Init dynamic rx buffer num: 32
+[0;32mI (709) wifi_init: rx ba win: 6[0m
+[0;32mI (709) wifi_init: tcpip mbox: 32[0m
+[0;32mI (709) wifi_init: udp mbox: 6[0m
+[0;32mI (719) wifi_init: tcp mbox: 6[0m
+[0;32mI (719) wifi_init: tcp tx win: 5760[0m
+[0;32mI (719) wifi_init: tcp rx win: 5760[0m
+[0;32mI (729) wifi_init: tcp mss: 1440[0m
+[0;32mI (729) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (739) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (749) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+I (839) wifi:mode : sta (c8:f0:9e:f1:4a:c8)
+I (839) wifi:enable tsf
+[0;32mI (839) Firebase: wifi_init_sta finished.[0m
+I (849) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (849) wifi:state: init -> auth (b0)
+I (859) wifi:state: auth -> assoc (0)
+I (869) wifi:state: assoc -> run (10)
+I (979) wifi:state: run -> init (2c0)
+I (979) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+[0;32mI (979) Firebase: retry to connect to the AP[0m
+[0;32mI (979) Firebase: connect to the AP fail[0m

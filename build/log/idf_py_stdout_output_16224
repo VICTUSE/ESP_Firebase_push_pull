@@ -1,0 +1,2945 @@
+�� chip revision: v3.0[0m
+[0;�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Sep 23 2024 10:01:52[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.0[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2a05ch (172124) map[0m
+[0;32mI (164) esp_image: segment 1: paddr=0003a084 vaddr=3ffb0000 size=03bcch ( 15308) load[0m
+[0;32mI (170) esp_image: segment 2: paddr=0003dc58 vaddr=40080000 size=023c0h (  9152) load[0m
+[0;32mI (173) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a4cf4h (675060) map[0m
+[0;32mI (409) esp_image: segment 4: paddr=000e4d1c vaddr=400823c0 size=15388h ( 86920) load[0m
+[0;32mI (455) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (455) boot: Disabling RNG early entropy source...[0m
+[0;32mI (467) cpu_start: Multicore app[0m
+[0;32mI (476) cpu_start: Pro cpu start user code[0m
+[0;32mI (476) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (476) cpu_start: Application information:[0m
+[0;32mI (479) cpu_start: Project name:     app-template[0m
+[0;32mI (484) cpu_start: App version:      1[0m
+[0;32mI (489) cpu_start: Compile time:     Sep 24 2024 11:48:22[0m
+[0;32mI (495) cpu_start: ELF file SHA256:  501b8d803...[0m
+[0;32mI (500) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (505) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (510) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (515) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (520) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (527) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (533) heap_init: At 3FFB8488 len 00027B78 (158 KiB): DRAM[0m
+[0;32mI (539) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (545) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (552) heap_init: At 40097748 len 000088B8 (34 KiB): IRAM[0m
+[0;32mI (560) spi_flash: detected chip: generic[0m
+[0;32mI (563) spi_flash: flash io: dio[0m
+[0;33mW (567) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (581) main_task: Started on CPU0[0m
+[0;32mI (591) main_task: Calling app_main()[0m
+[0;32mI (631) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 1| Intr:0 [0m
+[0;32mI (631) gpio: GPIO[5]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 1| Intr:0 [0m
+[0;32mI (641) uart: queue free spaces: 10[0m
+[0;32mI (651) Firebase: ESP_WIFI_MODE_STA[0m
+I (661) wifi:wifi driver task: 3ffc1b28, prio:23, stack:6656, core=0
+I (681) wifi:wifi firmware version: 3e0076f
+I (681) wifi:wifi certification version: v7.0
+I (681) wifi:config NVS flash: enabled
+I (681) wifi:config nano formating: disabled
+I (691) wifi:Init data frame dynamic rx buffer num: 32
+I (691) wifi:Init static rx mgmt buffer num: 5
+I (691) wifi:Init management short buffer num: 32
+I (701) wifi:Init dynamic tx buffer num: 32
+I (701) wifi:Init static rx buffer size: 1600
+I (711) wifi:Init static rx buffer num: 10
+I (711) wifi:Init dynamic rx buffer num: 32
+[0;32mI (721) wifi_init: rx ba win: 6[0m
+[0;32mI (721) wifi_init: tcpip mbox: 32[0m
+[0;32mI (721) wifi_init: udp mbox: 6[0m
+[0;32mI (731) wifi_init: tcp mbox: 6[0m
+[0;32mI (731) wifi_init: tcp tx win: 5760[0m
+[0;32mI (731) wifi_init: tcp rx win: 5760[0m
+[0;32mI (741) wifi_init: tcp mss: 1440[0m
+[0;32mI (741) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (751) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (761) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+I (851) wifi:mode : sta (c8:f0:9e:f1:4a:c8)
+I (851) wifi:enable tsf
+[0;32mI (851) Firebase: wifi_init_sta finished.[0m
+I (861) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (861) wifi:state: init -> auth (b0)
+I (871) wifi:state: auth -> assoc (0)
+I (881) wifi:state: assoc -> run (10)
+I (1021) wifi:connected with Galaxym31, aid = 1, channel 11, BW20, bssid = 4a:3e:02:1e:c9:b7
+I (1021) wifi:security: WPA2-PSK, phy: bgn, rssi: -45
+I (1031) wifi:pm start, type: 1
+
+I (1031) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (1041) wifi:<ba-add>idx:0 (ifx:0, 4a:3e:02:1e:c9:b7), tid:0, ssn:0, winSize:64
+I (1101) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us
+I (1101) wifi:AP's beacon interval = 102400 us, DTIM period = 2
+[0;32mI (2041) esp_netif_handlers: sta ip: 192.168.26.89, mask: 255.255.255.0, gw: 192.168.26.71[0m
+[0;32mI (2041) Firebase: got ip:192.168.26.89[0m
+[0;32mI (2041) Firebase: connected to ap SSID:myssid password:mypassword[0m
+[0;32mI (2051) Firebase: UART Received Data: ������������������������������������������[0m
+[0;32mI (2061) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (2071) main_task: Returned from app_main()[0m
+[0;32mI (5301) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "roll": {
+      "doubleValue": 0
+    },
+    "pitch": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:10:19.891120Z"
+}
+[0m
+[0;31mE (5321) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (5331) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (5931) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:10:47.195290Z"
+}
+[0m
+[0;32mI (5951) Firebase: HTTP GET Status = 200[0m
+[0;32mI (7341) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (7341) Firebase: UART Received Data: �?`��?[0m
+[0;32mI (7341) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (9421) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "pitch": {
+      "doubleValue": 0
+    },
+    "roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:10:19.891120Z"
+}
+[0m
+[0;31mE (9441) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (9441) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (11051) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:10:47.195290Z"
+}
+[0m
+[0;32mI (11071) Firebase: HTTP GET Status = 200[0m
+[0;32mI (11461) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (11461) Firebase: UART Received Data: �?`��?[0m
+[0;32mI (11461) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (13501) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "pitch": {
+      "doubleValue": 0
+    },
+    "roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:10:19.891120Z"
+}
+[0m
+[0;31mE (13531) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (13531) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (15541) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (15541) Firebase: UART Received Data: �?`��?[0m
+[0;32mI (15541) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (15761) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:10:47.195290Z"
+}
+[0m
+[0;32mI (15791) Firebase: HTTP GET Status = 200[0m
+[0;32mI (17391) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "pitch": {
+      "doubleValue": 0
+    },
+    "roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:10:19.891120Z"
+}
+[0m
+[0;31mE (17421) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (17421) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (19431) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (19431) Firebase: UART Received Data: �?`��?[0m
+[0;32mI (19431) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (20701) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:10:47.195290Z"
+}
+[0m
+[0;32mI (20731) Firebase: HTTP GET Status = 200[0m
+[0;32mI (21291) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "roll": {
+      "doubleValue": 0
+    },
+    "pitch": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:10:19.891120Z"
+}
+[0m
+[0;31mE (21311) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (21311) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (23331) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (23331) Firebase: UART Received Data: �?`��?[0m
+[0;32mI (23331) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (25341) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "pitch": {
+      "doubleValue": 0
+    },
+    "roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:10:19.891120Z"
+}
+[0m
+[0;31mE (25361) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (25361) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (25601) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:10:47.195290Z"
+}
+[0m
+[0;32mI (25631) Firebase: HTTP GET Status = 200[0m
+[0;32mI (27381) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (27381) Firebase: UART Received Data: �?`��?[0m
+[0;32mI (27381) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (29871) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "roll": {
+      "doubleValue": 0
+    },
+    "pitch": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:10:19.891120Z"
+}
+[0m
+[0;31mE (29891) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (29891) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (30501) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:10:47.195290Z"
+}
+[0m
+[0;32mI (30521) Firebase: HTTP GET Status = 200[0m
+[0;32mI (31911) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (31911) Firebase: UART Received Data: �?`��?[0m
+[0;32mI (31911) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (33821) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "pitch": {
+      "doubleValue": 0
+    },
+    "roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:10:19.891120Z"
+}
+[0m
+[0;31mE (33851) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (33851) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (35621) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:10:47.195290Z"
+}
+[0m
+[0;32mI (35651) Firebase: HTTP GET Status = 200[0m
+[0;32mI (35871) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (35871) Firebase: UART Received Data: �?`��?[0m
+[0;32mI (35871) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (37871) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "roll": {
+      "doubleValue": 0
+    },
+    "pitch": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:10:19.891120Z"
+}
+[0m
+[0;31mE (37901) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (37901) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (39911) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (39911) Firebase: UART Received Data: �?`��?[0m
+[0;32mI (39911) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (40341) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:10:47.195290Z"
+}
+[0m
+[0;32mI (40361) Firebase: HTTP GET Status = 200[0m
+[0;32mI (41561) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "pitch": {
+      "doubleValue": 0
+    },
+    "roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:10:19.891120Z"
+}
+[0m
+[0;31mE (41581) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (41591) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (43601) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (43601) Firebase: UART Received Data: �?`��?[0m
+[0;32mI (43601) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (44661) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:10:47.195290Z"
+}
+[0m
+[0;32mI (44691) Firebase: HTTP GET Status = 200[0m
+[0;32mI (45861) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "pitch": {
+      "doubleValue": 0
+    },
+    "roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:10:19.891120Z"
+}
+[0m
+[0;31mE (45881) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (45891) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (47901) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (47901) Firebase: UART Received Data: �?`��?[0m
+[0;32mI (47901) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (49751) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "pitch": {
+      "doubleValue": 0
+    },
+    "roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:10:19.891120Z"
+}
+[0m
+[0;31mE (49781) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (49781) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (49811) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:10:47.195290Z"
+}
+[0m
+[0;32mI (49831) Firebase: HTTP GET Status = 200[0m
+[0;32mI (51801) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (51801) Firebase: UART Received Data: �?`��?[0m
+[0;32mI (51801) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (53721) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "roll": {
+      "doubleValue": 0
+    },
+    "pitch": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:10:19.891120Z"
+}
+[0m
+[0;31mE (53741) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (53751) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (54671) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:10:47.195290Z"
+}
+[0m
+[0;32mI (54701) Firebase: HTTP GET Status = 200[0m
+[0;32mI (55761) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (55761) Firebase: UART Received Data: �?`��?[0m
+[0;32mI (55761) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (57541) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "pitch": {
+      "doubleValue": 0
+    },
+    "roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:10:19.891120Z"
+}
+[0m
+[0;31mE (57561) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (57561) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (59381) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:10:47.195290Z"
+}
+[0m
+[0;32mI (59401) Firebase: HTTP GET Status = 200[0m
+[0;32mI (59571) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (59571) Firebase: UART Received Data: �?`��?[0m
+[0;32mI (59571) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (61221) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "pitch": {
+      "doubleValue": 0
+    },
+    "roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:10:19.891120Z"
+}
+[0m
+[0;31mE (61241) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (61251) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (63261) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (63261) Firebase: UART Received Data: �?`��?[0m
+[0;32mI (63261) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (64321) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:15:21.564954Z"
+}
+[0m
+[0;32mI (64351) Firebase: HTTP GET Status = 200[0m
+[0;32mI (64921) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "pitch": {
+      "doubleValue": 0
+    },
+    "roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:10:19.891120Z"
+}
+[0m
+[0;31mE (64941) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (64951) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (66961) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (66961) Firebase: UART Received Data: �?`��?[0m
+[0;32mI (66961) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (69211) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "pitch": {
+      "doubleValue": 0
+    },
+    "roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:10:19.891120Z"
+}
+[0m
+[0;31mE (69231) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (69231) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (69271) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:15:21.564954Z"
+}
+[0m
+[0;32mI (69291) Firebase: HTTP GET Status = 200[0m
+[0;32mI (71251) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (71251) Firebase: UART Received Data: �?`��?[0m
+[0;32mI (71251) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (73691) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "pitch": {
+      "doubleValue": 0
+    },
+    "roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:10:19.891120Z"
+}
+[0m
+[0;31mE (73711) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (73721) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (74331) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:15:21.564954Z"
+}
+[0m
+[0;32mI (74351) Firebase: HTTP GET Status = 200[0m
+[0;32mI (75731) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (75731) Firebase: UART Received Data: �?`��?[0m
+[0;32mI (75731) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (77621) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "pitch": {
+      "doubleValue": 0
+    },
+    "roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:10:19.891120Z"
+}
+[0m
+[0;31mE (77641) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (77641) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (79241) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:15:21.564954Z"
+}
+[0m
+[0;32mI (79271) Firebase: HTTP GET Status = 200[0m
+[0;32mI (79661) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (79661) Firebase: UART Received Data: �?`��?[0m
+[0;32mI (79661) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (81701) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "pitch": {
+      "doubleValue": 0
+    },
+    "roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:10:19.891120Z"
+}
+[0m
+[0;31mE (81721) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (81731) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (83741) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (83741) Firebase: UART Received Data: �?`��?[0m
+[0;32mI (83741) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (83961) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:15:21.564954Z"
+}
+[0m
+[0;32mI (83981) Firebase: HTTP GET Status = 200[0m
+[0;32mI (85601) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "pitch": {
+      "doubleValue": 0
+    },
+    "roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:10:19.891120Z"
+}
+[0m
+[0;31mE (85621) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (85631) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (87641) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (87641) Firebase: UART Received Data: �?`��?[0m
+[0;32mI (87641) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (88871) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:15:21.564954Z"
+}
+[0m
+[0;32mI (88901) Firebase: HTTP GET Status = 200[0m
+[0;32mI (89481) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "pitch": {
+      "doubleValue": 0
+    },
+    "roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:10:19.891120Z"
+}
+[0m
+[0;31mE (89511) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (89511) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (91521) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (91521) Firebase: UART Received Data: �?`��?[0m
+[0;32mI (91521) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (94231) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "roll": {
+      "doubleValue": 0
+    },
+    "pitch": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:10:19.891120Z"
+}
+[0m
+[0;31mE (94251) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (94261) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (94401) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "1"
+    },
+    "led 1": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:15:54.666816Z"
+}
+[0m
+[0;32mI (94421) Firebase: HTTP GET Status = 200[0m
+[0;32mI (96271) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (96271) Firebase: UART Received Data: �?`��?[0m
+[0;32mI (96271) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (98431) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "pitch": {
+      "doubleValue": 0
+    },
+    "roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:10:19.891120Z"
+}
+[0m
+[0;31mE (98461) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (98461) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (98701) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "0"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:15:57.117799Z"
+}
+[0m
+[0;32mI (98731) Firebase: HTTP GET Status = 200[0m
+[0;32mI (100471) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (100471) Firebase: UART Received Data: �?`��?[0m
+[0;32mI (100471) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (102391) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "pitch": {
+      "doubleValue": 0
+    },
+    "roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:10:19.891120Z"
+}
+[0m
+[0;31mE (102411) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (102421) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (103411) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "0"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:15:57.117799Z"
+}
+[0m
+[0;32mI (103431) Firebase: HTTP GET Status = 200[0m
+[0;32mI (104431) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (104431) Firebase: UART Received Data: �?`��?[0m
+[0;32mI (104431) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (106281) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "roll": {
+      "doubleValue": 0
+    },
+    "pitch": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:10:19.891120Z"
+}
+[0m
+[0;31mE (106301) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (106301) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (108121) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:16:05.987473Z"
+}
+[0m
+[0;32mI (108141) Firebase: HTTP GET Status = 200[0m
+[0;32mI (108321) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (108321) Firebase: UART Received Data: �?`��?[0m
+[0;32mI (108321) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (109961) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "pitch": {
+      "doubleValue": 0
+    },
+    "roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:10:19.891120Z"
+}
+[0m
+[0;31mE (109981) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (109991) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (112001) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (112001) Firebase: UART Received Data: �?`��?[0m
+[0;32mI (112001) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (113061) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:16:05.987473Z"
+}
+[0m
+[0;32mI (113091) Firebase: HTTP GET Status = 200[0m
+[0;32mI (113651) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "pitch": {
+      "doubleValue": 0
+    },
+    "roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:10:19.891120Z"
+}
+[0m
+[0;31mE (113671) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (113681) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (115691) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (115691) Firebase: UART Received Data: �?`��?[0m
+[0;32mI (115691) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (117681) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "pitch": {
+      "doubleValue": 0
+    },
+    "roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:10:19.891120Z"
+}
+[0m
+[0;31mE (117711) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (117711) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (118361) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:16:05.987473Z"
+}
+[0m
+[0;32mI (118381) Firebase: HTTP GET Status = 200[0m
+[0;32mI (119721) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (119721) Firebase: UART Received Data: �?`��?[0m
+[0;32mI (119721) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (121431) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "pitch": {
+      "doubleValue": 0
+    },
+    "roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:10:19.891120Z"
+}
+[0m
+[0;31mE (121451) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (121451) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (123471) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (123471) Firebase: UART Received Data: �?`��?[0m
+[0;32mI (123471) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (123491) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:16:05.987473Z"
+}
+[0m
+[0;32mI (123511) Firebase: HTTP GET Status = 200[0m
+[0;32mI (125321) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "pitch": {
+      "doubleValue": 0
+    },
+    "roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:10:19.891120Z"
+}
+[0m
+[0;31mE (125351) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (125351) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (127361) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (127361) Firebase: UART Received Data: �?`��?[0m
+[0;32mI (127361) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (129021) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:16:05.987473Z"
+}
+[0m
+[0;32mI (129041) Firebase: HTTP GET Status = 200[0m
+[0;32mI (129211) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "roll": {
+      "doubleValue": 0
+    },
+    "pitch": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:10:19.891120Z"
+}
+[0m
+[0;31mE (129241) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (129241) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (131251) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (131251) Firebase: UART Received Data: �?`��?[0m
+[0;32mI (131251) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (133131) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "roll": {
+      "doubleValue": 0
+    },
+    "pitch": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:10:19.891120Z"
+}
+[0m
+[0;31mE (133161) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (133161) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (133521) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:16:05.987473Z"
+}
+[0m
+[0;32mI (133541) Firebase: HTTP GET Status = 200[0m
+[0;32mI (135171) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (135171) Firebase: UART Received Data: �?`��?[0m
+[0;32mI (135171) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (137531) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "pitch": {
+      "doubleValue": 0
+    },
+    "roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:10:19.891120Z"
+}
+[0m
+[0;31mE (137551) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (137561) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (137821) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:16:05.987473Z"
+}
+[0m
+[0;32mI (137841) Firebase: HTTP GET Status = 200[0m
+[0;32mI (139571) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (139571) Firebase: UART Received Data: �?`��?[0m
+[0;32mI (139571) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (141861) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "pitch": {
+      "doubleValue": 0
+    },
+    "roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:10:19.891120Z"
+}
+[0m
+[0;31mE (141881) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (141891) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (142321) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:16:05.987473Z"
+}
+[0m
+[0;32mI (142351) Firebase: HTTP GET Status = 200[0m
+[0;32mI (143901) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+Guru Meditation Error: Core  0 panic'ed (Unhandled debug exception). 
+Debug exception reason: BREAK instr 
+Core  0 register dump:
+PC      : 0x3ffc9730  PS      : 0x00000003  A0      : 0x3f4039c4  A1      : 0x3ffc9790  
+A2      : 0x00000003  A3      : 0x3f4039c4  A4      : 0x3f403748  A5      : 0x0002321d  
+A6      : 0x3f4039c4  A7      : 0x3ffafca0  A8      : 0x800d717a  A9      : 0x3ffc9730  
+A10     : 0x00000003  A11     : 0x3f4039c4  A12     : 0x3f403748  A13     : 0x00000000  
+A14     : 0x3ffbc92c  A15     : 0x3ffb4500  SAR     : 0x3ffb0728  EXCCAUSE: 0x00000001  
+EXCVADDR: 0xffffffdf  LBEG    : 0x4000c349  LEND    : 0x4000c36b  LCOUNT  : 0x00000000  
+
+
+Backtrace: 0x3ffc972d:0x3ffc9790 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 501b8d803
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Sep 23 2024 10:01:52[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.0[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2a05ch (172124) map[0m
+[0;32mI (164) esp_image: segment 1: paddr=0003a084 vaddr=3ffb0000 size=03bcch ( 15308) load[0m
+[0;32mI (170) esp_image: segment 2: paddr=0003dc58 vaddr=40080000 size=023c0h (  9152) load[0m
+[0;32mI (173) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a4cf4h (675060) map[0m
+[0;32mI (409) esp_image: segment 4: paddr=000e4d1c vaddr=400823c0 size=15388h ( 86920) load[0m
+[0;32mI (455) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (455) boot: Disabling RNG early entropy source...[0m
+[0;32mI (467) cpu_start: Multicore app[0m
+[0;32mI (476) cpu_start: Pro cpu start user code[0m
+[0;32mI (476) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (476) cpu_start: Application information:[0m
+[0;32mI (479) cpu_start: Project name:     app-template[0m
+[0;32mI (484) cpu_start: App version:      1[0m
+[0;32mI (488) cpu_start: Compile time:     Sep 24 2024 11:48:22[0m
+[0;32mI (495) cpu_start: ELF file SHA256:  501b8d803...[0m
+[0;32mI (500) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (505) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (510) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (515) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (520) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (527) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (533) heap_init: At 3FFB8488 len 00027B78 (158 KiB): DRAM[0m
+[0;32mI (539) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (545) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (552) heap_init: At 40097748 len 000088B8 (34 KiB): IRAM[0m
+[0;32mI (560) spi_flash: detected chip: generic[0m
+[0;32mI (563) spi_flash: flash io: dio[0m
+[0;33mW (567) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (581) main_task: Started on CPU0[0m
+[0;32mI (591) main_task: Calling app_main()[0m
+[0;32mI (631) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 1| Intr:0 [0m
+[0;32mI (631) gpio: GPIO[5]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 1| Intr:0 [0m
+[0;32mI (641) uart: queue free spaces: 10[0m
+[0;32mI (651) Firebase: ESP_WIFI_MODE_STA[0m
+I (661) wifi:wifi driver task: 3ffc1b28, prio:23, stack:6656, core=0
+I (681) wifi:wifi firmware version: 3e0076f
+I (681) wifi:wifi certification version: v7.0
+I (681) wifi:config NVS flash: enabled
+I (681) wifi:config nano formating: disabled
+I (691) wifi:Init data frame dynamic rx buffer num: 32
+I (691) wifi:Init static rx mgmt buffer num: 5
+I (691) wifi:Init management short buffer num: 32
+I (701) wifi:Init dynamic tx buffer num: 32
+I (701) wifi:Init static rx buffer size: 1600
+I (711) wifi:Init static rx buffer num: 10
+I (711) wifi:Init dynamic rx buffer num: 32
+[0;32mI (721) wifi_init: rx ba win: 6[0m
+[0;32mI (721) wifi_init: tcpip mbox: 32[0m
+[0;32mI (721) wifi_init: udp mbox: 6[0m
+[0;32mI (731) wifi_init: tcp mbox: 6[0m
+[0;32mI (731) wifi_init: tcp tx win: 5760[0m
+[0;32mI (731) wifi_init: tcp rx win: 5760[0m
+[0;32mI (741) wifi_init: tcp mss: 1440[0m
+[0;32mI (741) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (751) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (761) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+I (851) wifi:mode : sta (c8:f0:9e:f1:4a:c8)
+I (851) wifi:enable tsf
+[0;32mI (851) Firebase: wifi_init_sta finished.[0m
+I (861) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (861) wifi:state: init -> auth (b0)
+I (871) wifi:state: auth -> assoc (0)
+I (881) wifi:state: assoc -> run (10)
+I (1011) wifi:state: run -> init (2c0)
+I (1011) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+[0;32mI (1021) Firebase: retry to connect to the AP[0m
+[0;32mI (1021) Firebase: connect to the AP fail[0m
+[0;32mI (3431) Firebase: retry to connect to the AP[0m
+[0;32mI (3431) Firebase: connect to the AP fail[0m
+I (3441) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (3441) wifi:state: init -> auth (b0)
+I (3441) wifi:state: auth -> assoc (0)
+I (3451) wifi:state: assoc -> run (10)
+I (3621) wifi:connected with Galaxym31, aid = 1, channel 11, BW20, bssid = 4a:3e:02:1e:c9:b7
+I (3631) wifi:security: WPA2-PSK, phy: bgn, rssi: -45
+I (3631) wifi:pm start, type: 1
+
+I (3631) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (3641) wifi:<ba-add>idx:0 (ifx:0, 4a:3e:02:1e:c9:b7), tid:0, ssn:0, winSize:64
+I (3661) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us
+I (3661) wifi:AP's beacon interval = 102400 us, DTIM period = 2
+[0;32mI (4651) esp_netif_handlers: sta ip: 192.168.26.89, mask: 255.255.255.0, gw: 192.168.26.71[0m
+[0;32mI (4651) Firebase: got ip:192.168.26.89[0m
+[0;32mI (4651) Firebase: connected to ap SSID:myssid password:mypassword[0m
+[0;32mI (4661) Firebase: UART Received Data: Roll:  16         Pitch:  4   
+[0m
+[0;32mI (4671) Parsed Data: Roll: 16, Pitch: 4[0m
+[0;32mI (4681) main_task: Returned from app_main()[0m
+[0;32mI (6681) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:16:05.987473Z"
+}
+[0m
+[0;32mI (6701) Firebase: HTTP GET Status = 200[0m
+[0;32mI (7151) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "pitch": {
+      "doubleValue": 4
+    },
+    "roll": {
+      "doubleValue": 16
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:16:52.890456Z"
+}
+[0m
+[0;31mE (7181) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (7181) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (9191) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (9191) Firebase: UART Received Data: �[0m
+[0;32mI (9191) Parsed Data: Roll: 16, Pitch: 4[0m
+Guru Meditation Error: Core  0 panic'ed (StoreProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400e46ee  PS      : 0x00060830  A0      : 0x800d71e3  A1      : 0x3ffc9770  
+A2      : 0xe67ec000  A3      : 0x3ffc97b0  A4      : 0x00000040  A5      : 0x0000ff00  
+A6      : 0x00ff0000  A7      : 0xe67ec000  A8      : 0x6f520d00  A9      : 0x3ffc9760  
+A10     : 0x00000000  A11     : 0x3f4036b8  A12     : 0x3f4036a4  A13     : 0x00000050  
+A14     : 0x3ffce8d0  A15     : 0x00000000  SAR     : 0x00000017  EXCCAUSE: 0x0000001d  
+EXCVADDR: 0xe67ec030  LBEG    : 0x400014fd  LEND    : 0x4000150d  LCOUNT  : 0xffffffef  
+
+
+Backtrace: 0x400e46eb:0x3ffc9770 0x400d71e0:0x3ffc97a0 0x400d7247:0x203a6c6c |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 501b8d803
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Sep 23 2024 10:01:52[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.0[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2a05ch (172124) map[0m
+[0;32mI (164) esp_image: segment 1: paddr=0003a084 vaddr=3ffb0000 size=03bcch ( 15308) load[0m
+[0;32mI (170) esp_image: segment 2: paddr=0003dc58 vaddr=40080000 size=023c0h (  9152) load[0m
+[0;32mI (173) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a4cf4h (675060) map[0m
+[0;32mI (409) esp_image: segment 4: paddr=000e4d1c vaddr=400823c0 size=15388h ( 86920) load[0m
+[0;32mI (455) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (455) boot: Disabling RNG early entropy source...[0m
+[0;32mI (467) cpu_start: Multicore app[0m
+[0;32mI (476) cpu_start: Pro cpu start user code[0m
+[0;32mI (476) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (476) cpu_start: Application information:[0m
+[0;32mI (479) cpu_start: Project name:     app-template[0m
+[0;32mI (484) cpu_start: App version:      1[0m
+[0;32mI (488) cpu_start: Compile time:     Sep 24 2024 11:48:22[0m
+[0;32mI (495) cpu_start: ELF file SHA256:  501b8d803...[0m
+[0;32mI (500) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (505) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (510) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (515) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (520) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (527) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (533) heap_init: At 3FFB8488 len 00027B78 (158 KiB): DRAM[0m
+[0;32mI (539) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (545) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (552) heap_init: At 40097748 len 000088B8 (34 KiB): IRAM[0m
+[0;32mI (560) spi_flash: detected chip: generic[0m
+[0;32mI (563) spi_flash: flash io: dio[0m
+[0;33mW (567) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (581) main_task: Started on CPU0[0m
+[0;32mI (591) main_task: Calling app_main()[0m
+[0;32mI (631) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 1| Intr:0 [0m
+[0;32mI (631) gpio: GPIO[5]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 1| Intr:0 [0m
+[0;32mI (641) uart: queue free spaces: 10[0m
+[0;32mI (651) Firebase: ESP_WIFI_MODE_STA[0m
+I (661) wifi:wifi driver task: 3ffc1b28, prio:23, stack:6656, core=0
+I (681) wifi:wifi firmware version: 3e0076f
+I (681) wifi:wifi certification version: v7.0
+I (681) wifi:config NVS flash: enabled
+I (681) wifi:config nano formating: disabled
+I (691) wifi:Init data frame dynamic rx buffer num: 32
+I (691) wifi:Init static rx mgmt buffer num: 5
+I (691) wifi:Init management short buffer num: 32
+I (701) wifi:Init dynamic tx buffer num: 32
+I (701) wifi:Init static rx buffer size: 1600
+I (711) wifi:Init static rx buffer num: 10
+I (711) wifi:Init dynamic rx buffer num: 32
+[0;32mI (721) wifi_init: rx ba win: 6[0m
+[0;32mI (721) wifi_init: tcpip mbox: 32[0m
+[0;32mI (721) wifi_init: udp mbox: 6[0m
+[0;32mI (731) wifi_init: tcp mbox: 6[0m
+[0;32mI (731) wifi_init: tcp tx win: 5760[0m
+[0;32mI (731) wifi_init: tcp rx win: 5760[0m
+[0;32mI (741) wifi_init: tcp mss: 1440[0m
+[0;32mI (741) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (751) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (761) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+I (851) wifi:mode : sta (c8:f0:9e:f1:4a:c8)
+I (851) wifi:enable tsf
+[0;32mI (851) Firebase: wifi_init_sta finished.[0m
+I (861) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (861) wifi:state: init -> auth (b0)
+I (871) wifi:state: auth -> assoc (0)
+I (881) wifi:state: assoc -> run (10)
+I (1031) wifi:state: run -> init (2c0)
+I (1031) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+[0;32mI (1041) Firebase: retry to connect to the AP[0m
+[0;32mI (1041) Firebase: connect to the AP fail[0m
+[0;32mI (3451) Firebase: retry to connect to the AP[0m
+[0;32mI (3451) Firebase: connect to the AP fail[0m
+I (3461) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (3461) wifi:state: init -> auth (b0)
+I (3471) wifi:state: auth -> assoc (0)
+I (3471) wifi:state: assoc -> run (10)
+I (3641) wifi:connected with Galaxym31, aid = 1, channel 11, BW20, bssid = 4a:3e:02:1e:c9:b7
+I (3641) wifi:security: WPA2-PSK, phy: bgn, rssi: -51
+I (3651) wifi:pm start, type: 1
+
+I (3651) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (3661) wifi:<ba-add>idx:0 (ifx:0, 4a:3e:02:1e:c9:b7), tid:0, ssn:0, winSize:64
+I (3701) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us
+I (3701) wifi:AP's beacon interval = 102400 us, DTIM period = 2
+[0;32mI (4661) esp_netif_handlers: sta ip: 192.168.26.89, mask: 255.255.255.0, gw: 192.168.26.71[0m
+[0;32mI (4661) Firebase: got ip:192.168.26.89[0m
+[0;32mI (4661) Firebase: connected to ap SSID:myssid password:mypassword[0m
+Guru Meditation Error: Core  0 panic'ed (Unhandled debug exception). 
+Debug exception reason: BREAK instr 
+Core  0 register dump:
+PC      : 0x3ffc9740  PS      : 0x3ffc8578  A0      : 0x00000000  A1      : 0x3ffc97a0  
+A2      : 0x00000003  A3      : 0x00060023  A4      : 0x00060023  A5      : 0x3ffc842c  
+A6      : 0x3ffb40e0  A7      : 0x00000000  A8      : 0x800d717a  A9      : 0x3ffc9740  
+A10     : 0x3ffc8578  A11     : 0x00000000  A12     : 0x8008aeda  A13     : 0x00000000  
+A14     : 0x3ffbc92c  A15     : 0x3ffb4500  SAR     : 0x3ffb0728  EXCCAUSE: 0x00000001  
+EXCVADDR: 0xffffffe0  LBEG    : 0x4000c349  LEND    : 0x4000c36b  LCOUNT  : 0x00000000  
+
+
+Backtrace: 0x3ffc973d:0x3ffc97a0 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 501b8d803
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Sep 23 2024 10:01:52[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.0[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2a05ch (172124) map[0m
+[0;32mI (164) esp_image: segment 1: paddr=0003a084 vaddr=3ffb0000 size=03bcch ( 15308) load[0m
+[0;32mI (170) esp_image: segment 2: paddr=0003dc58 vaddr=40080000 size=023c0h (  9152) load[0m
+[0;32mI (173) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a4cf4h (675060) map[0m
+[0;32mI (409) esp_image: segment 4: paddr=000e4d1c vaddr=400823c0 size=15388h ( 86920) load[0m
+[0;32mI (455) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (455) boot: Disabling RNG early entropy source...[0m
+[0;32mI (467) cpu_start: Multicore app[0m
+[0;32mI (476) cpu_start: Pro cpu start user code[0m
+[0;32mI (476) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (476) cpu_start: Application information:[0m
+[0;32mI (479) cpu_start: Project name:     app-template[0m
+[0;32mI (484) cpu_start: App version:      1[0m
+[0;32mI (488) cpu_start: Compile time:     Sep 24 2024 11:48:22[0m
+[0;32mI (495) cpu_start: ELF file SHA256:  501b8d803...[0m
+[0;32mI (500) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (505) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (510) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (515) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (520) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (527) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (533) heap_init: At 3FFB8488 len 00027B78 (158 KiB): DRAM[0m
+[0;32mI (539) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (545) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (552) heap_init: At 40097748 len 000088B8 (34 KiB): IRAM[0m
+[0;32mI (560) spi_flash: detected chip: generic[0m
+[0;32mI (563) spi_flash: flash io: dio[0m
+[0;33mW (567) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (581) main_task: Started on CPU0[0m
+[0;32mI (591) main_task: Calling app_main()[0m
+[0;32mI (631) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 1| Intr:0 [0m
+[0;32mI (631) gpio: GPIO[5]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 1| Intr:0 [0m
+[0;32mI (641) uart: queue free spaces: 10[0m
+[0;32mI (651) Firebase: ESP_WIFI_MODE_STA[0m
+I (661) wifi:wifi driver task: 3ffc1b28, prio:23, stack:6656, core=0
+I (681) wifi:wifi firmware version: 3e0076f
+I (681) wifi:wifi certification version: v7.0
+I (681) wifi:config NVS flash: enabled
+I (681) wifi:config nano formating: disabled
+I (691) wifi:Init data frame dynamic rx buffer num: 32
+I (691) wifi:Init static rx mgmt buffer num: 5
+I (691) wifi:Init management short buffer num: 32
+I (701) wifi:Init dynamic tx buffer num: 32
+I (701) wifi:Init static rx buffer size: 1600
+I (711) wifi:Init static rx buffer num: 10
+I (711) wifi:Init dynamic rx buffer num: 32
+[0;32mI (721) wifi_init: rx ba win: 6[0m
+[0;32mI (721) wifi_init: tcpip mbox: 32[0m
+[0;32mI (721) wifi_init: udp mbox: 6[0m
+[0;32mI (731) wifi_init: tcp mbox: 6[0m
+[0;32mI (731) wifi_init: tcp tx win: 5760[0m
+[0;32mI (731) wifi_init: tcp rx win: 5760[0m
+[0;32mI (741) wifi_init: tcp mss: 1440[0m
+[0;32mI (741) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (751) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (761) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+I (851) wifi:mode : sta (c8:f0:9e:f1:4a:c8)
+I (851) wifi:enable tsf
+[0;32mI (851) Firebase: wifi_init_sta finished.[0m
+I (861) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (861) wifi:state: init -> auth (b0)
+I (871) wifi:state: auth -> assoc (0)
+I (881) wifi:state: assoc -> run (10)
+I (1011) wifi:state: run -> init (2c0)
+I (1021) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+[0;32mI (1021) Firebase: retry to connect to the AP[0m
+[0;32mI (1021) Firebase: connect to the AP fail[0m
+[0;32mI (3431) Firebase: retry to connect to the AP[0m
+[0;32mI (3431) Firebase: connect to the AP fail[0m
+I (3471) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (3471) wifi:state: init -> auth (b0)
+I (3511) wifi:state: auth -> assoc (0)
+I (3511) wifi:state: assoc -> run (10)
+I (3671) wifi:connected with Galaxym31, aid = 1, channel 11, BW20, bssid = 4a:3e:02:1e:c9:b7
+I (3671) wifi:security: WPA2-PSK, phy: bgn, rssi: -46
+I (3681) wifi:pm start, type: 1
+
+I (3681) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (3691) wifi:<ba-add>idx:0 (ifx:0, 4a:3e:02:1e:c9:b7), tid:0, ssn:0, winSize:64
+I (3771) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us
+I (3771) wifi:AP's beacon interval = 102400 us, DTIM period = 2
+[0;32mI (4691) esp_netif_handlers: sta ip: 192.168.26.89, mask: 255.255.255.0, gw: 192.168.26.71[0m
+[0;32mI (4691) Firebase: got ip:192.168.26.89[0m
+[0;32mI (4691) Firebase: connected to ap SSID:myssid password:mypassword[0m
+[0;32mI (4701) Firebase: UART Received Data: ������������������������������������������[0m
+[0;32mI (4701) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (4721) main_task: Returned from app_main()[0m
+[0;32mI (8111) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:16:05.987473Z"
+}
+[0m
+[0;32mI (8141) Firebase: HTTP GET Status = 200[0m
+[0;32mI (8691) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "pitch": {
+      "doubleValue": 0
+    },
+    "roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:17:08.439556Z"
+}
+[0m
+[0;31mE (8711) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (8721) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (10731) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (10731) Firebase: UART Received Data: �?p��?[0m
+[0;32mI (10731) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (12591) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "pitch": {
+      "doubleValue": 0
+    },
+    "roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:17:08.439556Z"
+}
+[0m
+[0;31mE (12611) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (12621) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (13041) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:16:05.987473Z"
+}
+[0m
+[0;32mI (13061) Firebase: HTTP GET Status = 200[0m
+[0;32mI (14631) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (14631) Firebase: UART Received Data: �?p��?[0m
+[0;32mI (14631) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (17081) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "roll": {
+      "doubleValue": 0
+    },
+    "pitch": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:17:08.439556Z"
+}
+[0m
+[0;31mE (17101) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (17111) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (17501) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:16:05.987473Z"
+}
+[0m
+[0;32mI (17521) Firebase: HTTP GET Status = 200[0m
+[0;32mI (19121) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (19121) Firebase: UART Received Data: �?p��?[0m
+[0;32mI (19121) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (21071) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "pitch": {
+      "doubleValue": 0
+    },
+    "roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:17:08.439556Z"
+}
+[0m
+[0;31mE (21091) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (21091) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (22001) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:16:05.987473Z"
+}
+[0m
+[0;32mI (22031) Firebase: HTTP GET Status = 200[0m
+[0;32mI (23111) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (23111) Firebase: UART Received Data: �?p��?[0m
+[0;32mI (23111) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (24671) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "roll": {
+      "doubleValue": 0
+    },
+    "pitch": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:17:08.439556Z"
+}
+[0m
+[0;31mE (24691) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (24691) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (26701) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (26701) Firebase: UART Received Data: �?p��?[0m
+[0;32mI (26701) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (26741) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:16:05.987473Z"
+}
+[0m
+[0;32mI (26761) Firebase: HTTP GET Status = 200[0m
+[0;32mI (28351) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "pitch": {
+      "doubleValue": 0
+    },
+    "roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:17:08.439556Z"
+}
+[0m
+[0;31mE (28371) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (28381) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (30391) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (30391) Firebase: UART Received Data: �?p��?[0m
+[0;32mI (30391) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (31661) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:16:05.987473Z"
+}
+[0m
+[0;32mI (31681) Firebase: HTTP GET Status = 200[0m
+[0;32mI (32241) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "pitch": {
+      "doubleValue": 0
+    },
+    "roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:17:08.439556Z"
+}
+[0m
+[0;31mE (32271) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (32271) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (34281) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (34281) Firebase: UART Received Data: �?p��?[0m
+[0;32mI (34281) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (36951) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "pitch": {
+      "doubleValue": 0
+    },
+    "roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:17:08.439556Z"
+}
+[0m
+[0;31mE (36981) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (36981) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (37161) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:16:05.987473Z"
+}
+[0m
+[0;32mI (37181) Firebase: HTTP GET Status = 200[0m
+[0;32mI (38991) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (38991) Firebase: UART Received Data: �?p��?[0m
+[0;32mI (38991) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (41421) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "pitch": {
+      "doubleValue": 0
+    },
+    "roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:17:08.439556Z"
+}
+[0m
+[0;31mE (41441) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (41441) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (42071) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:16:05.987473Z"
+}
+[0m
+[0;32mI (42101) Firebase: HTTP GET Status = 200[0m
+[0;32mI (43461) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (43461) Firebase: UART Received Data: �?p��?[0m
+[0;32mI (43461) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (45361) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "pitch": {
+      "doubleValue": 0
+    },
+    "roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:17:08.439556Z"
+}
+[0m
+[0;31mE (45391) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (45391) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (46581) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:16:05.987473Z"
+}
+[0m
+[0;32mI (46601) Firebase: HTTP GET Status = 200[0m
+[0;32mI (47401) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (47401) Firebase: UART Received Data: �?p��?[0m
+[0;32mI (47401) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (49621) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "pitch": {
+      "doubleValue": 0
+    },
+    "roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:17:08.439556Z"
+}
+[0m
+[0;31mE (49651) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (49651) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (51491) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:16:05.987473Z"
+}
+[0m
+[0;32mI (51521) Firebase: HTTP GET Status = 200[0m
+[0;32mI (51661) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (51661) Firebase: UART Received Data: �?p��?[0m
+[0;32mI (51661) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (53611) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "roll": {
+      "doubleValue": 0
+    },
+    "pitch": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:17:08.439556Z"
+}
+[0m
+[0;31mE (53631) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (53641) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (55651) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (55651) Firebase: UART Received Data: �?p��?[0m
+[0;32mI (55651) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (56981) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:16:05.987473Z"
+}
+[0m
+[0;32mI (57001) Firebase: HTTP GET Status = 200[0m
+[0;32mI (57431) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "roll": {
+      "doubleValue": 0
+    },
+    "pitch": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:17:08.439556Z"
+}
+[0m
+[0;31mE (57461) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (57461) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (59471) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (59471) Firebase: UART Received Data: �?p��?[0m
+[0;32mI (59471) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (62151) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:16:05.987473Z"
+}
+[0m
+[0;32mI (62151) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:16:05.987473Z"
+}
+{
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "roll": {
+      "doubleValue": 0
+    },
+    "pitch": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:17:08.439556Z"���[0m
+Guru Meditation Error: Core  1 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  1 register dump:
+PC      : 0x40001650  PS      : 0x00060f30  A0      : 0x800d6d12  A1      : 0x3ffc9720  
+A2      : 0x3ffb4264  A3      : 0x00000000  A4      : 0x000001ff  A5      : 0x0000ff00  
+A6      : 0x00ff0000  A7      : 0xff000000  A8      : 0x00000000  A9      : 0x3ffc96b0  
+A10     : 0x3ffb4264  A11     : 0x000000ff  A12     : 0x3f4030e8  A13     : 0x3ffc9710  
+A14     : 0x3ffc96f0  A15     : 0x0000000c  SAR     : 0x00000004  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000000  LBEG    : 0x4000164d  LEND    : 0x40001667  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x4000164d:0x3ffc9720 0x400d6d0f:0x3ffc9730 0x4016bb2b:0x3ffc9750 0x400e4af6:0x3ffc9770 0x400d71e5:0x3ffc97a0 0x400d7247:0x3ffc98b0 0x4008ab35:0x3ffc98d0
+
+
+
+
+ELF file SHA256: 501b8d803
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Sep 23 2024 10:01:52[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.0[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2a05ch (172124) map[0m
+[0;32mI (164) esp_image: segment 1: paddr=0003a084 vaddr=3ffb0000 size=03bcch ( 15308) load[0m
+[0;32mI (170) esp_image: segment 2: paddr=0003dc58 vaddr=40080000 size=023c0h (  9152) load[0m
+[0;32mI (173) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a4cf4h (675060) map[0m
+[0;32mI (409) esp_image: segment 4: paddr=000e4d1c vaddr=400823c0 size=15388h ( 86920) load[0m
+[0;32mI (455) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (455) boot: Disabling RNG early entropy source...[0m
+[0;32mI (467) cpu_start: Multicore app[0m
+[0;32mI (475) cpu_start: Pro cpu start user code[0m
+[0;32mI (475) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (476) cpu_start: Application information:[0m
+[0;32mI (479) cpu_start: Project name:     app-template[0m
+[0;32mI (484) cpu_start: App version:      1[0m
+[0;32mI (488) cpu_start: Compile time:     Sep 24 2024 11:48:22[0m
+[0;32mI (494) cpu_start: ELF file SHA256:  501b8d803...[0m
+[0;32mI (500) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (505) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (510) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (515) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (520) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (527) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (533) heap_init: At 3FFB8488 len 00027B78 (158 KiB): DRAM[0m
+[0;32mI (539) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (545) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (552) heap_init: At 40097748 len 000088B8 (34 KiB): IRAM[0m
+[0;32mI (559) spi_flash: detected chip: generic[0m
+[0;32mI (563) spi_flash: flash io: dio[0m
+[0;33mW (566) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (581) main_task: Started on CPU0[0m
+[0;32mI (591) main_task: Calling app_main()[0m
+[0;32mI (631) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 1| Intr:0 [0m
+[0;32mI (631) gpio: GPIO[5]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 1| Intr:0 [0m
+[0;32mI (641) uart: queue free spaces: 10[0m
+[0;32mI (651) Firebase: ESP_WIFI_MODE_STA[0m
+I (661) wifi:wifi driver task: 3ffc1b28, prio:23, stack:6656, core=0
+I (681) wifi:wifi firmware version: 3e0076f
+I (681) wifi:wifi certification version: v7.0
+I (681) wifi:config NVS flash: enabled
+I (681) wifi:config nano formating: disabled
+I (691) wifi:Init data frame dynamic rx buffer num: 32
+I (691) wifi:Init static rx mgmt buffer num: 5
+I (691) wifi:Init management short buffer num: 32
+I (701) wifi:Init dynamic tx buffer num: 32
+I (701) wifi:Init static rx buffer size: 1600
+I (711) wifi:Init static rx buffer num: 10
+I (711) wifi:Init dynamic rx buffer num: 32
+[0;32mI (721) wifi_init: rx ba win: 6[0m
+[0;32mI (721) wifi_init: tcpip mbox: 32[0m
+[0;32mI (721) wifi_init: udp mbox: 6[0m
+[0;32mI (731) wifi_init: tcp mbox: 6[0m
+[0;32mI (731) wifi_init: tcp tx win: 5760[0m
+[0;32mI (731) wifi_init: tcp rx win: 5760[0m
+[0;32mI (741) wifi_init: tcp mss: 1440[0m
+[0;32mI (741) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (751) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (761) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+I (851) wifi:mode : sta (c8:f0:9e:f1:4a:c8)
+I (851) wifi:enable tsf
+[0;32mI (851) Firebase: wifi_init_sta finished.[0m
+I (861) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (861) wifi:state: init -> auth (b0)
+I (871) wifi:state: auth -> assoc (0)
+I (881) wifi:state: assoc -> run (10)
+I (1011) wifi:state: run -> init (2c0)
+I (1011) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+[0;32mI (1011) Firebase: retry to connect to the AP[0m
+[0;32mI (1011) Firebase: connect to the AP fail[0m
+[0;32mI (3431) Firebase: retry to connect to the AP[0m
+[0;32mI (3431) Firebase: connect to the AP fail[0m
+I (3431) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (3441) wifi:state: init -> auth (b0)
+I (3441) wifi:state: auth -> assoc (0)
+I (3451) wifi:state: assoc -> run (10)
+I (3601) wifi:connected with Galaxym31, aid = 1, channel 11, BW20, bssid = 4a:3e:02:1e:c9:b7
+I (3601) wifi:security: WPA2-PSK, phy: bgn, rssi: -52
+I (3601) wifi:pm start, type: 1
+
+I (3601) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (3611) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us
+I (3621) wifi:AP's beacon interval = 102400 us, DTIM period = 2
+I (3631) wifi:<ba-add>idx:0 (ifx:0, 4a:3e:02:1e:c9:b7), tid:0, ssn:0, winSize:64
+[0;32mI (4631) esp_netif_handlers: sta ip: 192.168.26.89, mask: 255.255.255.0, gw: 192.168.26.71[0m
+[0;32mI (4631) Firebase: got ip:192.168.26.89[0m
+[0;32mI (4631) Firebase: connected to ap SSID:myssid password:mypassword[0m
+[0;32mI (4641) Firebase: UART Received Data: ������������������������������������������[0m
+[0;32mI (4651) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (4661) main_task: Returned from app_main()[0m
+[0;32mI (6381) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:16:05.987473Z"
+}
+{
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "pitch": {
+      "doubleValue": 0
+    },
+    "roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:17:08.439556Z"
+}
+[0m
+[0;32mI (6381) Firebase: Full JSON Response: {
+�?���?e": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:16:05.987473Z"
+}
+{
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "pitch": {
+      "doubleValue": 0
+    },
+    "roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:17:08.439556Z",��[0m
+Guru Meditation Error: Core  1 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  1 register dump:
+PC      : 0x40001650  PS      : 0x00060330  A0      : 0x800d6d12  A1      : 0x3ffc9720  
+A2      : 0x3ffb4264  A3      : 0x00000000  A4      : 0x000001ff  A5      : 0x0000ff00  
+A6      : 0x00ff0000  A7      : 0xff000000  A8      : 0x00000000  A9      : 0x3ffc96b0  
+A10     : 0x3ffb4264  A11     : 0x000000ff  A12     : 0x3f4030e8  A13     : 0x3ffc9710  
+A14     : 0x3ffc96f0  A15     : 0x0000000c  SAR     : 0x00000004  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000000  LBEG    : 0x4000164d  LEND    : 0x40001667  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x4000164d:0x3ffc9720 0x400d6d0f:0x3ffc9730 0x4016bb2b:0x3ffc9750 0x400e4af6:0x3ffc9770 0x400d71e5:0x3ffc97a0 0x400d7247:0x3ffc98b0 0x4008ab35:0x3ffc98d0
+
+
+
+
+ELF file SHA256: 501b8d803
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Sep 23 2024 10:01:52[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.0[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2a05ch (172124) map[0m
+[0;32mI (164) esp_image: segment 1: paddr=0003a084 vaddr=3ffb0000 size=03bcch ( 15308) load[0m
+[0;32mI (170) esp_image: segment 2: paddr=0003dc58 vaddr=40080000 size=023c0h (  9152) load[0m
+[0;32mI (173) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a4cf4h (675060) map[0m
+[0;32mI (409) esp_image: segment 4: paddr=000e4d1c vaddr=400823c0 size=15388h ( 86920) load[0m
+[0;32mI (455) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (455) boot: Disabling RNG early entropy source...[0m
+[0;32mI (467) cpu_start: Multicore app[0m
+[0;32mI (475) cpu_start: Pro cpu start user code[0m
+[0;32mI (475) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (476) cpu_start: Application information:[0m
+[0;32mI (479) cpu_start: Project name:     app-template[0m
+[0;32mI (484) cpu_start: App version:      1[0m
+[0;32mI (488) cpu_start: Compile time:     Sep 24 2024 11:48:22[0m
+[0;32mI (494) cpu_start: ELF file SHA256:  501b8d803...[0m
+[0;32mI (500) cpu_start: ESP-IDF:          v5.2.2-dirty[0m
+[0;32mI (505) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (510) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (515) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (520) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (527) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (533) heap_init: At 3FFB8488 len 00027B78 (158 KiB): DRAM[0m
+[0;32mI (539) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (545) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (552) heap_init: At 40097748 len 000088B8 (34 KiB): IRAM[0m
+[0;32mI (559) spi_flash: detected chip: generic[0m
+[0;32mI (563) spi_flash: flash io: dio[0m
+[0;33mW (566) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (581) main_task: Started on CPU0[0m
+[0;32mI (591) main_task: Calling app_main()[0m
+[0;32mI (631) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 1| Intr:0 [0m
+[0;32mI (631) gpio: GPIO[5]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 1| Intr:0 [0m
+[0;32mI (641) uart: queue free spaces: 10[0m
+[0;32mI (651) Firebase: ESP_WIFI_MODE_STA[0m
+I (661) wifi:wifi driver task: 3ffc1b28, prio:23, stack:6656, core=0
+I (681) wifi:wifi firmware version: 3e0076f
+I (681) wifi:wifi certification version: v7.0
+I (681) wifi:config NVS flash: enabled
+I (681) wifi:config nano formating: disabled
+I (691) wifi:Init data frame dynamic rx buffer num: 32
+I (691) wifi:Init static rx mgmt buffer num: 5
+I (691) wifi:Init management short buffer num: 32
+I (701) wifi:Init dynamic tx buffer num: 32
+I (701) wifi:Init static rx buffer size: 1600
+I (711) wifi:Init static rx buffer num: 10
+I (711) wifi:Init dynamic rx buffer num: 32
+[0;32mI (721) wifi_init: rx ba win: 6[0m
+[0;32mI (721) wifi_init: tcpip mbox: 32[0m
+[0;32mI (721) wifi_init: udp mbox: 6[0m
+[0;32mI (731) wifi_init: tcp mbox: 6[0m
+[0;32mI (731) wifi_init: tcp tx win: 5760[0m
+[0;32mI (731) wifi_init: tcp rx win: 5760[0m
+[0;32mI (741) wifi_init: tcp mss: 1440[0m
+[0;32mI (741) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (751) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (761) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+I (851) wifi:mode : sta (c8:f0:9e:f1:4a:c8)
+I (851) wifi:enable tsf
+[0;32mI (851) Firebase: wifi_init_sta finished.[0m
+I (861) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (861) wifi:state: init -> auth (b0)
+I (871) wifi:state: auth -> assoc (0)
+I (881) wifi:state: assoc -> run (10)
+I (1011) wifi:state: run -> init (2c0)
+I (1011) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+[0;32mI (1011) Firebase: retry to connect to the AP[0m
+[0;32mI (1011) Firebase: connect to the AP fail[0m
+[0;32mI (3431) Firebase: retry to connect to the AP[0m
+[0;32mI (3431) Firebase: connect to the AP fail[0m
+I (3431) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (3441) wifi:state: init -> auth (b0)
+I (3441) wifi:state: auth -> assoc (0)
+I (3451) wifi:state: assoc -> run (10)
+I (3611) wifi:connected with Galaxym31, aid = 1, channel 11, BW20, bssid = 4a:3e:02:1e:c9:b7
+I (3611) wifi:security: WPA2-PSK, phy: bgn, rssi: -53
+I (3621) wifi:pm start, type: 1
+
+I (3621) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (3631) wifi:<ba-add>idx:0 (ifx:0, 4a:3e:02:1e:c9:b7), tid:0, ssn:0, winSize:64
+I (3671) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us
+I (3671) wifi:AP's beacon interval = 102400 us, DTIM period = 2
+[0;32mI (4641) esp_netif_handlers: sta ip: 192.168.26.89, mask: 255.255.255.0, gw: 192.168.26.71[0m
+[0;32mI (4641) Firebase: got ip:192.168.26.89[0m
+[0;32mI (4641) Firebase: connected to ap SSID:myssid password:mypassword[0m
+[0;32mI (4651) Firebase: UART Received Data: ������������������������������������������[0m
+[0;32mI (4661) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (4671) main_task: Returned from app_main()[0m
+[0;32mI (6501) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:16:05.987473Z"
+}
+[0m
+[0;32mI (6531) Firebase: HTTP GET Status = 200[0m
+[0;32mI (7171) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "pitch": {
+      "doubleValue": 0
+    },
+    "roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:17:08.439556Z"
+}
+[0m
+[0;31mE (7191) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (7191) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (9201) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (9201) Firebase: UART Received Data: �?p��?[0m
+[0;32mI (9201) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (11261) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "roll": {
+      "doubleValue": 0
+    },
+    "pitch": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:17:08.439556Z"
+}
+[0m
+[0;31mE (11281) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (11291) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (11311) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:16:05.987473Z"
+}
+[0m
+[0;32mI (11331) Firebase: HTTP GET Status = 200[0m
+[0;32mI (13311) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (13311) Firebase: UART Received Data: �?p��?[0m
+[0;32mI (13311) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (15711) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "pitch": {
+      "doubleValue": 0
+    },
+    "roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:17:08.439556Z"
+}
+[0m
+[0;31mE (15731) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (15741) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (16171) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:16:05.987473Z"
+}
+[0m
+[0;32mI (16201) Firebase: HTTP GET Status = 200[0m
+[0;32mI (17751) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (17751) Firebase: UART Received Data: �?p��?[0m
+[0;32mI (17751) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (19781) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "pitch": {
+      "doubleValue": 0
+    },
+    "roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:17:08.439556Z"
+}
+[0m
+[0;31mE (19811) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (19811) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (20681) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:16:05.987473Z"
+}
+[0m
+[0;32mI (20701) Firebase: HTTP GET Status = 200[0m
+[0;32mI (21831) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (21831) Firebase: UART Received Data: �?p��?[0m
+[0;32mI (21831) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (23741) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "pitch": {
+      "doubleValue": 0
+    },
+    "roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:17:08.439556Z"
+}
+[0m
+[0;31mE (23761) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (23761) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (25391) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:16:05.987473Z"
+}
+[0m
+[0;32mI (25421) Firebase: HTTP GET Status = 200[0m
+[0;32mI (25781) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (25781) Firebase: UART Received Data: �?p��?[0m
+[0;32mI (25781) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (27641) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "roll": {
+      "doubleValue": 0
+    },
+    "pitch": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:17:08.439556Z"
+}
+[0m
+[0;31mE (27671) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (27671) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (29681) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (29681) Firebase: UART Received Data: �?p��?[0m
+[0;32mI (29681) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (30231) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:16:05.987473Z"
+}
+[0m
+[0;32mI (30251) Firebase: HTTP GET Status = 200[0m
+[0;32mI (31331) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "pitch": {
+      "doubleValue": 0
+    },
+    "roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:17:08.439556Z"
+}
+[0m
+[0;31mE (31351) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (31361) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (33371) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (33371) Firebase: UART Received Data: �?p��?[0m
+[0;32mI (33371) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (34821) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:16:05.987473Z"
+}
+[0m
+[0;32mI (34851) Firebase: HTTP GET Status = 200[0m
+[0;32mI (35221) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "pitch": {
+      "doubleValue": 0
+    },
+    "roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:17:08.439556Z"
+}
+[0m
+[0;31mE (35241) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (35251) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (37261) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (37261) Firebase: UART Received Data: �?p��?[0m
+[0;32mI (37261) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (39121) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "pitch": {
+      "doubleValue": 0
+    },
+    "roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:17:08.439556Z"
+}
+[0m
+[0;31mE (39141) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (39151) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (39931) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:16:05.987473Z"
+}
+[0m
+[0;32mI (39961) Firebase: HTTP GET Status = 200[0m
+[0;32mI (41161) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (41161) Firebase: UART Received Data: �?p��?[0m
+[0;32mI (41161) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (42991) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "pitch": {
+      "doubleValue": 0
+    },
+    "roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:17:08.439556Z"
+}
+[0m
+[0;31mE (43011) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (43011) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (44641) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:16:05.987473Z"
+}
+[0m
+[0;32mI (44671) Firebase: HTTP GET Status = 200[0m
+[0;32mI (45021) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (45021) Firebase: UART Received Data: �?p��?[0m
+[0;32mI (45021) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (46691) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "pitch": {
+      "doubleValue": 0
+    },
+    "roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:17:08.439556Z"
+}
+[0m
+[0;31mE (46711) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (46721) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (48731) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (48731) Firebase: UART Received Data: �?p��?[0m
+[0;32mI (48731) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (49351) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:16:05.987473Z"
+}
+[0m
+[0;32mI (49381) Firebase: HTTP GET Status = 200[0m
+[0;32mI (50791) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "pitch": {
+      "doubleValue": 0
+    },
+    "roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:17:08.439556Z"
+}
+[0m
+[0;31mE (50811) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (50811) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (52831) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (52831) Firebase: UART Received Data: �?p��?[0m
+[0;32mI (52831) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (54271) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:16:05.987473Z"
+}
+[0m
+[0;32mI (54301) Firebase: HTTP GET Status = 200[0m
+[0;32mI (54881) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "pitch": {
+      "doubleValue": 0
+    },
+    "roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:17:08.439556Z"
+}
+[0m
+[0;31mE (54901) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (54911) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (56921) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (56921) Firebase: UART Received Data: �?p��?[0m
+[0;32mI (56921) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (58991) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "pitch": {
+      "doubleValue": 0
+    },
+    "roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:17:08.439556Z"
+}
+[0m
+[0;31mE (59011) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (59011) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (59591) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:16:05.987473Z"
+}
+[0m
+[0;32mI (59621) Firebase: HTTP GET Status = 200[0m
+[0;32mI (61031) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (61031) Firebase: UART Received Data: �?p��?[0m
+[0;32mI (61031) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (63671) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "pitch": {
+      "doubleValue": 0
+    },
+    "roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:17:08.439556Z"
+}
+[0m
+[0;31mE (63691) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (63691) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (64131) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:16:05.987473Z"
+}
+[0m
+[0;32mI (64151) Firebase: HTTP GET Status = 200[0m
+[0;32mI (65711) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (65711) Firebase: UART Received Data: �?p��?[0m
+[0;32mI (65711) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (67581) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "pitch": {
+      "doubleValue": 0
+    },
+    "roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:17:08.439556Z"
+}
+[0m
+[0;31mE (67611) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (67611) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (68601) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 2": {
+      "integerValue": "0"
+    },
+    "led 1": {
+      "integerValue": "1"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:16:05.987473Z"
+}
+[0m
+[0;32mI (68631) Firebase: HTTP GET Status = 200[0m
+[0;32mI (69631) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (69631) Firebase: UART Received Data: �?p��?[0m
+[0;32mI (69631) Parsed Data: Roll: 0, Pitch: 0[0m
+[0;32mI (71471) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
+  "fields": {
+    "pitch": {
+      "doubleValue": 0
+    },
+    "roll": {
+      "doubleValue": 0
+    }
+  },
+  "createTime": "2024-09-24T06:38:16.299139Z",
+  "updateTime": "2024-09-24T13:17:08.439556Z"
+}
+[0m
+[0;31mE (71491) Firebase: Error retrieving LED data from JSON[0m
+[0;32mI (71501) Firebase: HTTP POST Status = 200, content_length = -1[0m
+[0;32mI (73141) Firebase: Full JSON Response: {
+  "name": "projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
+  "fields": {
+    "led 1": {
+      "integerValue": "1"
+    },
+    "led 2": {
+      "integerValue": "0"
+    }
+  },
+  "createTime": "2024-09-17T14:06:02.109454Z",
+  "updateTime": "2024-09-24T13:16:05.987473Z"
+}
+[0m
+[0;32mI (73161) Firebase: HTTP GET Status = 200[0m
+[0;32mI (73511) Firebase: DATA PUSHED TO THE FIRESTORE[0m
+[0;32mI (73511) Firebase: UART Received Data: �?p��?[0m
+[0;32mI (73511) Parsed Data: Roll: 0, Pitch: 0[0m

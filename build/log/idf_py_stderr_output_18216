@@ -1,0 +1,239 @@
+[0;33m--- esp-idf-monitor 1.4.0 on com11 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x4000c350: memcpy in ROM
+[0m
+[0;33m0x4000c349: memcpy in ROM
+0x4000c36b: memcpy in ROM
+[0m
+[0;33m0x4000c34d: memcpy in ROM
+0x400d6be1: http_event_handler at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:131
+0x40166daf: http_dispatch_event at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:188
+0x400e3080: http_on_body at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:311
+0x40142432: http_parser_execute at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/http_parser/http_parser.c:2104 (discriminator 5)
+0x400e3605: esp_http_client_fetch_headers at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1363
+0x400e4470: esp_http_client_perform at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1274
+0x400d6fef: get_data_from_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:351
+0x400d703f: Get_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:389
+0x4008aacd: vPortTaskWrapper at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x4000c350: memcpy in ROM
+[0m
+[0;33m0x4000c349: memcpy in ROM
+0x4000c36b: memcpy in ROM
+[0m
+[0;33m0x4000c34d: memcpy in ROM
+0x400d6be1: http_event_handler at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:131
+0x40166daf: http_dispatch_event at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:188
+0x400e3080: http_on_body at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:311
+0x40142432: http_parser_execute at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/http_parser/http_parser.c:2104 (discriminator 5)
+0x400e3605: esp_http_client_fetch_headers at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1363
+0x400e4470: esp_http_client_perform at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1274
+0x400d6fef: get_data_from_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:351
+0x400d703f: Get_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:389
+0x4008aacd: vPortTaskWrapper at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x4000c350: memcpy in ROM
+[0m
+[0;33m0x4000c349: memcpy in ROM
+0x4000c36b: memcpy in ROM
+[0m
+[0;33m0x4000c34d: memcpy in ROM
+0x400d6be1: http_event_handler at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:131
+0x40166daf: http_dispatch_event at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:188
+0x400e3080: http_on_body at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:311
+0x40142432: http_parser_execute at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/http_parser/http_parser.c:2104 (discriminator 5)
+0x400e3605: esp_http_client_fetch_headers at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1363
+0x400e4470: esp_http_client_perform at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1274
+0x400d6fef: get_data_from_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:351
+0x400d703f: Get_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:389
+0x4008aacd: vPortTaskWrapper at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x4000c350: memcpy in ROM
+[0m
+[0;33m0x4000c349: memcpy in ROM
+0x4000c36b: memcpy in ROM
+[0m
+[0;33m0x4000c34d: memcpy in ROM
+0x400d6be1: http_event_handler at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:131
+0x40166daf: http_dispatch_event at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:188
+0x400e3080: http_on_body at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:311
+0x40142432: http_parser_execute at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/http_parser/http_parser.c:2104 (discriminator 5)
+0x400e3605: esp_http_client_fetch_headers at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1363
+0x400e4470: esp_http_client_perform at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1274
+0x400d6fef: get_data_from_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:351
+0x400d703f: Get_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:389
+0x4008aacd: vPortTaskWrapper at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x4000c350: memcpy in ROM
+[0m
+[0;33m0x4000c349: memcpy in ROM
+0x4000c36b: memcpy in ROM
+[0m
+[0;33m0x4000c34d: memcpy in ROM
+0x400d6be1: http_event_handler at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:131
+0x40166daf: http_dispatch_event at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:188
+0x400e3080: http_on_body at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:311
+0x40142432: http_parser_execute at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/http_parser/http_parser.c:2104 (discriminator 5)
+0x400e3605: esp_http_client_fetch_headers at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1363
+0x400e4470: esp_http_client_perform at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1274
+0x400d6fef: get_data_from_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:351
+0x400d703f: Get_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:389
+0x4008aacd: vPortTaskWrapper at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x4000c350: memcpy in ROM
+[0m
+[0;33m0x4000c349: memcpy in ROM
+0x4000c36b: memcpy in ROM
+[0m
+[0;33m0x4000c34d: memcpy in ROM
+0x400d6be1: http_event_handler at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:131
+0x40166daf: http_dispatch_event at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:188
+0x400e3080: http_on_body at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:311
+0x40142432: http_parser_execute at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/http_parser/http_parser.c:2104 (discriminator 5)
+0x400e3605: esp_http_client_fetch_headers at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1363
+0x400e4470: esp_http_client_perform at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1274
+0x400d6fef: get_data_from_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:351
+0x400d703f: Get_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:389
+0x4008aacd: vPortTaskWrapper at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x4000c350: memcpy in ROM
+[0m
+[0;33m0x4000c349: memcpy in ROM
+0x4000c36b: memcpy in ROM
+[0m
+[0;33m0x4000c34d: memcpy in ROM
+0x400d6be1: http_event_handler at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:131
+0x40166daf: http_dispatch_event at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:188
+0x400e3080: http_on_body at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:311
+0x40142432: http_parser_execute at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/http_parser/http_parser.c:2104 (discriminator 5)
+0x400e3605: esp_http_client_fetch_headers at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1363
+0x400e4470: esp_http_client_perform at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1274
+0x400d6fef: get_data_from_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:351
+0x400d703f: Get_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:389
+0x4008aacd: vPortTaskWrapper at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x4000c350: memcpy in ROM
+[0m
+[0;33m0x4000c349: memcpy in ROM
+0x4000c36b: memcpy in ROM
+[0m
+[0;33m0x4000c34d: memcpy in ROM
+0x400d6be1: http_event_handler at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:131
+0x40166daf: http_dispatch_event at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:188
+0x400e3080: http_on_body at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:311
+0x40142432: http_parser_execute at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/http_parser/http_parser.c:2104 (discriminator 5)
+0x400e3605: esp_http_client_fetch_headers at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1363
+0x400e4470: esp_http_client_perform at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1274
+0x400d6fef: get_data_from_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:351
+0x400d703f: Get_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:389
+0x4008aacd: vPortTaskWrapper at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x4000c350: memcpy in ROM
+[0m
+[0;33m0x4000c349: memcpy in ROM
+0x4000c36b: memcpy in ROM
+[0m
+[0;33m0x4000c34d: memcpy in ROM
+0x400d6be1: http_event_handler at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:131
+0x40166daf: http_dispatch_event at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:188
+0x400e3080: http_on_body at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:311
+0x40142432: http_parser_execute at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/http_parser/http_parser.c:2104 (discriminator 5)
+0x400e3605: esp_http_client_fetch_headers at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1363
+0x400e4470: esp_http_client_perform at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1274
+0x400d6fef: get_data_from_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:351
+0x400d703f: Get_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:389
+0x4008aacd: vPortTaskWrapper at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x4000c350: memcpy in ROM
+[0m
+[0;33m0x4000c349: memcpy in ROM
+0x4000c36b: memcpy in ROM
+[0m
+[0;33m0x4000c34d: memcpy in ROM
+0x400d6be1: http_event_handler at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:131
+0x40166daf: http_dispatch_event at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:188
+0x400e3080: http_on_body at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:311
+0x40142432: http_parser_execute at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/http_parser/http_parser.c:2104 (discriminator 5)
+0x400e3605: esp_http_client_fetch_headers at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1363
+0x400e4470: esp_http_client_perform at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1274
+0x400d6fef: get_data_from_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:351
+0x400d703f: Get_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:389
+0x4008aacd: vPortTaskWrapper at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x4000c350: memcpy in ROM
+[0m
+[0;33m0x4000c349: memcpy in ROM
+0x4000c36b: memcpy in ROM
+[0m
+[0;33m0x4000c34d: memcpy in ROM
+0x400d6be1: http_event_handler at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:131
+0x40166daf: http_dispatch_event at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:188
+0x400e3080: http_on_body at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:311
+0x40142432: http_parser_execute at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/http_parser/http_parser.c:2104 (discriminator 5)
+0x400e3605: esp_http_client_fetch_headers at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1363
+0x400e4470: esp_http_client_perform at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1274
+0x400d6fef: get_data_from_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:351
+0x400d703f: Get_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:389
+0x4008aacd: vPortTaskWrapper at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x4000c350: memcpy in ROM
+[0m
+[0;33m0x4000c349: memcpy in ROM
+0x4000c36b: memcpy in ROM
+[0m
+[0;33m0x4000c34d: memcpy in ROM
+0x400d6be1: http_event_handler at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:131
+0x40166daf: http_dispatch_event at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:188
+0x400e3080: http_on_body at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:311
+0x40142432: http_parser_execute at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/http_parser/http_parser.c:2104 (discriminator 5)
+0x400e3605: esp_http_client_fetch_headers at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1363
+0x400e4470: esp_http_client_perform at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1274
+0x400d6fef: get_data_from_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:351
+0x400d703f: Get_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:389
+0x4008aacd: vPortTaskWrapper at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x4000c350: memcpy in ROM
+[0m
+[0;33m0x4000c349: memcpy in ROM
+0x4000c36b: memcpy in ROM
+[0m
+[0;33m0x4000c34d: memcpy in ROM
+0x400d6be1: http_event_handler at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:131
+0x40166daf: http_dispatch_event at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:188
+0x400e3080: http_on_body at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:311
+0x40142432: http_parser_execute at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/http_parser/http_parser.c:2104 (discriminator 5)
+0x400e3605: esp_http_client_fetch_headers at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1363
+0x400e4470: esp_http_client_perform at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1274
+0x400d6fef: get_data_from_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:351
+0x400d703f: Get_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:389
+0x4008aacd: vPortTaskWrapper at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0m

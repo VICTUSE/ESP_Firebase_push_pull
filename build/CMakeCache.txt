@@ -307,6 +307,9 @@ ENABLE_PROGRAMS:BOOL=
 //Build Mbed TLS tests.
 ENABLE_TESTING:BOOL=
 
+//No help, variable specified on the command line.
+ESP_PLATFORM:UNINITIALIZED=1
+
 //Generate the auto-generated files as needed
 GEN_FILES:BOOL=
 
@@ -345,6 +348,15 @@ Mbed TLS_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
 Mbed TLS_SOURCE_DIR:STATIC=D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/mbedtls/mbedtls
+
+//No help, variable specified on the command line.
+PYTHON:UNINITIALIZED=D:\Espressiff\Espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe
+
+//No help, variable specified on the command line.
+PYTHON_DEPS_CHECKED:UNINITIALIZED=1
+
+//No help, variable specified on the command line.
+SDKCONFIG:UNINITIALIZED=sdkconfig
 
 //Allow unsafe builds. These builds ARE NOT SECURE.
 UNSAFE_BUILD:BOOL=OFF
@@ -580,7 +592,7 @@ C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS:INTERNAL=1
 //Details about finding Git
 FIND_PACKAGE_MESSAGE_DETAILS_Git:INTERNAL=[D:/EMY/Git/cmd/git.exe][v2.44.0.windows.1()]
 //Details about finding Python3
-FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[C:/Program Files/WindowsApps/PythonSoftwareFoundation.Python.3.12_3.12.1776.0_x64__qbz5n2kfra8p0/python3.12.exe][cfound components: Interpreter ][v3.12.6()]
+FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[D:/Espressiff/Espressif/python_env/idf5.2_py3.11_env/Scripts/python.exe][cfound components: Interpreter ][v3.11.2()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //ADVANCED property for variable: GIT_EXECUTABLE
@@ -597,9 +609,8 @@ HAVE_TIME_T_SIZE:INTERNAL=TRUE
 TIME_T_SIZE:INTERNAL=8
 //CMAKE_INSTALL_PREFIX during last run
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=C:/Program Files (x86)/app-template
-//Path to a program.
-_Python3_EXECUTABLE:INTERNAL=C:/Program Files/WindowsApps/PythonSoftwareFoundation.Python.3.12_3.12.1776.0_x64__qbz5n2kfra8p0/python3.12.exe
+_Python3_EXECUTABLE:INTERNAL=D:/Espressiff/Espressif/python_env/idf5.2_py3.11_env/Scripts/python.exe
 //Python3 Properties
-_Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;12;6;32;;;C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1776.0_x64__qbz5n2kfra8p0\Lib;C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1776.0_x64__qbz5n2kfra8p0\Lib;C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1776.0_x64__qbz5n2kfra8p0\Lib\site-packages;C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.1776.0_x64__qbz5n2kfra8p0\Lib\site-packages
-_Python3_INTERPRETER_SIGNATURE:INTERNAL=ad8a1af04808e69759ee6e008090a875
+_Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;11;2;32;;;D:\Espressiff\Espressif\tools\idf-python\3.11.2\Lib;D:\Espressiff\Espressif\tools\idf-python\3.11.2\Lib;D:\Espressiff\Espressif\python_env\idf5.2_py3.11_env\Lib\site-packages;D:\Espressiff\Espressif\python_env\idf5.2_py3.11_env\Lib\site-packages
+_Python3_INTERPRETER_SIGNATURE:INTERNAL=373bb86b9b6d93d01fb5f9853234cbf0
 

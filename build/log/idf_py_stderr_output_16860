@@ -1,0 +1,916 @@
+[0;33m--- esp-idf-monitor 1.4.0 on com11 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400e3918: esp_http_client_get_header at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:348
+[0m
+[0;33m0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m0x400e3915: esp_http_client_get_header at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:348
+0x400e45be: esp_http_client_set_post_field at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1611
+0x400d71c4: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:312 (discriminator 1)
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400e3918: esp_http_client_get_header at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:348
+[0m
+[0;33m0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m0x400e3915: esp_http_client_get_header at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:348
+0x400e45be: esp_http_client_set_post_field at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1611
+0x400d71c4: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:312 (discriminator 1)
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400e3918: esp_http_client_get_header at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:348
+[0m
+[0;33m0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m0x400e3915: esp_http_client_get_header at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:348
+0x400e45be: esp_http_client_set_post_field at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1611
+0x400d71c4: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:312 (discriminator 1)
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400e45aa: esp_http_client_set_post_field at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1606
+[0m
+[0;33m0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m0x400e45a7: esp_http_client_set_post_field at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1604
+0x400d71c4: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:312 (discriminator 1)
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400e3918: esp_http_client_get_header at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:348
+[0m
+[0;33m0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m0x400e3915: esp_http_client_get_header at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:348
+0x400e45be: esp_http_client_set_post_field at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1611
+0x400d71c4: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:312 (discriminator 1)
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400e3918: esp_http_client_get_header at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:348
+[0m
+[0;33m0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m0x400e3915: esp_http_client_get_header at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:348
+0x400e45be: esp_http_client_set_post_field at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1611
+0x400d71c4: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:312 (discriminator 1)
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400e3918: esp_http_client_get_header at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:348
+[0m
+[0;33m0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m0x400e3915: esp_http_client_get_header at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:348
+0x400e45be: esp_http_client_set_post_field at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1611
+0x400d71c4: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:312 (discriminator 1)
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400818d6: panic_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x40089f6d: esp_system_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x40091961: __assert_func at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x4008f9b0: block_trim_free at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:496 (discriminator 3)
+ (inlined by) block_prepare_used at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:579 (discriminator 3)
+ (inlined by) tlsf_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:1006 (discriminator 3)
+0x4008f2d9: multi_heap_malloc_impl at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/multi_heap.c:210
+0x400820d1: heap_caps_malloc_base at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:179
+0x4008212c: heap_caps_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:202
+0x40082161: heap_caps_malloc_default at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:228
+0x40091971: malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/heap.c:24
+0x400e4209: esp_http_client_init at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:774
+0x400d719c: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:309
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400e3918: esp_http_client_get_header at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:348
+[0m
+[0;33m0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m0x400e3915: esp_http_client_get_header at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:348
+0x400e45be: esp_http_client_set_post_field at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1611
+0x400d71c4: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:312 (discriminator 1)
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400e3918: esp_http_client_get_header at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:348
+[0m
+[0;33m0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m0x400e3915: esp_http_client_get_header at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:348
+0x400e45be: esp_http_client_set_post_field at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1611
+0x400d71c4: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:312 (discriminator 1)
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400818d6: panic_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x40089f6d: esp_system_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x40091961: __assert_func at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x4008f9b0: block_trim_free at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:496 (discriminator 3)
+ (inlined by) block_prepare_used at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:579 (discriminator 3)
+ (inlined by) tlsf_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:1006 (discriminator 3)
+0x4008f2d9: multi_heap_malloc_impl at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/multi_heap.c:210
+0x400820d1: heap_caps_malloc_base at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:179
+0x4008212c: heap_caps_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:202
+0x40082161: heap_caps_malloc_default at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:228
+0x40091971: malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/heap.c:24
+0x400e4209: esp_http_client_init at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:774
+0x400d719c: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:309
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400818d6: panic_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x40089f6d: esp_system_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x40091961: __assert_func at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x4008f9b0: block_trim_free at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:496 (discriminator 3)
+ (inlined by) block_prepare_used at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:579 (discriminator 3)
+ (inlined by) tlsf_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:1006 (discriminator 3)
+0x4008f2d9: multi_heap_malloc_impl at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/multi_heap.c:210
+0x400820d1: heap_caps_malloc_base at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:179
+0x4008212c: heap_caps_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:202
+0x40082161: heap_caps_malloc_default at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:228
+0x40091971: malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/heap.c:24
+0x400e4209: esp_http_client_init at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:774
+0x400d719c: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:309
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400e3918: esp_http_client_get_header at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:348
+[0m
+[0;33m0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m0x400e3915: esp_http_client_get_header at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:348
+0x400e45be: esp_http_client_set_post_field at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1611
+0x400d71c4: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:312 (discriminator 1)
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400818d6: panic_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x40089f6d: esp_system_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x40091961: __assert_func at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x4008f9b0: block_trim_free at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:496 (discriminator 3)
+ (inlined by) block_prepare_used at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:579 (discriminator 3)
+ (inlined by) tlsf_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:1006 (discriminator 3)
+0x4008f2d9: multi_heap_malloc_impl at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/multi_heap.c:210
+0x400820d1: heap_caps_malloc_base at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:179
+0x4008212c: heap_caps_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:202
+0x40082161: heap_caps_malloc_default at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:228
+0x400919d8: _calloc_r at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/heap.c:65
+0x400919fc: calloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/heap.c:29 (discriminator 1)
+0x40143669: esp_transport_init_foundation_transport at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/tcp_transport/transport_internal.c:24
+0x40143314: esp_transport_base_init at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/tcp_transport/transport_ssl.c:500
+0x4014351b: esp_transport_ssl_init at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/tcp_transport/transport_ssl.c:515
+0x400e4091: esp_http_client_init at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:695
+0x400d719c: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:309
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400818d6: panic_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x40089f6d: esp_system_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x40091961: __assert_func at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x4008f9b0: block_trim_free at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:496 (discriminator 3)
+ (inlined by) block_prepare_used at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:579 (discriminator 3)
+ (inlined by) tlsf_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:1006 (discriminator 3)
+0x4008f2d9: multi_heap_malloc_impl at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/multi_heap.c:210
+0x400820d1: heap_caps_malloc_base at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:179
+0x4008212c: heap_caps_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:202
+0x40082161: heap_caps_malloc_default at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:228
+0x40091971: malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/heap.c:24
+0x400e4209: esp_http_client_init at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:774
+0x400d719c: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:309
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400e3918: esp_http_client_get_header at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:348
+[0m
+[0;33m0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m0x400e3915: esp_http_client_get_header at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:348
+0x400e45be: esp_http_client_set_post_field at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1611
+0x400d71c4: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:312 (discriminator 1)
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400e3918: esp_http_client_get_header at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:348
+[0m
+[0;33m0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m0x400e3915: esp_http_client_get_header at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:348
+0x400e45be: esp_http_client_set_post_field at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1611
+0x400d71c4: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:312 (discriminator 1)
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400818d6: panic_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x40089f6d: esp_system_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x40091961: __assert_func at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x4008f9b0: block_trim_free at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:496 (discriminator 3)
+ (inlined by) block_prepare_used at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:579 (discriminator 3)
+ (inlined by) tlsf_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:1006 (discriminator 3)
+0x4008f2d9: multi_heap_malloc_impl at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/multi_heap.c:210
+0x400820d1: heap_caps_malloc_base at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:179
+0x4008212c: heap_caps_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:202
+0x40082161: heap_caps_malloc_default at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:228
+0x40091971: malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/heap.c:24
+0x400e4209: esp_http_client_init at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:774
+0x400d719c: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:309
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400818d6: panic_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x40089f6d: esp_system_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x40091961: __assert_func at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x4008f9b0: block_trim_free at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:496 (discriminator 3)
+ (inlined by) block_prepare_used at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:579 (discriminator 3)
+ (inlined by) tlsf_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:1006 (discriminator 3)
+0x4008f2d9: multi_heap_malloc_impl at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/multi_heap.c:210
+0x400820d1: heap_caps_malloc_base at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:179
+0x4008212c: heap_caps_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:202
+0x40082161: heap_caps_malloc_default at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:228
+0x40091971: malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/heap.c:24
+0x400e4209: esp_http_client_init at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:774
+0x400d719c: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:309
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400818d6: panic_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x40089f6d: esp_system_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x40091961: __assert_func at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x4008f9b0: block_trim_free at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:496 (discriminator 3)
+ (inlined by) block_prepare_used at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:579 (discriminator 3)
+ (inlined by) tlsf_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:1006 (discriminator 3)
+0x4008f2d9: multi_heap_malloc_impl at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/multi_heap.c:210
+0x400820d1: heap_caps_malloc_base at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:179
+0x4008212c: heap_caps_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:202
+0x40082161: heap_caps_malloc_default at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:228
+0x40091971: malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/heap.c:24
+0x400e4209: esp_http_client_init at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:774
+0x400d719c: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:309
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400e3918: esp_http_client_get_header at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:348
+[0m
+[0;33m0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m0x400e3915: esp_http_client_get_header at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:348
+0x400e45be: esp_http_client_set_post_field at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1611
+0x400d71c4: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:312 (discriminator 1)
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400e3918: esp_http_client_get_header at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:348
+[0m
+[0;33m0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m0x400e3915: esp_http_client_get_header at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:348
+0x400e45be: esp_http_client_set_post_field at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1611
+0x400d71c4: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:312 (discriminator 1)
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400e3918: esp_http_client_get_header at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:348
+[0m
+[0;33m0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m0x400e3915: esp_http_client_get_header at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:348
+0x400e45be: esp_http_client_set_post_field at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1611
+0x400d71c4: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:312 (discriminator 1)
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400818d6: panic_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x40089f6d: esp_system_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x40091961: __assert_func at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x4008f9b0: block_trim_free at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:496 (discriminator 3)
+ (inlined by) block_prepare_used at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:579 (discriminator 3)
+ (inlined by) tlsf_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:1006 (discriminator 3)
+0x4008f2d9: multi_heap_malloc_impl at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/multi_heap.c:210
+0x400820d1: heap_caps_malloc_base at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:179
+0x4008212c: heap_caps_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:202
+0x40082161: heap_caps_malloc_default at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:228
+0x40091971: malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/heap.c:24
+0x400e4209: esp_http_client_init at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:774
+0x400d719c: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:309
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400818d6: panic_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x40089f6d: esp_system_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x40091961: __assert_func at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x4008f9b0: block_trim_free at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:496 (discriminator 3)
+ (inlined by) block_prepare_used at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:579 (discriminator 3)
+ (inlined by) tlsf_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:1006 (discriminator 3)
+0x4008f2d9: multi_heap_malloc_impl at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/multi_heap.c:210
+0x400820d1: heap_caps_malloc_base at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:179
+0x4008212c: heap_caps_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:202
+0x40082161: heap_caps_malloc_default at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:228
+0x40091971: malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/heap.c:24
+0x400e4209: esp_http_client_init at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:774
+0x400d719c: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:309
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400818d6: panic_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x40089f6d: esp_system_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x40091961: __assert_func at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x4008f9b0: block_trim_free at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:496 (discriminator 3)
+ (inlined by) block_prepare_used at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:579 (discriminator 3)
+ (inlined by) tlsf_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:1006 (discriminator 3)
+0x4008f2d9: multi_heap_malloc_impl at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/multi_heap.c:210
+0x400820d1: heap_caps_malloc_base at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:179
+0x4008212c: heap_caps_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:202
+0x40082161: heap_caps_malloc_default at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:228
+0x40091971: malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/heap.c:24
+0x400e4209: esp_http_client_init at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:774
+0x400d719c: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:309
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400818d6: panic_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x40089f6d: esp_system_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x40091961: __assert_func at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x4008f9b0: block_trim_free at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:496 (discriminator 3)
+ (inlined by) block_prepare_used at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:579 (discriminator 3)
+ (inlined by) tlsf_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:1006 (discriminator 3)
+0x4008f2d9: multi_heap_malloc_impl at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/multi_heap.c:210
+0x400820d1: heap_caps_malloc_base at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:179
+0x4008212c: heap_caps_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:202
+0x40082161: heap_caps_malloc_default at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:228
+0x40091971: malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/heap.c:24
+0x400e4209: esp_http_client_init at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:774
+0x400d719c: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:309
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400818d6: panic_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x40089f6d: esp_system_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x40091961: __assert_func at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x4008f9b0: block_trim_free at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:496 (discriminator 3)
+ (inlined by) block_prepare_used at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:579 (discriminator 3)
+ (inlined by) tlsf_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:1006 (discriminator 3)
+0x4008f2d9: multi_heap_malloc_impl at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/multi_heap.c:210
+0x400820d1: heap_caps_malloc_base at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:179
+0x4008212c: heap_caps_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:202
+0x40082161: heap_caps_malloc_default at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:228
+0x40091971: malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/heap.c:24
+0x400e4209: esp_http_client_init at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:774
+0x400d719c: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:309
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400818d6: panic_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x40089f6d: esp_system_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x40091961: __assert_func at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x4008f9b0: block_trim_free at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:496 (discriminator 3)
+ (inlined by) block_prepare_used at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:579 (discriminator 3)
+ (inlined by) tlsf_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:1006 (discriminator 3)
+0x4008f2d9: multi_heap_malloc_impl at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/multi_heap.c:210
+0x400820d1: heap_caps_malloc_base at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:179
+0x4008212c: heap_caps_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:202
+0x40082161: heap_caps_malloc_default at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:228
+0x40091971: malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/heap.c:24
+0x400e4209: esp_http_client_init at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:774
+0x400d719c: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:309
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400e45aa: esp_http_client_set_post_field at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1606
+[0m
+[0;33m0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m0x400e45a7: esp_http_client_set_post_field at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1604
+0x400d71c4: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:312 (discriminator 1)
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400e3918: esp_http_client_get_header at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:348
+[0m
+[0;33m0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m0x400e3915: esp_http_client_get_header at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:348
+0x400e45be: esp_http_client_set_post_field at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1611
+0x400d71c4: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:312 (discriminator 1)
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400e3918: esp_http_client_get_header at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:348
+[0m
+[0;33m0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m0x400e3915: esp_http_client_get_header at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:348
+0x400e45be: esp_http_client_set_post_field at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1611
+0x400d71c4: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:312 (discriminator 1)
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400e3918: esp_http_client_get_header at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:348
+[0m
+[0;33m0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m0x400e3915: esp_http_client_get_header at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:348
+0x400e45be: esp_http_client_set_post_field at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1611
+0x400d71c4: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:312 (discriminator 1)
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400818d6: panic_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x40089f6d: esp_system_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x40091961: __assert_func at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x4008f9b0: block_trim_free at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:496 (discriminator 3)
+ (inlined by) block_prepare_used at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:579 (discriminator 3)
+ (inlined by) tlsf_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:1006 (discriminator 3)
+0x4008f2d9: multi_heap_malloc_impl at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/multi_heap.c:210
+0x400820d1: heap_caps_malloc_base at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:179
+0x4008212c: heap_caps_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:202
+0x40082161: heap_caps_malloc_default at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:228
+0x40091971: malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/heap.c:24
+0x400e4209: esp_http_client_init at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:774
+0x400d719c: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:309
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400e3918: esp_http_client_get_header at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:348
+[0m
+[0;33m0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m0x400e3915: esp_http_client_get_header at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:348
+0x400e45be: esp_http_client_set_post_field at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1611
+0x400d71c4: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:312 (discriminator 1)
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400818d6: panic_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x40089f6d: esp_system_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x40091961: __assert_func at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x4008f9b0: block_trim_free at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:496 (discriminator 3)
+ (inlined by) block_prepare_used at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:579 (discriminator 3)
+ (inlined by) tlsf_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:1006 (discriminator 3)
+0x4008f2d9: multi_heap_malloc_impl at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/multi_heap.c:210
+0x400820d1: heap_caps_malloc_base at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:179
+0x4008212c: heap_caps_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:202
+0x40082161: heap_caps_malloc_default at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:228
+0x40091971: malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/heap.c:24
+0x400e4209: esp_http_client_init at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:774
+0x400d719c: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:309
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400818d6: panic_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x40089f6d: esp_system_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x40091961: __assert_func at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x4008f9b0: block_trim_free at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:496 (discriminator 3)
+ (inlined by) block_prepare_used at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:579 (discriminator 3)
+ (inlined by) tlsf_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:1006 (discriminator 3)
+0x4008f2d9: multi_heap_malloc_impl at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/multi_heap.c:210
+0x400820d1: heap_caps_malloc_base at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:179
+0x4008212c: heap_caps_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:202
+0x40082161: heap_caps_malloc_default at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:228
+0x40091971: malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/heap.c:24
+0x400e4209: esp_http_client_init at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:774
+0x400d719c: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:309
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400818d6: panic_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x40089f6d: esp_system_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x40091961: __assert_func at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x4008f9b0: block_trim_free at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:496 (discriminator 3)
+ (inlined by) block_prepare_used at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:579 (discriminator 3)
+ (inlined by) tlsf_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:1006 (discriminator 3)
+0x4008f2d9: multi_heap_malloc_impl at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/multi_heap.c:210
+0x400820d1: heap_caps_malloc_base at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:179
+0x4008212c: heap_caps_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:202
+0x40082161: heap_caps_malloc_default at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:228
+0x40091971: malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/heap.c:24
+0x400e4209: esp_http_client_init at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:774
+0x400d719c: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:309
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400818d6: panic_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x40089f6d: esp_system_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x40091961: __assert_func at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x4008f9b0: block_trim_free at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:496 (discriminator 3)
+ (inlined by) block_prepare_used at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:579 (discriminator 3)
+ (inlined by) tlsf_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:1006 (discriminator 3)
+0x4008f2d9: multi_heap_malloc_impl at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/multi_heap.c:210
+0x400820d1: heap_caps_malloc_base at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:179
+0x4008212c: heap_caps_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:202
+0x40082161: heap_caps_malloc_default at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:228
+0x40091971: malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/heap.c:24
+0x400e4209: esp_http_client_init at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:774
+0x400d719c: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:309
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400818d6: panic_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x40089f6d: esp_system_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x40091961: __assert_func at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x4008f9b0: block_trim_free at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:496 (discriminator 3)
+ (inlined by) block_prepare_used at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:579 (discriminator 3)
+ (inlined by) tlsf_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:1006 (discriminator 3)
+0x4008f2d9: multi_heap_malloc_impl at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/multi_heap.c:210
+0x400820d1: heap_caps_malloc_base at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:179
+0x4008212c: heap_caps_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:202
+0x40082161: heap_caps_malloc_default at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:228
+0x40091971: malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/heap.c:24
+0x400e4209: esp_http_client_init at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:774
+0x400d719c: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:309
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400818d6: panic_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x40089f6d: esp_system_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x40091961: __assert_func at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x4008f9b0: block_trim_free at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:496 (discriminator 3)
+ (inlined by) block_prepare_used at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:579 (discriminator 3)
+ (inlined by) tlsf_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:1006 (discriminator 3)
+0x4008f2d9: multi_heap_malloc_impl at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/multi_heap.c:210
+0x400820d1: heap_caps_malloc_base at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:179
+0x4008212c: heap_caps_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:202
+0x40082161: heap_caps_malloc_default at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:228
+0x40091971: malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/heap.c:24
+0x400e4209: esp_http_client_init at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:774
+0x400d719c: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:309
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400818d6: panic_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x40089f6d: esp_system_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x40091961: __assert_func at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x4008f9b0: block_trim_free at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:496 (discriminator 3)
+ (inlined by) block_prepare_used at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:579 (discriminator 3)
+ (inlined by) tlsf_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:1006 (discriminator 3)
+0x4008f2d9: multi_heap_malloc_impl at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/multi_heap.c:210
+0x400820d1: heap_caps_malloc_base at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:179
+0x4008212c: heap_caps_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:202
+0x40082161: heap_caps_malloc_default at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:228
+0x40091971: malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/heap.c:24
+0x400e4209: esp_http_client_init at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:774
+0x400d719c: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:309
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400818d6: panic_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x40089f6d: esp_system_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x40091961: __assert_func at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x4008f9b0: block_trim_free at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:496 (discriminator 3)
+ (inlined by) block_prepare_used at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:579 (discriminator 3)
+ (inlined by) tlsf_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:1006 (discriminator 3)
+0x4008f2d9: multi_heap_malloc_impl at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/multi_heap.c:210
+0x400820d1: heap_caps_malloc_base at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:179
+0x4008212c: heap_caps_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:202
+0x40082161: heap_caps_malloc_default at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:228
+0x40091971: malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/heap.c:24
+0x400e4209: esp_http_client_init at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:774
+0x400d719c: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:309
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400818d6: panic_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x40089f6d: esp_system_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x40091961: __assert_func at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x4008f9b0: block_trim_free at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:496 (discriminator 3)
+ (inlined by) block_prepare_used at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:579 (discriminator 3)
+ (inlined by) tlsf_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:1006 (discriminator 3)
+0x4008f2d9: multi_heap_malloc_impl at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/multi_heap.c:210
+0x400820d1: heap_caps_malloc_base at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:179
+0x4008212c: heap_caps_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:202
+0x40082161: heap_caps_malloc_default at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:228
+0x40091971: malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/heap.c:24
+0x400e4209: esp_http_client_init at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:774
+0x400d719c: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:309
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400e3918: esp_http_client_get_header at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:348
+[0m
+[0;33m0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m0x400e3915: esp_http_client_get_header at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:348
+0x400e45be: esp_http_client_set_post_field at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1611
+0x400d71c4: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:312 (discriminator 1)
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400e3918: esp_http_client_get_header at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:348
+[0m
+[0;33m0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m0x400e3915: esp_http_client_get_header at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:348
+0x400e45be: esp_http_client_set_post_field at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1611
+0x400d71c4: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:312 (discriminator 1)
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400818d6: panic_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x40089f6d: esp_system_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x40091961: __assert_func at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x4008f9b0: block_trim_free at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:496 (discriminator 3)
+ (inlined by) block_prepare_used at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:579 (discriminator 3)
+ (inlined by) tlsf_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:1006 (discriminator 3)
+0x4008f2d9: multi_heap_malloc_impl at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/multi_heap.c:210
+0x400820d1: heap_caps_malloc_base at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:179
+0x4008212c: heap_caps_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:202
+0x40082161: heap_caps_malloc_default at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:228
+0x40091971: malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/heap.c:24
+0x400e4209: esp_http_client_init at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:774
+0x400d719c: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:309
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400818d6: panic_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x40089f6d: esp_system_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x40091961: __assert_func at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x4008f9b0: block_trim_free at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:496 (discriminator 3)
+ (inlined by) block_prepare_used at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:579 (discriminator 3)
+ (inlined by) tlsf_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:1006 (discriminator 3)
+0x4008f2d9: multi_heap_malloc_impl at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/multi_heap.c:210
+0x400820d1: heap_caps_malloc_base at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:179
+0x4008212c: heap_caps_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:202
+0x40082161: heap_caps_malloc_default at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:228
+0x40091971: malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/heap.c:24
+0x400e4209: esp_http_client_init at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:774
+0x400d719c: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:309
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400818d6: panic_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x40089f6d: esp_system_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x40091961: __assert_func at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x4008f9b0: block_trim_free at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:496 (discriminator 3)
+ (inlined by) block_prepare_used at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:579 (discriminator 3)
+ (inlined by) tlsf_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:1006 (discriminator 3)
+0x4008f2d9: multi_heap_malloc_impl at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/multi_heap.c:210
+0x400820d1: heap_caps_malloc_base at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:179
+0x4008212c: heap_caps_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:202
+0x40082161: heap_caps_malloc_default at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:228
+0x40091971: malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/heap.c:24
+0x400e4209: esp_http_client_init at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:774
+0x400d719c: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:309
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400818d6: panic_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x40089f6d: esp_system_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x40091961: __assert_func at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x4008f9b0: block_trim_free at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:496 (discriminator 3)
+ (inlined by) block_prepare_used at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:579 (discriminator 3)
+ (inlined by) tlsf_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:1006 (discriminator 3)
+0x4008f2d9: multi_heap_malloc_impl at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/multi_heap.c:210
+0x400820d1: heap_caps_malloc_base at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:179
+0x4008212c: heap_caps_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:202
+0x40082161: heap_caps_malloc_default at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:228
+0x40091971: malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/heap.c:24
+0x400e4209: esp_http_client_init at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:774
+0x400d719c: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:309
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400818d6: panic_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x40089f6d: esp_system_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x40091961: __assert_func at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x4008f9b0: block_trim_free at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:496 (discriminator 3)
+ (inlined by) block_prepare_used at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:579 (discriminator 3)
+ (inlined by) tlsf_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:1006 (discriminator 3)
+0x4008f2d9: multi_heap_malloc_impl at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/multi_heap.c:210
+0x400820d1: heap_caps_malloc_base at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:179
+0x4008212c: heap_caps_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:202
+0x40082161: heap_caps_malloc_default at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:228
+0x40091971: malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/heap.c:24
+0x400e4209: esp_http_client_init at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:774
+0x400d719c: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:309
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400818d6: panic_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x40089f6d: esp_system_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x40091961: __assert_func at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x4008f9b0: block_trim_free at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:496 (discriminator 3)
+ (inlined by) block_prepare_used at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:579 (discriminator 3)
+ (inlined by) tlsf_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:1006 (discriminator 3)
+0x4008f2d9: multi_heap_malloc_impl at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/multi_heap.c:210
+0x400820d1: heap_caps_malloc_base at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:179
+0x4008212c: heap_caps_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:202
+0x40082161: heap_caps_malloc_default at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:228
+0x40091971: malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/heap.c:24
+0x400e4209: esp_http_client_init at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:774
+0x400d719c: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:309
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400818d6: panic_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x40089f6d: esp_system_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x40091961: __assert_func at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x4008f9b0: block_trim_free at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:496 (discriminator 3)
+ (inlined by) block_prepare_used at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:579 (discriminator 3)
+ (inlined by) tlsf_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:1006 (discriminator 3)
+0x4008f2d9: multi_heap_malloc_impl at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/multi_heap.c:210
+0x400820d1: heap_caps_malloc_base at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:179
+0x4008212c: heap_caps_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:202
+0x40082161: heap_caps_malloc_default at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:228
+0x400919d8: _calloc_r at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/heap.c:65
+0x400919fc: calloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/heap.c:29 (discriminator 1)
+0x401432f7: esp_transport_esp_tls_create at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/tcp_transport/transport_ssl.c:486
+0x40143351: esp_transport_base_init at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/tcp_transport/transport_ssl.c:505
+0x4014351b: esp_transport_ssl_init at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/tcp_transport/transport_ssl.c:515
+0x400e4091: esp_http_client_init at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:695
+0x400d719c: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:309
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400e3918: esp_http_client_get_header at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:348
+[0m
+[0;33m0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m0x400e3915: esp_http_client_get_header at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:348
+0x400e45be: esp_http_client_set_post_field at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1611
+0x400d71c4: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:312 (discriminator 1)
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400818d6: panic_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x40089f6d: esp_system_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x40091961: __assert_func at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x4008f9b0: block_trim_free at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:496 (discriminator 3)
+ (inlined by) block_prepare_used at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:579 (discriminator 3)
+ (inlined by) tlsf_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:1006 (discriminator 3)
+0x4008f2d9: multi_heap_malloc_impl at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/multi_heap.c:210
+0x400820d1: heap_caps_malloc_base at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:179
+0x4008212c: heap_caps_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:202
+0x40082161: heap_caps_malloc_default at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:228
+0x40091971: malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/heap.c:24
+0x400e4209: esp_http_client_init at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:774
+0x400d719c: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:309
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400818d6: panic_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x40089f6d: esp_system_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x40091961: __assert_func at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x4008f9b0: block_trim_free at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:496 (discriminator 3)
+ (inlined by) block_prepare_used at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:579 (discriminator 3)
+ (inlined by) tlsf_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:1006 (discriminator 3)
+0x4008f2d9: multi_heap_malloc_impl at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/multi_heap.c:210
+0x400820d1: heap_caps_malloc_base at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:179
+0x4008212c: heap_caps_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:202
+0x40082161: heap_caps_malloc_default at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:228
+0x40091971: malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/heap.c:24
+0x400e4209: esp_http_client_init at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:774
+0x400d719c: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:309
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400818d6: panic_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x40089f6d: esp_system_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x40091961: __assert_func at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x4008f9b0: block_trim_free at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:496 (discriminator 3)
+ (inlined by) block_prepare_used at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:579 (discriminator 3)
+ (inlined by) tlsf_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:1006 (discriminator 3)
+0x4008f2d9: multi_heap_malloc_impl at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/multi_heap.c:210
+0x400820d1: heap_caps_malloc_base at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:179
+0x4008212c: heap_caps_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:202
+0x40082161: heap_caps_malloc_default at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:228
+0x40091971: malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/heap.c:24
+0x400e4209: esp_http_client_init at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:774
+0x400d719c: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:309
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400818d6: panic_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x40089f6d: esp_system_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x40091961: __assert_func at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x4008f9b0: block_trim_free at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:496 (discriminator 3)
+ (inlined by) block_prepare_used at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:579 (discriminator 3)
+ (inlined by) tlsf_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:1006 (discriminator 3)
+0x4008f2d9: multi_heap_malloc_impl at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/multi_heap.c:210
+0x400820d1: heap_caps_malloc_base at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:179
+0x4008212c: heap_caps_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:202
+0x40082161: heap_caps_malloc_default at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:228
+0x40091971: malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/heap.c:24
+0x400e4209: esp_http_client_init at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:774
+0x400d719c: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:309
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400818d6: panic_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x40089f6d: esp_system_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x40091961: __assert_func at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x4008f9b0: block_trim_free at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:496 (discriminator 3)
+ (inlined by) block_prepare_used at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:579 (discriminator 3)
+ (inlined by) tlsf_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:1006 (discriminator 3)
+0x4008f2d9: multi_heap_malloc_impl at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/multi_heap.c:210
+0x400820d1: heap_caps_malloc_base at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:179
+0x4008212c: heap_caps_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:202
+0x40082161: heap_caps_malloc_default at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:228
+0x40091971: malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/heap.c:24
+0x400e4209: esp_http_client_init at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:774
+0x400d719c: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:309
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400818d6: panic_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x40089f6d: esp_system_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x40091961: __assert_func at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x4008f9b0: block_trim_free at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:496 (discriminator 3)
+ (inlined by) block_prepare_used at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:579 (discriminator 3)
+ (inlined by) tlsf_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/tlsf/tlsf.c:1006 (discriminator 3)
+0x4008f2d9: multi_heap_malloc_impl at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/multi_heap.c:210
+0x400820d1: heap_caps_malloc_base at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:179
+0x4008212c: heap_caps_malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:202
+0x40082161: heap_caps_malloc_default at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/heap/heap_caps.c:228
+0x40091971: malloc at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/heap.c:24
+0x400e4209: esp_http_client_init at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:774
+0x400d719c: push_data_to_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:309
+0x400d722b: Push_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:360
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0m

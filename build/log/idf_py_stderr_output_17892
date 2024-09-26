@@ -1,0 +1,70 @@
+[0;33m--- esp-idf-monitor 1.4.0 on com11 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400818d6: panic_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x40089f6d: esp_system_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x40091961: __assert_func at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x4008b48d: xEventGroupSetBits at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/event_groups.c:560 (discriminator 1)
+0x400d6e27: http_event_handler_pull at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:201
+0x4016c673: http_dispatch_event at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:188
+0x400e564e: esp_http_client_perform at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1322
+0x400d7443: get_data_from_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:437
+0x400d74a3: Get_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:479
+0x4008ab35: vPortTaskWrapper at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400818d6: panic_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x40089f6d: esp_system_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x40091961: __assert_func at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x4008b48d: xEventGroupSetBits at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/event_groups.c:560 (discriminator 1)
+0x400d6e27: http_event_handler_pull at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:201
+0x4016c673: http_dispatch_event at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:188
+0x400e564e: esp_http_client_perform at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1322
+0x400d7443: get_data_from_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:437
+0x400d74a3: Get_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:479
+0x4008ab35: vPortTaskWrapper at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400818d6: panic_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x40089f6d: esp_system_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x40091961: __assert_func at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x4008b48d: xEventGroupSetBits at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/event_groups.c:560 (discriminator 1)
+0x400d6e27: http_event_handler_pull at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:201
+0x4016c673: http_dispatch_event at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:188
+0x400e564e: esp_http_client_perform at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1322
+0x400d7443: get_data_from_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:437
+0x400d74a3: Get_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:479
+0x4008ab35: vPortTaskWrapper at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400818d6: panic_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x40089f6d: esp_system_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x40091961: __assert_func at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x4008b48d: xEventGroupSetBits at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/event_groups.c:560 (discriminator 1)
+0x400d6e27: http_event_handler_pull at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:201
+0x4016c673: http_dispatch_event at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:188
+0x400e564e: esp_http_client_perform at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1322
+0x400d7443: get_data_from_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:437
+0x400d74a3: Get_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:479
+0x4008ab35: vPortTaskWrapper at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400818d6: panic_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/panic.c:466
+0x40089f6d: esp_system_abort at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_system/port/esp_system_chip.c:93
+0x40091961: __assert_func at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/newlib/assert.c:81
+0x4008b48d: xEventGroupSetBits at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/event_groups.c:560 (discriminator 1)
+0x400d6e27: http_event_handler_pull at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:201
+0x4016c673: http_dispatch_event at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:188
+0x400e564e: esp_http_client_perform at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/esp_http_client/esp_http_client.c:1322
+0x400d7443: get_data_from_firebase at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:437
+0x400d74a3: Get_Data_Task at D:/EMY/ESP_workspace/firebase_deneme/main/main.c:479
+0x4008ab35: vPortTaskWrapper at D:/Espressiff/Espressif/frameworks/esp-idf-v5.2.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0m

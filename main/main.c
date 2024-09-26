@@ -1,8 +1,17 @@
 /**
-*
-*@Author: EREN MERT YİĞİT
-* @notes : Use task delay otherwise one of the tasks are broke
-**/
+  ******************************************************************************
+  * @file     main.c
+  * @author   EREN MERT YİĞİT
+  * @version  V1.0
+  * @date     26/09/2024 11:48:07
+  * @brief    Firebase push and pull main with functions
+  ******************************************************************************
+  @note 
+  * - Using semaphore with tasks to protect shared buffers. Use it on critical sections.
+  * - Without delay, tasks interrupts each other. Find suitable time delay. 
+  * - Be carefull with heap memory usage
+  ******************************************************************************
+*/
 #include <stdint.h>
 #include <stdio.h>
 #include <string.h>
@@ -11,6 +20,7 @@
 #include "driver/gpio.h"
 #include "esp_err.h"
 #include "freertos/FreeRTOS.h"
+#include "freertos/projdefs.h"
 #include "freertos/task.h"
 #include "esp_system.h"
 #include "esp_wifi.h"
@@ -25,26 +35,31 @@
 #include "lwip/sys.h"
 #include "cJSON.h"
 #include "freertos/semphr.h"
-
+/* GPIO Pin 4-5 for led output*/
 #define GPIO_LED1 4
 #define GPIO_LED2 5
 #define GPIO_PIN_SELECT (1ULL << GPIO_LED1) | (1ULL << GPIO_LED2)
-
+/* WIFI Authentetaction*/
 #define ESP_WIFI_SSID      "Galaxym31"
 #define ESP_WIFI_PASS      "12345678"
 #define EXAMPLE_ESP_MAXIMUM_RETRY  5
-
 #define ESP_WIFI_SCAN_AUTH_MODE_THRESHOLD WIFI_AUTH_WPA_WPA2_PSK
 
-// Firebase credentials
+/* Firebase credentials*/
 #define FIREBASE_HOST  "iot-firebase-80171-default-rtdb.europe-west1.firebasedatabase.app"
 #define FIREBASE_API_KEY "AIzaSyA3wUxLxeGNnfy6OZgcEDDg9NHXwzLEikQ"
+/* Length of UART buffer*/
+int length = 0;
 /**
 * Structer to hold led states
 */
+typedef enum{
+	LED_OFF = 0,
+    LED_ON = 1
+}led_state_t;
 typedef struct{
-	uint8_t led1;
-	uint8_t led2;
+	led_state_t led1;
+	led_state_t led2;
 }led_struct_t;
 led_struct_t led_struct;
 /**
@@ -55,7 +70,7 @@ typedef struct{
 	int8_t pitch;
 }roll_pitch_return;
 roll_pitch_return uart_return;
-// Global mutex handle
+/* Global mutex handle*/ 
 SemaphoreHandle_t xMutex;
 /**
 * buffer to hold respond from http request and total respond data length from chunks
@@ -64,17 +79,19 @@ static char *response_buffer = NULL;
 static int total_length = 0;
 /*Bool check to if http event finished*/
 bool http_event_finish = false;       
-
 /*Tag for logging*/
 static const char *TAG = "Firebase";
-/* FreeRTOS event group to signal when we are connected*/
+/* FreeRTOS event group to signal */
 static EventGroupHandle_t s_wifi_event_group;
-/* The event group allows multiple bits for each event, but we only care about two events:
+static EventGroupHandle_t firebase_event_group;
+/* The event group allows multiple bits for each event, but we only care about three events:
  * - we are connected to the AP with an IP
- * - we failed to connect after the maximum amount of retries */
+ * - we failed to connect after the maximum amount of retries 
+ * - we got response from http client */
 #define WIFI_CONNECTED_BIT BIT0
 #define WIFI_FAIL_BIT      BIT1
-/*firebase data buffer*/
+#define PULL_EVENT_FINISHED BIT2
+/*handle variables */
 const uart_port_t uart_num = UART_NUM_1;
 esp_http_client_handle_t client;
 /*WIFI Connection retry*/
@@ -83,7 +100,7 @@ static int s_retry_num = 0;
 extern const uint8_t _binary_firebase_cert_pem_start[] asm("_binary_firebase_cert_pem_start");
 extern const uint8_t _binary_firebase_cert_pem_end[] asm("_binary_firebase_cert_pem_end");
 /**
-* WIFI Event handler function
+* WIFI Event handler
 */
 static void WIFI_event_handler(void* arg, esp_event_base_t event_base,
                                 int32_t event_id, void* event_data)
@@ -106,10 +123,10 @@ static void WIFI_event_handler(void* arg, esp_event_base_t event_base,
         xEventGroupSetBits(s_wifi_event_group, WIFI_CONNECTED_BIT);
     }
 }
-
-
-
-
+/**
+* HTTP event handler. 
+* Update according to your need on events.  
+*/
 esp_err_t http_event_handler_push(esp_http_client_event_handle_t http_event_push)
 {
 	switch (http_event_push->event_id) 
@@ -140,7 +157,6 @@ esp_err_t http_event_handler_push(esp_http_client_event_handle_t http_event_push
    }
     return ESP_OK;
 }
-
 /**
 * HTTP Client event handler 
 */
@@ -164,12 +180,12 @@ esp_err_t http_event_handler_pull(esp_http_client_event_handle_t http_event_pull
                 // Append the data receive    
             }           
             if (http_event_pull->data_len > 0) {
-                char *new_buffer = (char *)realloc(response_buffer, total_length + http_event_pull->data_len + 1);
+                char *new_buffer = (char *)realloc(response_buffer, total_length + http_event_pull->data_len + 1);         //Allocated memory for variable buffer data
                 if (new_buffer == NULL) {
 				    ESP_LOGE(TAG, "Failed to allocate memory for response buffer");
                     if (response_buffer != NULL) 
                     {
-                         free(response_buffer);  // Free any previously allocated buffer
+                         free(response_buffer);         // Frees any previously allocated buffer
                          response_buffer = NULL;
                     }
                     return ESP_FAIL;
@@ -177,19 +193,21 @@ esp_err_t http_event_handler_pull(esp_http_client_event_handle_t http_event_pull
                 response_buffer = new_buffer;
                 memcpy(response_buffer + total_length, http_event_pull->data, http_event_pull->data_len);
                 total_length += http_event_pull->data_len;
-                response_buffer[total_length] = '\0';
+                response_buffer[total_length] = '\0';         //NULL terminate
             }
             break;
         case HTTP_EVENT_ON_FINISH:
             
              if (response_buffer != NULL && total_length > 0) {
                 ESP_LOGI(TAG, "HTTP_EVENT_ON_FINISH");
-                // Log the full response
-                ESP_LOGI(TAG, "Full JSON Response: %s", response_buffer);
                 
-                // Check if the response contains valid JSON
+                ESP_LOGI(TAG, "Full JSON Response: %s", response_buffer);         // Logs the full response
+                
+                /*
+                * Check if the response contains valid JSON
+                */
                 if (response_buffer[0] == '{') {
-					http_event_finish = true;
+					xEventGroupSetBits(firebase_event_group, PULL_EVENT_FINISHED);         //HTTP_EVENT_ON_FINISH sets PULL_EVENT_FINISHED for waiteventbit
                     
                 } else {
                     ESP_LOGE(TAG, "Received non-JSON response");
@@ -204,23 +222,6 @@ esp_err_t http_event_handler_pull(esp_http_client_event_handle_t http_event_pull
         }
     return ESP_OK;
 }
-
-/*
-esp_err_t client_event_handler(esp_http_client_event_handle_t http_event)
-{
-	switch(http_event_push_data->event_id)
-	{
-		case HTTP_EVENT_ON_DATA:
-		     printf("HTTP_EVENT_ON_DATA: %.*s\n",http_event_push_data->data_len, (char*)http_event_push_data->data);
-		     break;
-		default:
-		break;
-	}
-	
-	return ESP_OK;
-}
-*/
-
 /**
 * GPIO Initiliazition function
 */
@@ -303,7 +304,9 @@ void wifi_init_sta(void)
 **/
 void UART_Init(void)
 {
-	
+/**
+* Same as UART source
+*/
 uart_config_t uart_config = {
     .baud_rate = 38400,
     .data_bits = UART_DATA_8_BITS,
@@ -325,61 +328,73 @@ QueueHandle_t uart_queue;
 ESP_ERROR_CHECK(uart_driver_install(UART_NUM_1, uart_buffer_size, \
                                         uart_buffer_size, 10, &uart_queue, 0));
 }
-
 /**
-* UART Data receiver function
+* @brief Receive specific data from UART
+* This functions gets MPU6050 roll pitch data string from STM32 via UART and parse roll, pitch values
+* @param none
+* @retval roll_pitch_return
 */
 roll_pitch_return UART_Receive_Data(void)
 {
 	//maybe try malloc here ?
-	 // Read data from UART	
+	/**
+	* Read data from UART
+	*/	
 	uint8_t data[1024];    //little buffer cause reset problems keep it high
-	int length = 0;
 	
 	ESP_ERROR_CHECK(uart_get_buffered_data_len(uart_num, (size_t*)&length));
 
 	length = uart_read_bytes(uart_num, data, length, 100 / portTICK_PERIOD_MS);          //uart_read_bytes returns len
 	ESP_LOGI(TAG, "Bytes available in UART buffer: %d", length);
-	data[length] = '\0';  // Null-terminate the data
+	data[length] = '\0';        // Null-terminate the data
 	/*
 	* If data received
 	*/
     if (length > sizeof(data) - 1)
     {
-    length = sizeof(data) - 1;  // Prevent out-of-bound write
+    length = sizeof(data) - 1;         // Prevent out-of-bound write
     }
-    
     ESP_LOGI(TAG, "UART Received Data: %s", data);
-    // Parse the incoming string using sscanf
-    sscanf((char*)data, "Roll:  %hhd         Pitch:  %hhd   \n\r", &uart_return.roll, &uart_return.pitch);
-    // Log the parsed values
-    ESP_LOGI("Parsed UART Data", "Roll: %d, Pitch: %d", uart_return.roll, uart_return.pitch);
+    
+    sscanf((char*)data, "Roll:  %hhd         Pitch:  %hhd   \n\r", &uart_return.roll, &uart_return.pitch);         // Parse the incoming string using sscanf
+    
+    ESP_LOGI("Parsed UART Data", "Roll: %d, Pitch: %d", uart_return.roll, uart_return.pitch);         // Log the parsed values
    
     return uart_return;
 }
-/* Function to push data to Firebase */
+/**
+* @brief Push data to firebase 
+* This function pushes a string to firestore via http
+* @param none
+* @retval none
+*/
 void push_data_to_firebase(void) {
-    UART_Receive_Data();
+	
+    UART_Receive_Data();         //fill uart_return struct
+    
     char json_data[128];
-    sprintf(json_data, "{\"fields\":{\"Roll\":{\"doubleValue\":%d},\"Pitch\":{\"doubleValue\":%d}}}",uart_return.roll, uart_return.pitch); 
+    sprintf(json_data, "{\"fields\":{\"Roll\":{\"doubleValue\":%d},\"Pitch\":{\"doubleValue\":%d}}}",uart_return.roll, uart_return.pitch);          //Create string with roll,pitch data in json format   
+    /**
+    * Configure HTTP 
+    */
     esp_http_client_config_t config_push = {
         .url = "https://firestore.googleapis.com/v1/projects/iot-firebase-80171/databases/(default)/documents/collection/Roll_Pitch",
-        .method = HTTP_METHOD_PATCH,
-        .cert_pem = (char *)_binary_firebase_cert_pem_start,  // Set CA cert for SSL
+        .method = HTTP_METHOD_PATCH,         //To create new document send post, to update field send patch
+        .cert_pem = (char *)_binary_firebase_cert_pem_start,         // Set CA cert for SSL
         .event_handler = http_event_handler_push,
-        
     };
-     client = esp_http_client_init(&config_push);
-         
+    client = esp_http_client_init(&config_push);
+   
     if (client == NULL) {
     ESP_LOGE(TAG, "Failed to initialize HTTP client");
     return;
     }
-  //  esp_http_client_set_method(client, HTTP_METHOD_PATCH);   //To create new document send post, to update field send patch
+   
     esp_http_client_set_header(client, "Content-Type", "application/json");
     esp_http_client_set_post_field(client, json_data, strlen(json_data));
-    // Perform the HTTP request
-    esp_err_t err = esp_http_client_perform(client);
+    
+    
+    esp_err_t err = esp_http_client_perform(client);        /* Perform the HTTP request*/
     
     if (err == ESP_OK) {
         ESP_LOGI(TAG, "HTTP POST Status = %d, content_length = %lld",
@@ -390,13 +405,17 @@ void push_data_to_firebase(void) {
     }
     
     esp_http_client_cleanup(client);
-    
 }
 /**
-* Function to get data from Firebase
+* @brief Gets data from firebase
+* This specific function sends request to pull data from firebase using http_event_handler_pull
+* @param none
+* @retval none
 */
-
 void get_data_from_firebase(void) {
+	
+	firebase_event_group = xEventGroupCreate();
+	
     esp_http_client_config_t config = {
         .url = "https://firestore.googleapis.com/v1/projects/iot-firebase-80171/databases/(default)/documents/collection/1JRc9F32B4n1fWYeRlHT",
         .cert_pem = (char *)_binary_firebase_cert_pem_start,  // Set CA cert for SSL
@@ -404,46 +423,55 @@ void get_data_from_firebase(void) {
     };
     
     esp_http_client_handle_t client = esp_http_client_init(&config);
-    if (client == NULL) {
+    if (client == NULL) 
+    {
     ESP_LOGE(TAG, "Failed to initialize HTTP client");
     return;
-}
+    }
     esp_http_client_set_method(client, HTTP_METHOD_GET);
 
     esp_err_t err = esp_http_client_perform(client);
     
-    if (err == ESP_OK) {
+    if (err == ESP_OK) 
+    {
         ESP_LOGI(TAG, "HTTP GET Status = %d", esp_http_client_get_status_code(client));
-        }
-    else {
+    }
+    else 
+    {
         ESP_LOGE(TAG, "HTTP GET request failed: %s", esp_err_to_name(err));
     }
     
     esp_http_client_cleanup(client);
 }
-
-
+/**
+* @brief Task for pushing data
+* This is a task to manage roll pitch data pushing to firebase 
+* @param *pvParameters for freertos task no input param
+* @retval none
+*/
 static void Push_Data_Task(void *pvParameters)
 {
 	
 	while(1)
 	{
-	if (xSemaphoreTake(xMutex, pdMS_TO_TICKS(100)) == pdTRUE)
+	if (xSemaphoreTake(xMutex, pdMS_TO_TICKS(100)) == pdTRUE)       // Time is pdMS_TO_TICKS(100) to task to let it go after a while 
 	 {
-    // Critical section: Firebase push data logic
-	push_data_to_firebase();
+    
+	push_data_to_firebase();          // Critical section: Firebase push data logic
 	ESP_LOGI(TAG, "DATA PUSHED TO THE FIRESTORE");
     
-    xSemaphoreGive(xMutex);  // Release the mutex
+    xSemaphoreGive(xMutex);        // Release the mutex
     }
     vTaskDelay(1000 / portTICK_PERIOD_MS);
 	}
 	
 }
 /**
-* Get led data task 
+* @brief Task for pulling data
+* This is a task to manage Led state data pulling from firebase 
+* @param *pvParameters for freertos task no input param
+* @retval none
 */
-
 static void Get_Data_Task(void *pvParameters)
 {
 	
@@ -453,9 +481,16 @@ if (xSemaphoreTake(xMutex, pdMS_TO_TICKS(100)) == pdTRUE)
 	 {    
 	// Critical section: Firebase push data logic
         get_data_from_firebase();
-        if(http_event_finish == true)
+        xEventGroupWaitBits(firebase_event_group,
+            PULL_EVENT_FINISHED,
+            pdTRUE,
+            pdFALSE,
+            portMAX_DELAY);
+        if(PULL_EVENT_FINISHED)
         {
-        // Parse the full response
+        /**
+        *  Critical section: Firebase push data logic
+        */
                     cJSON *root = cJSON_Parse(response_buffer);
                     if (root == NULL)
                     {
@@ -474,8 +509,8 @@ if (xSemaphoreTake(xMutex, pdMS_TO_TICKS(100)) == pdTRUE)
                                 led_struct.led1 = atoi(cJSON_GetObjectItem(led1, "integerValue")->valuestring);
                                 led_struct.led2 = atoi(cJSON_GetObjectItem(led2, "integerValue")->valuestring);
 
-                                gpio_set_level(GPIO_LED1, led_struct.led1);
-                                gpio_set_level(GPIO_LED2, led_struct.led2);
+                                gpio_set_level(GPIO_LED1, led_struct.led1 == LED_ON ? 1:0);        //If Condition is true ? then value X : otherwise value Y
+                                gpio_set_level(GPIO_LED2, led_struct.led2 == LED_ON ? 1:0);
                             } 
                             else
                             {
@@ -489,13 +524,17 @@ if (xSemaphoreTake(xMutex, pdMS_TO_TICKS(100)) == pdTRUE)
                 response_buffer = NULL;
                 total_length = 0;
          }
-         http_event_finish = false;
-    xSemaphoreGive(xMutex);  // Release the mutex
+        else
+         {
+			 
+			 ESP_LOGE(TAG, "PULL_EVENT_FINISHED bit is not set");
+		 }
+		 
+		 xEventGroupClearBits(firebase_event_group, PULL_EVENT_FINISHED);
+         
+    xSemaphoreGive(xMutex);         // Release the mutex
     }                  
-        // Delay before the next iteration
-        vTaskDelay(1000 / portTICK_PERIOD_MS);
-      
-    
+        vTaskDelay(1000 / portTICK_PERIOD_MS);         // Delay before the next iteration
     }
 }
 
@@ -518,24 +557,12 @@ void app_main() {
         ESP_LOGE(TAG, "Mutex creation failed!");
         return;
     }
-    
     GPIO_Init();
     UART_Init();
-    ESP_LOGI(TAG, "ESP_WIFI_MODE_STA");
     wifi_init_sta();
+    ESP_LOGI(TAG, "ESP_WIFI_MODE_STA");
     
-    
-    // Push data to Firebase
- /*   char json_data[200];
-    sprintf(json_data, "{\"fields\":{\"roll\":{\"doubleValue\":%d},\"pitch\":{\"doubleValue\":%d}}}",roll, pitch);    
-    push_data_to_firebase( json_data); 
-    ESP_LOGI(TAG, "DATA PUSHED TO THE FIRESTORE"); */
-    
-    //Retrieve data from Firebase
-    //get_data_from_firebase();
-    
-    
-       xTaskCreate(Push_Data_Task, "Push_To_Firebase", 2048 * 2, NULL, configMAX_PRIORITIES - 1, NULL);
-       xTaskCreate(Get_Data_Task, "Get_Data_From_Firebase", 2048 * 2, NULL, configMAX_PRIORITIES - 1, NULL);
+    xTaskCreate(Push_Data_Task, "Push_To_Firebase", 2048 * 2, NULL, configMAX_PRIORITIES - 1, NULL);
+    xTaskCreate(Get_Data_Task, "Get_Data_From_Firebase", 2048 * 2, NULL, configMAX_PRIORITIES - 1, NULL);
     
 }
